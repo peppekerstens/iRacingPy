@@ -1,7 +1,17 @@
+#This scripts gets the data from a session and 
 from  iracingdataapi.client import irDataClient
 import json
-#https://stackoverflow.com/questions/2733813/iterating-through-a-json-object
+import sys
+import csv
+import pandas as pd 
+#import Jinja2 #dependency module for pandas for df.style command
+from tabulate import tabulate
+import numpy as np
+#https://stackoverflow.com/questions/9202224/getting-a-hidden-password-input
+#import getpass
+import pwinput
 
+#https://stackoverflow.com/questions/2733813/iterating-through-a-json-object
 #could (should!) improve with List Comprehensions or Vectorization
 #https://stackoverflow.com/questions/16476924/how-to-iterate-over-rows-in-a-dataframe-in-pandas
 def get_session_results(race_result: json, type: str):
@@ -19,40 +29,40 @@ def get_driver_results(race_result: json):
             new_list.append(driver)
     return new_list
 
-
-#def get_total_laps(race_result: json, team_id: int):
-#    result = 0
-#    for item in race_result:
-#        if  item['team_id'] == team_id:
-#            result += item['laps_complete']
-#    return result
-
-import sys
-import csv
-import pandas as pd 
-import numpy as np
-
 def get_total_laps(result: pd, team_id: int):
     team_match = result['team_id'] == team_id
     team_result = result[team_match]
     return team_result['laps_complete'].sum()
 
 if __name__ == '__main__':
-   
     if len(sys.argv) < 4:
-     print('Usage: py get_memberdata.py [username] [password] [session_id]')
-     sys.exit()
+        print('Error: to few arguments!')
+        print('Usage: py get_session_data.py [username] [password] [session_id]')
+        print('Going into interactive mode....')
+        username = input("Enter username: ")
+        #password = getpass.getpass('Enter password:')
+        password = pwinput.pwinput(prompt='Enter password: ')
+        session_id = input("Enter session_id: ")
 
-    username = sys.argv[1] #first cmdline arg is acnt name
-    password = sys.argv[2] #second cmdline arg is pwd
-    session_id = sys.argv[3] #third cmdline arg is pwd
+    if len(sys.argv) > 4:
+        print('Error: to many arguments!')
+        print('Usage: py get_session_data.py [username] [password] [session_id]')
+        sys.exit()
+
+    if len(sys.argv) == 4:
+        username = sys.argv[1] #first cmdline arg is acnt name
+        password = sys.argv[2] #second cmdline arg is pwd
+        session_id = sys.argv[3] #third cmdline arg is pwd
     
     idc = irDataClient(username=username, password=password)
 
-    session_id = 43720351 #BMW 12.0 Challenge 
-    session_id = 58362796 #PEC S2 5th race fuji
+    #session_id = 43720351 #BMW 12.0 Challenge 
+    #session_id = 58362796 #PEC S2 5th race fuji
     # get results from a session server
     session_result = idc.result(subsession_id=session_id)
+    if session_result is not None:
+        print('Received session_result')
+
     team_race = False
     #if session_result['min_team_drivers'] == 1 and session_result['max_team_drivers'] == 1: team_race = False
     if session_result['min_team_drivers'] > 1 and session_result['max_team_drivers'] > 1: team_race = True
@@ -60,13 +70,18 @@ if __name__ == '__main__':
     track = session_result['track']
     #get info in all tracks present in iRacing. Needed for track length, which is needed to calculate avg driver speed.
     all_tracks = idc.tracks
+    if all_tracks is not None:
+        print('Received all_tracks')
     df_all_tracks = pd.json_normalize(all_tracks)
     #current_track = all_tracks['track_id'] == track['track_id']
     current_track = df_all_tracks['track_id'] == track['track_id']
     #current_track_detail = all_tracks[current_track]
     current_track_detail = df_all_tracks[current_track]
-    current_track_detail[['track_name','config_name','track_config_length']]
     track_length = current_track_detail['track_config_length'] * 1.609344  #track_config_length is provided in miles
+    #current_track_detail['track_config_length_km'] = current_track_detail['track_config_length'] * 1.609344  #track_config_length is provided in miles
+    #current_track_detail[['track_name','config_name','track_config_length','track_config_length_km']]
+    #current_track_detail[['track_name','config_name','track_config_length']]
+    print(tabulate(current_track_detail[['track_name','config_name','track_config_length']], headers = 'keys', tablefmt = 'psql'))
 
     #if team_race:
     race_result = get_session_results(session_result, 'Race')
@@ -100,3 +115,5 @@ if __name__ == '__main__':
     df_driver_result['percentage'] = round(df_driver_result['laps_complete'] / get_total_laps(df_driver_result, df_driver_result['team_id'].iloc[0]) * 100,0)
     #df_driver_result[['team_id','cust_id','display_name', 'finish_position','finish_position_in_class','average_lap','best_lap_time','laps_complete','car_class_name']]
     df_driver_result[['team_id','cust_id','display_name', 'avg_lap','laps_complete','speed','time', 'percentage']] 
+
+    print(tabulate(df_driver_result[['team_id','cust_id','display_name', 'avg_lap','laps_complete','speed','time', 'percentage']], headers = 'keys', tablefmt = 'psql'))
