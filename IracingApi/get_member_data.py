@@ -40,13 +40,22 @@ def get_member_irating(idc: irDataClient, custid: int):
         driver_classification = 'Gold'
     else:
         driver_classification = 'Silver'
+    
+    if latest_iRating > 2500:
+        driver_qualification = 'lmdh approved'
+    elif latest_iRating > 2000:
+        driver_qualification = 'lmp2 approved'
+    elif latest_iRating > 1500:
+        driver_qualification = 'gt3 approved'
+    else:
+        driver_qualification = 'not qualified' 
 
     display_name = member_data['members']
     display_name2 = display_name[0]['display_name']
     #table = [['iRacing Customer ID', 'Driver Name', 'iRating', 'Driver Classifictaion'], 
                 #custid[0], display_name2, latest_iRating, driver_classification]
     #print(tabulate(table, headers='firstrow', tablefmt='fancy_grid'))
-    print(f"{custid[0]},{display_name2},{latest_iRating},{driver_classification}")
+    print(f"{custid[0]},{display_name2},{latest_iRating},{driver_classification},{driver_qualification}")
     #print(tabulate([['custid[0]','display_name2','latest_iRating', 'driver_classification']], headers = 'keys', tablefmt = 'psql'))
 
 import sys
