@@ -90,25 +90,27 @@ def get_total_laps(result: pd, team_id: int):
     return team_result['laps_complete'].sum()
 
 if __name__ == '__main__':
-    if len(sys.argv) < 4:
+    if len(sys.argv) < 5:
         #raise BaseException('bla')  #does not work; processing is stopped see: https://docs.python.org/3/library/exceptions.html#Exception
         print('Error: to few arguments!')
-        print('Usage: py get_session_data.py [username] [password] [session_id]')
+        print('Usage: py get_session_data.py [username] [password] [session_id] [csv name]')
         print('Going into interactive mode....')
         username = input("Enter username: ")
         #password = getpass.getpass('Enter password:') # hard in practise, does not show any input hint
         password = pwinput.pwinput(prompt='Enter password: ')
         session_id = input("Enter session_id: ")
+        csv_name = input("Enter CSV name: ")
 
-    if len(sys.argv) > 4:
+    if len(sys.argv) > 5:
         print('Error: to many arguments!')
-        print('Usage: py get_session_data.py [username] [password] [session_id]')
+        print('Usage: py get_session_data.py [username] [password] [session_id] [csv name]')
         sys.exit()
 
-    if len(sys.argv) == 4:
+    if len(sys.argv) == 5:
         username = sys.argv[1] #first cmdline arg is acnt name
         password = sys.argv[2] #second cmdline arg is pwd
-        session_id = sys.argv[3] #third cmdline arg is pwd
+        session_id = sys.argv[3] #third cmdline arg is session_id
+        csv_name = sys.argv[4] #third cmdline arg is csv_name
     
     print('Processing...')
     idc = irDataClient(username=username, password=password)
@@ -139,10 +141,11 @@ if __name__ == '__main__':
     #if team_race:
     race_result = get_session_results(session_result, 'Race')
     driver_result = get_driver_results(race_result[0]['results'])
-    print('Receiving al laps..')
+    print('Receiving all laps')
     new_list = []
     for dr in driver_result:
         new_list.append(get_valid_avg_laps(dr, idc, session_id))
+        print('.')
     df_race_result = pd.json_normalize(race_result[0]['results'])
     df_driver_result = pd.json_normalize(driver_result)
 
@@ -152,6 +155,7 @@ if __name__ == '__main__':
     #Get the total time driven per team, to calculate percentage per driver later
     df_race_result['avg_lap'] = (df_race_result['average_lap'] / 10000)
     df_race_result['time'] = (df_race_result['avg_lap'] * df_race_result['laps_complete'])
+    total_race_laps = df_race_result['laps_complete'].max()
     
     #df_race_result[['team_id','display_name','avg_lap','laps_complete','time']]
     print(tabulate(df_race_result[['team_id','display_name','avg_lap','laps_complete','time']], headers = 'keys', tablefmt = 'psql'))
@@ -166,7 +170,8 @@ if __name__ == '__main__':
     df_driver_result['avg_lap'] = (df_driver_result['average_lap'] / 10000)
     df_driver_result['avg_lap_valid'] = (df_driver_result['average_lap_valid'] / 10000)
     #df_driver_result['speed'] = (track_length.iloc[0] / df_driver_result['avg_lap'] * 3600)
-    df_driver_result['speed'] = (track_length / df_driver_result['avg_lap_valid'] * 3600)
+    df_current_track_detail['track_config_length_km'].iloc[-1]
+    df_driver_result['speed'] = (df_current_track_detail['track_config_length_km'].iloc[-1] / df_driver_result['avg_lap_valid'] * 3600)
     df_driver_result['time'] = (df_driver_result['avg_lap_valid'] * df_driver_result['laps_complete'])
     
    
@@ -182,3 +187,7 @@ if __name__ == '__main__':
     print(tabulate(df_driver_result[['team_id','cust_id','display_name', 'avg_lap','avg_lap_valid','laps_complete','speed','time', 'percentage']], headers = 'keys', tablefmt = 'psql'))
 
 
+    #from pathlib import Path  
+    #filepath = Path('folder/subfolder/out.csv')  
+    #filepath.parent.mkdir(parents=True, exist_ok=True)  
+    df_driver_result.to_csv(csv_name,index=False,columns=['team_id','cust_id','display_name', 'avg_lap','avg_lap_valid','laps_complete','speed','time', 'percentage'])  
