@@ -43,7 +43,7 @@ import pwinput
 def get_session_results(race_result: json, type: str):
     new_list = []
     for session_results in race_result['session_results']:
-        if  session_results['simsession_type_name'] == type:
+        if session_results['simsession_type_name'] == type:
             new_list.append(session_results)
     return new_list
 
@@ -54,6 +54,35 @@ def get_driver_results(race_result: json):
         for driver in driver_results['driver_results']:
             new_list.append(driver)
     return new_list
+
+def get_valid_avg_laps(driver_result: json, idc: irDataClient, session_id: int):
+    cust_id = driver_result['cust_id']
+    team_id = driver_result['team_id']
+    lap_data = idc.result_lap_data(subsession_id=session_id,simsession_number=0, cust_id=cust_id, team_id=team_id)
+    new_list = []
+    for lap in lap_data:
+        #array = [0, 4] #clean lap or offtrack lap
+        if lap['flags'] in [0, 4] and lap['lap_time'] != -1:
+            new_list.append(lap) 
+    df_lap_data = pd.json_normalize(new_list)
+    #df_valid_lap_data[['lap_number','flags','session_time', 'session_start_time', 'lap_time', 'team_fastest_lap', 'personal_best_lap','lap_events']]
+    avg_lap_time = df_lap_data['lap_time'].mean()
+    driver_result['average_lap_valid'] = avg_lap_time
+    return driver_result
+
+"""
+def get_valid_avg_laps(idc: irDataClient, session_id: int, team_id = None, cust_id = None):
+    lap_data = idc.result_lap_data(subsession_id=session_id,simsession_number=0, cust_id=cust_id, team_id=team_id)
+    df_lap_data = pd.json_normalize(lap_data) 
+    array = [0, 4] #clean lap or offtrack lap
+    clean_laps = df_lap_data['flags'].isin(array) 
+    df_clean_lap_data = df_lap_data[clean_laps]
+    valid_laps = df_lap_data['lap_time'] != -1
+    df_valid_lap_data = df_clean_lap_data[valid_laps]
+    #df_valid_lap_data[['lap_number','flags','session_time', 'session_start_time', 'lap_time', 'team_fastest_lap', 'personal_best_lap','lap_events']]
+    avg_lap_time = df_valid_lap_data['lap_time'].mean()
+    return avg_lap_time
+"""
 
 def get_total_laps(result: pd, team_id: int):
     team_match = result['team_id'] == team_id
@@ -110,6 +139,10 @@ if __name__ == '__main__':
     #if team_race:
     race_result = get_session_results(session_result, 'Race')
     driver_result = get_driver_results(race_result[0]['results'])
+    print('Receiving al laps..')
+    new_list = []
+    for dr in driver_result:
+        new_list.append(get_valid_avg_laps(dr, idc, session_id))
     df_race_result = pd.json_normalize(race_result[0]['results'])
     df_driver_result = pd.json_normalize(driver_result)
 
@@ -127,32 +160,9 @@ if __name__ == '__main__':
     car_class = df_race_result['car_class_short_name'] == "GT3 Class"
     df_race_result_class = df_race_result[car_class]
 
-    #Get the speed an total time driven per driver of each team, expressed as a percentage of the laps of winning team
-    track_length = df_current_track_detail['track_config_length_km'].iloc[0]
-    total_race_laps = df_race_result['laps_complete'].max()
-
-    #get the valid avg_lap_times only
-    df_driver_result['average_lap_valid'] = 0 #add another column (for lack of better way)
-    for index, row in df_driver_result.iterrows():
-        #lap_data = idc.result_lap_data(subsession_id=session_id,simsession_number=0, cust_id=466944, team_id=203387)
-        lap_data = idc.result_lap_data(subsession_id=session_id,simsession_number=0, cust_id=row['cust_id'], team_id=row['team_id'])
-        df_lap_data = pd.json_normalize(lap_data) 
-        #df_lap_data[['group_id','cust_id','name','display_name', 'lap_number','flags','session_time', 'session_start_time', 'lap_time', 'team_fastest_lap', 'personal_best_lap','lap_events']]
-        #df_lap_data[['lap_number','flags','session_time', 'session_start_time', 'lap_time', 'team_fastest_lap', 'personal_best_lap','lap_events']]
-        #print(tabulate(df_lap_data[['lap_number','flags','session_time', 'session_start_time', 'lap_time', 'team_fastest_lap', 'personal_best_lap','lap_events']], headers = 'keys', tablefmt = 'psql'))
-
-        array = [0, 4] #clean lap or offtrack lap
-        clean_laps = df_lap_data['flags'].isin(array) 
-        df_clean_lap_data = df_lap_data[clean_laps]
-
-        valid_laps = df_lap_data.loc['lap_time'] != -1
-        df_valid_lap_data = df_clean_lap_data[valid_laps]
-        #df_valid_lap_data[['lap_number','flags','session_time', 'session_start_time', 'lap_time', 'team_fastest_lap', 'personal_best_lap','lap_events']]
-        avg_lap_time = df_valid_lap_data['lap_time'].mean()
-        row['average_lap_valid'] = avg_lap_time
-
-
-    #total_race_laps = df_race_result.loc[df_race_result['laps_complete'].idxmax()]
+    #Get the speed an total time driven per driver of each team
+    #average_lap = 940294 
+    #average_lap = 94.0294 => sec
     df_driver_result['avg_lap'] = (df_driver_result['average_lap'] / 10000)
     df_driver_result['avg_lap_valid'] = (df_driver_result['average_lap_valid'] / 10000)
     #df_driver_result['speed'] = (track_length.iloc[0] / df_driver_result['avg_lap'] * 3600)
