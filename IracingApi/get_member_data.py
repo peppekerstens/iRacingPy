@@ -44,18 +44,39 @@ def get_pec_driver_classification(iRating: int) -> str:
     else:
         return 'Silver'
 
+
+def get_member_latest_iRating(df_member_chart_data: pd) -> int:
+    #df_latest = df_member_chart_data.iloc[-1] #get the latest iRating (last row)
+    #last_value = df_latest['value'] 
+    if 'value' in df_member_chart_data.columns:
+        last_value = df_member_chart_data['value'].iat[-1]
+    else:
+        last_value = 0
+    return last_value 
+
 def get_pec_driver_information(idc: irDataClient, df_member_data: pd) -> pd:
+    df_pec_driver_info = pd.DataFrame(columns=['cust_id','display_name','latest_iRating', 'driver_classification','driver_qualification'])
+    #df_member_data['latest_iRating'] = None
+    #df_member_data['driver_qualification'] = '' #just add a column with empty string
+    #df_member_data['driver_classification'] = '' #just add a column with empty string
     print('Getting driver chart data',end=".")
-    df_pec_driver_info = None
-    for df_row in df_member_data:
+    #df_pec_driver_info = None
+    for index, df_row in df_member_data.iterrows():
         cust_id = df_row['cust_id'] #no need to do something like df_row.iloc[0]['cust_id'] as it already is a single row
         df_member_chart_data = get_member_chart_data(idc,cust_id)
-        df_member_chart_data['display_name'] = df_row[0]['display_name']
+        display_name = df_row['display_name']
+        latest_iRating = get_member_latest_iRating(df_member_chart_data)
+        driver_qualification = get_pec_driver_qualification(latest_iRating)
+        driver_classification = get_pec_driver_classification(latest_iRating)
+        df_pec_driver_info.loc[index] = [cust_id,display_name,latest_iRating,driver_classification,driver_qualification]
+        #df_member_chart_data['display_name'] = df_row['display_name']
+        #df_member_chart_data['driver_qualification'] = '' #just add a column with empty string
+        #df_member_chart_data['driver_classification'] = '' #just add a column with empty string
+        #df_latest = df_member_chart_data.iloc[-1] #get the latest iRating (last row)
+        #df_member_chart_data['driver_qualification'] = get_pec_driver_qualification(df_member_chart_data['value'])
+        #df_member_chart_data['driver_classification'] = get_pec_driver_classification(df_member_chart_data['value'])
+        #df_pec_driver_info += df_latest
         print(end=".")
-        df_member_chart_data['driver_qualification'] = get_pec_driver_qualification(df_member_chart_data['value'])
-        df_member_chart_data['driver_classification'] = get_pec_driver_classification(df_member_chart_data['value'])
-        df_latest = df_member_chart_data.iloc[-1]
-        df_pec_driver_info += df_latest
     print()
     return df_pec_driver_info
 
@@ -97,10 +118,11 @@ def get_member_irating(idc: irDataClient, custid: int) -> pd:
 
 if __name__ == '__main__':
    
-    if len(sys.argv) == 4:
+    if len(sys.argv) == 5:
         username = sys.argv[1] #first cmdline arg is acnt name
         password = sys.argv[2] #second cmdline arg is pwd
         cust_id_csv = sys.argv[3] #third cmdline arg is csv with one table cust_ids (iRacing id)
+        csv_name = sys.argv[3] #csv file to save results
 
     else:
         #raise BaseException('bla')  #does not work; processing is stopped see: https://docs.python.org/3/library/exceptions.html#Exception
@@ -111,6 +133,7 @@ if __name__ == '__main__':
         #password = getpass.getpass('Enter password:') # hard in practise, does not show any input hint
         password = pwinput.pwinput(prompt='Enter password: ')
         cust_id_csv = input("Enter Customer ID CSV: ")
+        csv_name = input("Enter CSV name for result: ")
     
     idc = irDataClient(username=username, password=password)
 
@@ -119,5 +142,6 @@ if __name__ == '__main__':
     df_pec_driver_info = get_pec_driver_information(idc,df_member_data)
 
     #print(f"{custid[0]},{display_name2},{latest_iRating},{driver_classification},{driver_qualification}")
-    print(tabulate(df_pec_driver_info[['cust_id','display_name','value', 'driver_classification','driver_qualification']], headers = 'keys', tablefmt = 'psql'))
+    print(tabulate(df_pec_driver_info[['cust_id','display_name','latest_iRating', 'driver_classification','driver_qualification']], headers = 'keys', tablefmt = 'psql'))
 
+    df_pec_driver_info.to_csv(csv_name,index=False,columns=['cust_id','display_name','latest_iRating', 'driver_classification','driver_qualification'])  
