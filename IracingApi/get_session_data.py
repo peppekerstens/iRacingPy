@@ -144,11 +144,12 @@ if __name__ == '__main__':
     #if team_race:
     race_result = get_session_results(session_result, 'Race')
     driver_result = get_driver_results(race_result[0]['results'])
-    print('Receiving all laps')
+    print()
+    print('Receiving all laps',end=".")
     new_list = []
     for dr in driver_result:
         new_list.append(get_valid_avg_laps(dr, idc, session_id))
-        print('.')
+        print(end=".")
     df_race_result = pd.json_normalize(race_result[0]['results'])
     df_driver_result = pd.json_normalize(driver_result)
 
