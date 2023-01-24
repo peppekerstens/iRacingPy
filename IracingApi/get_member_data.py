@@ -29,17 +29,19 @@ def get_iracing_member_data(idc: irDataClient, custid: int):
 """
 
 def get_pec_driver_qualification(iRating: int) -> str:
-    if iRating > 2500:
+    if iRating >= 2500:
         return 'lmdh'
-    elif iRating > 2000:
+    elif iRating >= 2200:
         return 'lmp2'
-    elif iRating > 1500:
+    elif iRating >= 1500:
         return 'gt3'
     else:
         return None 
 
 def get_pec_driver_classification(iRating: int) -> str:
     if iRating > 3750:
+        return 'Not allowed'
+    elif iRating >= 2750:
         return 'Gold'
     else:
         return 'Silver'
