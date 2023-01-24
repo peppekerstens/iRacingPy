@@ -36,6 +36,7 @@ import numpy as np
 #https://stackoverflow.com/questions/9202224/getting-a-hidden-password-input
 #import getpass
 import pwinput
+from tqdm import tqdm #https://github.com/tqdm/tqdm/#readme
 
 #https://stackoverflow.com/questions/2733813/iterating-through-a-json-object
 #could (should!) improve with List Comprehensions or Vectorization
@@ -111,6 +112,9 @@ if __name__ == '__main__':
         password = sys.argv[2] #second cmdline arg is pwd
         session_id = sys.argv[3] #third cmdline arg is session_id
         csv_name = sys.argv[4] #third cmdline arg is csv_name
+
+    if csv_name == None:
+        csv_name = 'session_' + session_id + '.csv'
     
     print('Processing...')
     idc = irDataClient(username=username, password=password)
@@ -144,12 +148,18 @@ if __name__ == '__main__':
     #if team_race:
     race_result = get_session_results(session_result, 'Race')
     driver_result = get_driver_results(race_result[0]['results'])
+
+    driver_count = len(driver_result)
+
     print()
-    print('Receiving all laps',end=".")
+    print('Receiving all laps')
+    print()
     new_list = []
-    for dr in driver_result:
-        new_list.append(get_valid_avg_laps(dr, idc, session_id))
-        print(end=".")
+    with tqdm(total=driver_count) as pbar:
+        for dr in driver_result:
+            new_list.append(get_valid_avg_laps(dr, idc, session_id))
+            pbar.update(1)
+            #print(end=".")
     df_race_result = pd.json_normalize(race_result[0]['results'])
     df_driver_result = pd.json_normalize(driver_result)
 
@@ -179,22 +189,16 @@ if __name__ == '__main__':
     df_current_track_detail['track_config_length_km'].iloc[-1]
     df_driver_result['speed'] = (df_current_track_detail['track_config_length_km'].iloc[-1] / df_driver_result['avg_lap_valid'] * 3600)
     df_driver_result['time'] = (df_driver_result['avg_lap_valid'] * df_driver_result['laps_complete'])
-    
-    #not there yet....
-    #df_driver_result['percentage'] = np.where(df_race_result['team_id'] == df_driver_result['team_id'], 0, df_driver_result['laps_complete'] / df_race_result['laps_complete'])
-    #throws ValueError: Can only compare identically-labeled Series objects
-    #so the long way round
     df_driver_result['percentage'] = round(df_driver_result['laps_complete'] / total_race_laps * 100,0)
-    #df_driver_result['percentage'] = round(df_driver_result['laps_complete'] / get_total_laps(df_driver_result, df_driver_result['team_id'].iloc[0]) * 100,0)
-    
-    #df_driver_result[['team_id','cust_id','display_name', 'avg_lap','laps_complete','speed','time', 'percentage']]
+    car_class = df_driver_result['car_class_short_name'] == "GT3 Class"
+    df_driver_result_class = df_driver_result[car_class]
     print()
     print('GT3 Class driver result')
     print()
-    print(tabulate(df_driver_result[['team_id','cust_id','display_name', 'avg_lap','avg_lap_valid','laps_complete','speed','time', 'percentage']], headers = 'keys', tablefmt = 'psql'))
+    print(tabulate(df_driver_result_class[['team_id','cust_id','display_name', 'avg_lap','avg_lap_valid','laps_complete','speed','time', 'percentage']], headers = 'keys', tablefmt = 'psql'))
 
 
     #from pathlib import Path  
     #filepath = Path('folder/subfolder/out.csv')  
     #filepath.parent.mkdir(parents=True, exist_ok=True)  
-    df_driver_result.to_csv(csv_name,index=False,columns=['team_id','cust_id','display_name', 'avg_lap','avg_lap_valid','laps_complete','speed','time', 'percentage'])  
+    df_driver_result_class.to_csv(csv_name,index=False,columns=['team_id','cust_id','display_name', 'avg_lap','avg_lap_valid','laps_complete','speed','time', 'percentage'])  
