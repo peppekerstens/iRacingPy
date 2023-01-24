@@ -5,32 +5,12 @@
 # On entry, a driver is Silver when iRating <2750
 # A GT3 team may not have Gold drivers attending which have an iRating >3750 for more than 3 times
 
-# Silver drivers Drivers competing GT3 AM class drivers may not have an Irating beyond 3750
-# This is processed, producing a table presenting 
-#+----+-----------+-----------+---------------------------+-----------+-----------------+---------+-----------+--------------+
-#|    |   team_id |   cust_id | display_name              |   avg_lap |   laps_complete |   speed |      time |   percentage |
-#|----+-----------+-----------+---------------------------+-----------+-----------------+---------+-----------+--------------|
-# in order of result (winning team first and so on)
-#
-#+---------------+--------------+
-#|  column name  |  unit        |
-#|---------------+--------------+
-#| avg_lap       | seconds      |
-#| laps_complete | int          |
-#| speed         | km           |
-#| time          | seconds      |
-#| percentage    | percentage   |
-#|---------------+--------------+
-#
-# Current limitations
-# - Nu named arguments
-# - Assumes only 1 race
-# - Assumes team race 
-#
-# Links
-# https://datatofish.com/compare-values-dataframes/
 
-
+# at minimum, indicator file must contain, 
+#
+# team_id,races_attended,am_driven
+#
+# but may be wise to keep some history as well for reference and proof (nice to have)
 
 import sys
 import os
@@ -76,5 +56,3 @@ if latest_session == None:
 # save indicator as file
 
 
-#at minimum, indicator file must contain 
-#team_id,races_attended,avg_percentage_am_driven
