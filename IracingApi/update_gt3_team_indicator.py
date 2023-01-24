@@ -4,6 +4,7 @@
 # On entry, a driver Gold when iRating >= 2750
 # On entry, a driver is Silver when iRating <2750
 # A GT3 team may not have Gold drivers attending which have an iRating >3750 for more than 3 times
+# comment rest of rules here for script/rule clarity
 
 
 # at minimum, indicator file must contain, 
@@ -40,16 +41,23 @@ else:
     df_indicator = pd.DataFrame.from_dict(previous_state)
 
 # get result from current race
-latest_session = None
-if latest_session == None:
+latest_session_file = None
+if latest_session_file == None:
     sessionsFilenamesList = glob.glob('session_*.csv')
-    latest_session = max(sessionsFilenamesList, key=os.path.getmtime)
+    latest_session_file = max(sessionsFilenamesList, key=os.path.getmtime)
     answer = None
     while answer != 'y' or answer != 'n':
         answer = input(f"Found {latest_session}, use that file and continue? y/n")
 
+if answer == 'n':
+    print('Error: no valid session file provided. please re-run and provide valid file!')
+    quit() #https://www.scaler.com/topics/exit-in-python/
+
+latest_session = import_csv(latest_session_file)
+df_latest_session = pd.DataFrame.from_dict(latest_session)
 
 # add the driver percentages to the teams percentages
+
 
 # show indicator
 
