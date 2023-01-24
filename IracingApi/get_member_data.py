@@ -1,10 +1,11 @@
 
 import sys
 import csv
-from  iracingdataapi.client import irDataClient
+from iracingdataapi.client import irDataClient
 import pandas as pd 
 import pwinput
 from tabulate import tabulate
+from tqdm import tqdm #https://github.com/tqdm/tqdm/#readme
 
 """
 def get_iracing_member_data(idc: irDataClient, custid: int):
@@ -57,28 +58,31 @@ def get_member_latest_iRating(df_member_chart_data: pd) -> int:
     return last_value 
 
 def get_pec_driver_information(idc: irDataClient, df_member_data: pd) -> pd:
+    member_count = len(df_member_data)
     df_pec_driver_info = pd.DataFrame(columns=['cust_id','display_name','latest_iRating', 'driver_classification','driver_qualification'])
     #df_member_data['latest_iRating'] = None
     #df_member_data['driver_qualification'] = '' #just add a column with empty string
     #df_member_data['driver_classification'] = '' #just add a column with empty string
-    print('Getting driver chart data',end=".")
+    print('Getting driver chart data')
+    print()
     #df_pec_driver_info = None
-    for index, df_row in df_member_data.iterrows():
-        cust_id = df_row['cust_id'] #no need to do something like df_row.iloc[0]['cust_id'] as it already is a single row
-        df_member_chart_data = get_member_chart_data(idc,cust_id)
-        display_name = df_row['display_name']
-        latest_iRating = get_member_latest_iRating(df_member_chart_data)
-        driver_qualification = get_pec_driver_qualification(latest_iRating)
-        driver_classification = get_pec_driver_classification(latest_iRating)
-        df_pec_driver_info.loc[index] = [cust_id,display_name,latest_iRating,driver_classification,driver_qualification]
-        #df_member_chart_data['display_name'] = df_row['display_name']
-        #df_member_chart_data['driver_qualification'] = '' #just add a column with empty string
-        #df_member_chart_data['driver_classification'] = '' #just add a column with empty string
-        #df_latest = df_member_chart_data.iloc[-1] #get the latest iRating (last row)
-        #df_member_chart_data['driver_qualification'] = get_pec_driver_qualification(df_member_chart_data['value'])
-        #df_member_chart_data['driver_classification'] = get_pec_driver_classification(df_member_chart_data['value'])
-        #df_pec_driver_info += df_latest
-        print(end=".")
+    with tqdm(total=member_count) as pbar:
+        for index, df_row in df_member_data.iterrows():
+            cust_id = df_row['cust_id'] #no need to do something like df_row.iloc[0]['cust_id'] as it already is a single row
+            df_member_chart_data = get_member_chart_data(idc,cust_id)
+            display_name = df_row['display_name']
+            latest_iRating = get_member_latest_iRating(df_member_chart_data)
+            driver_qualification = get_pec_driver_qualification(latest_iRating)
+            driver_classification = get_pec_driver_classification(latest_iRating)
+            df_pec_driver_info.loc[index] = [cust_id,display_name,latest_iRating,driver_classification,driver_qualification]
+            #df_member_chart_data['display_name'] = df_row['display_name']
+            #df_member_chart_data['driver_qualification'] = '' #just add a column with empty string
+            #df_member_chart_data['driver_classification'] = '' #just add a column with empty string
+            #df_latest = df_member_chart_data.iloc[-1] #get the latest iRating (last row)
+            #df_member_chart_data['driver_qualification'] = get_pec_driver_qualification(df_member_chart_data['value'])
+            #df_member_chart_data['driver_classification'] = get_pec_driver_classification(df_member_chart_data['value'])
+            #df_pec_driver_info += df_latest
+            pbar.update(1)
     print()
     return df_pec_driver_info
 
