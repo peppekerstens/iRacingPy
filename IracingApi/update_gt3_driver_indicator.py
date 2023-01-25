@@ -25,7 +25,7 @@ def import_csv(path: str) -> dict:
 previous_state = import_csv(team_indicator_file)
 
 if previous_state == None:
-    df_indicator = pd.DataFrame(columns=['cust_id','classification'])
+    df_indicator = pd.DataFrame(columns=['cust_id','display_name','classification'])
 else:
     df_indicator = pd.DataFrame.from_dict(previous_state)
 
@@ -44,10 +44,22 @@ if answer == 'n':
 latest_session = import_csv(latest_session_file)
 df_latest_session = pd.DataFrame.from_dict(latest_session)
 
+#add previous classification
+df_pec_driver_info = pd.DataFrame(columns=['cust_id','display_name','old_classification','speed','percentage'])
+for index, df_row in df_latest_session.iterrows():
+    cust_id = 
+    display_name = 
+    speed = 
+    percentage =
+    driver_indicator = df_indicator['cust_id'] == df_row['cust_id'] 
+    df_indicator_driver = df_indicator[driver_indicator]
+    old_classification = df_indicator_driver['classification']
+    df_pec_driver_info[index] = [cust_id,display_name,old_classification,speed,percentage]
+
 #how large is is the deadzone?
-total_drivers = len(df_latest_session)
-gold_drivers = df_indicator['classification'] == 'Gold'
-df_indicator_gold_drivers = df_indicator[gold_drivers]
+total_drivers = len(df_pec_driver_info)
+gold_drivers = df_pec_driver_info['old_classification'] == 'Gold'
+df_indicator_gold_drivers = df_pec_driver_info[gold_drivers]
 gold_driver_count = len(df_indicator_gold_drivers)
 
 
