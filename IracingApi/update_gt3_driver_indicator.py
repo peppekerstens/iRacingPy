@@ -86,14 +86,14 @@ for index, df_row in df_latest_session.iterrows():
         percentage = df_row['percentage']
         new_classification = 'None'
         race_count = df_indicator_driver.iloc[0]['race_count'] + 1 # https://stackoverflow.com/questions/16729574/how-can-i-get-a-value-from-a-cell-of-a-dataframe
-        total_time = df_indicator_driver.iloc[0]['total_time'] + df_row['time']
-        avg_speed = (df_indicator_driver.iloc[0]['total_time'] * df_indicator_driver.iloc[0]['avg_speed'] + df_row['time'] * df_row['speed']) / total_time
+        total_time = round(df_indicator_driver.iloc[0]['total_time'] + df_row['time'],2)
+        avg_speed = round((df_indicator_driver.iloc[0]['total_time'] * df_indicator_driver.iloc[0]['avg_speed'] + df_row['time'] * df_row['speed']) / total_time,2)
         df_pec_driver_info.loc[index] = [cust_id,display_name,race_count,old_classification,total_time,avg_speed,percentage,new_classification]
 
 #print(df_pec_driver_info['avg_speed'])
 print(tabulate(df_pec_driver_info, headers = 'keys', tablefmt = 'psql'))
 
-df_new_indicator = pd.DataFrame(columns=['cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification'])
+df_new_indicator = pd.DataFrame(columns=['cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification','deadzone','reclassified'])
 #how large is is the deadzone?
 silver_deadzone_speed = 0
 gold_deadzone_speed = 0
@@ -112,23 +112,28 @@ if silver_driver_deadzone > 0 and gold_driver_deadzone >0:
     gold_deadzone_speed = df_pec_driver_info.iloc[gold_deadzone_limit]['avg_speed']
     #review created list for new_classification
     for index, df_row in df_pec_driver_info_sorted.iterrows():
+        deadzone = False
         if df_row['avg_speed'] > gold_deadzone_speed:
             new_classification = 'Gold'
         if df_row['avg_speed'] < silver_deadzone_speed:
             new_classification = 'Silver'
         if df_row['avg_speed'] <= gold_deadzone_speed and df_row['avg_speed'] >= silver_deadzone_speed:
-            new_classification  = df_row['old_classification']
+            new_classification = df_row['old_classification']
+            deadzone = True
+        reclassified = False   
+        if new_classification != df_row['old_classification']:
+            reclassified = True
         if new_classification == 'Gold':
             driver_indicator = df_indicator['cust_id'] == df_row['cust_id'] 
             df_indicator_driver = df_indicator[driver_indicator]
             percentage = (df_indicator_driver.iloc[0]['race_count'] * df_indicator_driver.iloc[0]['percentage'] + df_row['percentage']) / df_row['race_count']
         else:
-            percentage =  df_indicator_driver['percentage']
-        df_new_indicator.loc[index] = [df_row['cust_id'] ,df_row['display_name'],df_row['race_count'],df_row['old_classification'],df_row['total_time'],df_row['avg_speed'],percentage,new_classification]
+            percentage =  df_indicator_driver.iloc[0]['percentage']
+        df_new_indicator.loc[index] = [df_row['cust_id'] ,df_row['display_name'],df_row['race_count'],df_row['old_classification'],df_row['total_time'],df_row['avg_speed'],percentage,new_classification,deadzone,reclassified]
 else:
     print(f"WARNING: detected deadzone too small to use!")
     #synthesise df_new_indicator
 
-print(tabulate(df_new_indicator[['cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification']], headers = 'keys', tablefmt = 'psql'))
+print(tabulate(df_new_indicator[['cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification','deadzone','reclassified']], headers = 'keys', tablefmt = 'psql'))
 
 df_new_indicator.to_csv(driver_indicator_file,index=False)
