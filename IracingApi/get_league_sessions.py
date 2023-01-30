@@ -2,6 +2,7 @@ import pwinput
 from iracingdataapi.client import irDataClient
 from tabulate import tabulate
 from tqdm import tqdm #https://github.com/tqdm/tqdm/#readme
+import pandas as pd
 
 league_id = 5606
 season_id = 83043
