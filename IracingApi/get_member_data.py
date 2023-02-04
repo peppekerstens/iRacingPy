@@ -1,3 +1,11 @@
+# do we really need this?
+# the race result action (get_session_data.py) seem to contain following info for attending drivers;
+# 'finish_position': 15, 'finish_position_in_class': 5,
+# 'old_cpi': 17.439022,'oldi_rating': 5655, 'old_ttrating': 1384,
+# 'new_cpi': 17.439022, 'newi_rating': 5655, 'new_ttrating': 1384,
+# the new parts are not updated when results are not an offcial
+# .... as well as team info
+# 'team_id': -286631, 'display_name': 'PGZ Motorsport #119', 'finish_position': 38,
 
 import sys
 import csv
