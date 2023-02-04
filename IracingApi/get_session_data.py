@@ -56,6 +56,12 @@ def get_driver_results(race_result: json):
             new_list.append(driver)
     return new_list
 
+def get_team_name(race_result: json, team_id: int) -> str:
+    for item in race_result:
+        if item['team_id'] == team_id:
+            return item['display_name']
+    return ''
+
 def get_valid_avg_laps(driver_result: json, idc: irDataClient, session_id: int):
     cust_id = driver_result['cust_id']
     team_id = driver_result['team_id']
@@ -147,8 +153,8 @@ if __name__ == '__main__':
 
     #if team_race:
     race_result = get_session_results(session_result, 'Race')
-    driver_result = get_driver_results(race_result[0]['results'])
-
+    first_race_result = race_result[0]['results'] #improve: hard coding on first race!
+    driver_result = get_driver_results(first_race_result) 
     driver_count = len(driver_result)
 
     print()
@@ -160,7 +166,7 @@ if __name__ == '__main__':
             new_list.append(get_valid_avg_laps(dr, idc, session_id))
             pbar.update(1)
             #print(end=".")
-    df_race_result = pd.json_normalize(race_result[0]['results'])
+    df_race_result = pd.json_normalize(first_race_result)
     df_driver_result = pd.json_normalize(driver_result)
 
     #some code to detect by class
@@ -190,15 +196,18 @@ if __name__ == '__main__':
     df_driver_result['speed'] = (df_current_track_detail['track_config_length_km'].iloc[-1] / df_driver_result['avg_lap_valid'] * 3600)
     df_driver_result['time'] = (df_driver_result['avg_lap_valid'] * df_driver_result['laps_complete'])
     df_driver_result['percentage'] = round(df_driver_result['laps_complete'] / total_race_laps * 100,0)
+    #get the team name from the race_result - not working yet, so empty for now
+    #df_driver_result['team_display_name'] = get_team_name(first_race_result, df_driver_result['team_id'])
+    df_driver_result['team_display_name'] = ''
     car_class = df_driver_result['car_class_short_name'] == "GT3 Class"
     df_driver_result_class = df_driver_result[car_class]
     print()
     print('GT3 Class driver result')
     print()
-    print(tabulate(df_driver_result_class[['team_id','cust_id','display_name', 'avg_lap','avg_lap_valid','laps_complete','speed','time', 'percentage']], headers = 'keys', tablefmt = 'psql'))
+    print(tabulate(df_driver_result_class[['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','avg_lap_valid','laps_complete','speed','time', 'percentage']], headers = 'keys', tablefmt = 'psql'))
 
 
     #from pathlib import Path  
     #filepath = Path('folder/subfolder/out.csv')  
     #filepath.parent.mkdir(parents=True, exist_ok=True)  
-    df_driver_result_class.to_csv(csv_name,index=False,columns=['team_id','cust_id','display_name', 'avg_lap','avg_lap_valid','laps_complete','speed','time', 'percentage'])  
+    df_driver_result_class.to_csv(csv_name,index=False,columns=['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','avg_lap_valid','laps_complete','speed','time', 'percentage'])  
