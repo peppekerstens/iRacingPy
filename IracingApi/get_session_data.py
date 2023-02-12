@@ -36,6 +36,7 @@ import numpy as np
 #https://stackoverflow.com/questions/9202224/getting-a-hidden-password-input
 #import getpass
 import pwinput
+from tqdm import tqdm #https://github.com/tqdm/tqdm/#readme
 
 #https://stackoverflow.com/questions/2733813/iterating-through-a-json-object
 #could (should!) improve with List Comprehensions or Vectorization
@@ -54,6 +55,12 @@ def get_driver_results(race_result: json):
         for driver in driver_results['driver_results']:
             new_list.append(driver)
     return new_list
+
+def get_team_name(race_result: json, team_id: int) -> str:
+    for item in race_result:
+        if item['team_id'] == team_id:
+            return item['display_name']
+    return ''
 
 def get_valid_avg_laps(driver_result: json, idc: irDataClient, session_id: int):
     cust_id = driver_result['cust_id']
@@ -111,6 +118,9 @@ if __name__ == '__main__':
         password = sys.argv[2] #second cmdline arg is pwd
         session_id = sys.argv[3] #third cmdline arg is session_id
         csv_name = sys.argv[4] #third cmdline arg is csv_name
+
+    if csv_name == None:
+        csv_name = 'session_' + session_id + '.csv'
     
     print('Processing...')
     idc = irDataClient(username=username, password=password)
@@ -136,17 +146,27 @@ if __name__ == '__main__':
     current_track = df_all_tracks['track_id'] == track['track_id']
     df_current_track_detail = df_all_tracks[current_track]
     
+    print()
+    print('Track information')
+    print()
     print(tabulate(df_current_track_detail[['track_name','config_name','track_config_length_km']], headers = 'keys', tablefmt = 'psql'))
 
     #if team_race:
     race_result = get_session_results(session_result, 'Race')
-    driver_result = get_driver_results(race_result[0]['results'])
+    first_race_result = race_result[0]['results'] #improve: hard coding on first race!
+    driver_result = get_driver_results(first_race_result) 
+    driver_count = len(driver_result)
+
+    print()
     print('Receiving all laps')
+    print()
     new_list = []
-    for dr in driver_result:
-        new_list.append(get_valid_avg_laps(dr, idc, session_id))
-        print('.')
-    df_race_result = pd.json_normalize(race_result[0]['results'])
+    with tqdm(total=driver_count) as pbar:
+        for dr in driver_result:
+            new_list.append(get_valid_avg_laps(dr, idc, session_id))
+            pbar.update(1)
+            #print(end=".")
+    df_race_result = pd.json_normalize(first_race_result)
     df_driver_result = pd.json_normalize(driver_result)
 
     #some code to detect by class
@@ -155,15 +175,17 @@ if __name__ == '__main__':
     #Get the total time driven per team, to calculate percentage per driver later
     df_race_result['avg_lap'] = (df_race_result['average_lap'] / 10000)
     df_race_result['time'] = (df_race_result['avg_lap'] * df_race_result['laps_complete'])
-    total_race_laps = df_race_result['laps_complete'].max()
     
+    print()
+    print('Overall race result')
+    print()
     #df_race_result[['team_id','display_name','avg_lap','laps_complete','time']]
     print(tabulate(df_race_result[['team_id','display_name','avg_lap','laps_complete','time']], headers = 'keys', tablefmt = 'psql'))
 
-    #Get the team results per class - ToDo
+    #Get the team results for the GT3 class
     car_class = df_race_result['car_class_short_name'] == "GT3 Class"
     df_race_result_class = df_race_result[car_class]
-
+    total_race_laps = df_race_result_class['laps_complete'].max()
     #Get the speed an total time driven per driver of each team
     #average_lap = 940294 
     #average_lap = 94.0294 => sec
@@ -173,21 +195,19 @@ if __name__ == '__main__':
     df_current_track_detail['track_config_length_km'].iloc[-1]
     df_driver_result['speed'] = (df_current_track_detail['track_config_length_km'].iloc[-1] / df_driver_result['avg_lap_valid'] * 3600)
     df_driver_result['time'] = (df_driver_result['avg_lap_valid'] * df_driver_result['laps_complete'])
-    
-   
-    
-    #not there yet....
-    #df_driver_result['percentage'] = np.where(df_race_result['team_id'] == df_driver_result['team_id'], 0, df_driver_result['laps_complete'] / df_race_result['laps_complete'])
-    #throws ValueError: Can only compare identically-labeled Series objects
-    #so the long way round
     df_driver_result['percentage'] = round(df_driver_result['laps_complete'] / total_race_laps * 100,0)
-    #df_driver_result['percentage'] = round(df_driver_result['laps_complete'] / get_total_laps(df_driver_result, df_driver_result['team_id'].iloc[0]) * 100,0)
-    
-    #df_driver_result[['team_id','cust_id','display_name', 'avg_lap','laps_complete','speed','time', 'percentage']] 
-    print(tabulate(df_driver_result[['team_id','cust_id','display_name', 'avg_lap','avg_lap_valid','laps_complete','speed','time', 'percentage']], headers = 'keys', tablefmt = 'psql'))
+    #get the team name from the race_result - not working yet, so empty for now
+    #df_driver_result['team_display_name'] = get_team_name(first_race_result, df_driver_result['team_id'])
+    df_driver_result['team_display_name'] = ''
+    car_class = df_driver_result['car_class_short_name'] == "GT3 Class"
+    df_driver_result_class = df_driver_result[car_class]
+    print()
+    print('GT3 Class driver result')
+    print()
+    print(tabulate(df_driver_result_class[['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','avg_lap_valid','laps_complete','speed','time', 'percentage']], headers = 'keys', tablefmt = 'psql'))
 
 
     #from pathlib import Path  
     #filepath = Path('folder/subfolder/out.csv')  
     #filepath.parent.mkdir(parents=True, exist_ok=True)  
-    df_driver_result.to_csv(csv_name,index=False,columns=['team_id','cust_id','display_name', 'avg_lap','avg_lap_valid','laps_complete','speed','time', 'percentage'])  
+    df_driver_result_class.to_csv(csv_name,index=False,columns=['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','avg_lap_valid','laps_complete','speed','time', 'percentage'])  

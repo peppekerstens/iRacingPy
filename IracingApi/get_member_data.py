@@ -1,3 +1,11 @@
+# do we really need this?
+# the race result action (get_session_data.py) seem to contain following info for attending drivers;
+# 'finish_position': 15, 'finish_position_in_class': 5,
+# 'old_cpi': 17.439022,'oldi_rating': 5655, 'old_ttrating': 1384,
+# 'new_cpi': 17.439022, 'newi_rating': 5655, 'new_ttrating': 1384,
+# the new parts are not updated when results are not an offcial
+# .... as well as team info
+# 'team_id': -286631, 'display_name': 'PGZ Motorsport #119', 'finish_position': 38,
 
 import sys
 import csv
@@ -69,19 +77,22 @@ def get_pec_driver_information(idc: irDataClient, df_member_data: pd) -> pd:
     with tqdm(total=member_count) as pbar:
         for index, df_row in df_member_data.iterrows():
             cust_id = df_row['cust_id'] #no need to do something like df_row.iloc[0]['cust_id'] as it already is a single row
-            df_member_chart_data = get_member_chart_data(idc,cust_id)
-            display_name = df_row['display_name']
-            latest_iRating = get_member_latest_iRating(df_member_chart_data)
-            driver_qualification = get_pec_driver_qualification(latest_iRating)
-            driver_classification = get_pec_driver_classification(latest_iRating)
-            df_pec_driver_info.loc[index] = [cust_id,display_name,latest_iRating,driver_classification,driver_qualification]
-            #df_member_chart_data['display_name'] = df_row['display_name']
-            #df_member_chart_data['driver_qualification'] = '' #just add a column with empty string
-            #df_member_chart_data['driver_classification'] = '' #just add a column with empty string
-            #df_latest = df_member_chart_data.iloc[-1] #get the latest iRating (last row)
-            #df_member_chart_data['driver_qualification'] = get_pec_driver_qualification(df_member_chart_data['value'])
-            #df_member_chart_data['driver_classification'] = get_pec_driver_classification(df_member_chart_data['value'])
-            #df_pec_driver_info += df_latest
+            try:
+                df_member_chart_data = get_member_chart_data(idc,cust_id)
+                display_name = df_row['display_name']
+                latest_iRating = get_member_latest_iRating(df_member_chart_data)
+                driver_qualification = get_pec_driver_qualification(latest_iRating)
+                driver_classification = get_pec_driver_classification(latest_iRating)
+                df_pec_driver_info.loc[index] = [cust_id,display_name,latest_iRating,driver_classification,driver_qualification]
+                #df_member_chart_data['display_name'] = df_row['display_name']
+                #df_member_chart_data['driver_qualification'] = '' #just add a column with empty string
+                #df_member_chart_data['driver_classification'] = '' #just add a column with empty string
+                #df_latest = df_member_chart_data.iloc[-1] #get the latest iRating (last row)
+                #df_member_chart_data['driver_qualification'] = get_pec_driver_qualification(df_member_chart_data['value'])
+                #df_member_chart_data['driver_classification'] = get_pec_driver_classification(df_member_chart_data['value'])
+                #df_pec_driver_info += df_latest
+            except:
+                print(f"WARNING: Could not find info for cust_id: {cust_id}")
             pbar.update(1)
     print()
     return df_pec_driver_info
@@ -138,8 +149,12 @@ if __name__ == '__main__':
         username = input("Enter username: ")
         #password = getpass.getpass('Enter password:') # hard in practise, does not show any input hint
         password = pwinput.pwinput(prompt='Enter password: ')
-        cust_id_csv = input("Enter Customer ID CSV: ")
-        csv_name = input("Enter CSV name for result: ")
+        cust_id_csv = input("Enter Customer ID CSV (press <enter> for iracingid.csv): ")
+        if cust_id_csv == '':
+            cust_id_csv = 'iracingid.csv'
+        csv_name = input("Enter CSV name for result (press <enter> for member_data.csv): ")
+        if csv_name == '':
+            csv_name = 'member_data.csv'
     
     idc = irDataClient(username=username, password=password)
 
