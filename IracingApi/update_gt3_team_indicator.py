@@ -30,28 +30,6 @@ driver_indicator_file = 'pec_s3_driver_indicator.csv' #server both as reference 
 team_indicator_file = 'pec_s3_team_indicator.csv' #server both as reference data set from previous race(s) as well as file to save latest status to after processing
 latest_session_file = None #results from current race. maybe an agrument for this script? currently being detected as latest file within directory with name session_*.csv
 
-def generate_team_indicator(df_member_data: pd, cust_id: int) -> pd:
-    df_indicator = pd.DataFrame(columns=['cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification','deadzone','reclassified'])
-    driver = df_member_data['cust_id'] == cust_id
-    df_driver = df_member_data[driver]
-    #print(tabulate(df_driver, headers = 'keys', tablefmt = 'psql'))
-    if not df_driver.empty:
-        classification = df_driver.iloc[0]['driver_classification']
-        #print(df_row['driver_classification'])
-        if classification == 'Not allowed':
-            #print(df_row['driver_classification'])
-            classification = 'Gold'
-        df_indicator.loc[0] = [df_row['cust_id'] ,df_row['display_name'],0,classification,0,0,0,classification,False,False]
-    return df_indicator
-
-def get_df_indicator_team(df_indicator: pd, df_member_data: pd, cust_id: int) -> pd:
-    if df_indicator.empty:
-        df_indicator_driver = generate_member_data_driver_indicator(df_member_data,cust_id)
-    else:
-        driver_indicator = df_indicator['cust_id'] == cust_id
-        df_indicator_driver = df_indicator[driver_indicator]
-    return df_indicator_driver
-
 # Read the driver_indicator_file, if exists, if not; stop
 try:
     df_driver_indicator = pd.read_csv(driver_indicator_file)
@@ -99,48 +77,38 @@ df_gold_drivers = df_driver_indicator[gold_drivers]
 
 #we want the drivers, grouped by team
 #https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html
-df_latest_session_grouped_team = df_latest_session.groupby('team_id', group_keys=True).apply(lambda x: x) 
+#df_latest_session_grouped_team = df_latest_session.groupby('team_id', group_keys=True).apply(lambda x: x) 
+#not figured out yet how to handle that :(
 
-# rebuild team_indicator by iterating through the driver_indicator_file, 
-
+#iterate through all the info an rebuild team_indicator 
 df_new_team_indicator = pd.DataFrame(columns=['team_id','display_name','race_count','percentage'])
-
-
-
-
-
-
-for index, row in df_driver_indicator.iterrows():
-    team_id = row['team_id']
-    team = df_team_indicator['cust_id'] == team_id
+unique_teams = df_latest_session['team_id'].unique()
+for team_id in unique_teams:
+    #get driver results for this team
+    drivers = df_latest_session['team_id'] == team_id
+    df_drivers = df_latest_session[drivers]
+    team_display_name = df_drivers.iloc[0]['team_display_name']
+    percentage = 0
+    # iterate through the drivers for this team
+    for index, row in df_drivers.iterrows():
+        #is it a gold driver? get the driver indicator
+        indicator = df_gold_drivers['cust_id'] == row['cust_id']
+        df_indicator = df_gold_drivers[indicator]
+        if not df_indicator.empty: #if a result, driver is gold
+            percentage += row['percentage']
+    #check if there are previous team results in the team indicator file
+    team = df_team_indicator['team_id'] == team_id
     df_team = df_team_indicator[team]
-     
-
-    df_team = get_team(df_team_indicator,team_id)
     if not df_team.empty:
-        #print(tabulate(df_indicator_driver, headers = 'keys', tablefmt = 'psql'))
-        old_classification = df_indicator_driver.iloc[0]['old_classification']
-        cust_id = df_row['cust_id'] 
-        display_name = df_row['display_name']
-        percentage = df_row['percentage']
-        new_classification = df_indicator_driver.iloc[0]['new_classification']
-        race_count = df_indicator_driver.iloc[0]['race_count'] + 1 # https://stackoverflow.com/questions/16729574/how-can-i-get-a-value-from-a-cell-of-a-dataframe
-        total_time = round(df_indicator_driver.iloc[0]['total_time'] + df_row['time'],2)
-        avg_speed = round((df_indicator_driver.iloc[0]['total_time'] * df_indicator_driver.iloc[0]['avg_speed'] + df_row['time'] * df_row['speed']) / total_time,2)
-        df_pec_driver_info.loc[index] = [cust_id,display_name,race_count,old_classification,total_time,avg_speed,percentage,new_classification]
-    if df_indicator_driver.empty:    
-        print(f"WARNING: could not find indicator information for driver {df_row['display_name']} ({df_row['cust_id']}) skipping!")
-
-
-
-    #lookup pro results
-    current_team = df_latest_session['team_id'] == row['team_id']
-    df_latest_session_team = df_latest_session[current_team]
-
-
+        race_count = df_team.iloc[0]['race_count'] + 1
+        running_percentage = round((df_team.iloc[0]['race_count'] * df_team.iloc[0]['percentage'] + percentage) /  race_count,2)   
+    if df_team.empty:
+        running_percentage = percentage
+        race_count = 1            
+    df_new_team_indicator.loc[index] = [team_id,team_display_name,race_count,running_percentage]
 
 # show indicator
+print(tabulate(df_new_team_indicator, headers = 'keys', tablefmt = 'psql'))
 
 # save indicator as file
-
-
+df_new_team_indicator.to_csv(team_indicator_file,index=False)
