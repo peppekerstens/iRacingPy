@@ -106,7 +106,9 @@ if __name__ == '__main__':
         #password = getpass.getpass('Enter password:') # hard in practise, does not show any input hint
         password = pwinput.pwinput(prompt='Enter password: ')
         session_id = input("Enter session_id: ")
-        csv_name = input("Enter CSV name: ")
+        csv_name = input(f"Enter CSV name (<enter> for session_{session_id}.csv): ")
+        if csv_name == '':
+            csv_name = 'session_' + session_id + '.csv'
 
     if len(sys.argv) > 5:
         print('Error: to many arguments!')
