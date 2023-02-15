@@ -77,24 +77,91 @@ def get_valid_avg_laps(driver_result: json, idc: irDataClient, session_id: int):
     driver_result['average_lap_valid'] = avg_lap_time
     return driver_result
 
-"""
-def get_valid_avg_laps(idc: irDataClient, session_id: int, team_id = None, cust_id = None):
-    lap_data = idc.result_lap_data(subsession_id=session_id,simsession_number=0, cust_id=cust_id, team_id=team_id)
-    df_lap_data = pd.json_normalize(lap_data) 
-    array = [0, 4] #clean lap or offtrack lap
-    clean_laps = df_lap_data['flags'].isin(array) 
-    df_clean_lap_data = df_lap_data[clean_laps]
-    valid_laps = df_lap_data['lap_time'] != -1
-    df_valid_lap_data = df_clean_lap_data[valid_laps]
-    #df_valid_lap_data[['lap_number','flags','session_time', 'session_start_time', 'lap_time', 'team_fastest_lap', 'personal_best_lap','lap_events']]
-    avg_lap_time = df_valid_lap_data['lap_time'].mean()
-    return avg_lap_time
-"""
-
 def get_total_laps(result: pd, team_id: int):
     team_match = result['team_id'] == team_id
     team_result = result[team_match]
     return team_result['laps_complete'].sum()
+
+def get_track_detail(idc: irDataClient, track_id) -> pd:
+    #get info in all tracks present in iRacing. Needed for track length, which is needed to calculate avg driver speed.
+    all_tracks = idc.tracks
+    #if all_tracks is not None:
+    #    print('Received all_tracks')
+    df_all_tracks = pd.json_normalize(all_tracks)
+    #add the lentgh in KM to all records. If we do this after filtering the track we want, we get an 'bad practise' error
+    df_all_tracks['track_config_length_km'] = df_all_tracks['track_config_length'] * 1.609344  #track_config_length is provided in miles
+    #we want info from a specific track
+    current_track = df_all_tracks['track_id'] == track_id
+    df_current_track_detail = df_all_tracks[current_track]
+    return df_current_track_detail
+
+def get_session_driver_result(idc: irDataClient, session_id) -> pd:
+    # get results from a session server
+    session_result = idc.result(subsession_id=session_id)
+    if session_result is not None:
+        print('Received session_result')
+
+    team_race = False
+    if session_result['min_team_drivers'] > 1 and session_result['max_team_drivers'] > 1: team_race = True
+
+    track = session_result['track']
+    df_current_track_detail = get_track_detail(idc, track['track_id'])
+    print()
+    print('Track information')
+    print()
+    print(tabulate(df_current_track_detail[['track_name','config_name','track_config_length_km']], headers = 'keys', tablefmt = 'psql'))
+ 
+    if team_race == True:
+        race_result = get_session_results(session_result, 'Race')
+        first_race_result = race_result[0]['results'] #improve: hard coding on first race!
+        driver_result = get_driver_results(first_race_result) 
+        driver_count = len(driver_result)
+
+        print()
+        print('Receiving all laps')
+        print()
+        new_list = []
+        with tqdm(total=driver_count) as pbar:
+            for dr in driver_result:
+                new_list.append(get_valid_avg_laps(dr, idc, session_id))
+                pbar.update(1)
+                #print(end=".")
+        df_race_result = pd.json_normalize(first_race_result)
+        df_driver_result = pd.json_normalize(driver_result)
+
+        #some code to detect by class
+        #https://pandas.pydata.org/docs/getting_started/intro_tutorials/03_subset_data.html
+        #
+        #Get the total time driven per team, to calculate percentage per driver later
+        df_race_result['avg_lap'] = (df_race_result['average_lap'] / 10000)
+        df_race_result['time'] = (df_race_result['avg_lap'] * df_race_result['laps_complete'])
+        
+        print()
+        print('Overall race result')
+        print()
+        #df_race_result[['team_id','display_name','avg_lap','laps_complete','time']]
+        print(tabulate(df_race_result[['team_id','display_name','avg_lap','laps_complete','time']], headers = 'keys', tablefmt = 'psql'))
+
+        #Get the team results for the GT3 class
+        car_class = df_race_result['car_class_short_name'] == "GT3 Class"
+        df_race_result_class = df_race_result[car_class]
+        total_race_laps = df_race_result_class['laps_complete'].max()
+        #Get the speed an total time driven per driver of each team
+        #average_lap = 940294 = 94.0294 sec
+        df_driver_result['avg_lap'] = (df_driver_result['average_lap'] / 10000)
+        df_driver_result['avg_lap_valid'] = (df_driver_result['average_lap_valid'] / 10000)
+        #df_driver_result['speed'] = (track_length.iloc[0] / df_driver_result['avg_lap'] * 3600)
+        df_current_track_detail['track_config_length_km'].iloc[-1]
+        df_driver_result['speed'] = (df_current_track_detail['track_config_length_km'].iloc[-1] / df_driver_result['avg_lap_valid'] * 3600)
+        df_driver_result['time'] = (df_driver_result['avg_lap_valid'] * df_driver_result['laps_complete'])
+        df_driver_result['percentage'] = round(df_driver_result['laps_complete'] / total_race_laps * 100,0)
+        #get the team name from the race_result - not working yet, so empty for now
+        #df_driver_result['team_display_name'] = get_team_name(first_race_result, df_driver_result['team_id'])
+        df_driver_result['team_display_name'] = ''
+        car_class = df_driver_result['car_class_short_name'] == "GT3 Class"
+        df_driver_result_class = df_driver_result[car_class]
+        return df_driver_result_class
+      
 
 if __name__ == '__main__':
     if len(sys.argv) < 5:
@@ -127,82 +194,7 @@ if __name__ == '__main__':
     print('Processing...')
     idc = irDataClient(username=username, password=password)
 
-    # get results from a session server
-    session_result = idc.result(subsession_id=session_id)
-    if session_result is not None:
-        print('Received session_result')
-
-    team_race = False
-    #if session_result['min_team_drivers'] == 1 and session_result['max_team_drivers'] == 1: team_race = False
-    if session_result['min_team_drivers'] > 1 and session_result['max_team_drivers'] > 1: team_race = True
-
-    track = session_result['track']
-    #get info in all tracks present in iRacing. Needed for track length, which is needed to calculate avg driver speed.
-    all_tracks = idc.tracks
-    if all_tracks is not None:
-        print('Received all_tracks')
-    df_all_tracks = pd.json_normalize(all_tracks)
-    #add the lentgh in KM to all records. If we do this after filtering the track we want, we get an 'bad practise' error
-    df_all_tracks['track_config_length_km'] = df_all_tracks['track_config_length'] * 1.609344  #track_config_length is provided in miles
-    #we want info from a specific track
-    current_track = df_all_tracks['track_id'] == track['track_id']
-    df_current_track_detail = df_all_tracks[current_track]
-    
-    print()
-    print('Track information')
-    print()
-    print(tabulate(df_current_track_detail[['track_name','config_name','track_config_length_km']], headers = 'keys', tablefmt = 'psql'))
-
-    #if team_race:
-    race_result = get_session_results(session_result, 'Race')
-    first_race_result = race_result[0]['results'] #improve: hard coding on first race!
-    driver_result = get_driver_results(first_race_result) 
-    driver_count = len(driver_result)
-
-    print()
-    print('Receiving all laps')
-    print()
-    new_list = []
-    with tqdm(total=driver_count) as pbar:
-        for dr in driver_result:
-            new_list.append(get_valid_avg_laps(dr, idc, session_id))
-            pbar.update(1)
-            #print(end=".")
-    df_race_result = pd.json_normalize(first_race_result)
-    df_driver_result = pd.json_normalize(driver_result)
-
-    #some code to detect by class
-    #https://pandas.pydata.org/docs/getting_started/intro_tutorials/03_subset_data.html
-    #
-    #Get the total time driven per team, to calculate percentage per driver later
-    df_race_result['avg_lap'] = (df_race_result['average_lap'] / 10000)
-    df_race_result['time'] = (df_race_result['avg_lap'] * df_race_result['laps_complete'])
-    
-    print()
-    print('Overall race result')
-    print()
-    #df_race_result[['team_id','display_name','avg_lap','laps_complete','time']]
-    print(tabulate(df_race_result[['team_id','display_name','avg_lap','laps_complete','time']], headers = 'keys', tablefmt = 'psql'))
-
-    #Get the team results for the GT3 class
-    car_class = df_race_result['car_class_short_name'] == "GT3 Class"
-    df_race_result_class = df_race_result[car_class]
-    total_race_laps = df_race_result_class['laps_complete'].max()
-    #Get the speed an total time driven per driver of each team
-    #average_lap = 940294 
-    #average_lap = 94.0294 => sec
-    df_driver_result['avg_lap'] = (df_driver_result['average_lap'] / 10000)
-    df_driver_result['avg_lap_valid'] = (df_driver_result['average_lap_valid'] / 10000)
-    #df_driver_result['speed'] = (track_length.iloc[0] / df_driver_result['avg_lap'] * 3600)
-    df_current_track_detail['track_config_length_km'].iloc[-1]
-    df_driver_result['speed'] = (df_current_track_detail['track_config_length_km'].iloc[-1] / df_driver_result['avg_lap_valid'] * 3600)
-    df_driver_result['time'] = (df_driver_result['avg_lap_valid'] * df_driver_result['laps_complete'])
-    df_driver_result['percentage'] = round(df_driver_result['laps_complete'] / total_race_laps * 100,0)
-    #get the team name from the race_result - not working yet, so empty for now
-    #df_driver_result['team_display_name'] = get_team_name(first_race_result, df_driver_result['team_id'])
-    df_driver_result['team_display_name'] = ''
-    car_class = df_driver_result['car_class_short_name'] == "GT3 Class"
-    df_driver_result_class = df_driver_result[car_class]
+    df_driver_result_class = get_session_driver_result(idc, session_id)
     print()
     print('GT3 Class driver result')
     print()
