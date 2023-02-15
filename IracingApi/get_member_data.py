@@ -15,28 +15,6 @@ import pwinput
 from tabulate import tabulate
 from tqdm import tqdm #https://github.com/tqdm/tqdm/#readme
 
-"""
-def get_iracing_member_data(idc: irDataClient, custid: int):
-    # get generic member information
-    member_data = idc.member(cust_id=custid)
-
-    # get generic member information
-    member_chart_data = idc.member_chart_data(cust_id=custid)
-
-    # get the summary data of a member
-    member_summary = idc.stats_member_summary(cust_id=custid)
-
-    # get latest race results of a member
-    member_recent_races = idc.stats_member_recent_races(cust_id=custid)
-
-    return {
-        "member": member_data ,
-        "summary": member_summary ,
-        "chart": member_chart_data ,
-        "recent": member_recent_races
-    }
-"""
-
 def get_pec_driver_qualification(iRating: int) -> str:
     if iRating >= 2500:
         return 'lmdh'
@@ -55,7 +33,6 @@ def get_pec_driver_classification(iRating: int) -> str:
     else:
         return 'Silver'
 
-
 def get_member_latest_iRating(df_member_chart_data: pd) -> int:
     #df_latest = df_member_chart_data.iloc[-1] #get the latest iRating (last row)
     #last_value = df_latest['value'] 
@@ -68,9 +45,6 @@ def get_member_latest_iRating(df_member_chart_data: pd) -> int:
 def get_pec_driver_information(idc: irDataClient, df_member_data: pd) -> pd:
     member_count = len(df_member_data)
     df_pec_driver_info = pd.DataFrame(columns=['cust_id','display_name','latest_iRating', 'driver_classification','driver_qualification'])
-    #df_member_data['latest_iRating'] = None
-    #df_member_data['driver_qualification'] = '' #just add a column with empty string
-    #df_member_data['driver_classification'] = '' #just add a column with empty string
     print('Getting driver chart data')
     print()
     #df_pec_driver_info = None
@@ -84,13 +58,6 @@ def get_pec_driver_information(idc: irDataClient, df_member_data: pd) -> pd:
                 driver_qualification = get_pec_driver_qualification(latest_iRating)
                 driver_classification = get_pec_driver_classification(latest_iRating)
                 df_pec_driver_info.loc[index] = [cust_id,display_name,latest_iRating,driver_classification,driver_qualification]
-                #df_member_chart_data['display_name'] = df_row['display_name']
-                #df_member_chart_data['driver_qualification'] = '' #just add a column with empty string
-                #df_member_chart_data['driver_classification'] = '' #just add a column with empty string
-                #df_latest = df_member_chart_data.iloc[-1] #get the latest iRating (last row)
-                #df_member_chart_data['driver_qualification'] = get_pec_driver_qualification(df_member_chart_data['value'])
-                #df_member_chart_data['driver_classification'] = get_pec_driver_classification(df_member_chart_data['value'])
-                #df_pec_driver_info += df_latest
             except:
                 print(f"WARNING: Could not find info for cust_id: {cust_id}")
             pbar.update(1)
@@ -113,28 +80,7 @@ def import_csv(path: str) -> dict:
     file.close()
     return data
 
-"""
-def get_member_irating(idc: irDataClient, custid: int) -> pd:
-    iracing_member_data =  get_iracing_member_data(idc, custid)
-    member_data = iracing_member_data['member']
-
-    #get the last registered iRating from member
-    member_chart_data = iracing_member_data['chart']
-    mcd = pd.DataFrame.from_dict(member_chart_data['data'])
-    
-    latest_iRating = mcd.iloc[-1]['value']
-    
-    display_name = member_data['members']
-    display_name2 = display_name[0]['display_name']
-    #table = [['iRacing Customer ID', 'Driver Name', 'iRating', 'Driver Classifictaion'], 
-                #custid[0], display_name2, latest_iRating, driver_classification]
-    #print(tabulate(table, headers='firstrow', tablefmt='fancy_grid'))
-    print(f"{custid[0]},{display_name2},{latest_iRating},{driver_classification},{driver_qualification}")
-    #print(tabulate([['custid[0]','display_name2','latest_iRating', 'driver_classification']], headers = 'keys', tablefmt = 'psql'))
-"""
-
-if __name__ == '__main__':
-   
+if __name__ == '__main__': 
     if len(sys.argv) == 5:
         username = sys.argv[1] #first cmdline arg is acnt name
         password = sys.argv[2] #second cmdline arg is pwd
