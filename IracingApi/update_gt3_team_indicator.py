@@ -27,7 +27,7 @@ from tabulate import tabulate
 import glob
 
 
-def update_team_indicator(df_driver_indicator: pd, df_latest_session: pd) -> pd:
+def update_team_indicator(df_team_indicator: pd, df_driver_indicator: pd, df_latest_session: pd) -> pd:
     # we only need the gold drivers
     gold_drivers = df_driver_indicator['new_classification'] == 'Gold'
     df_gold_drivers = df_driver_indicator[gold_drivers]
@@ -108,7 +108,7 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
     print(tabulate(df_latest_session, headers = 'keys', tablefmt = 'psql'))
 
     # show indicator
-    df_new_team_indicator = update_team_indicator(df_driver_indicator, df_latest_session)
+    df_new_team_indicator = update_team_indicator(df_team_indicator, df_driver_indicator, df_latest_session)
     print(tabulate(df_new_team_indicator, headers = 'keys', tablefmt = 'psql'))
 
     # save indicator as file
