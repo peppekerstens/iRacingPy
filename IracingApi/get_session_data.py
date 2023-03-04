@@ -90,15 +90,18 @@ def get_valid_avg_laps(driver_result: json, idc: irDataClient, session_id: int):
     lap_data = idc.result_lap_data(subsession_id=session_id,simsession_number=0, cust_id=cust_id, team_id=team_id)
     new_list = []
     for lap in lap_data:
-        #array = [0, 4] #clean lap or offtrack lap
+        #array = [0, 4] #clean lap or invalid lap (slow down penalty)
         if lap['flags'] in [0, 4] and lap['lap_time'] != -1:
             new_list.append(lap)
     avg_lap_time = 0
+    laps_complete = 0
     if new_list != []:
         df_lap_data = pd.json_normalize(new_list)
         #df_valid_lap_data[['lap_number','flags','session_time', 'session_start_time', 'lap_time', 'team_fastest_lap', 'personal_best_lap','lap_events']] 
         avg_lap_time = df_lap_data['lap_time'].mean()
+        laps_complete = len(df_lap_data)
     driver_result['average_lap_valid'] = avg_lap_time
+    driver_result['laps_complete_valid'] = laps_complete
     return driver_result
 
 def get_total_laps(result: pd, team_id: int):
@@ -106,12 +109,7 @@ def get_total_laps(result: pd, team_id: int):
     team_result = result[team_match]
     return team_result['laps_complete'].sum()
 
-def get_track_detail(idc: irDataClient, track_id) -> pd:
-    #get info in all tracks present in iRacing. Needed for track length, which is needed to calculate avg driver speed.
-    all_tracks = idc.tracks
-    #if all_tracks is not None:
-    #    print('Received all_tracks')
-    df_all_tracks = pd.json_normalize(all_tracks)
+def get_track_detail(df_all_tracks: pd, track_id) -> pd:
     #add the lentgh in KM to all records. If we do this after filtering the track we want, we get an 'bad practise' error
     df_all_tracks['track_config_length_km'] = df_all_tracks['track_config_length'] * 1.609344  #track_config_length is provided in miles
     #we want info from a specific track
@@ -137,17 +135,17 @@ def get_session_driver_result_class(idc, subsession_id, result, track_length, re
     if team_race == False:
         item = session_result['results'][0] #improve: hard coding on first race!
         driver_result = get_personal_driver_results(item)
-    driver_count = len(driver_result)
+    df_result = pd.json_normalize(item)  
     print()
     print('Receiving all laps')
     print()
+    driver_count = len(driver_result)
     new_list = []
     with tqdm(total=driver_count) as pbar:
         for dr in driver_result:
             new_list.append(get_valid_avg_laps(dr, idc, subsession_id))
             pbar.update(1)
             #print(end=".")
-    df_result = pd.json_normalize(item)
     df_driver_result = pd.json_normalize(driver_result)
     #some code to detect by class
     #https://pandas.pydata.org/docs/getting_started/intro_tutorials/03_subset_data.html
@@ -165,8 +163,8 @@ def get_session_driver_result_class(idc, subsession_id, result, track_length, re
     df_driver_result['avg_lap_valid'] = (df_driver_result['average_lap_valid'] / 10000)
     #df_driver_result['speed'] = (track_length.iloc[0] / df_driver_result['avg_lap'] * 3600)    
     df_driver_result['speed'] = (track_length / df_driver_result['avg_lap_valid'] * 3600)
-    df_driver_result['time'] = (df_driver_result['avg_lap_valid'] * df_driver_result['laps_complete'])
-    df_driver_result['percentage'] = round(df_driver_result['laps_complete'] / total_race_laps * 100,0)
+    df_driver_result['time'] = (df_driver_result['avg_lap_valid'] * df_driver_result['laps_complete_valid'])
+    df_driver_result['percentage'] = round(df_driver_result['laps_complete_valid'] / total_race_laps * 100,0)
     #get the team name from the race_result - not working yet, so empty for now
     #df_driver_result['team_display_name'] = get_team_name(first_race_result, df_driver_result['team_id'])
     df_driver_result['team_display_name'] = ''
@@ -181,7 +179,12 @@ def process_session_result(username, password, subsession_id):
     # get results from a session server
     result = idc.result(subsession_id=subsession_id)
     track = result['track']
-    df_current_track_detail = get_track_detail(idc, track['track_id'])
+    #get info in all tracks present in iRacing. Needed for track length, which is needed to calculate avg driver speed.
+    all_tracks = idc.tracks
+    #if all_tracks is not None:
+    #    print('Received all_tracks')
+    df_all_tracks = pd.json_normalize(all_tracks)
+    df_current_track_detail = get_track_detail(df_all_tracks, track['track_id'])
     print()
     print('Track information')
     print()
@@ -201,14 +204,14 @@ def process_session_result(username, password, subsession_id):
             print()
             print(f"driver result {subsession_id} {result_type} {car_class}")
             print()
-            print(tabulate(df_driver_result[['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','avg_lap_valid','laps_complete','speed','time', 'percentage']], headers = 'keys', tablefmt = 'psql'))
+            print(tabulate(df_driver_result[['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time', 'percentage']], headers = 'keys', tablefmt = 'psql'))
 
             #csv_name = 'session_' + session_id + '_' + session_result['simsession_type_name'] + 'csv'
 
             #from pathlib import Path  
             #filepath = Path('folder/subfolder/out.csv')  
             #filepath.parent.mkdir(parents=True, exist_ok=True)
-            df_driver_result.to_csv(csv_name,index=False,columns=['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','avg_lap_valid','laps_complete','speed','time', 'percentage'])
+            df_driver_result.to_csv(csv_name,index=False,columns=['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time', 'percentage'])
     return
 
 if __name__ == '__main__':
