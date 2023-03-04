@@ -16,7 +16,7 @@ def generate_member_data_driver_indicator(df_member_data: pd, cust_id: int) -> p
         if classification == 'Not allowed':
             #print(df_row['driver_classification'])
             classification = 'Gold'
-        df_indicator.loc[0] = [df_row['cust_id'] ,df_row['display_name'],0,classification,0,0,0,classification,False,False]
+        df_indicator.loc[0] = [df_driver.iloc[0]['cust_id'] ,df_driver.iloc[0]['display_name'],0,classification,0,0,0,classification,False,False]
     return df_indicator
 
 
