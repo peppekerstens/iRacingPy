@@ -14,6 +14,7 @@ import pandas as pd
 import pwinput
 from tabulate import tabulate
 from tqdm import tqdm #https://github.com/tqdm/tqdm/#readme
+import json
 
 def get_pec_driver_qualification(iRating: int) -> str:
     if iRating >= 2500:
@@ -69,8 +70,18 @@ def get_member_chart_data(idc: irDataClient, custid: int) -> pd:
     df_member_chart_data = pd.DataFrame.from_dict(member_chart_data['data'])
     return df_member_chart_data
 
-def get_member_data(idc: irDataClient, custid: dict) -> pd:
-    member_data = idc.member(cust_id=custid)
+"""
+def get_member_data(idc: irDataClient, df_league_roster:pd) -> pd:
+    custid = dict(df_league_roster['cust_id'])
+    custid_list = list(custid.values())
+    custid_json = json.dumps(custid_list)
+    member_data = idc.member(cust_id=custid_list)
+    df_member_data = pd.DataFrame.from_dict(member_data['members'])
+    return df_member_data
+"""
+
+def get_member_data(idc: irDataClient, cust_id) -> pd:
+    member_data = idc.member(cust_id=cust_id)
     df_member_data = pd.DataFrame.from_dict(member_data['members'])
     return df_member_data
 
@@ -95,17 +106,27 @@ if __name__ == '__main__':
         username = input("Enter username: ")
         #password = getpass.getpass('Enter password:') # hard in practise, does not show any input hint
         password = pwinput.pwinput(prompt='Enter password: ')
-        cust_id_csv = input("Enter Customer ID CSV (press <enter> for iracingid.csv): ")
+        cust_id_csv = input("Enter Customer ID CSV (press <enter> for league_roster.csv): ")
         if cust_id_csv == '':
-            cust_id_csv = 'iracingid.csv'
+            cust_id_csv = 'league_roster.csv'
         csv_name = input("Enter CSV name for result (press <enter> for member_data.csv): ")
         if csv_name == '':
             csv_name = 'member_data.csv'
-    
+
     idc = irDataClient(username=username, password=password)
 
-    csvdata = import_csv(cust_id_csv)
-    df_member_data = get_member_data(idc,csvdata)
+    df_league_roster = pd.read_csv(cust_id_csv)
+    #csvdata = import_csv(cust_id_csv)
+    df_league_roster_count = len(df_league_roster)
+    new_list = []
+    with tqdm(total=df_league_roster_count) as pbar:
+        for index, df_row in df_league_roster.iterrows():
+            cust_id = df_row['cust_id']
+            new_list.append(get_member_data(idc, cust_id))
+            pbar.update(1)
+    #df_member_data = get_member_data(idc,df_league_roster)
+    #df_member_data = get_member_data(idc, csvdata)
+    df_member_data = pd.DataFrame.from_dict(new_list)
     df_pec_driver_info = get_pec_driver_information(idc,df_member_data)
 
     #print(f"{custid[0]},{display_name2},{latest_iRating},{driver_classification},{driver_qualification}")
