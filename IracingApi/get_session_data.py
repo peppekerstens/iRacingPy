@@ -163,7 +163,8 @@ def get_session_driver_result_class(idc, subsession_id, result, track_length, re
     df_driver_result['avg_lap_valid'] = (df_driver_result['average_lap_valid'] / 10000)
     #df_driver_result['speed'] = (track_length.iloc[0] / df_driver_result['avg_lap'] * 3600)    
     df_driver_result['speed'] = (track_length / df_driver_result['avg_lap_valid'] * 3600)
-    df_driver_result['time'] = (df_driver_result['avg_lap_valid'] * df_driver_result['laps_complete_valid'])
+    df_driver_result['time_valid'] = (df_driver_result['avg_lap_valid'] * df_driver_result['laps_complete_valid'])
+    df_driver_result['time'] = (df_driver_result['avg_lap'] * df_driver_result['laps_complete'])
     df_driver_result['percentage'] = round(df_driver_result['laps_complete_valid'] / total_race_laps * 100,0)
     #get the team name from the race_result - not working yet, so empty for now
     #df_driver_result['team_display_name'] = get_team_name(first_race_result, df_driver_result['team_id'])
@@ -204,14 +205,14 @@ def process_session_result(username, password, subsession_id):
             print()
             print(f"driver result {subsession_id} {result_type} {car_class}")
             print()
-            print(tabulate(df_driver_result[['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time', 'percentage']], headers = 'keys', tablefmt = 'psql'))
+            print(tabulate(df_driver_result[['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time','time_valid','percentage']], headers = 'keys', tablefmt = 'psql'))
 
             #csv_name = 'session_' + session_id + '_' + session_result['simsession_type_name'] + 'csv'
 
             #from pathlib import Path  
             #filepath = Path('folder/subfolder/out.csv')  
             #filepath.parent.mkdir(parents=True, exist_ok=True)
-            df_driver_result.to_csv(csv_name,index=False,columns=['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time', 'percentage'])
+            df_driver_result.to_csv(csv_name,index=False,columns=['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time','time_valid','percentage'])
     return
 
 if __name__ == '__main__':
