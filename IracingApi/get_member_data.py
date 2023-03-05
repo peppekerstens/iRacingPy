@@ -81,9 +81,14 @@ def get_member_data(idc: irDataClient, df_league_roster:pd) -> pd:
 """
 
 def get_member_data(idc: irDataClient, cust_id) -> pd:
-    member_data = idc.member(cust_id=cust_id)
-    df_member_data = pd.DataFrame.from_dict(member_data['members'])
-    return df_member_data
+    member_data = None
+    try:
+        member_data = idc.member(cust_id=cust_id)
+        #df_member_data = pd.DataFrame.from_dict(member_data['members'])
+        #return df_member_data
+    except:
+        return member_data
+    return member_data 
 
 def import_csv(path: str) -> dict:
     file = open(path, "r")
@@ -109,24 +114,37 @@ if __name__ == '__main__':
         cust_id_csv = input("Enter Customer ID CSV (press <enter> for league_roster.csv): ")
         if cust_id_csv == '':
             cust_id_csv = 'league_roster.csv'
+            cust_id_csv = 'iracingid.csv'
         csv_name = input("Enter CSV name for result (press <enter> for member_data.csv): ")
         if csv_name == '':
             csv_name = 'member_data.csv'
 
     idc = irDataClient(username=username, password=password)
 
+    #pd.Series(states_df.name.values).to_dict()
+    #https://cmdlinetips.com/2021/04/convert-two-column-values-from-pandas-dataframe-to-a-dictionary/
+    #https://sparkbyexamples.com/pandas/convert-pandas-dataframe-to-series/#:~:text=Convert%20DataFrame%20Column%20to%20Series,selected%20column%20as%20a%20Series.
+    #member_data = get_member_data(idc, cust_id) -> cust_id should be series of type {'12233','112333'}
+
     df_league_roster = pd.read_csv(cust_id_csv)
     #csvdata = import_csv(cust_id_csv)
     df_league_roster_count = len(df_league_roster)
-    new_list = []
+    cust_id_array = df_league_roster['cust_id'].values
+    #should be of type {}
+    members = []  
+    #new_list = []
     with tqdm(total=df_league_roster_count) as pbar:
-        for index, df_row in df_league_roster.iterrows():
-            cust_id = df_row['cust_id']
-            new_list.append(get_member_data(idc, cust_id))
+        for cust_id in cust_id_array:
+        #for index, df_row in df_league_roster.iterrows():
+            #cust_id = df_row['cust_id']
+            member_data = get_member_data(idc, cust_id)
+            if member_data != None:
+                members += member_data['members']
+                #new_list.append(member_data['members'])
             pbar.update(1)
     #df_member_data = get_member_data(idc,df_league_roster)
     #df_member_data = get_member_data(idc, csvdata)
-    df_member_data = pd.DataFrame.from_dict(new_list)
+    df_member_data = pd.DataFrame.from_dict(members)
     df_pec_driver_info = get_pec_driver_information(idc,df_member_data)
 
     #print(f"{custid[0]},{display_name2},{latest_iRating},{driver_classification},{driver_qualification}")
