@@ -59,7 +59,7 @@ def process_session_result(idc: irDataClient, df_all_tracks: pd, subsession_id):
     print()
     print(f"Detected session types {session_result_types} ")
     print()
-    car_classes = get_session_data.get_session_result_classes(result)
+    car_classes = get_session_data.get_session_result_classes_json(result)
     for result_type in session_result_types:
         if result_type not in result_type_to_process:
             print()
