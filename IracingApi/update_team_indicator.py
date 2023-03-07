@@ -58,13 +58,13 @@ def update_team_indicator(df_team_indicator: pd, df_driver_indicator: pd, df_lat
             running_percentage = percentage
             race_count = 1            
         df_new_team_indicator.loc[index] = [team_id,team_display_name,race_count,running_percentage]
-        return df_new_team_indicator
+    return df_new_team_indicator
 
 
 if __name__ == '__main__': #only execute when called as script, skipped when loaded as module
-    driver_indicator_file = 'pec_s3_driver_indicator.csv' #server both as reference data set from previous race(s) as well as file to save latest status to after processing
-    team_indicator_file = 'pec_s3_team_indicator.csv' #server both as reference data set from previous race(s) as well as file to save latest status to after processing
-    latest_session_file = None #results from current race. maybe an agrument for this script? currently being detected as latest file within directory with name session_*.csv
+    driver_indicator_file = 'pec_driver_indicator_GT3 Class.csv' #server both as reference data set from previous race(s) as well as file to save latest status to after processing
+    team_indicator_file = 'pec_team_indicator.csv' #server both as reference data set from previous race(s) as well as file to save latest status to after processing
+    latest_session_file = 'session_60222976.0_Race_GT3 Class.csv' #results from current race. maybe an agrument for this script? currently being detected as latest file within directory with name session_*.csv
 
     # Read the driver_indicator_file, if exists, if not; stop
     try:
@@ -91,13 +91,11 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
         latest_session_file = max(sessionsFilenamesList, key=os.path.getmtime)
         answer = None
         #while answer != "y" or answer != "n":
-        while answer != "y":
-            answer = input(f"Found {latest_session_file}, use that file and continue? y/n ")
-            print (answer)
-
-    if answer == 'n':
-        print('Error: no valid session file provided. please re-run and provide valid file!')
-        quit() #https://www.scaler.com/topics/exit-in-python/
+        #while answer != "y":
+        answer = input(f"Found {latest_session_file}, use that file and continue? y/n ")
+        if answer == 'n':
+            print('Error: no valid session file provided. please re-run and provide valid file!')
+            quit() #https://www.scaler.com/topics/exit-in-python/
 
     try:
         df_latest_session = pd.read_csv(latest_session_file)
