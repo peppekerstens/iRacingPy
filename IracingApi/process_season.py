@@ -12,8 +12,8 @@ from pathlib import Path
 import get_league_information
 import get_member_data
 import get_session_data
-import update_gt3_driver_indicator
-import update_gt3_team_indicator
+import update_driver_indicator
+import update_team_indicator
 
 league_information_file = 'league_information'
 league_roster_file = 'league_roster'
@@ -84,11 +84,11 @@ def process_session_result(idc: irDataClient, df_all_tracks: pd, subsession_id):
                     #car_classes = df_result['car_class_short_name'].unique()
                     #car_class = "GT3 Class"
                     df_driver_result = get_session_data.get_session_driver_result_class(idc, subsession_id, result, track_length, result_type, car_class)
-                    print(tabulate(df_driver_result[['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time', 'percentage']], headers = 'keys', tablefmt = 'psql'))
+                    print(tabulate(df_driver_result[['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time','time_valid','percentage']], headers = 'keys', tablefmt = 'psql'))
                     #from pathlib import Path  
                     #filepath = Path('folder/subfolder/out.csv')  
                     #filepath.parent.mkdir(parents=True, exist_ok=True)
-                    df_driver_result.to_csv(session_file,index=False,columns=['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time', 'percentage'])
+                    df_driver_result.to_csv(session_file,index=False,columns=['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time','time_valid','percentage'])
 
                     if result_type == 'Race':
                         #
@@ -103,27 +103,31 @@ def process_session_result(idc: irDataClient, df_all_tracks: pd, subsession_id):
                         driver_indicator_csv = driver_indicator_file + '_' + car_class + '.csv'
                         # must either be result of previous race -or if first race- result from iRating analysis
                         try:
-                            df_indicator = pd.read_csv(driver_indicator_csv)
+                            #scenario follow-up races
+                            df_driver_indicator = pd.read_csv(driver_indicator_csv)
+                            print()
+                            print(f"Using existing driver indicator file {driver_indicator_csv}.")
+                            print()
                         except:
                             #scenario first race
-                            print(f"WARNING: could not find file {driver_indicator_csv}. Is this the first race?")
-                            #scenario first race - REWRITE: SHOULD ALWAYS LOAD TO ADD DRIVERS!!!! CALL IT DF_MEMBERS /DF_REF
-                            df_indicator = pd.DataFrame(columns=['cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification'])
+                            print()
+                            print(f"WARNING: could not find file {driver_indicator_csv}. Assuming first race!")
+                            print()
+                            df_driver_indicator = pd.DataFrame(columns=['cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification'])
+                        print(tabulate(df_driver_indicator, headers = 'keys', tablefmt = 'psql'))
 
-                        print(tabulate(df_indicator, headers = 'keys', tablefmt = 'psql'))
-
-                        df_pec_driver_info = update_gt3_driver_indicator.create_pec_driver_info(df_driver_result,df_indicator,df_member_data)
+                        df_updated_driver_info = update_driver_indicator.update_driver_info(df_driver_result,df_driver_indicator,df_member_data)
 
                         #move the new_classification to old_classification
-                        df_pec_driver_info['old_classification'] = df_pec_driver_info['new_classification']
+                        df_updated_driver_info['old_classification'] = df_updated_driver_info['new_classification']
 
                         #print(df_pec_driver_info['avg_speed'])
-                        print(tabulate(df_pec_driver_info, headers = 'keys', tablefmt = 'psql'))
+                        print(tabulate(df_updated_driver_info, headers = 'keys', tablefmt = 'psql'))
 
-                        df_new_indicator = update_gt3_driver_indicator.update_team_indicator(df_pec_driver_info, df_indicator, df_member_data)
-                        print(tabulate(df_new_indicator[['cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification','deadzone','reclassified']], headers = 'keys', tablefmt = 'psql'))
+                        df_driver_indicator = update_driver_indicator.update_driver_indicator(df_updated_driver_info, df_driver_indicator, df_member_data)
+                        print(tabulate(df_driver_indicator[['cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification','deadzone','reclassified']], headers = 'keys', tablefmt = 'psql'))
 
-                        df_new_indicator.to_csv(driver_indicator_csv,index=False)
+                        df_driver_indicator.to_csv(driver_indicator_csv,index=False)
 
                         #
                         # Read the team_indicator_file, if exists
@@ -131,12 +135,17 @@ def process_session_result(idc: irDataClient, df_all_tracks: pd, subsession_id):
                         team_indicator_csv = team_indicator_file + '.csv'
                         try:
                             df_team_indicator = pd.read_csv(team_indicator_csv)
+                            print()
+                            print(f"Using existing team indicator file {team_indicator_csv}.")
+                            print()
                         except:
                             #scenario first race
-                            print(f"WARNING: could not find file {team_indicator_csv}. Is this the first race?")
+                            print()
+                            print(f"WARNING: could not find file {team_indicator_csv}. Assuming first race!")
+                            print()
                             df_team_indicator = pd.DataFrame(columns=['team_id','display_name','race_count','percentage'])
 
-                        df_new_team_indicator = update_gt3_team_indicator.update_team_indicator(df_team_indicator, df_new_indicator, df_driver_result)
+                        df_new_team_indicator = update_team_indicator.update_team_indicator(df_team_indicator, df_driver_indicator, df_driver_result)
                         print(tabulate(df_new_team_indicator, headers = 'keys', tablefmt = 'psql'))
 
                         # save indicator as file

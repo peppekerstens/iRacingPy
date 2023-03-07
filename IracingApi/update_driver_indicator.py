@@ -29,7 +29,7 @@ def get_df_indicator_driver(df_indicator: pd, df_member_data: pd, cust_id: int) 
     return df_indicator_driver
 
 
-def create_pec_driver_info(df_latest_session: pd,df_indicator: pd,df_member_data: pd) -> pd:
+def update_driver_info(df_latest_session: pd,df_indicator: pd,df_member_data: pd) -> pd:
     #build intermediate dataframe based on current results
     df_pec_driver_info = pd.DataFrame(columns=['cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification'])
     for index, df_row in df_latest_session.iterrows():
@@ -51,7 +51,7 @@ def create_pec_driver_info(df_latest_session: pd,df_indicator: pd,df_member_data
     return df_pec_driver_info
 
 
-def update_team_indicator(df_pec_driver_info: pd, df_indicator: pd, df_member_data: pd ) -> pd:
+def update_driver_indicator(df_pec_driver_info: pd, df_indicator: pd, df_member_data: pd ) -> pd:
     df_new_indicator = pd.DataFrame(columns=['cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification','deadzone','reclassified'])
     #how large is is the deadzone?
     silver_deadzone_speed = 0
@@ -149,7 +149,7 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
 
     print(tabulate(df_latest_session, headers = 'keys', tablefmt = 'psql'))
 
-    df_pec_driver_info = create_pec_driver_info(df_latest_session,df_indicator,df_member_data)
+    df_pec_driver_info = update_driver_info(df_latest_session,df_indicator,df_member_data)
 
     #move the new_classification to old_classification
     df_pec_driver_info['old_classification'] = df_pec_driver_info['new_classification']
@@ -157,7 +157,7 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
     #print(df_pec_driver_info['avg_speed'])
     print(tabulate(df_pec_driver_info, headers = 'keys', tablefmt = 'psql'))
 
-    df_new_indicator = update_team_indicator(df_pec_driver_info, df_indicator, df_member_data)
+    df_new_indicator = update_driver_indicator(df_pec_driver_info, df_indicator, df_member_data)
     print(tabulate(df_new_indicator[['cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification','deadzone','reclassified']], headers = 'keys', tablefmt = 'psql'))
 
     df_new_indicator.to_csv(driver_indicator_file,index=False)

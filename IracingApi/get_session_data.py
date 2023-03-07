@@ -50,12 +50,16 @@ def get_session_result_types(result: json):
         new_list.append(session_result_type)
     return new_list
 
-def get_session_result_classes(result: json):
+def get_session_result_classes_json(result: json):
     unique_car_classes = set()
     for session_results in result['session_results']:
         for item in session_results['results']:
             unique_car_classes.add(item["car_class_short_name"])
     return unique_car_classes
+
+def get_session_result_classes(df_result: pd):
+    #assumes a converted json to Dataframe with the data subset session_results\results from a iRacing session result file   
+    return df_result["car_class_short_name"].unique()
 
 def get_session_results(result: json, result_type: str):
     new_list = []
@@ -84,7 +88,7 @@ def get_team_name(result: json, team_id: int) -> str:
             return item['display_name']
     return ''
 
-def get_valid_avg_laps(driver_result: json, idc: irDataClient, session_id: int):
+def get_valid_laps(driver_result: json, idc: irDataClient, session_id: int):
     cust_id = driver_result['cust_id']
     team_id = driver_result['team_id']
     lap_data = idc.result_lap_data(subsession_id=session_id,simsession_number=0, cust_id=cust_id, team_id=team_id)
@@ -117,6 +121,13 @@ def get_track_detail(df_all_tracks: pd, track_id) -> pd:
     df_current_track_detail = df_all_tracks[current_track]
     return df_current_track_detail
 
+def get_total_racelaps_class(df_result:pd, car_class) -> int:
+    #get the total race laps per class
+    current_car_class = df_result['car_class_short_name'] == car_class
+    df_result_class = df_result[current_car_class]
+    total_race_laps = df_result_class['laps_complete'].max()
+    return total_race_laps
+
 def get_session_driver_result_class(idc, subsession_id, result, track_length, result_type, car_class) -> pd:
     print()
     print(f"Getting information for {result_type}")
@@ -143,7 +154,7 @@ def get_session_driver_result_class(idc, subsession_id, result, track_length, re
     new_list = []
     with tqdm(total=driver_count) as pbar:
         for dr in driver_result:
-            new_list.append(get_valid_avg_laps(dr, idc, subsession_id))
+            new_list.append(get_valid_laps(dr, idc, subsession_id))
             pbar.update(1)
             #print(end=".")
     df_driver_result = pd.json_normalize(driver_result)
@@ -165,7 +176,7 @@ def get_session_driver_result_class(idc, subsession_id, result, track_length, re
     df_driver_result['speed'] = (track_length / df_driver_result['avg_lap_valid'] * 3600)
     df_driver_result['time_valid'] = (df_driver_result['avg_lap_valid'] * df_driver_result['laps_complete_valid'])
     df_driver_result['time'] = (df_driver_result['avg_lap'] * df_driver_result['laps_complete'])
-    df_driver_result['percentage'] = round(df_driver_result['laps_complete_valid'] / total_race_laps * 100,0)
+    df_driver_result['percentage'] = round(df_driver_result['laps_complete'] / total_race_laps * 100,0)
     #get the team name from the race_result - not working yet, so empty for now
     #df_driver_result['team_display_name'] = get_team_name(first_race_result, df_driver_result['team_id'])
     df_driver_result['team_display_name'] = ''
@@ -193,7 +204,7 @@ def process_session_result(username, password, subsession_id):
     track_length = df_current_track_detail['track_config_length_km'].iloc[-1]
 
     session_result_types = get_session_result_types(result)
-    car_classes = get_session_result_classes(result)
+    car_classes = get_session_result_classes_json(result)
     for result_type in session_result_types:
         for car_class in car_classes:
             #car_classes = df_result['car_class_short_name'].unique()
