@@ -58,7 +58,12 @@ def update_team_indicator(df_team_indicator: pd, df_driver_indicator: pd, df_lat
             running_percentage = percentage
             race_count = 1            
         df_new_team_indicator.loc[index] = [team_id,team_display_name,race_count,running_percentage]
-    return df_new_team_indicator
+
+    #now combine any old values which may not have been update with the new Dataframe
+    df_not_in_common = df_team_indicator.loc[~df_team_indicator['team_id'].isin(df_new_team_indicator['team_id'])]
+    frames = [df_not_in_common, df_new_team_indicator]
+    result = pd.concat(frames)
+    return result
 
 
 if __name__ == '__main__': #only execute when called as script, skipped when loaded as module
