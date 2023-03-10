@@ -19,7 +19,7 @@ import json
 def get_pec_driver_qualification(iRating: int) -> str:
     if iRating >= 2500:
         return 'lmdh'
-    elif iRating >= 2200:
+    elif iRating >= 2000:
         return 'lmp2'
     elif iRating >= 1500:
         return 'gt3'
@@ -114,7 +114,7 @@ if __name__ == '__main__':
         cust_id_csv = input("Enter Customer ID CSV (press <enter> for league_roster.csv): ")
         if cust_id_csv == '':
             cust_id_csv = 'league_roster.csv'
-            cust_id_csv = 'iracingid.csv'
+            #cust_id_csv = 'iracingid.csv'
         csv_name = input("Enter CSV name for result (press <enter> for member_data.csv): ")
         if csv_name == '':
             csv_name = 'member_data.csv'
