@@ -19,7 +19,7 @@ import json
 def get_pec_driver_qualification(iRating: int) -> str:
     if iRating >= 2500:
         return 'lmdh'
-    elif iRating >= 2200:
+    elif iRating >= 2000:
         return 'lmp2'
     elif iRating >= 1500:
         return 'gt3'
