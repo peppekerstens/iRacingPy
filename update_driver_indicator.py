@@ -43,7 +43,7 @@ def get_df_indicator_driver(df_indicator: pd, df_member_data: pd, cust_id: int) 
 
 def update_driver_info(df_latest_session: pd,df_indicator: pd,df_member_data: pd) -> pd:
     #build intermediate dataframe based on current results
-    df_pec_driver_info = pd.DataFrame(columns=['team_id','cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification'])
+    df_pec_driver_info = pd.DataFrame(columns=['team_id','cust_id','display_name','race_count','old_classification','total_time','total_avg_speed','avg_speed','percentage','new_classification'])
     for index, df_row in df_latest_session.iterrows():
         cust_id = df_row['cust_id']
         df_indicator_driver = get_df_indicator_driver(df_indicator,df_member_data,cust_id)
@@ -59,9 +59,10 @@ def update_driver_info(df_latest_session: pd,df_indicator: pd,df_member_data: pd
             percentage = df_row['percentage']
             new_classification = df_indicator_driver.iloc[0]['new_classification']
             race_count = df_indicator_driver.iloc[0]['race_count'] + 1 # https://stackoverflow.com/questions/16729574/how-can-i-get-a-value-from-a-cell-of-a-dataframe
+            avg_speed = df_row['speed']
             total_time = round(df_indicator_driver.iloc[0]['total_time'] + df_row['time'],2)
-            avg_speed = round((df_indicator_driver.iloc[0]['total_time'] * df_indicator_driver.iloc[0]['avg_speed'] + df_row['time'] * df_row['speed']) / total_time,2)
-            df_pec_driver_info.loc[index] = [team_id,cust_id,display_name,race_count,old_classification,total_time,avg_speed,percentage,new_classification]
+            total_avg_speed = round((df_indicator_driver.iloc[0]['total_time'] * df_indicator_driver.iloc[0]['avg_speed'] + df_row['time'] * df_row['speed']) / total_time,2)
+            df_pec_driver_info.loc[index] = [team_id,cust_id,display_name,race_count,old_classification,total_time,total_avg_speed,avg_speed,percentage,new_classification]
         #if df_indicator_driver.empty: 
         #    df_indicator_driver = generate_member_data_driver_indicator(df_member_data,cust_id)
         if df_indicator_driver.empty:    
@@ -70,7 +71,7 @@ def update_driver_info(df_latest_session: pd,df_indicator: pd,df_member_data: pd
 
 
 def update_driver_indicator(df_pec_driver_info: pd, df_indicator: pd, df_member_data: pd ) -> pd:
-    df_new_indicator = pd.DataFrame(columns=['team_id','cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification','deadzone','reclassified'])
+    df_new_indicator = pd.DataFrame(columns=['team_id','cust_id','display_name','race_count','old_classification','total_time','total_avg_speed','avg_speed','percentage','new_classification','deadzone','reclassified'])
     #how large is is the deadzone?
     silver_deadzone_speed = 0
     gold_deadzone_speed = 0
@@ -114,7 +115,7 @@ def update_driver_indicator(df_pec_driver_info: pd, df_indicator: pd, df_member_
             else:
                 percentage =  df_indicator_driver.iloc[0]['percentage']
                 #print(f"hoi { df_row['display_name']} {df_indicator_driver.iloc[0]['percentage']}")
-            df_new_indicator.loc[index] = [df_row['team_id'],df_row['cust_id'] ,df_row['display_name'],df_row['race_count'],df_row['old_classification'],df_row['total_time'],df_row['avg_speed'],percentage,new_classification,deadzone,reclassified]
+            df_new_indicator.loc[index] = [df_row['team_id'],df_row['cust_id'] ,df_row['display_name'],df_row['race_count'],df_row['old_classification'],df_row['total_time'],df_row['avg_speed'],df_row['total_avg_speed'],percentage,new_classification,deadzone,reclassified]
     else:
         print(f"WARNING: detected deadzone too small to use!")
         #synthesise df_new_indicator
@@ -141,7 +142,7 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
         #scenario first race
         print(f"WARNING: could not find file {driver_indicator_file}. Is this the first race?")
         #scenario first race - REWRITE: SHOULD ALWAYS LOAD TO ADD DRIVERS!!!! CALL IT DF_MEMBERS /DF_REF
-        df_indicator = pd.DataFrame(columns=['team_id','cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification'])
+        df_indicator = pd.DataFrame(columns=['team_id','cust_id','display_name','race_count','old_classification','total_time','avg_speed','total_avg_speed','percentage','new_classification'])
 
     print(tabulate(df_indicator, headers = 'keys', tablefmt = 'psql'))
 
@@ -176,6 +177,6 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
     print(tabulate(df_pec_driver_info, headers = 'keys', tablefmt = 'psql'))
 
     df_new_indicator = update_driver_indicator(df_pec_driver_info, df_indicator, df_member_data)
-    print(tabulate(df_new_indicator[['team_id','cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification','deadzone','reclassified']], headers = 'keys', tablefmt = 'psql'))
+    print(tabulate(df_new_indicator[['team_id','cust_id','display_name','race_count','old_classification','total_time','avg_speed','total_avg_speed','percentage','new_classification','deadzone','reclassified']], headers = 'keys', tablefmt = 'psql'))
 
     df_new_indicator.to_csv(driver_indicator_file,index=False)
