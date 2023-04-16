@@ -50,7 +50,10 @@ def update_driver_info(df_latest_session: pd,df_indicator: pd,df_member_data: pd
         if not df_indicator_driver.empty:
             #print(tabulate(df_indicator_driver, headers = 'keys', tablefmt = 'psql'))
             old_classification = df_indicator_driver.iloc[0]['old_classification']
-            team_id = df_row['team_id']
+            try:
+                team_id = df_row['team_id']
+            except:
+                team_id = None
             cust_id = df_row['cust_id']
             display_name = df_row['display_name']
             percentage = df_row['percentage']
