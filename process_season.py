@@ -71,6 +71,7 @@ def process_session_result(idc: irDataClient, df_all_tracks: pd, subsession_id):
                 # process results
                 #
                 session_file = 'session_' + str(subsession_id) + '_' + result_type + '_' + car_class + '.csv'
+                session_file_fix = 'session_' + str(subsession_id) + '_' + result_type + '_' + car_class + '_fix.csv'
                 path = './' + session_file
                 check_file = os.path.isfile(path)
                 #sessionsFilenamesList = glob.glob(session_file)
@@ -84,11 +85,26 @@ def process_session_result(idc: irDataClient, df_all_tracks: pd, subsession_id):
                     #car_classes = df_result['car_class_short_name'].unique()
                     #car_class = "GT3 Class"
                     df_driver_result = get_session_data.get_session_driver_result_class(idc, subsession_id, result, track_length, result_type, car_class)
-                    print(tabulate(df_driver_result[['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time','time_valid','percentage']], headers = 'keys', tablefmt = 'psql'))
+                    try:
+                        print(tabulate(df_driver_result[['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time','time_valid','percentage']], headers = 'keys', tablefmt = 'psql'))
+                        df_driver_result.to_csv(session_file,index=False,columns=['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time','time_valid','percentage'])
+                        df_driver_results_fix = df_driver_result.copy()
+                        df_driver_results_fix.to_csv(session_file_fix,index=False,columns=['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time_valid','percentage'])
+                    except:
+                        print(tabulate(df_driver_result[['cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time','time_valid','percentage']], headers = 'keys', tablefmt = 'psql'))
+                        df_driver_result.to_csv(session_file,index=False,columns=['cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time','time_valid','percentage'])
+                        df_driver_results_fix = df_driver_result.copy()
+                        df_driver_results_fix.to_csv(session_file_fix,index=False,columns=['cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time_valid','percentage'])
+
                     #from pathlib import Path  
                     #filepath = Path('folder/subfolder/out.csv')  
                     #filepath.parent.mkdir(parents=True, exist_ok=True)
-                    df_driver_result.to_csv(session_file,index=False,columns=['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time','time_valid','percentage'])
+                    #df_driver_result.to_csv(session_file,index=False,columns=['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time','time_valid','percentage'])
+                    #df_driver_results_fix = df_driver_result.copy()
+                    
+                    #df_driver_results_fix.rename(columns={"time": "time_full"})
+                    #df_driver_results_fix.rename(columns={"time_valid": "time"})
+                    #df_driver_results_fix.to_csv(session_file_fix,index=False,columns=['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time_valid','percentage'])
 
                     if result_type == 'Race':
                         #
