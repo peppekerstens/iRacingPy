@@ -40,6 +40,19 @@ import numpy as np
 import pwinput
 from tqdm import tqdm #https://github.com/tqdm/tqdm/#readme
 
+def extract_value(data,keyName):
+    result = []
+    if isinstance(data, dict):
+        for key, value in data.items():
+            if key == keyName:
+                result.append(value)
+            elif isinstance(value, (dict, list)):
+                result.extend(extract_value(value,keyName))
+    elif isinstance(data, list):
+        for item in data:
+            result.extend(extract_value(item,keyName))
+    return result
+
 #https://stackoverflow.com/questions/2733813/iterating-through-a-json-object
 #could (should!) improve with List Comprehensions or Vectorization
 #https://stackoverflow.com/questions/16476924/how-to-iterate-over-rows-in-a-dataframe-in-pandas
@@ -68,11 +81,40 @@ def get_session_results(result: json, result_type: str):
             new_list.append(session_results)
     return new_list
 
+#def get_session_results(result: json):
+#    new_list = []
+#    for session_results in result['session_results']:
+#        if session_results['simsession_type_name'] == result_type:
+#            new_list.append(session_results)
+#    return new_list
+
+
+#def get_drivers(result: json):
+#    new_list = []
+#    team_race = False
+#    if result['max_team_drivers'] > 1: team_race = True
+#    for session_results in result['session_results']:
+#        for driver_results in result:
+#            #if  session_results['simsession_type_name'] == type:
+#            for driver in driver_results['driver_results']:
+#                new_list.append(driver)
+#    
+#            if team_race == True:
+#                item = session_result[0]['results'] #improve: hard coding on first race!
+#                driver_result = get_team_driver_results(item)
+#            if team_race == False:
+#                item = session_result[0]['results'] #improve: hard coding on first race!
+#                driver_result = item # no more processing needed
+#
+#    return new_list
+
 def get_team_driver_results(result: json):
     new_list = []
-    for driver_results in result:
+    for team_results in result:
+        team_display_name = team_results["display_name"]
         #if  session_results['simsession_type_name'] == type:
-        for driver in driver_results['driver_results']:
+        for driver in team_results['driver_results']:
+            driver['team_display_name'] = team_display_name
             new_list.append(driver)
     return new_list
 
@@ -90,8 +132,11 @@ def get_team_name(result: json, team_id: int) -> str:
 
 def get_valid_laps(driver_result: json, idc: irDataClient, session_id: int):
     cust_id = driver_result['cust_id']
-    team_id = driver_result['team_id']
-    lap_data = idc.result_lap_data(subsession_id=session_id,simsession_number=0, cust_id=cust_id, team_id=team_id)
+    try:
+        team_id = driver_result['team_id']
+        lap_data = idc.result_lap_data(subsession_id=session_id,simsession_number=0, cust_id=cust_id, team_id=team_id)
+    except:
+        lap_data = idc.result_lap_data(subsession_id=session_id,simsession_number=0, cust_id=cust_id) 
     new_list = []
     for lap in lap_data:
         #array = [0, 4] #clean lap or invalid lap (slow down penalty)
@@ -144,8 +189,9 @@ def get_session_driver_result_class(idc, subsession_id, result, track_length, re
         item = session_result[0]['results'] #improve: hard coding on first race!
         driver_result = get_team_driver_results(item)
     if team_race == False:
-        item = session_result['results'][0] #improve: hard coding on first race!
-        driver_result = get_personal_driver_results(item)
+        item = session_result[0]['results'] #improve: hard coding on first race!
+        driver_result = item # no more processing needed
+        #driver_result = get_personal_driver_results(item)
     df_result = pd.json_normalize(item)  
     print()
     print('Receiving all laps')
@@ -179,7 +225,7 @@ def get_session_driver_result_class(idc, subsession_id, result, track_length, re
     df_driver_result['percentage'] = round(df_driver_result['laps_complete'] / total_race_laps * 100,0)
     #get the team name from the race_result - not working yet, so empty for now
     #df_driver_result['team_display_name'] = get_team_name(first_race_result, df_driver_result['team_id'])
-    df_driver_result['team_display_name'] = ''
+    #df_driver_result['team_display_name'] = df_result[]
     car_class = df_driver_result['car_class_short_name'] == car_class
     df_driver_result_class = df_driver_result[car_class]
     return df_driver_result_class
