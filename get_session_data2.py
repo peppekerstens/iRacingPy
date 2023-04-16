@@ -83,7 +83,7 @@ def process_session_result(idc: irDataClient, df_all_tracks, subsession_id):
     return
 
 
-if __name__ == '__main__':
+def main():
     if len(sys.argv) < 4:
         #raise BaseException('bla')  #does not work; processing is stopped see: https://docs.python.org/3/library/exceptions.html#Exception
         print('Error: to few arguments!')
@@ -121,3 +121,22 @@ if __name__ == '__main__':
     get_lap_data
 
     process_session_result(idc,df_all_tracks, subsession_id)
+
+
+    import json 
+
+    # read file
+    with open('iracing-result-60648976.json', 'r') as myfile:
+        data=myfile.read()
+
+
+    # read file
+    with open('iracing-result-60696954.json', 'r') as myfile:
+        data=myfile.read()
+
+    # parse file
+    obj = json.loads(data)
+
+
+if __name__ == '__main__':
+    main()
