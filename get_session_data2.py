@@ -10,13 +10,32 @@ import numpy as np
 import pwinput
 from tqdm import tqdm #https://github.com/tqdm/tqdm/#readme
 
-def get_all_tracks(idc: irDataClient) -> pd:
+def get_all_tracks_json(idc: irDataClient) -> json:
+    #get info in all tracks present in iRacing. Needed for track length, which is needed to calculate avg driver speed.
+    all_tracks = idc.tracks
+    return all_tracks
+
+
+def get_track_length_km(track: json) -> float:
+    track_config_length_km = track['track_config_length'] * 1.609344  #track_config_length is provided in miles
+    return track_config_length_km
+
+
+def get_track(all_tracks: json, track_id: int) -> json:
+    for track in all_tracks:
+        if track['track_id'] == track_id:
+            return track
+    return json.loads('{}')}
+
+
+def get_all_tracks_df(idc: irDataClient) -> pd:
     #get info in all tracks present in iRacing. Needed for track length, which is needed to calculate avg driver speed.
     all_tracks = idc.tracks
     df_all_tracks = pd.json_normalize(all_tracks)
     #add the lentgh in KM to all records. If we do this after filtering the track we want, we get an 'bad practise' error
     df_all_tracks['track_config_length_km'] = df_all_tracks['track_config_length'] * 1.609344  #track_config_length is provided in miles
     return df_all_tracks
+
 
 def get_track_detail(df_all_tracks: pd, track_id) -> pd:
     #gets information from a sepcific track
@@ -25,7 +44,11 @@ def get_track_detail(df_all_tracks: pd, track_id) -> pd:
     return df_current_track_detail
 
 def convert_result(result: json) -> pd:
-    
+
+    for session_results in result['session_results']:
+        for item in session_results['results']:
+            
+    return unique_car_classes
 
 def get_lap_data(idc: irDataClient, result: pd) -> pd:
     cust_id = driver_result['cust_id']
