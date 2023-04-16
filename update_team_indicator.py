@@ -34,7 +34,10 @@ def update_team_indicator(df_team_indicator: pd, df_driver_indicator: pd, df_lat
 
     #iterate through all the info an rebuild team_indicator 
     df_new_team_indicator = pd.DataFrame(columns=['team_id','display_name','race_count','percentage'])
-    unique_teams = df_latest_session['team_id'].unique()
+    try:
+        unique_teams = df_latest_session['team_id'].unique()
+    except:
+        return df_new_team_indicator #when there are no teams found...
     for team_id in unique_teams:
         #get driver results for this team
         drivers = df_latest_session['team_id'] == team_id
@@ -59,7 +62,7 @@ def update_team_indicator(df_team_indicator: pd, df_driver_indicator: pd, df_lat
             race_count = 1            
         df_new_team_indicator.loc[index] = [team_id,team_display_name,race_count,running_percentage]
 
-    #now combine any old values which may not have been update with the new Dataframe
+    #now combine any old values which may not have been updated with the new Dataframe
     df_not_in_common = df_team_indicator.loc[~df_team_indicator['team_id'].isin(df_new_team_indicator['team_id'])]
     frames = [df_not_in_common, df_new_team_indicator]
     result = pd.concat(frames)
