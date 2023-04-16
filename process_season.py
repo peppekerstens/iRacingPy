@@ -167,7 +167,7 @@ def process_session_result(idc: irDataClient, df_all_tracks: pd, subsession_id):
                         # save indicator as file
                         df_new_team_indicator.to_csv(team_indicator_csv,index=False)
 
-                        answer = input("Continue?")          
+                        #answer = input("Continue?")          
     return
 
 
