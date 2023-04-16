@@ -55,6 +55,13 @@ def process_session_result(idc: irDataClient, df_all_tracks: pd, subsession_id):
     print(tabulate(df_current_track_detail[['track_name','config_name','track_config_length_km']], headers = 'keys', tablefmt = 'psql'))
     track_length = df_current_track_detail['track_config_length_km'].iloc[-1]
 
+
+    team_race = False
+    if result['max_team_drivers'] > 1: team_race = True
+    print()
+    print(f"Detected team race {team_race} ")
+    print()
+
     session_result_types = get_session_data.get_session_result_types(result)
     print()
     print(f"Detected session types {session_result_types} ")
@@ -107,67 +114,68 @@ def process_session_result(idc: irDataClient, df_all_tracks: pd, subsession_id):
                     #df_driver_results_fix.to_csv(session_file_fix,index=False,columns=['team_id','team_display_name','cust_id','display_name','oldi_rating','avg_lap','laps_complete','avg_lap_valid','laps_complete_valid','speed','time_valid','percentage'])
 
                     if result_type == 'Race':
-                        #
-                        # update driver indicator
-                        #
-                        #should we renew member_data here as well?
-                        member_data_csv = member_data_file + '.csv'
-                        df_member_data = pd.read_csv(member_data_csv)
-                        #print(tabulate(df_member_data, headers = 'keys', tablefmt = 'psql'))
+                        if team_race:
+                            #
+                            # update driver indicator
+                            #
+                            #should we renew member_data here as well?
+                            member_data_csv = member_data_file + '.csv'
+                            df_member_data = pd.read_csv(member_data_csv)
+                            #print(tabulate(df_member_data, headers = 'keys', tablefmt = 'psql'))
 
-                        # get previous indicator
-                        driver_indicator_csv = driver_indicator_file + '_' + car_class + '.csv'
-                        # must either be result of previous race -or if first race- result from iRating analysis
-                        try:
-                            #scenario follow-up races
-                            df_driver_indicator = pd.read_csv(driver_indicator_csv)
-                            print()
-                            print(f"Using existing driver indicator file {driver_indicator_csv}.")
-                            print()
-                        except:
-                            #scenario first race
-                            print()
-                            print(f"WARNING: could not find file {driver_indicator_csv}. Assuming first race!")
-                            print()
-                            df_driver_indicator = pd.DataFrame(columns=['cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification'])
-                        print(tabulate(df_driver_indicator, headers = 'keys', tablefmt = 'psql'))
+                            # get previous indicator
+                            driver_indicator_csv = driver_indicator_file + '_' + car_class + '.csv'
+                            # must either be result of previous race -or if first race- result from iRating analysis
+                            try:
+                                #scenario follow-up races
+                                df_driver_indicator = pd.read_csv(driver_indicator_csv)
+                                print()
+                                print(f"Using existing driver indicator file {driver_indicator_csv}.")
+                                print()
+                            except:
+                                #scenario first race
+                                print()
+                                print(f"WARNING: could not find file {driver_indicator_csv}. Assuming first race!")
+                                print()
+                                df_driver_indicator = pd.DataFrame(columns=['cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification'])
+                            print(tabulate(df_driver_indicator, headers = 'keys', tablefmt = 'psql'))
 
-                        df_updated_driver_info = update_driver_indicator.update_driver_info(df_driver_result,df_driver_indicator,df_member_data)
+                            df_updated_driver_info = update_driver_indicator.update_driver_info(df_driver_result,df_driver_indicator,df_member_data)
 
-                        #move the new_classification to old_classification
-                        df_updated_driver_info['old_classification'] = df_updated_driver_info['new_classification']
+                            #move the new_classification to old_classification
+                            df_updated_driver_info['old_classification'] = df_updated_driver_info['new_classification']
 
-                        #print(df_pec_driver_info['avg_speed'])
-                        print(tabulate(df_updated_driver_info, headers = 'keys', tablefmt = 'psql'))
+                            #print(df_pec_driver_info['avg_speed'])
+                            print(tabulate(df_updated_driver_info, headers = 'keys', tablefmt = 'psql'))
 
-                        df_driver_indicator = update_driver_indicator.update_driver_indicator(df_updated_driver_info, df_driver_indicator, df_member_data)
-                        print(tabulate(df_driver_indicator[['cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification','deadzone','reclassified']], headers = 'keys', tablefmt = 'psql'))
+                            df_driver_indicator = update_driver_indicator.update_driver_indicator(df_updated_driver_info, df_driver_indicator, df_member_data)
+                            print(tabulate(df_driver_indicator[['cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification','deadzone','reclassified']], headers = 'keys', tablefmt = 'psql'))
 
-                        df_driver_indicator.to_csv(driver_indicator_csv,index=False)
+                            df_driver_indicator.to_csv(driver_indicator_csv,index=False)
 
-                        #
-                        # Read the team_indicator_file, if exists
-                        #
-                        team_indicator_csv = team_indicator_file + '.csv'
-                        try:
-                            df_team_indicator = pd.read_csv(team_indicator_csv)
-                            print()
-                            print(f"Using existing team indicator file {team_indicator_csv}.")
-                            print()
-                        except:
-                            #scenario first race
-                            print()
-                            print(f"WARNING: could not find file {team_indicator_csv}. Assuming first race!")
-                            print()
-                            df_team_indicator = pd.DataFrame(columns=['team_id','display_name','race_count','percentage'])
+                            #
+                            # Read the team_indicator_file, if exists
+                            #
+                            team_indicator_csv = team_indicator_file + '.csv'
+                            try:
+                                df_team_indicator = pd.read_csv(team_indicator_csv)
+                                print()
+                                print(f"Using existing team indicator file {team_indicator_csv}.")
+                                print()
+                            except:
+                                #scenario first race
+                                print()
+                                print(f"WARNING: could not find file {team_indicator_csv}. Assuming first race!")
+                                print()
+                                df_team_indicator = pd.DataFrame(columns=['team_id','display_name','race_count','percentage'])
 
-                        df_new_team_indicator = update_team_indicator.update_team_indicator(df_team_indicator, df_driver_indicator, df_driver_result)
-                        print(tabulate(df_new_team_indicator, headers = 'keys', tablefmt = 'psql'))
+                            df_new_team_indicator = update_team_indicator.update_team_indicator(df_team_indicator, df_driver_indicator, df_driver_result)
+                            print(tabulate(df_new_team_indicator, headers = 'keys', tablefmt = 'psql'))
 
-                        # save indicator as file
-                        df_new_team_indicator.to_csv(team_indicator_csv,index=False)
+                            # save indicator as file
+                            df_new_team_indicator.to_csv(team_indicator_csv,index=False)
 
-                        #answer = input("Continue?")          
+                            #answer = input("Continue?")          
     return
 
 
