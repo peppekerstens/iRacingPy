@@ -117,7 +117,7 @@ def update_driver_indicator(df_pec_driver_info: pd, df_indicator: pd, df_member_
                 percentage =  df_indicator_driver.iloc[0]['percentage']
                 #print(f"hoi { df_row['display_name']} {df_indicator_driver.iloc[0]['percentage']}")
             driven = True
-            df_new_indicator.loc[index] = [df_row['team_id'],df_row['cust_id'] ,df_row['display_name'],df_row['race_count'],df_row['old_classification'],df_row['total_time'],df_row['avg_speed'],df_row['total_avg_speed'],percentage,new_classification,deadzone,reclassified,driven]
+            df_new_indicator.loc[index] = [df_row['team_id'],df_row['cust_id'] ,df_row['display_name'],df_row['race_count'],df_row['old_classification'],df_row['total_time'],df_row['total_avg_speed'],df_row['avg_speed'],percentage,new_classification,deadzone,reclassified,driven]
     
         #now combine any old values which may not have been updated with the new Dataframe
         df_not_in_common = df_indicator.loc[~df_indicator['cust_id'].isin(df_new_indicator['cust_id'])]
