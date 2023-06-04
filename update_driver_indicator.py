@@ -71,7 +71,7 @@ def update_driver_info(df_latest_session: pd,df_indicator: pd,df_member_data: pd
 
 
 def update_driver_indicator(df_pec_driver_info: pd, df_indicator: pd, df_member_data: pd ) -> pd:
-    df_new_indicator = pd.DataFrame(columns=['team_id','cust_id','display_name','race_count','old_classification','total_time','total_avg_speed','avg_speed','percentage','new_classification','deadzone','reclassified'])
+    df_new_indicator = pd.DataFrame(columns=['team_id','cust_id','display_name','race_count','old_classification','total_time','total_avg_speed','avg_speed','percentage','new_classification','deadzone','reclassified','driven'])
     #how large is is the deadzone?
     silver_deadzone_speed = 0
     gold_deadzone_speed = 0
@@ -83,7 +83,7 @@ def update_driver_indicator(df_pec_driver_info: pd, df_indicator: pd, df_member_
     silver_driver_count = total_drivers - gold_driver_count
     gold_driver_deadzone = round(gold_driver_count * 0.3)
     silver_driver_deadzone = round(silver_driver_count * 0.3)
-    if silver_driver_deadzone > 0 and gold_driver_deadzone >0:
+    if silver_driver_deadzone > 0 and gold_driver_deadzone > 0:
         silver_deadzone_limit = gold_driver_count + silver_driver_deadzone
         gold_deadzone_limit = gold_driver_count - gold_driver_deadzone
         silver_deadzone_speed = df_pec_driver_info_sorted.iloc[silver_deadzone_limit]['avg_speed']
@@ -115,11 +115,18 @@ def update_driver_indicator(df_pec_driver_info: pd, df_indicator: pd, df_member_
             else:
                 percentage =  df_indicator_driver.iloc[0]['percentage']
                 #print(f"hoi { df_row['display_name']} {df_indicator_driver.iloc[0]['percentage']}")
-            df_new_indicator.loc[index] = [df_row['team_id'],df_row['cust_id'] ,df_row['display_name'],df_row['race_count'],df_row['old_classification'],df_row['total_time'],df_row['avg_speed'],df_row['total_avg_speed'],percentage,new_classification,deadzone,reclassified]
+            driven = True
+            df_new_indicator.loc[index] = [df_row['team_id'],df_row['cust_id'] ,df_row['display_name'],df_row['race_count'],df_row['old_classification'],df_row['total_time'],df_row['avg_speed'],df_row['total_avg_speed'],percentage,new_classification,deadzone,reclassified,driven]
+    
+        #now combine any old values which may not have been updated with the new Dataframe
+        df_not_in_common = df_indicator.loc[~df_indicator['cust_id'].isin(df_new_indicator['cust_id'])]
+        df_not_in_common['driven'] = False
+        frames = [df_not_in_common, df_new_indicator]
+        result = pd.concat(frames)
     else:
         print(f"WARNING: detected deadzone too small to use!")
-        #synthesise df_new_indicator
-    return df_new_indicator
+        return df_indicator
+    return result
 
 
 if __name__ == '__main__': #only execute when called as script, skipped when loaded as module
