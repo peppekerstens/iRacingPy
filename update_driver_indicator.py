@@ -1,3 +1,4 @@
+import argparse
 import sys
 import os
 import csv
@@ -130,15 +131,34 @@ def update_driver_indicator(df_pec_driver_info: pd, df_indicator: pd, df_member_
 
 
 if __name__ == '__main__': #only execute when called as script, skipped when loaded as module
-    member_data_file= 'member_data.csv' #up-to-date info on members irating and validation (only needed for first race)
-    #cust_id,display_name,latest_iRating,driver_classification,driver_qualification
-    driver_indicator_file = 'pec_s3_driver_indicator.csv' #server both as reference data set from previous race(s) as well as file to save latest status to after processing
-    latest_session_file = None #results from current race. maybe an agrument for this script? currently being detected as latest file within directory with name session_*.csv
+    #https://stackoverflow.com/questions/40001892/reading-named-command-arguments
+    #https://stackoverflow.com/questions/15301147/python-argparse-default-value-or-specified-value
+    #expand later to use a config file instead of defaults
+    parser=argparse.ArgumentParser()
+    parser.add_argument("--member_data", help="location of member data file. if only name is supplied, script location is used",  default='member_data.csv', type=str)
+    parser.add_argument("--driver_indicator", help="location of the driver indicator file. if only name is supplied, script location is used",  default='pec_s3_driver_indicator.csv', type=str)
+    parser.add_argument("--session", help="location of the session file to process. if only name is supplied, script location is used")
+    
+    args=parser.parse_args()
+    #print(f"Args: {args}\nCommand Line: {sys.argv}\nfoo: {args.foo}")
+    #print(f"Dict format: {vars(args)}")
 
+    member_data_file= args.member_data #up-to-date info on members irating and validation (only needed for first race)
+    #cust_id,display_name,latest_iRating,driver_classification,driver_qualification
+    driver_indicator_file = args.driver_indicator #server both as reference data set from previous race(s) as well as file to save latest status to after processing
+    latest_session_file = args.session #results from current race. maybe an agrument for this script? currently being detected as latest file within directory with name session_*.csv
+
+    print(f"member_data: {member_data_file}")
+   
     #always load the member data; use when data for driver does not exist in driver indicator file
 
     #should we renew member_data here as well?
-    df_member_data = pd.read_csv(member_data_file)
+    try:
+        df_member_data = pd.read_csv(member_data_file)
+    except:
+        print('Error: member_data file {member_data_file} not found! Please re-run and provide valid file!')
+        quit()
+    
     #print(tabulate(df_member_data, headers = 'keys', tablefmt = 'psql'))
 
     # get previous indicator
@@ -154,18 +174,17 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
     print(tabulate(df_indicator, headers = 'keys', tablefmt = 'psql'))
 
     # get result from current race
-    if latest_session_file == None:
-        sessionsFilenamesList = glob.glob('session_*.csv')
-        latest_session_file = max(sessionsFilenamesList, key=os.path.getmtime)
-        answer = None
+    #if latest_session_file == None:
+    #    sessionsFilenamesList = glob.glob('session_*.csv')
+    #    latest_session_file = max(sessionsFilenamesList, key=os.path.getmtime)
+    #    answer = None
         #while answer != "y" or answer != "n":
-        while answer != "y":
-            answer = input(f"Found {latest_session_file}, use that file and continue? y/n ")
-            print (answer)
-
-    if answer == 'n':
-        print('Error: no valid session file provided. please re-run and provide valid file!')
-        quit() #https://www.scaler.com/topics/exit-in-python/
+    #    while answer != "y":
+    #        answer = input(f"Found {latest_session_file}, use that file and continue? y/n ")
+    #        print (answer)
+    #if answer == 'n':
+    #    print('Error: no valid session file provided. please re-run and provide valid file!')
+    #    quit() #https://www.scaler.com/topics/exit-in-python/
 
     try:
         df_latest_session = pd.read_csv(latest_session_file)
