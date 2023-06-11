@@ -1,3 +1,4 @@
+import argparse
 import sys
 import os
 import csv
@@ -71,7 +72,7 @@ def update_driver_info(df_latest_session: pd,df_indicator: pd,df_member_data: pd
 
 
 def update_driver_indicator(df_pec_driver_info: pd, df_indicator: pd, df_member_data: pd ) -> pd:
-    df_new_indicator = pd.DataFrame(columns=['team_id','cust_id','display_name','race_count','old_classification','total_time','total_avg_speed','avg_speed','percentage','new_classification','deadzone','reclassified'])
+    df_new_indicator = pd.DataFrame(columns=['team_id','cust_id','display_name','race_count','old_classification','total_time','total_avg_speed','avg_speed','percentage','new_classification','deadzone','reclassified','driven'])
     #how large is is the deadzone?
     silver_deadzone_speed = 0
     gold_deadzone_speed = 0
@@ -83,7 +84,7 @@ def update_driver_indicator(df_pec_driver_info: pd, df_indicator: pd, df_member_
     silver_driver_count = total_drivers - gold_driver_count
     gold_driver_deadzone = round(gold_driver_count * 0.3)
     silver_driver_deadzone = round(silver_driver_count * 0.3)
-    if silver_driver_deadzone > 0 and gold_driver_deadzone >0:
+    if silver_driver_deadzone > 0 and gold_driver_deadzone > 0:
         silver_deadzone_limit = gold_driver_count + silver_driver_deadzone
         gold_deadzone_limit = gold_driver_count - gold_driver_deadzone
         silver_deadzone_speed = df_pec_driver_info_sorted.iloc[silver_deadzone_limit]['avg_speed']
@@ -115,23 +116,49 @@ def update_driver_indicator(df_pec_driver_info: pd, df_indicator: pd, df_member_
             else:
                 percentage =  df_indicator_driver.iloc[0]['percentage']
                 #print(f"hoi { df_row['display_name']} {df_indicator_driver.iloc[0]['percentage']}")
-            df_new_indicator.loc[index] = [df_row['team_id'],df_row['cust_id'] ,df_row['display_name'],df_row['race_count'],df_row['old_classification'],df_row['total_time'],df_row['avg_speed'],df_row['total_avg_speed'],percentage,new_classification,deadzone,reclassified]
+            driven = True
+            df_new_indicator.loc[index] = [df_row['team_id'],df_row['cust_id'] ,df_row['display_name'],df_row['race_count'],df_row['old_classification'],df_row['total_time'],df_row['total_avg_speed'],df_row['avg_speed'],percentage,new_classification,deadzone,reclassified,driven]
+    
+        #now combine any old values which may not have been updated with the new Dataframe
+        df_not_in_common = df_indicator.loc[~df_indicator['cust_id'].isin(df_new_indicator['cust_id'])]
+        df_not_in_common['driven'] = False
+        frames = [df_not_in_common, df_new_indicator]
+        result = pd.concat(frames)
     else:
         print(f"WARNING: detected deadzone too small to use!")
-        #synthesise df_new_indicator
-    return df_new_indicator
+        return df_indicator
+    return result
 
 
 if __name__ == '__main__': #only execute when called as script, skipped when loaded as module
-    member_data_file= 'member_data.csv' #up-to-date info on members irating and validation (only needed for first race)
-    #cust_id,display_name,latest_iRating,driver_classification,driver_qualification
-    driver_indicator_file = 'pec_s3_driver_indicator.csv' #server both as reference data set from previous race(s) as well as file to save latest status to after processing
-    latest_session_file = None #results from current race. maybe an agrument for this script? currently being detected as latest file within directory with name session_*.csv
+    #https://stackoverflow.com/questions/40001892/reading-named-command-arguments
+    #https://stackoverflow.com/questions/15301147/python-argparse-default-value-or-specified-value
+    #expand later to use a config file instead of defaults
+    parser=argparse.ArgumentParser()
+    parser.add_argument("--member_data", help="location of member data file. if only name is supplied, script location is used",  default='member_data.csv', type=str)
+    parser.add_argument("--driver_indicator", help="location of the driver indicator file. if only name is supplied, script location is used",  default='pec_s3_driver_indicator.csv', type=str)
+    parser.add_argument("--session", help="location of the session file to process. if only name is supplied, script location is used")
+    
+    args=parser.parse_args()
+    #print(f"Args: {args}\nCommand Line: {sys.argv}\nfoo: {args.foo}")
+    #print(f"Dict format: {vars(args)}")
 
+    member_data_file= args.member_data #up-to-date info on members irating and validation (only needed for first race)
+    #cust_id,display_name,latest_iRating,driver_classification,driver_qualification
+    driver_indicator_file = args.driver_indicator #server both as reference data set from previous race(s) as well as file to save latest status to after processing
+    latest_session_file = args.session #results from current race. maybe an agrument for this script? currently being detected as latest file within directory with name session_*.csv
+
+    print(f"member_data: {member_data_file}")
+   
     #always load the member data; use when data for driver does not exist in driver indicator file
 
     #should we renew member_data here as well?
-    df_member_data = pd.read_csv(member_data_file)
+    try:
+        df_member_data = pd.read_csv(member_data_file)
+    except:
+        print('Error: member_data file {member_data_file} not found! Please re-run and provide valid file!')
+        quit()
+    
     #print(tabulate(df_member_data, headers = 'keys', tablefmt = 'psql'))
 
     # get previous indicator
@@ -147,18 +174,17 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
     print(tabulate(df_indicator, headers = 'keys', tablefmt = 'psql'))
 
     # get result from current race
-    if latest_session_file == None:
-        sessionsFilenamesList = glob.glob('session_*.csv')
-        latest_session_file = max(sessionsFilenamesList, key=os.path.getmtime)
-        answer = None
+    #if latest_session_file == None:
+    #    sessionsFilenamesList = glob.glob('session_*.csv')
+    #    latest_session_file = max(sessionsFilenamesList, key=os.path.getmtime)
+    #    answer = None
         #while answer != "y" or answer != "n":
-        while answer != "y":
-            answer = input(f"Found {latest_session_file}, use that file and continue? y/n ")
-            print (answer)
-
-    if answer == 'n':
-        print('Error: no valid session file provided. please re-run and provide valid file!')
-        quit() #https://www.scaler.com/topics/exit-in-python/
+    #    while answer != "y":
+    #        answer = input(f"Found {latest_session_file}, use that file and continue? y/n ")
+    #        print (answer)
+    #if answer == 'n':
+    #    print('Error: no valid session file provided. please re-run and provide valid file!')
+    #    quit() #https://www.scaler.com/topics/exit-in-python/
 
     try:
         df_latest_session = pd.read_csv(latest_session_file)
