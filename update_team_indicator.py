@@ -28,9 +28,13 @@ import glob
 
 
 def update_team_indicator(df_team_indicator: pd, df_driver_indicator: pd, df_latest_session: pd) -> pd:
+    # we only need drivers who attended the last race
+    attending_drivers = df_driver_indicator['driven'] == True
+    df_attending_drivers = df_driver_indicator[attending_drivers]
+    
     # we only need the gold drivers
-    gold_drivers = df_driver_indicator['new_classification'] == 'Gold'
-    df_gold_drivers = df_driver_indicator[gold_drivers]
+    gold_drivers = df_attending_drivers['new_classification'] == 'Gold'
+    df_gold_drivers = df_attending_drivers[gold_drivers]
 
     #iterate through all the info an rebuild team_indicator 
     df_new_team_indicator = pd.DataFrame(columns=['team_id','display_name','race_count','percentage'])
