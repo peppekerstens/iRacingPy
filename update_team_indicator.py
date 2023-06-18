@@ -20,6 +20,7 @@
 #
 # but may be wise to keep some history as well for reference and proof (nice to have)
 
+import argparse
 import sys
 import os
 import pandas as pd 
@@ -74,9 +75,21 @@ def update_team_indicator(df_team_indicator: pd, df_driver_indicator: pd, df_lat
 
 
 if __name__ == '__main__': #only execute when called as script, skipped when loaded as module
-    driver_indicator_file = 'pec_driver_indicator_GT3 Class.csv' #server both as reference data set from previous race(s) as well as file to save latest status to after processing
-    team_indicator_file = 'pec_team_indicator.csv' #server both as reference data set from previous race(s) as well as file to save latest status to after processing
-    latest_session_file = 'session_60222976.0_Race_GT3 Class.csv' #results from current race. maybe an agrument for this script? currently being detected as latest file within directory with name session_*.csv
+        #https://stackoverflow.com/questions/40001892/reading-named-command-arguments
+    #https://stackoverflow.com/questions/15301147/python-argparse-default-value-or-specified-value
+    #expand later to use a config file instead of defaults
+    parser=argparse.ArgumentParser()
+    parser.add_argument("--team_indicator", help="location of the driver indicator file. if only name is supplied, script location is used",  default='member_data.csv', type=str)
+    parser.add_argument("--driver_indicator", help="location of the driver indicator file. if only name is supplied, script location is used",  default='pec_s3_driver_indicator.csv', type=str)
+    parser.add_argument("--session", help="location of the session file to process. if only name is supplied, script location is used")
+    
+    args=parser.parse_args()
+    #print(f"Args: {args}\nCommand Line: {sys.argv}\nfoo: {args.foo}")
+    #print(f"Dict format: {vars(args)}")
+
+    team_indicator_file = args.team_indicator 
+    driver_indicator_file = args.driver_indicator #serves both as reference data set from previous race(s) as well as file to save latest status to after processing
+    latest_session_file = args.session #results from current race. maybe an agrument for this script? currently being detected as latest file within directory with name session_*.csv
 
     # Read the driver_indicator_file, if exists, if not; stop
     try:
@@ -85,7 +98,7 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
         print(f"ERROR: could not find file {driver_indicator_file}. Quitting...")
         quit()
 
-    print(tabulate(df_driver_indicator, headers = 'keys', tablefmt = 'psql'))
+    #print(tabulate(df_driver_indicator, headers = 'keys', tablefmt = 'psql'))
 
     # Read the team_indicator_file, if exists
     try:
@@ -95,19 +108,7 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
         print(f"WARNING: could not find file {team_indicator_file}. Is this the first race?")
         df_team_indicator = pd.DataFrame(columns=['team_id','display_name','race_count','percentage'])
 
-    print(tabulate(df_team_indicator, headers = 'keys', tablefmt = 'psql'))
-
-    # Get the latest_session_file - result from current race
-    if latest_session_file == None:
-        sessionsFilenamesList = glob.glob('session_*.csv')
-        latest_session_file = max(sessionsFilenamesList, key=os.path.getmtime)
-        answer = None
-        #while answer != "y" or answer != "n":
-        #while answer != "y":
-        answer = input(f"Found {latest_session_file}, use that file and continue? y/n ")
-        if answer == 'n':
-            print('Error: no valid session file provided. please re-run and provide valid file!')
-            quit() #https://www.scaler.com/topics/exit-in-python/
+    #print(tabulate(df_team_indicator, headers = 'keys', tablefmt = 'psql'))
 
     try:
         df_latest_session = pd.read_csv(latest_session_file)
@@ -115,7 +116,7 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
         print('Error: session file {latest_session_file} not found! Please re-run and provide valid file!')
         quit()
 
-    print(tabulate(df_latest_session, headers = 'keys', tablefmt = 'psql'))
+    #print(tabulate(df_latest_session, headers = 'keys', tablefmt = 'psql'))
 
     # show indicator
     df_new_team_indicator = update_team_indicator(df_team_indicator, df_driver_indicator, df_latest_session)

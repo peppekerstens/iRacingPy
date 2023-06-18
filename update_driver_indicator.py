@@ -148,18 +148,12 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
     driver_indicator_file = args.driver_indicator #server both as reference data set from previous race(s) as well as file to save latest status to after processing
     latest_session_file = args.session #results from current race. maybe an agrument for this script? currently being detected as latest file within directory with name session_*.csv
 
-    print(f"member_data: {member_data_file}")
-   
     #always load the member data; use when data for driver does not exist in driver indicator file
-
-    #should we renew member_data here as well?
     try:
         df_member_data = pd.read_csv(member_data_file)
     except:
         print('Error: member_data file {member_data_file} not found! Please re-run and provide valid file!')
         quit()
-    
-    #print(tabulate(df_member_data, headers = 'keys', tablefmt = 'psql'))
 
     # get previous indicator
     # must either be result of previous race -or if first race- result from iRating analysis
@@ -171,7 +165,7 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
         #scenario first race - REWRITE: SHOULD ALWAYS LOAD TO ADD DRIVERS!!!! CALL IT DF_MEMBERS /DF_REF
         df_indicator = pd.DataFrame(columns=['team_id','cust_id','display_name','race_count','old_classification','total_time','avg_speed','total_avg_speed','percentage','new_classification'])
 
-    print(tabulate(df_indicator, headers = 'keys', tablefmt = 'psql'))
+    #print(tabulate(df_indicator, headers = 'keys', tablefmt = 'psql'))
 
     # get result from current race
     #if latest_session_file == None:
@@ -192,7 +186,7 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
         print('Error: session file {latest_session_file} not found! Please re-run and provide valid file!')
         quit()
 
-    print(tabulate(df_latest_session, headers = 'keys', tablefmt = 'psql'))
+    #print(tabulate(df_latest_session, headers = 'keys', tablefmt = 'psql'))
 
     df_pec_driver_info = update_driver_info(df_latest_session,df_indicator,df_member_data)
 
@@ -200,7 +194,7 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
     df_pec_driver_info['old_classification'] = df_pec_driver_info['new_classification']
 
     #print(df_pec_driver_info['avg_speed'])
-    print(tabulate(df_pec_driver_info, headers = 'keys', tablefmt = 'psql'))
+    #print(tabulate(df_pec_driver_info, headers = 'keys', tablefmt = 'psql'))
 
     df_new_indicator = update_driver_indicator(df_pec_driver_info, df_indicator, df_member_data)
     print(tabulate(df_new_indicator[['team_id','cust_id','display_name','race_count','old_classification','total_time','avg_speed','total_avg_speed','percentage','new_classification','deadzone','reclassified']], headers = 'keys', tablefmt = 'psql'))
