@@ -1,5 +1,0 @@
-cust_id,display_name,oldi_rating,avg_lap,laps_complete,avg_lap_valid,laps_complete_valid,speed,time,time_valid,percentage
-424670,Marc Hagele,4139,108.7842,2,111.261325,12,192.66768645798533,217.5684,1335.1359,11.0
-363812,Vincent Aussems,4015,110.162,3,0.0,0,inf,330.486,0.0,16.0
-528821,Ivan Spitz,2395,110.1392,19,111.6194125,8,192.04958707339554,2092.6448,892.9553,100.0
-427545,Marnix Heijster,3180,111.0492,3,0.0,0,inf,333.1476,0.0,16.0

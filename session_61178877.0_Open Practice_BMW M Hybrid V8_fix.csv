@@ -1,6 +1,0 @@
-cust_id,display_name,oldi_rating,avg_lap,laps_complete,avg_lap_valid,laps_complete_valid,speed,time_valid,percentage
-382105,Peter Hruska,3747,105.1569,9,0.0,0,inf,0.0,100.0
-171867,Leandro Mendes,4475,105.4102,4,105.31773333333332,21,201.39542991556982,2211.6724,44.0
-366068,Stephane Civeira Lareo,3945,105.9682,9,0.0,0,inf,0.0,100.0
-620347,Norbert Tamas,3495,0.0,0,0.0,0,inf,0.0,0.0
-468045,Hákon Jökulsson,2549,0.0,1,0.0,0,inf,0.0,11.0

@@ -1,6 +1,0 @@
-team_id,team_display_name,cust_id,display_name,oldi_rating,avg_lap,laps_complete,avg_lap_valid,laps_complete_valid,speed,time,time_valid,percentage
--212830,Team Tom R Dadswell,176521,Tom R Dadswell,4562,106.6739,22,105.22984,20,203.710868324042,2346.8258,2104.5968,76.0
--243684,Altitude Esports,388214,Mark D Hutchinson,4074,105.5864,29,105.58637777777777,27,203.02298962387198,3062.0056,2850.8322,100.0
--233878,DLR x Sim-Lab \\ Orange,722146,Yannick Gerards,2939,105.175,8,105.175,6,203.81708657000243,841.4,631.05,28.0
--284108,Magic Arrow,742620,Norbert Frank,2550,107.1169,26,106.84148333333333,24,200.63800511942227,2785.0394,2564.1956,90.0
--132780,Octopus Racing - R. Palazón,380806,Rubén Palazón,3736,0.0,0,0.0,0,inf,0.0,0.0,0.0

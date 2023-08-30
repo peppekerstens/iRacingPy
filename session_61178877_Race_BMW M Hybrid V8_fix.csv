@@ -1,7 +1,0 @@
-cust_id,display_name,oldi_rating,avg_lap,laps_complete,avg_lap_valid,laps_complete_valid,speed,time_valid,percentage
-171867,Leandro Mendes,4475,105.6516,24,105.31773333333332,21,201.39542991556982,2211.6724,100.0
-316144,Standa Sehnall,4428,106.0711,11,105.32777142857144,7,201.37623624538583,737.2944000000001,46.0
-468045,Hákon Jökulsson,2549,0.0,0,0.0,0,inf,0.0,0.0
-366068,Stephane Civeira Lareo,3945,0.0,0,0.0,0,inf,0.0,0.0
-382105,Peter Hruska,3747,0.0,0,0.0,0,inf,0.0,0.0
-620347,Norbert Tamas,3495,0.0,0,0.0,0,inf,0.0,0.0
