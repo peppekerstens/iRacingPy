@@ -75,8 +75,8 @@ def update_driver_indicator(df_driver_info: pd, df_indicator: pd, df_member_data
     df_driver_info_sorted = df_driver_info.sort_values(by='avg_speed', ascending=False)
     total_drivers = len(df_driver_info_sorted)
     gold_drivers = df_driver_info_sorted['old_classification'] == 'Gold'
-    df_indicator_gold_drivers = df_driver_info_sorted[gold_drivers]
-    gold_driver_count = len(df_indicator_gold_drivers)
+    df_driver_info_gold_drivers = df_driver_info_sorted[gold_drivers]
+    gold_driver_count = len(df_driver_info_gold_drivers)
     silver_driver_count = total_drivers - gold_driver_count
     gold_driver_deadzone = round(gold_driver_count * 0.3)
     silver_driver_deadzone = round(silver_driver_count * 0.3)
@@ -95,6 +95,22 @@ def update_driver_indicator(df_driver_info: pd, df_indicator: pd, df_member_data
 
         #review created list for new_classification
         for index, df_row in df_driver_info_sorted.iterrows():
+            #get the old indicator info
+            driver = df_indicator['cust_id'] == df_row['cust_id']
+            df_indicator_driver = df_indicator[driver]
+
+            if df_indicator_driver.empty:
+                gold_race_count = 0
+                gold_total_drive_time = 0
+                gold_total_sesion_time = 0
+                gold_total_percentage = 0
+
+            if not df_indicator_driver.empty:
+                gold_race_count = df_indicator_driver.iloc[0]['gold_race_count']
+                gold_total_drive_time = df_indicator_driver.iloc[0]['gold_total_drive_time']
+                gold_total_sesion_time = df_indicator_driver.iloc[0]['gold_total_sesion_time']
+                gold_total_percentage = df_indicator_driver.iloc[0]['gold_total_percentage']
+
             deadzone = False
             if df_row['avg_speed'] > gold_deadzone_speed:
                 new_classification = 'Gold'
@@ -107,15 +123,12 @@ def update_driver_indicator(df_driver_info: pd, df_indicator: pd, df_member_data
             if new_classification != df_row['old_classification']:
                 reclassified = True
             #df_indicator_driver = get_df_indicator_driver(df_indicator,df_member_data, df_row['cust_id'])
-            gold_race_count = df_row['gold_race_count']
-            gold_total_drive_time = df_row['gold_total_drive_time']
-            gold_total_sesion_time = df_row['gold_total_sesion_time']
-            gold_total_percentage = df_row['gold_total_percentage']
+
             if new_classification == 'Gold':
                 #'gold_race_count','gold_total_drive_time','gold_total_sesion_time',gold_total_percentage, 'index','total_index'
-                gold_race_count = df_row['gold_race_count'] + 1
-                gold_total_drive_time = round(df_row['gold_total_drive_time'] + df_row['total_time'],2)
-                gold_total_sesion_time = round(df_row['gold_total_sesion_time'] + df_row['total_session_time'],2)
+                gold_race_count += 1
+                gold_total_drive_time = round(gold_total_drive_time + df_row['total_time'],2)
+                gold_total_sesion_time = round(gold_total_sesion_time + df_row['total_session_time'],2)
                 gold_total_percentage = round(gold_total_drive_time/gold_total_sesion_time * 100,0)
                 #gold_total_time = round(df_indicator_driver.iloc[0]['total_time'] + df_row['time_valid'],2)
 

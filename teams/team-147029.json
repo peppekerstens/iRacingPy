@@ -1,0 +1,173 @@
+{
+    "about": "Enter a team description",
+    "created": "2020-01-11T17:34:11Z",
+    "hidden": false,
+    "is_admin": false,
+    "is_applicant": false,
+    "is_default": true,
+    "is_ignored": false,
+    "is_invite": false,
+    "is_member": false,
+    "is_owner": false,
+    "owner": {
+        "admin": true,
+        "cust_id": 171651,
+        "display_name": "Borja Garcia",
+        "helmet": {
+            "color1": "fa811e",
+            "color2": "f5f5f5",
+            "color3": "f2efee",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 61
+        },
+        "owner": true
+    },
+    "owner_id": 171651,
+    "pending_requests": [],
+    "private_wall": true,
+    "recruiting": true,
+    "roster": [
+        {
+            "admin": true,
+            "cust_id": 171651,
+            "display_name": "Borja Garcia",
+            "owner": true,
+            "team_id": 147029
+        },
+        {
+            "admin": true,
+            "cust_id": 569598,
+            "display_name": "Aitor Iglesias",
+            "owner": false,
+            "team_id": 147029
+        },
+        {
+            "admin": true,
+            "cust_id": 383286,
+            "display_name": "Alex Barasoain",
+            "owner": false,
+            "team_id": 147029
+        },
+        {
+            "admin": true,
+            "cust_id": 428325,
+            "display_name": "Cristian Conde Dominguez",
+            "owner": false,
+            "team_id": 147029
+        },
+        {
+            "admin": true,
+            "cust_id": 395568,
+            "display_name": "Fernando Cruz Sanchez",
+            "owner": false,
+            "team_id": 147029
+        },
+        {
+            "admin": true,
+            "cust_id": 368159,
+            "display_name": "Iv\u00e1n Vaz Cabrera",
+            "owner": false,
+            "team_id": 147029
+        },
+        {
+            "admin": true,
+            "cust_id": 418026,
+            "display_name": "Jonathan Ortu\u00f1o",
+            "owner": false,
+            "team_id": 147029
+        },
+        {
+            "admin": true,
+            "cust_id": 378344,
+            "display_name": "Jonathan Zamora",
+            "owner": false,
+            "team_id": 147029
+        },
+        {
+            "admin": true,
+            "cust_id": 350311,
+            "display_name": "Jose Maria Guerras",
+            "owner": false,
+            "team_id": 147029
+        },
+        {
+            "admin": true,
+            "cust_id": 395790,
+            "display_name": "Manu Overa",
+            "owner": false,
+            "team_id": 147029
+        },
+        {
+            "admin": true,
+            "cust_id": 342641,
+            "display_name": "Marcos Alarc\u00f3n",
+            "owner": false,
+            "team_id": 147029
+        },
+        {
+            "admin": true,
+            "cust_id": 558947,
+            "display_name": "Pablo Javier Ruiz",
+            "owner": false,
+            "team_id": 147029
+        },
+        {
+            "admin": true,
+            "cust_id": 241377,
+            "display_name": "Pablo Villalba Blanco",
+            "owner": false,
+            "team_id": 147029
+        },
+        {
+            "admin": true,
+            "cust_id": 552913,
+            "display_name": "Sergio Borja",
+            "owner": false,
+            "team_id": 147029
+        },
+        {
+            "admin": false,
+            "cust_id": 450977,
+            "display_name": "Guillermo Pequerul",
+            "owner": false,
+            "team_id": 147029
+        },
+        {
+            "admin": false,
+            "cust_id": 332826,
+            "display_name": "Jorge Varela",
+            "owner": false,
+            "team_id": 147029
+        },
+        {
+            "admin": false,
+            "cust_id": 321786,
+            "display_name": "Victor Rgz Magnusson",
+            "owner": false,
+            "team_id": 147029
+        },
+        {
+            "admin": false,
+            "cust_id": 207525,
+            "display_name": "\u00c1lvaro Garc\u00eda",
+            "owner": false,
+            "team_id": 147029
+        }
+    ],
+    "roster_count": 18,
+    "suit": {
+        "color1": "44f85a",
+        "color2": "474343",
+        "color3": "666666",
+        "pattern": 11
+    },
+    "tags": {
+        "categorized": [],
+        "not_categorized": []
+    },
+    "team_applications": [],
+    "team_id": -147029,
+    "team_name": "M4sked Devils eSports RED",
+    "url": ""
+}

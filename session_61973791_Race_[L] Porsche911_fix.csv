@@ -1,0 +1,5 @@
+team_id,team_display_name,cust_id,display_name,oldi_rating,avg_lap,laps_complete,avg_lap_valid,laps_complete_valid,speed,time_valid,percentage
+-159911,Austrian Simracers Blue,341206,Kevin Ketzerau,2591,105.9368,72,104.9291294117647,68,162.16579777409424,7135.1808,53.0
+-159911,Austrian Simracers Blue,344263,Markus Fallmann,2228,105.2993,64,104.32938,60,163.09802646962916,6259.7628,47.0
+-264062,Team Upstate,671627,Justin Cole6,1815,109.0366,106,105.27159868421052,76,161.63824045119384,8000.6415,78.0
+-264062,Team Upstate,478574,Matias Nievas Soto,2157,106.5611,27,105.31239047619049,21,161.57563135599923,2211.5602000000003,20.0

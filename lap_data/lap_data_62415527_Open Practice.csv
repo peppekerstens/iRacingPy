@@ -1,0 +1,7 @@
+group_id,name,cust_id,display_name,lap_number,flags,incident,session_time,session_start_time,lap_time,team_fastest_lap,personal_best_lap,license_level,car_number,lap_events
+640490,Dimitri Seront,640490,Dimitri Seront,0,2,False,1409037,,-1,False,False,20,2,['pitted']
+640490,Dimitri Seront,640490,Dimitri Seront,1,0,False,1803028,,393991,False,False,20,2,[]
+640490,Dimitri Seront,640490,Dimitri Seront,2,0,False,2179722,,376694,True,True,20,2,[]
+30319,Francesco Bernardo,30319,Francesco Bernardo,0,2,False,1392473,,-1,False,False,20,3,['pitted']
+30319,Francesco Bernardo,30319,Francesco Bernardo,1,275,False,2012759,,-1,False,False,20,3,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+30319,Francesco Bernardo,30319,Francesco Bernardo,2,0,False,2393581,,380822,True,True,20,3,[]
