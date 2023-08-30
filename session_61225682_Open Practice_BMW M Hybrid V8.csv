@@ -1,0 +1,4 @@
+cust_id,display_name,oldi_rating,avg_lap,laps_complete,avg_lap_valid,laps_complete_valid,speed,time,time_valid,percentage
+708185,Denis Robin Wolf,6343,106.773,10,103.55371428571428,7,204.82616513279515,1067.73,724.876,40.0
+620347,Norbert Tamas,3495,104.4663,25,104.52157916666667,24,202.92948452853378,2611.6575000000003,2508.5179,100.0
+366068,Stephane Civeira Lareo,3945,0.0,0,0.0,0,inf,0.0,0.0,0.0

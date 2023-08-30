@@ -1,0 +1,299 @@
+{
+    "about": "Enter a team description",
+    "created": "2020-01-11T17:34:11Z",
+    "hidden": false,
+    "is_admin": false,
+    "is_applicant": false,
+    "is_default": true,
+    "is_ignored": false,
+    "is_invite": false,
+    "is_member": false,
+    "is_owner": false,
+    "owner": {
+        "admin": true,
+        "cust_id": 171651,
+        "display_name": "Borja Garcia",
+        "helmet": {
+            "color1": "fa811e",
+            "color2": "f5f5f5",
+            "color3": "f2efee",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 61
+        },
+        "owner": true
+    },
+    "owner_id": 171651,
+    "pending_requests": [],
+    "private_wall": true,
+    "recruiting": true,
+    "roster": [
+        {
+            "admin": true,
+            "cust_id": 171651,
+            "display_name": "Borja Garcia",
+            "helmet": {
+                "color1": "fa811e",
+                "color2": "f5f5f5",
+                "color3": "f2efee",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 61
+            },
+            "owner": true
+        },
+        {
+            "admin": true,
+            "cust_id": 569598,
+            "display_name": "Aitor Iglesias",
+            "helmet": {
+                "color1": "0094ff",
+                "color2": "faff00",
+                "color3": "faff00",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 31
+            },
+            "owner": false
+        },
+        {
+            "admin": true,
+            "cust_id": 383286,
+            "display_name": "Alex Barasoain",
+            "helmet": {
+                "color1": "ff2929",
+                "color2": "ffffff",
+                "color3": "ffffff",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 0
+            },
+            "owner": false
+        },
+        {
+            "admin": true,
+            "cust_id": 428325,
+            "display_name": "Cristian Conde Dominguez",
+            "helmet": {
+                "color1": "FFFFFF",
+                "color2": "000000",
+                "color3": "B6070D",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 24
+            },
+            "owner": false
+        },
+        {
+            "admin": true,
+            "cust_id": 395568,
+            "display_name": "Fernando Cruz Sanchez",
+            "helmet": {
+                "color1": "0d4af2",
+                "color2": "f0ff14",
+                "color3": "111111",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 62
+            },
+            "owner": false
+        },
+        {
+            "admin": true,
+            "cust_id": 368159,
+            "display_name": "Iv\u00e1n Vaz Cabrera",
+            "helmet": {
+                "color1": "191515",
+                "color2": "ffffff",
+                "color3": "ff0000",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 37
+            },
+            "owner": false
+        },
+        {
+            "admin": true,
+            "cust_id": 418026,
+            "display_name": "Jonathan Ortu\u00f1o",
+            "helmet": {
+                "color1": "000000",
+                "color2": "d4ff00",
+                "color3": "e9e9e9",
+                "face_type": 8,
+                "helmet_type": 0,
+                "pattern": 62
+            },
+            "owner": false
+        },
+        {
+            "admin": true,
+            "cust_id": 378344,
+            "display_name": "Jonathan Zamora",
+            "helmet": {
+                "color1": "0a0a06",
+                "color2": "ed2129",
+                "color3": "f9fc7e",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 58
+            },
+            "owner": false
+        },
+        {
+            "admin": true,
+            "cust_id": 350311,
+            "display_name": "Jose Maria Guerras",
+            "helmet": {
+                "color1": "FFF557",
+                "color2": "372a75",
+                "color3": "f1732e",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 65
+            },
+            "owner": false
+        },
+        {
+            "admin": true,
+            "cust_id": 395790,
+            "display_name": "Manu Overa",
+            "helmet": {
+                "color1": "b91f1f",
+                "color2": "efe30d",
+                "color3": "b91f1f",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 46
+            },
+            "owner": false
+        },
+        {
+            "admin": true,
+            "cust_id": 342641,
+            "display_name": "Marcos Alarc\u00f3n",
+            "helmet": {
+                "color1": "447ac0",
+                "color2": "ee3442",
+                "color3": "ffffff",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 1
+            },
+            "owner": false
+        },
+        {
+            "admin": true,
+            "cust_id": 558947,
+            "display_name": "Pablo Javier Ruiz",
+            "helmet": {
+                "color1": "000000",
+                "color2": "000000",
+                "color3": "000000",
+                "face_type": 4,
+                "helmet_type": 0,
+                "pattern": 0
+            },
+            "owner": false
+        },
+        {
+            "admin": true,
+            "cust_id": 241377,
+            "display_name": "Pablo Villalba Blanco",
+            "helmet": {
+                "color1": "c00707",
+                "color2": "f1f410",
+                "color3": "e9dc00",
+                "face_type": 8,
+                "helmet_type": 0,
+                "pattern": 1
+            },
+            "owner": false
+        },
+        {
+            "admin": true,
+            "cust_id": 552913,
+            "display_name": "Sergio Borja",
+            "helmet": {
+                "color1": "fcff39",
+                "color2": "f5180a",
+                "color3": "ffc658",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 64
+            },
+            "owner": false
+        },
+        {
+            "admin": false,
+            "cust_id": 450977,
+            "display_name": "Guillermo Pequerul",
+            "helmet": {
+                "color1": "ffff00",
+                "color2": "f80000",
+                "color3": "f80000",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 22
+            },
+            "owner": false
+        },
+        {
+            "admin": false,
+            "cust_id": 332826,
+            "display_name": "Jorge Varela",
+            "helmet": {
+                "color1": "000000",
+                "color2": "ff0000",
+                "color3": "fffc00",
+                "face_type": 4,
+                "helmet_type": 0,
+                "pattern": 3
+            },
+            "owner": false
+        },
+        {
+            "admin": false,
+            "cust_id": 321786,
+            "display_name": "Victor Rgz Magnusson",
+            "helmet": {
+                "color1": "FFFFFF",
+                "color2": "375DBE",
+                "color3": "B39037",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 44
+            },
+            "owner": false
+        },
+        {
+            "admin": false,
+            "cust_id": 207525,
+            "display_name": "\u00c1lvaro Garc\u00eda",
+            "helmet": {
+                "color1": "000000",
+                "color2": "ffe600",
+                "color3": "ff0000",
+                "face_type": 10,
+                "helmet_type": 0,
+                "pattern": 52
+            },
+            "owner": false
+        }
+    ],
+    "roster_count": 18,
+    "suit": {
+        "color1": "44f85a",
+        "color2": "474343",
+        "color3": "666666",
+        "pattern": 11
+    },
+    "tags": {
+        "categorized": [],
+        "not_categorized": []
+    },
+    "team_applications": [],
+    "team_id": -147029,
+    "team_name": "M4sked Devils eSports RED",
+    "url": ""
+}

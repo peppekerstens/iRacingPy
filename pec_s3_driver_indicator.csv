@@ -1,0 +1,78 @@
+team_id,cust_id,display_name,race_count,old_classification,total_time,avg_speed,total_avg_speed,percentage,new_classification,driven,deadzone,reclassified
+-129672,443123,Alessio Bernardini,1,Gold,21210.21,178.71,178.70952554053397,59.0,Gold,True,False,False
+-127445,19423,Fabio Ponta,1,Gold,21783.4,178.24,178.24232445866775,61.0,Gold,True,False,False
+-223528,380763,David Assuncao,1,Gold,10564.64,178.15,178.15395282309257,29.0,Gold,True,False,False
+-159910,420543,Pascal Haß,1,Gold,5241.9,177.84,177.83957351279514,15.0,Gold,True,False,False
+-134184,286658,Marcelo Eusébio,1,Gold,16979.55,177.62,177.61934517569085,47.0,Gold,True,False,False
+-223528,465352,Filipe RC Barreto,1,Gold,21617.05,177.59,177.5950303505099,60.0,Gold,True,False,False
+-129672,758401,Alessio Bonino,1,Gold,14634.74,177.48,177.48439118560822,41.0,Gold,True,False,False
+-299092,852455,Vincenzo Sorice Jr,1,Gold,10106.74,177.46,177.4557206855914,28.0,Gold,True,False,False
+-96989,366403,Nils Corr,1,Gold,8465.38,177.43,177.42813526706672,23.0,Gold,True,False,False
+-134184,667770,Pedro Daniel Paquete,1,Gold,8580.78,177.38,177.3756932314644,24.0,Gold,True,False,False
+-299638,346983,Vicente Orozco,1,Gold,15108.64,177.36,177.35561182577408,42.0,Gold,True,False,False
+-127445,59708,Luigi Nespolino,1,Gold,14166.49,177.28,177.2796147379088,39.0,Gold,True,False,False
+-159910,409965,Thomas Pieber,1,Gold,16106.07,177.27,177.2724753884693,45.0,Gold,True,False,False
+-62993,81643,Bryan Krauss,1,Gold,7354.83,176.86,176.864224658477,20.0,Gold,True,False,False
+-129653,365305,Davo Ramos,1,Gold,10328.94,176.79,176.79189592070006,29.0,Gold,True,False,False
+-299638,19254,Cesar Carregal,1,Gold,10695.54,176.77,176.76805515677745,29.0,Gold,True,False,False
+-297933,180064,Nic Veltenaar,1,Gold,7959.13,176.72,176.72444145420985,22.0,Gold,True,False,False
+-159910,347495,Marko Zeiler,1,Gold,13673.52,176.64,176.64265688187473,38.0,Gold,True,False,False
+-134184,676270,Cassio Medeiros,1,Gold,10285.04,176.62,176.6162884367645,28.0,Gold,True,False,False
+-96989,445418,Thomas Fischer2,1,Gold,14236.95,176.61,176.61324844157792,39.0,Gold,True,False,False
+-96989,398267,Ben Idris Abdillahi,1,Gold,12819.45,176.52,176.52109202712916,35.0,Gold,True,False,False
+-278379,389317,Steven Bird2,1,Gold,15080.89,176.48,176.484721707828,42.0,Gold,True,False,False
+-232258,641212,Pedro M Oliveira,1,Silver,10515.86,176.46,176.4580661915342,29.0,Gold,True,False,True
+-223528,301748,Joao Nascimento,1,Gold,3651.14,176.42,176.42176765270122,10.0,Gold,True,False,False
+-129653,389453,Carlos Ruiz3,1,Gold,10229.44,176.36,176.36427620082586,28.0,Gold,True,False,False
+-129653,649681,Joselu Otero,1,Gold,15085.54,176.32,176.3224662193201,42.0,Gold,True,False,False
+-175849,843051,Linus Griese,1,Silver,15396.9,176.32,176.32196137914298,43.0,Gold,True,False,True
+-62993,722391,Matthew Luke Sr,1,Silver,7402.8,176.29,176.29303194049854,20.0,Gold,True,False,True
+-299092,327245,Paolo Ernesto Taddeolini,1,Gold,16837.43,176.28,176.27728390255268,46.0,Gold,True,False,False
+-62993,651954,Cade Middleton,1,Silver,12053.85,176.28,176.27525069758585,33.0,Gold,True,False,True
+-252527,727711,Ryan O'Connor6,1,Silver,21327.27,176.24,176.23526436702605,59.0,Gold,True,False,True
+-297933,413083,Ryan Scott Hamilton,1,Gold,10666.95,176.16,176.1646497075811,29.0,Gold,True,True,False
+-62993,656823,Rink Wilbrink3,1,Gold,8964.01,176.15,176.14898969336022,25.0,Gold,True,True,False
+-278379,416545,Martin Hobson,1,Gold,19982.65,176.1,176.10283181027089,55.0,Gold,True,True,False
+-280178,451680,Kris van Strijland,1,Silver,13718.82,176.06,176.06014958918558,0.0,Silver,True,True,False
+-232258,858949,Gonçalo C Ferreira,1,Gold,10713.44,175.97,175.97426350175286,29.0,Gold,True,True,False
+-257829,25377,Aurelio Carneiro,1,Silver,6839.53,175.86,175.86098444291304,0.0,Silver,True,True,False
+-299638,273285,Ale G Torres,1,Gold,10208.43,175.75,175.75337005725774,28.0,Gold,True,True,False
+-159911,685554,Chris Mayr,1,Gold,10308.87,175.67,175.66623638179195,28.0,Gold,True,True,False
+-175849,371739,Levi Pruitt,1,Silver,6875.59,175.63,175.62859161222858,0.0,Silver,True,True,False
+-110547,528824,Kiko Lacalle,1,Gold,8207.2,175.57,175.57417545965603,22.0,Gold,True,True,False
+-232258,387273,Ricardo Luis Pereira,1,Gold,8946.64,175.57,175.57307150147227,24.0,Gold,True,True,False
+-175849,364155,Stefan Schuster,1,Gold,8973.3,175.5,175.49556455742754,25.0,Gold,True,True,False
+-257829,515776,Rui Filipe Pinheiro,1,Silver,7528.33,175.43,175.4312398181303,0.0,Silver,True,True,False
+-257830,530634,Nuno Vinagre,1,Gold,5936.06,175.31,175.3062523193309,16.0,Gold,True,True,False
+-140651,643345,Austin Dilts,1,Silver,18012.31,175.25,175.25158182292358,0.0,Silver,True,True,False
+-312337,332166,Mathias Saurer,1,Silver,6680.75,175.17,175.17144327060754,0.0,Silver,True,True,False
+-257829,561604,Carlos Coxinho,1,Gold,7052.14,175.16,175.15514110500726,19.0,Gold,True,True,False
+-257782,608985,Ricardo Varão,1,Silver,8055.07,175.15,175.15299025013363,0.0,Silver,True,True,False
+-299092,564555,Mauro Dragoni,1,Silver,8904.9,175.09,175.0877227011177,0.0,Silver,True,True,False
+-257829,461417,Jorge  Mendes Pinheiro,1,Gold,7119.88,175.01,175.00888246013346,19.0,Gold,True,True,False
+-280178,127270,Simon Van  Dijk,1,Gold,6996.35,174.99,174.98817446907023,19.0,Gold,True,True,False
+-264062,671627,Justin Cole6,1,Silver,16933.73,174.96,174.95592987859774,0.0,Silver,True,True,False
+-159911,665679,TH Reinberger,1,Silver,14982.51,174.9,174.8975743417908,0.0,Silver,True,True,False
+-140651,579208,Thomas Burling,1,Silver,17381.13,174.85,174.85114051511016,0.0,Silver,True,True,False
+-297933,318959,Chris Chadderton,1,Gold,10817.87,174.84,174.8361574132004,29.0,Gold,True,True,False
+-299312,605082,Mich Comazzetto,1,Silver,3883.82,174.77,174.77479546243066,0.0,Silver,True,False,False
+-110547,214678,J Carlos Villarejo,1,Gold,6130.3,174.76,174.7626305969284,0.0,Silver,True,False,True
+-232258,453157,Daniel Silva10,1,Silver,5219.58,174.75,174.7531149692832,0.0,Silver,True,False,False
+-243021,370494,Josh Fletcher,1,Gold,3492.73,174.75,174.74541716463204,0.0,Silver,True,False,True
+-257830,613054,Luis Marinho,1,Gold,3375.97,174.68,174.67690342302967,0.0,Silver,True,False,True
+-258771,648414,Cristiano Rocha,1,Gold,4607.13,174.68,174.67648296912114,0.0,Silver,True,False,True
+-243021,417146,Jonathan Worth,1,Silver,3325.98,174.65,174.65305668850738,0.0,Silver,True,False,False
+-299312,732337,Davide De Marco2,1,Silver,3212.31,174.62,174.61885614768354,0.0,Silver,True,False,False
+-312337,113603,Norbert Windholz,1,Silver,7704.8,174.56,174.55777152429206,0.0,Silver,True,False,False
+-159911,461635,Markus Deutsch,1,Silver,10402.71,174.54,174.53596148751822,0.0,Silver,True,False,False
+-175849,314054,Jan-Eike Zanders,1,Silver,3448.4,174.45,174.45220422327023,0.0,Silver,True,False,False
+-264062,478574,Matias Nievas Soto,1,Silver,17716.61,174.42,174.42029234207658,0.0,Silver,True,False,False
+-252527,654026,Caleb Koski,1,Silver,13799.34,174.39,174.3861653299492,0.0,Silver,True,False,False
+-257782,725974,Gonçalo Paixão5,1,Silver,9461.03,174.12,174.11786414960935,0.0,Silver,True,False,False
+-257782,823793,Luciano Gomes,1,Silver,9090.82,173.94,173.9428435293051,0.0,Silver,True,False,False
+-257829,201606,Manuel M Cruz,1,Silver,7169.7,173.8,173.79515183499112,0.0,Silver,True,False,False
+-258771,796249,Guilherme Costa Reis,1,Gold,2299.8,173.74,173.73649258145394,0.0,Silver,True,False,True
+-258771,479840,João Rufino,1,Silver,8171.15,173.49,173.49025259689174,0.0,Silver,True,False,False
+-280178,454587,Bart Feuerstein,1,Silver,10298.58,173.37,173.37012919001972,0.0,Silver,True,False,False
+-280178,662411,Peppe Kerstens,1,Silver,3359.01,172.27,172.27066564188215,0.0,Silver,True,False,False
+-257782,149607,Pedro Bragança,1,Silver,7181.9,171.84,171.83647484188998,0.0,Silver,True,False,False

@@ -20,51 +20,82 @@
 #
 # but may be wise to keep some history as well for reference and proof (nice to have)
 
+import argparse
 import sys
 import os
 import pandas as pd 
 from tabulate import tabulate
 import glob
 
+team_indicator_columns = ['team_id','team_display_name','race_count','percentage','gold_league_drive_time','gold_league_percentage','total_league_time']
 
-def update_team_indicator(df_team_indicator: pd, df_driver_indicator: pd, df_latest_session: pd) -> pd:
+def update_team_indicator(df_team_indicator: pd, df_driver_indicator: pd) -> pd:
     # we only need drivers who attended the last race
     attending_drivers = df_driver_indicator['driven'] == True
     df_attending_drivers = df_driver_indicator[attending_drivers]
     
     # we only need the gold drivers
-    gold_drivers = df_attending_drivers['new_classification'] == 'Gold'
-    df_gold_drivers = df_attending_drivers[gold_drivers]
+    #gold_drivers = df_attending_drivers['new_classification'] == 'Gold'
+    #df_gold_drivers = df_attending_drivers[gold_drivers]
 
     #iterate through all the info an rebuild team_indicator 
-    df_new_team_indicator = pd.DataFrame(columns=['team_id','display_name','race_count','percentage'])
-    try:
-        unique_teams = df_latest_session['team_id'].unique()
-    except:
-        return df_new_team_indicator #when there are no teams found...
+    df_new_team_indicator = pd.DataFrame(columns=team_indicator_columns)
+    unique_teams = df_attending_drivers['team_id'].unique()
+    print(f"found {len(unique_teams)} unique_teams")
+    index = 0
     for team_id in unique_teams:
         #get driver results for this team
-        drivers = df_latest_session['team_id'] == team_id
-        df_drivers = df_latest_session[drivers]
+        drivers = df_attending_drivers['team_id'] == team_id
+        df_drivers = df_attending_drivers[drivers]
+        
         team_display_name = df_drivers.iloc[0]['team_display_name']
+        print(f"processing team {team_display_name} with {len(df_drivers)} drivers")
+
+        # check if there are previous records in the indicator file for same team
+        indicator = df_team_indicator['team_id'] == team_id
+        df_indicator = df_team_indicator[indicator]
+
+        if df_indicator.empty:
+            race_count = 1
+            gold_league_drive_time = 0
+            total_league_time = 0
+        if not df_indicator.empty:
+            # pre-populate values with previous records
+            race_count = df_indicator.iloc[0]['race_count'] + 1
+            gold_league_drive_time = df_indicator.iloc[0]['gold_league_drive_time']
+            total_league_time = df_indicator.iloc[0]['total_league_time']
+
         percentage = 0
+        gold_league_percentage = 0
+
+        # we only need the gold drivers
+        gold_drivers = df_drivers['new_classification'] == 'Gold'
+        df_gold_drivers = df_drivers[gold_drivers]
+
+        if not df_gold_drivers.empty:
+            total_league_time += df_drivers.iloc[0]['total_session_time']
         # iterate through the drivers for this team
-        for index, row in df_drivers.iterrows():
+        for index2, row in df_gold_drivers.iterrows():
+            gold_league_drive_time += row['gold_total_drive_time']
             #is it a gold driver? get the driver indicator
-            indicator = df_gold_drivers['cust_id'] == row['cust_id']
-            df_indicator = df_gold_drivers[indicator]
-            if not df_indicator.empty: #if a result, driver is gold
-                percentage += row['percentage']
+            #indicator = df_gold_drivers['cust_id'] == row['cust_id']
+            #df_indicator = df_gold_drivers[indicator]
+            #if not df_indicator.empty: #if a result, driver is gold
+            percentage += row['percentage']
+        if total_league_time > 0:
+            gold_league_percentage = round(gold_league_drive_time/total_league_time * 100,0)
         #check if there are previous team results in the team indicator file
-        team = df_team_indicator['team_id'] == team_id
-        df_team = df_team_indicator[team]
-        if not df_team.empty:
-            race_count = df_team.iloc[0]['race_count'] + 1
-            running_percentage = round((df_team.iloc[0]['race_count'] * df_team.iloc[0]['percentage'] + percentage) /  race_count,2)   
-        if df_team.empty:
-            running_percentage = percentage
-            race_count = 1            
-        df_new_team_indicator.loc[index] = [team_id,team_display_name,race_count,running_percentage]
+        #team = df_team_indicator['team_id'] == team_id
+        #df_team = df_team_indicator[team]
+        #if not df_team.empty:
+        #    race_count = df_team.iloc[0]['race_count'] + 1
+        #    running_percentage = round((df_team.iloc[0]['race_count'] * df_team.iloc[0]['percentage'] + percentage) /  race_count,2)   
+        #if df_team.empty:
+        #    running_percentage = percentage
+        #    race_count = 1
+        # ['team_id','team_display_name','race_count','percentage','gold_league_drive_time','gold_league_percentage','total_league_time']    
+        index += 1
+        df_new_team_indicator.loc[index] = [team_id,team_display_name,race_count,percentage,gold_league_drive_time,gold_league_percentage,total_league_time]
 
     #now combine any old values which may not have been updated with the new Dataframe
     df_not_in_common = df_team_indicator.loc[~df_team_indicator['team_id'].isin(df_new_team_indicator['team_id'])]
@@ -74,10 +105,20 @@ def update_team_indicator(df_team_indicator: pd, df_driver_indicator: pd, df_lat
 
 
 if __name__ == '__main__': #only execute when called as script, skipped when loaded as module
-    driver_indicator_file = 'pec_driver_indicator_GT3 Class.csv' #server both as reference data set from previous race(s) as well as file to save latest status to after processing
-    team_indicator_file = 'pec_team_indicator.csv' #server both as reference data set from previous race(s) as well as file to save latest status to after processing
-    latest_session_file = 'session_60222976.0_Race_GT3 Class.csv' #results from current race. maybe an agrument for this script? currently being detected as latest file within directory with name session_*.csv
+    #https://stackoverflow.com/questions/40001892/reading-named-command-arguments
+    #https://stackoverflow.com/questions/15301147/python-argparse-default-value-or-specified-value
+    #expand later to use a config file instead of defaults
+    parser=argparse.ArgumentParser()
+    parser.add_argument("--team_indicator", help="location of the driver indicator file. if only name is supplied, script location is used",  default='./indicators/pec_s3_team_indicator.csv', type=str)
+    parser.add_argument("--driver_indicator", help="location of the driver indicator file. if only name is supplied, script location is used",  default='./indicators/pec_s3_driver_indicator.csv', type=str)
+       
+    args=parser.parse_args()
+    #print(f"Args: {args}\nCommand Line: {sys.argv}\nfoo: {args.foo}")
+    #print(f"Dict format: {vars(args)}")
 
+    team_indicator_file = args.team_indicator 
+    driver_indicator_file = args.driver_indicator #serves both as reference data set from previous race(s) as well as file to save latest status to after processing
+    
     # Read the driver_indicator_file, if exists, if not; stop
     try:
         df_driver_indicator = pd.read_csv(driver_indicator_file)
@@ -85,7 +126,7 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
         print(f"ERROR: could not find file {driver_indicator_file}. Quitting...")
         quit()
 
-    print(tabulate(df_driver_indicator, headers = 'keys', tablefmt = 'psql'))
+    #print(tabulate(df_driver_indicator, headers = 'keys', tablefmt = 'psql'))
 
     # Read the team_indicator_file, if exists
     try:
@@ -93,32 +134,12 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
     except:
         #scenario first race
         print(f"WARNING: could not find file {team_indicator_file}. Is this the first race?")
-        df_team_indicator = pd.DataFrame(columns=['team_id','display_name','race_count','percentage'])
+        df_team_indicator = pd.DataFrame(columns=team_indicator_columns)
 
-    print(tabulate(df_team_indicator, headers = 'keys', tablefmt = 'psql'))
-
-    # Get the latest_session_file - result from current race
-    if latest_session_file == None:
-        sessionsFilenamesList = glob.glob('session_*.csv')
-        latest_session_file = max(sessionsFilenamesList, key=os.path.getmtime)
-        answer = None
-        #while answer != "y" or answer != "n":
-        #while answer != "y":
-        answer = input(f"Found {latest_session_file}, use that file and continue? y/n ")
-        if answer == 'n':
-            print('Error: no valid session file provided. please re-run and provide valid file!')
-            quit() #https://www.scaler.com/topics/exit-in-python/
-
-    try:
-        df_latest_session = pd.read_csv(latest_session_file)
-    except:
-        print('Error: session file {latest_session_file} not found! Please re-run and provide valid file!')
-        quit()
-
-    print(tabulate(df_latest_session, headers = 'keys', tablefmt = 'psql'))
+    #print(tabulate(df_team_indicator, headers = 'keys', tablefmt = 'psql'))
 
     # show indicator
-    df_new_team_indicator = update_team_indicator(df_team_indicator, df_driver_indicator, df_latest_session)
+    df_new_team_indicator = update_team_indicator(df_team_indicator, df_driver_indicator)
     print(tabulate(df_new_team_indicator, headers = 'keys', tablefmt = 'psql'))
 
     # save indicator as file

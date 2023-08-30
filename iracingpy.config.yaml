@@ -1,0 +1,9 @@
+league_id : 5606 #PEC
+season_id : 89417 #s3
+data_path : /users/peppe/onedrive/pecresults/s3
+member_data_file : member_data
+league_information_file : 'league_information'
+league_roster_file : 'league_roster'
+league_pending_requests_file : 'league_pending_requests'
+league_seasons_file : 'league_seasons'
+league_season_sessions_file : 'league_season_sessions'
