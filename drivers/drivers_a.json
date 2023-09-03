@@ -1,0 +1,1302 @@
+[
+    {
+        "cust_id": 545515,
+        "display_name": ".Alex. .Pederzini.",
+        "helmet": {
+            "color1": "FFFFFF",
+            "color2": "FFFFFF",
+            "color3": "FFFFFF",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 59
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 576117,
+        "display_name": ".Alex. Pederzini",
+        "helmet": {
+            "color1": "ffffff",
+            "color2": "ffffff",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 39
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 578536,
+        "display_name": ".Alex. Pederzini2",
+        "helmet": {
+            "color1": "ffffff",
+            "color2": "f1732e",
+            "color3": "372a75",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 578794,
+        "display_name": ".Alex. Pederzini3",
+        "helmet": {
+            "color1": "ffffff",
+            "color2": "daf91f",
+            "color3": "000000",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 59
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 114530,
+        "display_name": "130R_Yokohama Server",
+        "helmet": {
+            "color1": "ffffff",
+            "color2": "372a75",
+            "color3": "f1732e",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 4
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 114528,
+        "display_name": "130R_Yokohama Sim73",
+        "helmet": {
+            "color1": "5e5e5e",
+            "color2": "135324",
+            "color3": "111111",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 114529,
+        "display_name": "130R_Yokohama Sim74",
+        "helmet": {
+            "color1": "cccccc",
+            "color2": "111111",
+            "color3": "ed1c24",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 5
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 829234,
+        "display_name": "1thirtyone Motorcars",
+        "helmet": {
+            "color1": "4bd3fd",
+            "color2": "ffffff",
+            "color3": "013990",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 829235,
+        "display_name": "1thirtyone Motorcars2",
+        "helmet": {
+            "color1": "4bd3fd",
+            "color2": "013990",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 792459,
+        "display_name": "23xi Racing",
+        "helmet": {
+            "color1": "ff0000",
+            "color2": "ffffff",
+            "color3": "000000",
+            "face_type": 2,
+            "helmet_type": 0,
+            "pattern": 11
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 100864,
+        "display_name": "5Neal Isborne",
+        "helmet": {
+            "color1": "00aeef",
+            "color2": "0a0a0a",
+            "color3": "f26522",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 2
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 377432,
+        "display_name": ">Anders Antell",
+        "helmet": {
+            "color1": "060217",
+            "color2": "CCCCCC",
+            "color3": "ed1c24",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 57
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 94431,
+        "display_name": "?iga Gr?ar",
+        "helmet": {
+            "color1": "cccccc",
+            "color2": "111111",
+            "color3": "ed1c24",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 3
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 89819,
+        "display_name": "?Ukasz ?Wieczkowski",
+        "helmet": {
+            "color1": "270000",
+            "color2": "e20100",
+            "color3": "c6b800",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 19
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 89139,
+        "display_name": "?ukasz Bo?uchowski",
+        "helmet": {
+            "color1": "ffffff",
+            "color2": "111111",
+            "color3": "0ada00",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 2
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 728530,
+        "display_name": "[Gift] Hall",
+        "helmet": {
+            "color1": "372a75",
+            "color2": "f1732e",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 199629,
+        "display_name": "[L]LiRiK Vladimir",
+        "helmet": {
+            "color1": "111111",
+            "color2": "ed1c24",
+            "color3": "cccccc",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 43095,
+        "display_name": "`Odis Walters",
+        "helmet": {
+            "color1": "5481fc",
+            "color2": "ffffff",
+            "color3": "111111",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 252074,
+        "display_name": "`Yakov Faitelaon",
+        "helmet": {
+            "color1": "111111",
+            "color2": "184252",
+            "color3": "03bbbd",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 5
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 801767,
+        "display_name": "A -",
+        "helmet": {
+            "color1": "284a94",
+            "color2": "b82f37",
+            "color3": "111111",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 293529,
+        "display_name": "A A A A",
+        "helmet": {
+            "color1": "4bd3fd",
+            "color2": "ffffff",
+            "color3": "013990",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 907872,
+        "display_name": "A A Burale",
+        "helmet": {
+            "color1": "ffffff",
+            "color2": "ffffff",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 8
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 778842,
+        "display_name": "A A Burcus",
+        "helmet": {
+            "color1": "420076",
+            "color2": "fafafa",
+            "color3": "000000",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 35
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 786240,
+        "display_name": "A A11",
+        "helmet": {
+            "color1": "f06e34",
+            "color2": "111111",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 790390,
+        "display_name": "A A13",
+        "helmet": {
+            "color1": "135324",
+            "color2": "111111",
+            "color3": "5e5e5e",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 858292,
+        "display_name": "A A14",
+        "helmet": {
+            "color1": "372a75",
+            "color2": "ffffff",
+            "color3": "f1732e",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 878506,
+        "display_name": "A A15",
+        "helmet": {
+            "color1": "ffffff",
+            "color2": "2a3795",
+            "color3": "ed2129",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 883683,
+        "display_name": "A A16",
+        "helmet": {
+            "color1": "00aeef",
+            "color2": "f26522",
+            "color3": "0a0a0a",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 883743,
+        "display_name": "A A17",
+        "helmet": {
+            "color1": "111111",
+            "color2": "284a94",
+            "color3": "b82f37",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 886451,
+        "display_name": "A A18",
+        "helmet": {
+            "color1": "111111",
+            "color2": "135324",
+            "color3": "5e5e5e",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 886959,
+        "display_name": "A A19",
+        "helmet": {
+            "color1": "ffffff",
+            "color2": "00ffe0",
+            "color3": "ffffff",
+            "face_type": 8,
+            "helmet_type": 0,
+            "pattern": 20
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 229698,
+        "display_name": "A A2",
+        "helmet": {
+            "color1": "ffffff",
+            "color2": "f1732e",
+            "color3": "372a75",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 5
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 892457,
+        "display_name": "A A20",
+        "helmet": {
+            "color1": "4bd3fd",
+            "color2": "013990",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 900076,
+        "display_name": "A A21",
+        "helmet": {
+            "color1": "ffffff",
+            "color2": "111111",
+            "color3": "0ada00",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 253791,
+        "display_name": "A A3",
+        "helmet": {
+            "color1": "d7162d",
+            "color2": "111111",
+            "color3": "efd600",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 2
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 304639,
+        "display_name": "A A4",
+        "helmet": {
+            "color1": "2a3795",
+            "color2": "ffffff",
+            "color3": "ed2129",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 441591,
+        "display_name": "A A5",
+        "helmet": {
+            "color1": "0ada00",
+            "color2": "111111",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 555691,
+        "display_name": "A A6",
+        "helmet": {
+            "color1": "ed1c24",
+            "color2": "111111",
+            "color3": "cccccc",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 654627,
+        "display_name": "A A7",
+        "helmet": {
+            "color1": "111111",
+            "color2": "fc0706",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 734506,
+        "display_name": "A A9",
+        "helmet": {
+            "color1": "111111",
+            "color2": "ffffff",
+            "color3": "5481fc",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 619673,
+        "display_name": "A Almehrzi",
+        "helmet": {
+            "color1": "000000",
+            "color2": "6feafa",
+            "color3": "ff7300",
+            "face_type": 10,
+            "helmet_type": 0,
+            "pattern": 37
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 469252,
+        "display_name": "A Alusic-Bingham",
+        "helmet": {
+            "color1": "391c83",
+            "color2": "ccff00",
+            "color3": "111111",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 453042,
+        "display_name": "A AnRe",
+        "helmet": {
+            "color1": "111111",
+            "color2": "cccccc",
+            "color3": "ed1c24",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 512619,
+        "display_name": "A Aze",
+        "helmet": {
+            "color1": "111111",
+            "color2": "b82f37",
+            "color3": "284a94",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 223148,
+        "display_name": "A B",
+        "helmet": {
+            "color1": "ffee47",
+            "color2": "111111",
+            "color3": "0300c2",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 5
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 521538,
+        "display_name": "A B10",
+        "helmet": {
+            "color1": "ed2129",
+            "color2": "2a3795",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 654927,
+        "display_name": "A B11",
+        "helmet": {
+            "color1": "efd600",
+            "color2": "111111",
+            "color3": "d7162d",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 788625,
+        "display_name": "A B13",
+        "helmet": {
+            "color1": "efd600",
+            "color2": "d7162d",
+            "color3": "111111",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 930464,
+        "display_name": "A B14",
+        "helmet": {
+            "color1": "372a75",
+            "color2": "f1732e",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 230261,
+        "display_name": "A B2",
+        "helmet": {
+            "color1": "111111",
+            "color2": "03bbbd",
+            "color3": "184252",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 34677,
+        "display_name": "A Bass",
+        "helmet": {
+            "color1": "111111",
+            "color2": "184252",
+            "color3": "03bbbd",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 2
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 853812,
+        "display_name": "A Beattie",
+        "helmet": {
+            "color1": "f06e34",
+            "color2": "ffffff",
+            "color3": "111111",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 474623,
+        "display_name": "A Bedford",
+        "helmet": {
+            "color1": "dbff00",
+            "color2": "f00024",
+            "color3": "59ff00",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 32
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 18162,
+        "display_name": "A Blaine Dockery",
+        "helmet": {
+            "color1": "8C3594",
+            "color2": "fef246",
+            "color3": "110314",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 10
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 146829,
+        "display_name": "A Blake Stetler",
+        "helmet": {
+            "color1": "ffffff",
+            "color2": "2a3795",
+            "color3": "ed2129",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 418139,
+        "display_name": "A Bouanane",
+        "helmet": {
+            "color1": "040931",
+            "color2": "ffffff",
+            "color3": "ed2129",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 27
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 273933,
+        "display_name": "A Braun",
+        "helmet": {
+            "color1": "5e5e5e",
+            "color2": "111111",
+            "color3": "135324",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 103851,
+        "display_name": "A Brusse",
+        "helmet": {
+            "color1": "45e3ee",
+            "color2": "055ff3",
+            "color3": "e20100",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 45
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 388954,
+        "display_name": "A C Keith",
+        "helmet": {
+            "color1": "000000",
+            "color2": "000000",
+            "color3": "111111",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 2
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 112732,
+        "display_name": "A C Rogers",
+        "helmet": {
+            "color1": "ffffff",
+            "color2": "7de54c",
+            "color3": "1f2892",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 2
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 496753,
+        "display_name": "A Cooney",
+        "helmet": {
+            "color1": "edfc54",
+            "color2": "0c0b0b",
+            "color3": "efed2e",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 36
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 528440,
+        "display_name": "A Coutinho",
+        "helmet": {
+            "color1": "03bbbd",
+            "color2": "184252",
+            "color3": "111111",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 89112,
+        "display_name": "A Crabb",
+        "helmet": {
+            "color1": "ee3442",
+            "color2": "447ac0",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 3
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 467442,
+        "display_name": "A D Harvey",
+        "helmet": {
+            "color1": "111111",
+            "color2": "ffffff",
+            "color3": "5481fc",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 592890,
+        "display_name": "A D Jones",
+        "helmet": {
+            "color1": "f63cff",
+            "color2": "00fff0",
+            "color3": "111111",
+            "face_type": 4,
+            "helmet_type": 0,
+            "pattern": 20
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 685538,
+        "display_name": "A D Ritter",
+        "helmet": {
+            "color1": "ff0000",
+            "color2": "ffffff",
+            "color3": "000000",
+            "face_type": 4,
+            "helmet_type": 0,
+            "pattern": 2
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 684514,
+        "display_name": "A D Thompson",
+        "helmet": {
+            "color1": "111111",
+            "color2": "d7162d",
+            "color3": "efd600",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 575037,
+        "display_name": "A D Wheeldon",
+        "helmet": {
+            "color1": "0019f7",
+            "color2": "111111",
+            "color3": "ffffff",
+            "face_type": 4,
+            "helmet_type": 0,
+            "pattern": 28
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 932118,
+        "display_name": "A Dalit",
+        "helmet": {
+            "color1": "f1732e",
+            "color2": "ffffff",
+            "color3": "372a75",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 652005,
+        "display_name": "A Daniel Chereches",
+        "helmet": {
+            "color1": "000000",
+            "color2": "ff0015",
+            "color3": "000000",
+            "face_type": 8,
+            "helmet_type": 0,
+            "pattern": 65
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 660676,
+        "display_name": "A Darnell Longwill",
+        "helmet": {
+            "color1": "111111",
+            "color2": "ffffff",
+            "color3": "f06e34",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 10
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 561867,
+        "display_name": "A Dean Strandberg",
+        "helmet": {
+            "color1": "0a0a0a",
+            "color2": "ffffff",
+            "color3": "e1ff00",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 35
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 130407,
+        "display_name": "a Dickens",
+        "helmet": {
+            "color1": "ffee47",
+            "color2": "0300c2",
+            "color3": "111111",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 4
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 218203,
+        "display_name": "A Dijkerman",
+        "helmet": {
+            "color1": "000000",
+            "color2": "000000",
+            "color3": "ED2129",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 47
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 843116,
+        "display_name": "A Drew Craig",
+        "helmet": {
+            "color1": "ffffff",
+            "color2": "fc0706",
+            "color3": "111111",
+            "face_type": 4,
+            "helmet_type": 0,
+            "pattern": 13
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 16867,
+        "display_name": "A Driscoll",
+        "helmet": {
+            "color1": "ffffff",
+            "color2": "000000",
+            "color3": "555555",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 32
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 364598,
+        "display_name": "A Duquesne",
+        "helmet": {
+            "color1": "ccff00",
+            "color2": "111111",
+            "color3": "391c83",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 814705,
+        "display_name": "A Eduard Radut",
+        "helmet": {
+            "color1": "ffee47",
+            "color2": "0300c2",
+            "color3": "111111",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 68
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 220689,
+        "display_name": "A Ehmer",
+        "helmet": {
+            "color1": "141aeb",
+            "color2": "5ce9f0",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 11
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 533892,
+        "display_name": "A Elsmore",
+        "helmet": {
+            "color1": "ffffff",
+            "color2": "7de54c",
+            "color3": "1f2892",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 115842,
+        "display_name": "A Errington",
+        "helmet": {
+            "color1": "7de54c",
+            "color2": "1f2892",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 4
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 273861,
+        "display_name": "A Fdez De Gorostiza Gutierr",
+        "helmet": {
+            "color1": "F2A945",
+            "color2": "CCCCCC",
+            "color3": "666666",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 0
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 524055,
+        "display_name": "A Fletcher",
+        "helmet": {
+            "color1": "ffee47",
+            "color2": "c20000",
+            "color3": "1b0909",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 62
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 475905,
+        "display_name": "A Frazer",
+        "helmet": {
+            "color1": "02028D",
+            "color2": "FFFFFF",
+            "color3": "B10B0B",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 67
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 218583,
+        "display_name": "A French",
+        "helmet": {
+            "color1": "111111",
+            "color2": "03bbbd",
+            "color3": "184252",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 2
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 304840,
+        "display_name": "A G",
+        "helmet": {
+            "color1": "111111",
+            "color2": "fc0706",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 452493,
+        "display_name": "A G Hetherington",
+        "helmet": {
+            "color1": "dff000",
+            "color2": "1a4b9b",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 412591,
+        "display_name": "A G Iliakis",
+        "helmet": {
+            "color1": "01081E",
+            "color2": "FFFFFF",
+            "color3": "217BED",
+            "face_type": 3,
+            "helmet_type": 0,
+            "pattern": 3
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 401231,
+        "display_name": "A G Liapatis",
+        "helmet": {
+            "color1": "000000",
+            "color2": "ecf31b",
+            "color3": "51148d",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 5
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 163752,
+        "display_name": "A G Walker",
+        "helmet": {
+            "color1": "111111",
+            "color2": "135324",
+            "color3": "5e5e5e",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 2
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 532023,
+        "display_name": "A G2",
+        "helmet": {
+            "color1": "e71143",
+            "color2": "ffffff",
+            "color3": "0f1bcf",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 18
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 561043,
+        "display_name": "A G3",
+        "helmet": {
+            "color1": "bd9003",
+            "color2": "ff6100",
+            "color3": "ff9200",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 13
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 712770,
+        "display_name": "A G4",
+        "helmet": {
+            "color1": "ffffff",
+            "color2": "111111",
+            "color3": "fc0706",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 96839,
+        "display_name": "A Gift For You",
+        "helmet": {
+            "color1": "ffffff",
+            "color2": "111111",
+            "color3": "0ada00",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 2
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 210902,
+        "display_name": "A Gift For You3",
+        "helmet": {
+            "color1": "ffee47",
+            "color2": "0300c2",
+            "color3": "111111",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 2
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 396725,
+        "display_name": "A Gift For You4",
+        "helmet": {
+            "color1": "31633A",
+            "color2": "624F32",
+            "color3": "33663F",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 34
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 645423,
+        "display_name": "A Gift For You5",
+        "helmet": {
+            "color1": "135324",
+            "color2": "111111",
+            "color3": "5e5e5e",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 880589,
+        "display_name": "A Gift For You6",
+        "helmet": {
+            "color1": "391c83",
+            "color2": "ccff00",
+            "color3": "111111",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 908263,
+        "display_name": "A Gift For You7",
+        "helmet": {
+            "color1": "000000",
+            "color2": "ffffff",
+            "color3": "000000",
+            "face_type": 8,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 172138,
+        "display_name": "A Gurau",
+        "helmet": {
+            "color1": "111111",
+            "color2": "0ada00",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    }
+]

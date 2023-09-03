@@ -1,0 +1,119 @@
+[
+    {
+        "cust_id": 605124,
+        "display_name": "A***D Nobelius",
+        "helmet": {
+            "color1": "d7162d",
+            "color2": "111111",
+            "color3": "0002f0",
+            "face_type": 4,
+            "helmet_type": 0,
+            "pattern": 21
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 424735,
+        "display_name": "A***Y M***I",
+        "helmet": {
+            "color1": "2a3795",
+            "color2": "ed2129",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 709379,
+        "display_name": "Bao **2",
+        "helmet": {
+            "color1": "f1732e",
+            "color2": "ffffff",
+            "color3": "372a75",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 588002,
+        "display_name": "J***s M***r",
+        "helmet": {
+            "color1": "5481fc",
+            "color2": "111111",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 763661,
+        "display_name": "M***Y G***R",
+        "helmet": {
+            "color1": "111111",
+            "color2": "f06e34",
+            "color3": "ffffff",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 429501,
+        "display_name": "N***L K***R",
+        "helmet": {
+            "color1": "0b3600",
+            "color2": "ffffff",
+            "color3": "0a0a0a",
+            "face_type": 4,
+            "helmet_type": 0,
+            "pattern": 65
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 481473,
+        "display_name": "N***n B***y",
+        "helmet": {
+            "color1": "372a75",
+            "color2": "ffffff",
+            "color3": "f1732e",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 226182,
+        "display_name": "Ond\u00c5\u0099ej Fo*****",
+        "helmet": {
+            "color1": "1f2892",
+            "color2": "ffffff",
+            "color3": "7de54c",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 4
+        },
+        "profile_disabled": false
+    },
+    {
+        "cust_id": 503641,
+        "display_name": "P***n N***w",
+        "helmet": {
+            "color1": "284a94",
+            "color2": "b82f37",
+            "color3": "111111",
+            "face_type": 0,
+            "helmet_type": 0,
+            "pattern": 1
+        },
+        "profile_disabled": false
+    }
+]

@@ -1,11 +1,15 @@
-import csv
-import sys
-import pwinput
-from tabulate import tabulate
+from  iracingdataapi.client import irDataClient
 import json
-from iracingdataapi.client import irDataClient
-import pandas as pd
+import sys
+import csv
+import pandas as pd 
+from tabulate import tabulate
+import numpy as np
+#https://stackoverflow.com/questions/9202224/getting-a-hidden-password-input
+#import getpass
+import pwinput
 from tqdm import tqdm #https://github.com/tqdm/tqdm/#readme
+import argparse
 
 if __name__ == '__main__': 
     league_information_file = 'league_information'
@@ -84,5 +88,22 @@ if __name__ == '__main__':
             writer.writerow([cust_id])
 
 
-
+if __name__ == '__main__':
+        #https://stackoverflow.com/questions/40001892/reading-named-command-arguments
+    #https://stackoverflow.com/questions/15301147/python-argparse-default-value-or-specified-value
+    #expand later to use a config file instead of defaults
+    parser=argparse.ArgumentParser()
+    parser.add_argument("--username", help="",  default='', type=str)
+    parser.add_argument("--password", help="",  default='', type=str)
+    parser.add_argument("--sessionid", help="")
+    parser.add_argument("--type", help="")
+    
+    args=parser.parse_args()
+    #print(f"Args: {args}\nCommand Line: {sys.argv}\nfoo: {args.foo}")
+    #print(f"Dict format: {vars(args)}")
+    
+    username = args.username
+    password = args.password
+    subsession_id = args.sessionid
+    session_type = args.type
 
