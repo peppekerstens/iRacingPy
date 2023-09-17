@@ -27,7 +27,7 @@ def get_pec_driver_qualification(iRating: int) -> str:
         return None 
 
 def get_pec_driver_classification(iRating: int) -> str:
-    if iRating > 3750:
+    if iRating > 3500:
         return 'Not allowed'
     elif iRating >= 2750:
         return 'Gold'

@@ -15,7 +15,8 @@ if __name__ == '__main__':
     league_season_sessions_file = 'league_season_sessions'
     league_id = 5606
     #season_id = 83043 #s2
-    season_id = 89417 #s3
+    #season_id = 89417 #s3
+    season_id = 95271 #s4
 
     print('Going into interactive mode....')
     username = input("Enter username: ")
