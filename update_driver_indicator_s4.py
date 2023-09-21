@@ -6,28 +6,8 @@ import pandas as pd
 from tabulate import tabulate
 import glob
 
-driver_indicator_columns = ['team_id','team_display_name','cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification','deadzone','reclassified','driven','gold_race_count','gold_total_drive_time','gold_total_sesion_time','gold_total_percentage','index','total_index','total_session_time']
-driver_indicator_columns = ['team_id','team_display_name','cust_id','display_name','classification','percentage','total_time','total_session_time']
-
-def get_total_session_time(result: json, ): #assumes all contenders (teams of drivers) within a session (race, qually etc), eg all memebers under ['session_results']
-    total_time = 0
-    for contender in result:
-        if contender['finish_position'] == 0:
-            contender_time = contender['laps_complete'] * contender['average_lap']
-            total_time += contender_time
-    total_time = total_time / 10000
-    return total_time
-
-def get_team_driver_results(result: json, ):
-    new_list = []
-    for team_results in result:
-        team_display_name = team_results["display_name"]
-        #if  session_results['simsession_type_name'] == type:
-        for driver in team_results['driver_results']:
-            driver['team_display_name'] = team_display_name
-            new_list.append(driver)
-    return new_list
-
+#driver_indicator_columns = ['team_id','team_display_name','cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification','deadzone','reclassified','driven','gold_race_count','gold_total_drive_time','gold_total_sesion_time','gold_total_percentage','index','total_index','total_session_time']
+driver_indicator_columns = ['team_id','team_display_name','cust_id','display_name','classification','percentage','avg_speed','total_time','total_session_time']
 
 def generate_member_data_driver_indicator(df_member_data: pd, cust_id: int) -> pd:
     #scenario first time driver. use downloaded member_data (which should contain classification based on iRating) as a reference
@@ -42,13 +22,11 @@ def generate_member_data_driver_indicator(df_member_data: pd, cust_id: int) -> p
             #print(df_row['driver_classification'])
             classification = 'Gold'
         #                        ['team_id','cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification','deadzone','reclassified','driven','gold_race_count','gold_total_drive_time','gold_total_sesion_time','index','total_index']
-        df_indicator.loc[0] = [0,'',df_driver.iloc[0]['cust_id'] ,df_driver.iloc[0]['display_name'],classification,0,0,0]
+        df_indicator.loc[0] = [0,'',df_driver.iloc[0]['cust_id'] ,df_driver.iloc[0]['display_name'],classification,0,0,0,0]
     return df_indicator
 
 
 def update_driver_info(df_latest_session: pd,df_member_data: pd) -> pd:
-    #get all teams 
-
     #build dataframe based on current results
     df_driver_info = pd.DataFrame(columns=driver_indicator_columns)
     for index, df_row in df_latest_session.iterrows():
@@ -66,13 +44,14 @@ def update_driver_info(df_latest_session: pd,df_member_data: pd) -> pd:
             total_session_time = df_row['total_session_time']
             total_time = df_row['time_valid']
             percentage = round(total_time/total_session_time * 100,0)
+            avg_speed = df_row['speed_valid']
             #print(f"cust_id: {df_row['cust_id']}")
             #print(f"total_time: {total_time}")
             #print(f"total_session_time: {total_session_time}")
             #print(f"percentage: {percentage}")
             #total_time = round(df_indicator_driver.iloc[0]['total_time'] + df_row['time_valid'],2)
             # ['team_id','team_display_name','cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification','deadzone','reclassified','driven','gold_race_count','gold_total_drive_time','gold_total_sesion_time','gold_total_percentage','index','total_index','total_session_time']
-            df_driver_info.loc[index] = [team_id,team_display_name,cust_id,display_name,classification,percentage,total_time,total_session_time]
+            df_driver_info.loc[index] = [team_id,team_display_name,cust_id,display_name,classification,percentage,avg_speed,total_time,total_session_time]
             #driver_indicator_columns = ['team_id','team_display_name','cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification','deadzone','reclassified','driven','gold_race_count','gold_total_drive_time','gold_total_sesion_time','gold_total_percentage','index','total_index','total_session_time']
             #driver_indicator_columns = ['team_id','team_display_name','cust_id','display_name','classification','percentage','total_time','total_session_time']
 
