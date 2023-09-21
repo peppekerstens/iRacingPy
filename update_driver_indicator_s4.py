@@ -41,10 +41,10 @@ def update_driver_info(df_latest_session: pd,df_member_data: pd) -> pd:
             display_name = df_row['display_name']
             team_display_name = df_row['team_display_name']
             classification = df_indicator_driver.iloc[0]['classification']
-            total_session_time = df_row['total_session_time']
-            total_time = df_row['time_valid']
+            total_session_time = round(df_row['total_session_time'])
+            total_time = round(df_row['time_valid'])
             percentage = round(total_time/total_session_time * 100,0)
-            avg_speed = df_row['speed_valid']
+            avg_speed = round(df_row['speed_valid'])
             #print(f"cust_id: {df_row['cust_id']}")
             #print(f"total_time: {total_time}")
             #print(f"total_session_time: {total_session_time}")
