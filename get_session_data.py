@@ -186,12 +186,12 @@ def add_valid_lap_report(driver_result: json, lap_data: json, track_length) -> j
             lap_avg = np.average(new_list) / 10000
         
         driver['laps_complete_valid'] = laps_total
-        driver['average_lap_valid'] = lap_avg
+        driver['average_lap_valid'] = round(lap_avg)
         if lap_avg != 0:
-            driver['speed_valid'] = (track_length / lap_avg * 3600)
+            driver['speed_valid'] = round(track_length / lap_avg * 3600)
         if lap_avg == 0:
             driver['speed_valid'] = 0
-        driver['time_valid'] = lap_avg * laps_total
+        driver['time_valid'] = round(lap_avg * laps_total)
     return driver_result
 
 def process_session_result(username, password, subsession_id, session_type = None, car_class = None):
@@ -245,10 +245,10 @@ def process_session_result(username, password, subsession_id, session_type = Non
             driver_report = add_valid_lap_report(drivers,lap_data,track_length)
             df_result = pd.json_normalize(driver_report)
             #TODO the total time driven per team, to calculate percentage per driver later
-            df_result['avg_lap'] = (df_result['average_lap'] / 10000)
-            df_result['time'] = (df_result['avg_lap'] * df_result['laps_complete'])
-            df_result['speed'] = (track_length / (df_result['average_lap'] / 10000)) * 3600
-            df_result['total_session_time'] = total_session_time
+            df_result['avg_lap'] = round(df_result['average_lap'] / 10000)
+            df_result['time'] = round(df_result['avg_lap'] * df_result['laps_complete'])
+            df_result['speed'] = round((track_length / (df_result['average_lap'] / 10000)) * 3600)
+            df_result['total_session_time'] = round(total_session_time)
             #df_result['total_session_time_class'] = get_total_session_time_class(drivers,df_result["car_class_short_name"])
             # drop unneeded columns
             columns_to_drop = ['livery.car_id',
