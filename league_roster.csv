@@ -41,6 +41,7 @@ cust_id,display_name,league_member_since,admin
 25377,Aurelio Carneiro,2023-09-10T13:01:00Z,False
 643345,Austin Dilts,2023-09-12T02:12:19Z,False
 477938,Balazs Turoczy,2023-09-10T18:26:10Z,False
+398267,Ben Idris Abdillahi,2023-12-07T20:14:27Z,False
 704780,Bence Sziffer,2023-09-27T19:20:26Z,False
 29496,Beto Monteiro,2023-10-22T11:56:01Z,False
 387611,Beñat Artano,2023-09-10T11:33:12Z,False
@@ -51,6 +52,7 @@ cust_id,display_name,league_member_since,admin
 561604,Carlos Coxinho,2023-09-09T16:31:55Z,False
 675847,Carlos Miguel Duarte,2023-09-11T21:28:31Z,False
 615845,Carlos Ponce,2023-09-14T21:17:23Z,False
+328249,Carlos R. Ferro,2023-12-05T11:13:44Z,False
 370087,Carmen Hardy,2023-09-14T16:18:04Z,False
 46080,Cesar Cabral,2023-09-09T20:08:40Z,False
 19254,Cesar Carregal,2023-09-11T17:08:08Z,False
@@ -58,6 +60,7 @@ cust_id,display_name,league_member_since,admin
 167281,Coen Gerrits,2023-09-09T14:32:41Z,False
 641759,Daan Berg2,2023-09-08T15:43:11Z,False
 604599,Daan Pepels,2023-09-27T17:37:49Z,False
+408804,Dan Carter2,2023-12-05T18:00:52Z,False
 459754,Dan Fendick,2023-11-01T21:19:50Z,False
 602947,Daniel Cruz4,2023-10-12T20:19:01Z,False
 47036,Daniel López,2023-09-14T21:29:29Z,False
@@ -78,6 +81,7 @@ cust_id,display_name,league_member_since,admin
 499940,Eloy Cabañero,2023-09-08T17:31:01Z,False
 813496,Emre Kemaldar,2023-09-11T16:28:06Z,False
 684015,Eran Aviner,2023-09-10T18:27:42Z,False
+574911,Eros Gioannini,2023-12-04T20:42:30Z,False
 840603,Fabio Braga,2023-10-30T21:37:49Z,False
 19423,Fabio Ponta,2023-09-09T13:52:54Z,False
 373841,Felix Gretschel,2023-11-15T16:38:06Z,False
@@ -93,8 +97,10 @@ cust_id,display_name,league_member_since,admin
 725974,Gonçalo B Paixão,2023-09-10T20:36:32Z,False
 276401,Gonçalo Narciso,2023-09-14T14:23:59Z,False
 796249,Guilherme Costa Reis,2023-09-08T18:32:15Z,False
+330428,Henrik T Andersen,2023-12-05T15:39:08Z,False
 636125,Hiago Martins,2023-09-10T14:31:36Z,False
 524155,Hugo Miguel Pereira,2023-09-08T22:18:30Z,False
+572543,Iago Mosquera,2023-12-03T18:35:32Z,False
 381527,Iordanin Tsvetanov,2023-09-08T22:14:45Z,False
 869318,Istvan Decsi,2023-09-09T20:33:06Z,False
 290299,Ivan Alfimof,2023-09-12T18:35:17Z,False
@@ -116,6 +122,7 @@ cust_id,display_name,league_member_since,admin
 560363,Joe Pinder,2023-09-20T12:23:02Z,False
 231184,John Szpyt,2023-09-11T19:24:44Z,False
 767101,Jonathan Newman2,2023-11-01T18:06:21Z,False
+279033,Jonathan Pumuki,2023-12-03T19:07:36Z,False
 850829,Jonathan Rivero Prudente,2023-09-12T20:20:05Z,False
 378344,Jonathan Zamora,2023-09-09T16:31:09Z,False
 764590,Jordy De Boer,2023-09-11T17:47:20Z,False
@@ -153,6 +160,7 @@ cust_id,display_name,league_member_since,admin
 530304,Luis Gaspar,2023-11-15T16:34:22Z,False
 613054,Luis Marinho,2023-09-09T16:30:42Z,False
 540224,Luis Martinez8,2023-09-11T10:58:11Z,False
+847826,Luke Fisher2,2023-12-07T13:47:09Z,False
 201606,Manuel M Cruz,2023-10-06T21:38:40Z,False
 424670,Marc Hagele,2023-09-10T06:44:44Z,False
 888006,Marc Lopez5,2023-09-13T17:27:56Z,False
@@ -202,14 +210,16 @@ cust_id,display_name,league_member_since,admin
 560764,Pablo Avolio2,2023-09-15T13:58:55Z,False
 558947,Pablo Javier Ruiz,2023-09-09T16:31:34Z,False
 410026,Pablo Álvarez,2023-10-12T17:31:24Z,False
+209271,Patrick Letouvet,2023-12-05T17:25:05Z,False
 324079,Patrick Szilvasi,2023-09-11T13:01:39Z,False
-588850,Paul Schmudlach,2023-09-11T22:41:38Z,False
 601687,Pedro Arnaut,2023-09-12T21:16:56Z,False
 794190,Pedro Oliveira Vigário,2023-09-10T16:02:10Z,False
+230399,Philip Koenig,2023-12-07T19:55:10Z,False
 760355,Philipp Spes2,2023-09-16T07:23:23Z,False
 183567,Péter Balassa,2023-09-09T06:12:56Z,False
 54077,Rafael Carballedo,2023-11-02T17:57:28Z,False
 524108,Ricardo Emílio,2023-09-10T18:26:53Z,False
+331981,Robert Viski,2023-12-04T09:27:37Z,False
 504386,Roberto Barbu,2023-09-12T12:50:01Z,False
 681110,Roberto Luengo,2023-09-09T09:23:58Z,False
 257614,Roman Farre Ortiz,2023-09-10T11:21:22Z,False
@@ -220,6 +230,7 @@ cust_id,display_name,league_member_since,admin
 515776,Rui Filipe Pinheiro,2023-09-09T17:13:21Z,False
 93943,Ryan Littlemore,2023-09-10T17:57:26Z,False
 682387,Salvatore DiPompo,2023-09-12T03:40:02Z,False
+514561,Samu Martinez,2023-12-04T22:47:40Z,False
 848950,Saúl Pais,2023-09-10T20:26:15Z,False
 377973,Sebastian O. Pedersen,2023-09-10T11:34:44Z,False
 552913,Sergio Borja,2023-09-08T15:08:32Z,False
@@ -234,8 +245,10 @@ cust_id,display_name,league_member_since,admin
 306358,Taylor Mills,2023-11-11T12:28:33Z,False
 298552,Telmo Jose,2023-09-10T20:27:45Z,False
 445418,Thomas Fischer2,2023-09-10T16:40:51Z,False
+665466,Thomas Gallois,2023-12-04T20:38:04Z,False
 430969,Thomas Jensen4,2023-09-13T15:28:35Z,False
 556217,Thomas Mørk,2023-09-14T17:14:28Z,False
+705911,Thomas Toulemonde,2023-12-08T20:44:47Z,False
 841393,Tiago B Rodriguez,2023-10-31T20:34:06Z,False
 272192,Toño N. Ordieres,2023-09-12T20:22:13Z,False
 265255,Valter Mendes,2023-09-12T22:20:32Z,False
@@ -246,7 +259,6 @@ cust_id,display_name,league_member_since,admin
 395985,Vincent Bruning,2023-09-09T08:49:56Z,False
 666727,Vladislav T Shopov,2023-09-09T10:45:29Z,False
 746572,Wesley Kaspers,2023-09-11T20:54:57Z,False
-641608,Yuliyan Dimitrov,2023-09-16T09:12:11Z,False
 380152,Zachary Livengood,2023-09-11T00:57:51Z,False
 808067,Ákos Borsányi,2023-09-12T17:26:53Z,False
 207525,Álvaro García,2023-09-08T18:05:28Z,False

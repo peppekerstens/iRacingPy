@@ -1,49 +1,72 @@
 team_id,team_display_name,cust_id,display_name,classification,percentage,avg_speed,total_time,total_session_time
--129672,Zero7 Racing #201,607475,Lorenzo Castellani,Gold,66.0,161,14111,21447
--129672,Zero7 Racing #201,19423,Fabio Ponta,Gold,33.0,161,7002,21447
--272730,Negative Delta by BULERS,666727,Vladislav T Shopov,Gold,78.0,160,16821,21447
--272730,Negative Delta by BULERS,381527,Iordanin Tsvetanov,Silver,16.0,159,3386,21447
--117499,Carbono eSports JD Army,498058,Alberto Moreno S,Gold,49.0,160,10590,21447
--117499,Carbono eSports JD Army,633220,Gerard Sardeny Saez,Gold,45.0,161,9573,21447
--194019,EUROMASTER ESPORTS,227966,Juanma Frias Gamez,Gold,34.0,160,7339,21447
--194019,EUROMASTER ESPORTS,548682,Fran Parada,Gold,34.0,161,7209,21447
--194019,EUROMASTER ESPORTS,636125,Hiago Martins,Gold,30.0,159,6475,21447
--324629,Virtual Insanity Racing,857815,Lemi Mischke,Silver,80.0,159,17065,21447
--324629,Virtual Insanity Racing,686915,Nick Kerstens,Gold,17.0,159,3603,21447
--321313,Enosis eSports,436347,Migue Santos,Gold,63.0,160,13410,21447
--321313,Enosis eSports,19254,Cesar Carregal,Gold,31.0,161,6707,21447
--215259,GO! eSports,243240,Joan Marti,Gold,51.0,160,10947,21447
--215259,GO! eSports,725639,David Martín Fdez,Gold,48.0,159,10261,21447
--257830,SR TECHNIC,461417,Jorge  Mendes Pinheiro,Gold,51.0,159,10985,21447
--257830,SR TECHNIC,613054,Luis Marinho,Gold,46.0,160,9843,21447
--92660,Really Slow Motion Racing,727595,Andras Kucsma,Gold,46.0,160,9905,21447
--92660,Really Slow Motion Racing,840562,Miklós Gál,Gold,33.0,159,7084,21447
--92660,Really Slow Motion Racing,183567,Péter Balassa,Gold,16.0,159,3489,21447
--293255,AZR Motorsport,416883,Kiko Alves,Gold,31.0,159,6586,21447
--293255,AZR Motorsport,601687,Pedro Arnaut,Gold,33.0,158,7137,21447
--293255,AZR Motorsport,796249,Guilherme Costa Reis,Gold,30.0,158,6329,21447
--301539,SIM RACING CONCEPT,730865,David Gutierrez4,Gold,35.0,159,7492,21447
--301539,SIM RACING CONCEPT,763849,Victor Florido Gomez,Gold,32.0,158,6940,21447
--301539,SIM RACING CONCEPT,54077,Rafael Carballedo,Silver,30.0,156,6499,21447
--55648,Kuruma MotorSport,272192,Toño N. Ordieres,Gold,52.0,157,11210,21447
--55648,Kuruma MotorSport,213565,Fran Vinal,Gold,44.0,159,9409,21447
--326644,Future Racing Team,377973,Sebastian O. Pedersen,Silver,65.0,157,13854,21447
--326644,Future Racing Team,834170,Flemming Jensen,Silver,34.0,158,7358,21447
--257829,SR TECHNIC #PEC,25377,Aurelio Carneiro,Silver,34.0,159,7207,21447
--257829,SR TECHNIC #PEC,515776,Rui Filipe Pinheiro,Silver,34.0,159,7205,21447
--257829,SR TECHNIC #PEC,201606,Manuel M Cruz,Silver,31.0,158,6546,21447
--303388,Pick Up The Pace,856446,Diogo Cabeças,Silver,36.0,156,7759,21447
--303388,Pick Up The Pace,817410,Mix Bonito,Silver,27.0,160,5868,21447
--303388,Pick Up The Pace,823793,Luciano Gomes,Gold,17.0,159,3691,21447
--303388,Pick Up The Pace,725974,Gonçalo B Paixão,Silver,16.0,159,3496,21447
--110547,Carbono eSports,299996,Jose L  Pulido,Silver,51.0,157,10927,21447
--110547,Carbono eSports,898832,David Mato,Silver,42.0,156,9051,21447
--293256,AZR Motorsport White,777046,Ruben Carrapato,Silver,51.0,157,11042,21447
--293256,AZR Motorsport White,681922,Nuno Tavares Barbosa,Silver,28.0,132,6001,21447
--293256,AZR Motorsport White,798579,João T. Freire,Silver,16.0,155,3473,21447
--331468,OVRTK Team 4,451736,Devan Horvath,Gold,18.0,159,3800,21447
--331468,OVRTK Team 4,767101,Jonathan Newman2,Gold,12.0,160,2673,21447
--134184,GROW RACING TEAM RED,281564,Andre Monteiro2,Gold,15.0,158,3117,21447
--134960,Chicane Online Racing Blue,310170,Alex Gal,Gold,7.0,159,1399,21447
--299547,MerXo Racing Team #221,415746,Sito Ferrer,Gold,2.0,151,526,21447
--299547,MerXo Racing Team #221,496743,Aleix Garcia,Gold,0.0,0,0,21447
+-129672,Zero7 Racing #201,443123,Alessio Bernardini,Gold,34.0,179,14482,42573
+-129672,Zero7 Racing #201,607475,Lorenzo Castellani,Gold,34.0,179,14344,42573
+-129672,Zero7 Racing #201,19423,Fabio Ponta,Gold,31.0,179,13364,42573
+-117499,Carbono eSports JD Army,498058,Alberto Moreno S,Gold,51.0,179,21732,42573
+-117499,Carbono eSports JD Army,633220,Gerard Sardeny Saez,Gold,48.0,179,20528,42573
+-153276,RUCANOR RACING,322064,Luca Thinggaard,Gold,49.0,180,20759,42573
+-153276,RUCANOR RACING,257599,Milan Radivojevic,Gold,48.0,180,20284,42573
+-321313,Enosis eSports,436347,Migue Santos,Gold,50.0,178,21330,42573
+-321313,Enosis eSports,387611,Beñat Artano,Gold,48.0,179,20510,42573
+-92660,Really Slow Motion Racing,137333,Martin Kovács,Gold,17.0,178,7215,42573
+-92660,Really Slow Motion Racing,840562,Miklós Gál,Gold,17.0,178,7212,42573
+-92660,Really Slow Motion Racing,808067,Ákos Borsányi,Gold,17.0,179,7181,42573
+-92660,Really Slow Motion Racing,727595,Andras Kucsma,Gold,17.0,178,7218,42573
+-92660,Really Slow Motion Racing,869318,Istvan Decsi,Gold,15.0,179,6209,42573
+-295369,F Racing #GT3,580757,Marco Andre Pinto,Gold,41.0,178,17544,42573
+-295369,F Racing #GT3,455915,André da Silva,Gold,33.0,178,13896,42573
+-295369,F Racing #GT3,369778,Luis Filipe Pinto,Gold,24.0,179,10297,42573
+-293255,AZR Motorsport,416883,Kiko Alves,Gold,33.0,179,13902,42573
+-293255,AZR Motorsport,623248,Diogo F Teodoro,Gold,34.0,178,14328,42573
+-293255,AZR Motorsport,601687,Pedro Arnaut,Gold,16.0,177,6991,42573
+-293255,AZR Motorsport,796249,Guilherme Costa Reis,Gold,16.0,179,6610,42573
+-110547,Carbono eSports,631768,Gilberto J Alleyne,Silver,30.0,178,12752,42573
+-110547,Carbono eSports,227444,Sergio Ochoa Expósito,Silver,25.0,179,10563,42573
+-110547,Carbono eSports,898832,David Mato,Silver,25.0,178,10624,42573
+-110547,Carbono eSports,606715,Jose F Velez,Silver,17.0,177,7102,42573
+-143359,CORE MOTORSPORTS,602947,Daniel Cruz4,Gold,35.0,175,14936,42573
+-143359,CORE MOTORSPORTS,344701,Orlando Telheiro,Gold,34.0,178,14414,42573
+-143359,CORE MOTORSPORTS,376121,Marco M Mendes,Gold,28.0,178,11883,42573
+-303388,Pick Up The Pace,828731,Nelson Ricardo,Silver,17.0,178,7095,42573
+-303388,Pick Up The Pace,856446,Diogo Cabeças,Silver,17.0,178,7094,42573
+-303388,Pick Up The Pace,524108,Ricardo Emílio,Silver,17.0,177,7130,42573
+-303388,Pick Up The Pace,848950,Saúl Pais,Silver,16.0,179,6768,42573
+-303388,Pick Up The Pace,823793,Luciano Gomes,Gold,16.0,178,6811,42573
+-303388,Pick Up The Pace,725974,Gonçalo B Paixão,Silver,13.0,179,5636,42573
+-272730,Negative Delta by BULERS,155092,Georgi Raychev,Gold,44.0,170,18795,42573
+-272730,Negative Delta by BULERS,835504,Kris B Vrazhilov,Gold,37.0,175,15679,42573
+-272730,Negative Delta by BULERS,666727,Vladislav T Shopov,Gold,18.0,178,7491,42573
+-257830,SR TECHNIC,461417,Jorge  Mendes Pinheiro,Gold,35.0,167,14917,42573
+-257830,SR TECHNIC,613054,Luis Marinho,Gold,33.0,177,14221,42573
+-257830,SR TECHNIC,491790,Sérgio Vieira,Gold,30.0,179,12560,42573
+-326644,Future Racing Team,834170,Flemming Jensen,Silver,48.0,177,20326,42573
+-326644,Future Racing Team,377973,Sebastian O. Pedersen,Silver,46.0,178,19394,42573
+-78242,IPM Blue,682387,Salvatore DiPompo,Gold,49.0,178,20811,42573
+-78242,IPM Blue,533021,Mason Smith8,Gold,41.0,179,17444,42573
+-293256,AZR Motorsport White,675847,Carlos Miguel Duarte,Silver,25.0,178,10480,42573
+-293256,AZR Motorsport White,681922,Nuno Tavares Barbosa,Silver,21.0,140,8826,42573
+-293256,AZR Motorsport White,777046,Ruben Carrapato,Silver,16.0,179,6747,42573
+-293256,AZR Motorsport White,489696,Artur Gordinho,Silver,16.0,175,6613,42573
+-293256,AZR Motorsport White,798579,João T. Freire,Silver,15.0,177,6399,42573
+-215259,GO! eSports,528824,Kiko Lacalle,Gold,30.0,178,12745,42573
+-215259,GO! eSports,725639,David Martín Fdez,Gold,25.0,181,10451,42573
+-215259,GO! eSports,888006,Marc Lopez5,Gold,25.0,179,10722,42573
+-324629,Virtual Insanity Racing,902607,Lucas Budde,Silver,33.0,169,13888,42573
+-324629,Virtual Insanity Racing,760355,Philipp Spes2,Silver,23.0,169,9982,42573
+-324629,Virtual Insanity Racing,857815,Lemi Mischke,Silver,17.0,176,7150,42573
+-244728,No Limits SimRacing,617093,Ferran Bailon,Gold,17.0,178,7363,42573
+-244728,No Limits SimRacing,813496,Emre Kemaldar,Gold,3.0,180,1258,42573
+-55648,Kuruma MotorSport,272192,Toño N. Ordieres,Gold,27.0,176,11566,42573
+-55648,Kuruma MotorSport,213565,Fran Vinal,Gold,7.0,179,2949,42573
+-301539,SIM RACING CONCEPT,730865,David Gutierrez4,Gold,12.0,173,4942,42573
+-301539,SIM RACING CONCEPT,670417,Agustin Corraliza,Silver,5.0,178,2129,42573
+-301539,SIM RACING CONCEPT,763529,Alejandro Fernandez10,Silver,3.0,176,1143,42573
+-257829,SR TECHNIC #PEC,515776,Rui Filipe Pinheiro,Silver,8.0,177,3559,42573
+-257829,SR TECHNIC #PEC,25377,Aurelio Carneiro,Silver,5.0,179,1966,42573
+-257829,SR TECHNIC #PEC,201606,Manuel M Cruz,Silver,1.0,179,282,42573
+-134960,Chicane Online Racing Blue,366403,Nils Corr,Gold,8.0,179,3511,42573
+-134960,Chicane Online Racing Blue,300656,Dennis   van Beelen,Gold,6.0,179,2400,42573
+-194019,EUROMASTER ESPORTS,227966,Juanma Frias Gamez,Gold,19.0,160,7892,42573
+-194019,EUROMASTER ESPORTS,415746,Sito Ferrer,Gold,0.0,0,0,42573
+-194019,EUROMASTER ESPORTS,496743,Aleix Garcia,Gold,0.0,0,0,42573
+-134184,GROW RACING TEAM RED,494812,Luis Barbosa,Gold,8.0,162,3423,42573
