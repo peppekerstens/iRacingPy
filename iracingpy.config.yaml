@@ -1,6 +1,11 @@
 league_id : 5606 #PEC
 season_id : 89417 #s3
-data_path : /users/peppe/onedrive/pecresults/s3
+base_path : /users/peppe/onedrive/pecresults/s3
+indicator_path : /indicator
+result_path : /result
+sessions_path : /sessions
+laps_path : /laps
+league_path : /league
 member_data_file : member_data
 league_information_file : 'league_information'
 league_roster_file : 'league_roster'
