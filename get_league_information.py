@@ -8,7 +8,7 @@ import pandas as pd
 from tqdm import tqdm #https://github.com/tqdm/tqdm/#readme
 import argparse
 
-def dump_json(information, filename: 'str') -> None:
+def dump_json(information: dict, filename: 'str') -> None:
     with open(filename + ".json", "w") as write_file:
         json.dump(information, write_file, indent=4, sort_keys=True)
 
@@ -22,8 +22,15 @@ def dump_csv_league_roster(league_information, filename: 'str') -> None:
     #print(tabulate(df_league_roster[['cust_id','display_name','league_member_since','admin']], headers = 'keys', tablefmt = 'psql'))
     df_league_roster.to_csv(filename + ".csv",index=False,columns=['cust_id','display_name','league_member_since','admin'])  
 
-def dump_csv_league_seasons_sessions(league_seasons, filename: 'str') -> None:
-    df_league_seasons = pd.DataFrame.from_dict(league_seasons['seasons'])
+def dump_csv_league_seasons(league_seasons, filename: 'str') -> None:
+    #df_league_seasons = pd.DataFrame.from_dict(league_seasons['seasons'])
+    df_league_seasons = pd.json_normalize(league_seasons['seasons'])
+    #print(tabulate(df_league_seasons[['session_id','time_limit','qualify_length','race_length']], headers = 'keys', tablefmt = 'psql'))
+    df_league_seasons.to_csv(filename + ".csv",index=False) 
+
+def dump_csv_league_seasons_sessions(league_seasons_sessions, filename: 'str') -> None:
+    #df_league_seasons = pd.DataFrame.from_dict(league_seasons['seasons'])
+    df_league_seasons = pd.json_normalize(league_seasons_sessions['sessions'])
     #print(tabulate(df_league_seasons[['session_id','time_limit','qualify_length','race_length']], headers = 'keys', tablefmt = 'psql'))
     df_league_seasons.to_csv(filename + ".csv",index=False)  
 
@@ -66,7 +73,7 @@ if __name__ == '__main__':
     parser.add_argument("--password", help="", default='', type=str)
     parser.add_argument("--league_id", help="", default=5606, type=int) #PEC league
     parser.add_argument("--season_id", help="", default=110644, type=int) #season 6
-    parser.add_argument("--csv", help="", type=bool)
+    parser.add_argument("--csv", help="", default=True, type=bool)
     parser.add_argument("--json", help="", default=True, type=bool)
 
     args=parser.parse_args()
@@ -97,6 +104,10 @@ if __name__ == '__main__':
     # Get generic league information
     league_information = idc.league_get(league_id)
 
+    #league_membership = idc.league_membership(self, include_league=False):
+
+    #idc.league_roster(self, league_id, include_licenses=False)
+    
     # Get all league seasons
     league_seasons = idc.league_seasons(league_id)
 
@@ -106,10 +117,11 @@ if __name__ == '__main__':
 
     if jsondump == True:
         dump_json(league_information, league_information_file)
-        dump_json(league_seasons, league_information_file)
+        dump_json(league_seasons, league_seasons_file)
         dump_json(league_season_sessions, league_season_sessions_file)
 
     if csvdump == True:
         dump_csv_league_pending_requests(league_information, league_pending_requests_file)
         dump_csv_league_roster(league_information, league_roster_file)
+        dump_csv_league_seasons(league_seasons, league_seasons_file)
         dump_csv_league_seasons_sessions(league_season_sessions, league_season_sessions_file)
