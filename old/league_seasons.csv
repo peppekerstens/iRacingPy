@@ -1,0 +1,2 @@
+league_id,season_id,points_system_id,season_name,active,hidden,num_drops,no_drops_on_or_after_race_num,points_cars,driver_points_car_classes,team_points_car_classes,points_system_name,points_system_desc
+5606,110644,1,PEC Season 6,True,False,0,-1,[],[],[],None,No points will be awarded.  The league administrator will assign points at a later date.

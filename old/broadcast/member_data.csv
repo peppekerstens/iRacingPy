@@ -1,0 +1,185 @@
+cust_id,display_name,latest_iRating,gtp,lmp2,gt3pro,gt3am
+662411,Peppe Kerstens,1238,False,False,False,Silver
+454587,Bart Feuerstein,1815,False,False,True,Silver
+370087,Carmen Sienna,1503,False,False,False,Silver
+639396,Jonas Weber4,2636,False,True,True,Silver
+724047,Liam O'Sullivan,2883,True,True,True,Gold
+948441,Luc Teunissen,2145,False,True,True,Silver
+929520,Lucas Derksen2,2672,False,True,True,Silver
+275244,Max Knolli,1577,False,False,False,Silver
+686915,Nick Kerstens,2872,True,True,True,Gold
+208290,Robert Covey,1739,False,False,True,Silver
+413787,Rowan Pelan O'Treasaigh,1573,False,False,False,Silver
+579208,Thomas Burling,2236,False,True,True,Silver
+363812,Vincent Aussems,4693,True,True,True,No
+532015,Winston Ekkel,3283,True,True,True,Gold
+338621,Aaron Beaver,1998,False,False,True,Silver
+809117,Aaron Kimelman2,2217,False,True,True,Silver
+20477,Albert Priem,4133,True,True,True,No
+245246,Alberto García Blasco,6016,True,True,True,No
+498058,Alberto Moreno S,6116,True,True,True,No
+273285,Ale G Torres,5633,True,True,True,No
+510504,Alex Baeyens,2476,False,True,True,Silver
+300176,Alex González,3092,True,True,True,Gold
+690462,Alex Pilbeam,2929,True,True,True,Gold
+159173,Alex Rourera,3278,True,True,True,Gold
+371028,Alex Sevillano Lledó,4597,True,True,True,No
+362217,Alexander Gerber,3955,True,True,True,No
+1002358,Anders Daniel Rasmussen2,1350,False,False,False,Silver
+737017,Andre Campanholo,2074,False,True,True,Silver
+444876,Andreas Hauser,4172,True,True,True,No
+717883,André Filipe Vilela,5644,True,True,True,No
+68157,Andy Perrs,3251,True,True,True,Gold
+427628,Antoine  Bos,4499,True,True,True,No
+350390,Antonio Celada,1958,False,False,True,Silver
+392630,Arend Vergauwe,3662,True,True,True,Gold
+348052,Aritz Paz,4314,True,True,True,No
+283597,Balta Fernandez,2733,False,True,True,Silver
+387611,Beñat Artano,4694,True,True,True,No
+780497,Björn Klaassens,2261,False,True,True,Silver
+379075,Brian McGough,3477,True,True,True,Gold
+388244,Bruno Filipe Almeida,4335,True,True,True,No
+81643,Bryan Krauss,3949,True,True,True,No
+651954,Cade Middleton,4441,True,True,True,No
+675847,Carlos Miguel Duarte,1972,False,False,True,Silver
+389453,Carlos Ruiz3,3904,True,True,True,No
+535122,Caño Lopez,6209,True,True,True,No
+590994,Charlie Lund Nilsson,7280,True,True,True,No
+302537,Charlie Monroe,3215,True,True,True,Gold
+895171,Christian Müller6,3231,True,True,True,Gold
+994597,Christoph Zander,1767,False,False,True,Silver
+983360,Christos Libanovnos,2316,False,True,True,Silver
+80716,Christos Panoulas,2354,False,True,True,Silver
+527266,Cory Ratcliffe,2965,True,True,True,Gold
+604599,Daan Pepels,3288,True,True,True,Gold
+47036,Daniel López,5690,True,True,True,No
+874076,Daniel Ziętek,1836,False,False,True,Silver
+59268,Danni Fugl,2198,False,True,True,Silver
+369262,Daryl Norkett,2682,False,True,True,Silver
+701793,David Marchal,3638,True,True,True,Gold
+311045,David Narbonne,1928,False,False,True,Silver
+365305,Davo Ramos,3549,True,True,True,Gold
+984745,Davy Daniels2,1682,False,False,False,Silver
+696206,Delil Akbulut,2383,False,True,True,Silver
+623248,Diogo F Teodoro,4035,True,True,True,No
+1033551,Diogo Faria,1350,False,False,False,Silver
+719028,Dávid Végh,3206,True,True,True,Gold
+144094,E Bennett Parsons,3079,True,True,True,Gold
+813496,Emre Kemaldar,6282,True,True,True,No
+885933,Falco Van Rijsselt,2170,False,True,True,Silver
+376751,Federico Calello,3297,True,True,True,Gold
+485913,Federico Romano,3895,True,True,True,No
+799932,Felix Manzanedo,3157,True,True,True,Gold
+363478,Fernando Padilla Romero,4295,True,True,True,No
+545065,Finn Aders,3907,True,True,True,No
+931569,Florian Maus,2032,False,True,True,Silver
+501688,Francisco Barrionuevo,3111,True,True,True,Gold
+844532,Fábio M Salvaterra,3760,True,True,True,No
+555223,Gianni Pirone,4072,True,True,True,No
+462911,Gilles Philippaerts,2354,False,True,True,Silver
+657202,Glenn Grondelaers,3113,True,True,True,Gold
+858949,Gonçalo C Ferreira,4433,True,True,True,No
+569535,Gonçalo Leite,4508,True,True,True,No
+796249,Guilherme Costa Reis,3612,True,True,True,Gold
+376502,Guilian Mourre,4113,True,True,True,No
+537077,Huib Schuirink,3174,True,True,True,Gold
+689306,Isak Arvidsson,5653,True,True,True,No
+949669,Ives Van Sande,1911,False,False,True,Silver
+367020,Iván Niño,2065,False,True,True,Silver
+560270,Iwan Bremer,4461,True,True,True,No
+601678,Jack James2,2878,True,True,True,Gold
+289340,Jan Körbs,5353,True,True,True,No
+673623,Jan Simnacher,3524,True,True,True,Gold
+674724,Jan Steffens,3340,True,True,True,Gold
+486559,Jannis Rohde,2139,False,True,True,Silver
+260286,Jelle Verstraeten2,2503,False,True,True,Silver
+425035,Joao F Magalhaes,4326,True,True,True,No
+121111,Joe Mugford,2721,False,True,True,Silver
+794023,John Connors3,1750,False,False,True,Silver
+368835,Jonathan Goitiz Sati,5178,True,True,True,No
+818518,Jonathan Valgaeren,1959,False,False,True,Silver
+323778,Jose Manuel Cazon,4704,True,True,True,No
+491802,Juan Antonio Mena,1791,False,False,True,Silver
+292820,Juanjo Gragera,2630,False,True,True,Silver
+803226,Julien Harmand,4271,True,True,True,No
+697478,Julien Jouy,3427,True,True,True,Gold
+294793,Kees IJzerman,2530,False,True,True,Silver
+335241,Kevin Chartier,3583,True,True,True,Gold
+70605,Kevin Daniels,3729,True,True,True,Gold
+812551,Kevin Deckers,2400,False,True,True,Silver
+427405,Kevin Jailler,2928,True,True,True,Gold
+599263,Kevin Lazar,3168,True,True,True,Gold
+732637,Kevin Souffreau,2790,True,True,True,Gold
+896782,Koen Van De Woestyne,1390,False,False,False,Silver
+662921,Kris Van Gucht,2989,True,True,True,Gold
+309084,Krzysztof Jachura,4180,True,True,True,No
+792769,Lennart Otto,4463,True,True,True,No
+194225,Loic Guillardeau,3125,True,True,True,Gold
+767013,Lorenz De Vlieger,2014,False,True,True,Silver
+823793,Luciano Gomes,3069,True,True,True,Gold
+851184,Luke Smith17,2375,False,True,True,Silver
+858536,Mahmood Albash,3162,True,True,True,Gold
+957920,Malte Johansson,4337,True,True,True,No
+166232,Manu Prieto,5690,True,True,True,No
+424670,Marc Hagele,4421,True,True,True,No
+775090,Marcel Beck,2009,False,True,True,Silver
+349178,Marco Vilela,3036,True,True,True,Gold
+398891,Marino Mollá,2090,False,True,True,Silver
+504417,Mario Grillo,1622,False,False,False,Silver
+427545,Marnix Heijster,2890,True,True,True,Gold
+284176,Martin Birmele,2259,False,True,True,Silver
+291119,Martyn Pearson,3835,True,True,True,No
+706216,Mateusz Alexander Debczuk,3210,True,True,True,Gold
+403160,Mateusz Dębczuk,5036,True,True,True,No
+634750,Mathijs Wijten,6206,True,True,True,No
+960421,Matt Couso,3132,True,True,True,Gold
+722391,Matthew J Luke,3118,True,True,True,Gold
+359902,Matthias Temme,4789,True,True,True,No
+18782,Maurizio Scotti di Uccio,3652,True,True,True,Gold
+564555,Mauro Dragoni,2682,False,True,True,Silver
+636464,Mickael Costa,1812,False,False,True,Silver
+925588,Mike Gaff,1719,False,False,True,Silver
+335781,Mike R,3299,True,True,True,Gold
+611888,Milo Speelman,2504,False,True,True,Silver
+400103,Mitchell Ian Greene,4970,True,True,True,No
+396799,Neil Debacquer,4412,True,True,True,No
+679882,Nick Debeck,1663,False,False,False,Silver
+528552,Niclas Geßner,5233,True,True,True,No
+827394,Nicolas Vicent,2787,True,True,True,Gold
+681922,Nuno Tavares Barbosa,1963,False,False,True,Silver
+302291,Onno Bastings,3808,True,True,True,No
+367828,Pablo Riestra,3220,True,True,True,Gold
+327245,Paolo Ernesto Taddeolini,3287,True,True,True,Gold
+595283,Patrick Gannon,4315,True,True,True,No
+278489,Paulo J Fonseca,4598,True,True,True,No
+400601,Pedro S Monteiro,4544,True,True,True,No
+383953,Philipp Kanehl,2795,True,True,True,Gold
+283568,Pieter Elsen,2375,False,True,True,Silver
+596421,Przemyslaw Majtyka,2592,False,True,True,Silver
+54077,Rafael Carballedo,1445,False,False,False,Silver
+490005,Randy Martin y Mateos,3643,True,True,True,Gold
+794445,Rasmus Uustulnd,4768,True,True,True,No
+443864,Renaud Herbillon,3327,True,True,True,Gold
+636573,Roberto JM Artur,2020,False,True,True,Silver
+361527,Romain Utiel,3501,True,True,True,Gold
+767972,Roy Vermeer,2410,False,True,True,Silver
+472821,Ryan Hardinge,2726,False,True,True,Silver
+393778,Stefan Le Guen,2780,True,True,True,Gold
+410995,Stefano Tonelli,3995,True,True,True,No
+405129,Sven Martin,2142,False,True,True,Silver
+502143,Thomas Baker6,1932,False,False,True,Silver
+705552,Tiago Pontes,2550,False,True,True,Silver
+773907,Tim De Hondt,2419,False,True,True,Silver
+104551,Tim van Spronsen,3461,True,True,True,Gold
+674952,Tobias Krücken,4130,True,True,True,No
+617317,Tom Bryant,2156,False,True,True,Silver
+889286,Tom Cecchetto,4349,True,True,True,No
+549249,Tom Kunath,3741,True,True,True,Gold
+821015,Tomas Vandenbossche,2018,False,True,True,Silver
+1061507,Tseard Ploeg,1350,False,False,False,Silver
+733558,Tyler J. Hall,1555,False,False,False,Silver
+433451,William Foyle,3452,True,True,True,Gold
+43654,Yannick Willems,2251,False,True,True,Silver
+412258,Yeshal Yunus,3588,True,True,True,Gold
+380152,Zachary Livengood,2704,False,True,True,Silver
+954931,Zidar Ates,2284,False,True,True,Silver

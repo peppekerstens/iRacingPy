@@ -1,0 +1,23 @@
+{
+    "league_id": 5606,
+    "retired": false,
+    "seasons": [
+        {
+            "active": true,
+            "driver_points_car_classes": [],
+            "hidden": false,
+            "league_id": 5606,
+            "no_drops_on_or_after_race_num": -1,
+            "num_drops": 0,
+            "points_cars": [],
+            "points_system_desc": "No points will be awarded.  The league administrator will assign points at a later date.",
+            "points_system_id": 1,
+            "points_system_name": "None",
+            "season_id": 110644,
+            "season_name": "PEC Season 6",
+            "team_points_car_classes": []
+        }
+    ],
+    "subscribed": false,
+    "success": true
+}

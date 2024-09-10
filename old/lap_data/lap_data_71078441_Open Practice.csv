@@ -1,0 +1,130 @@
+group_id,name,cust_id,display_name,lap_number,flags,incident,session_time,session_start_time,lap_time,team_fastest_lap,personal_best_lap,license_level,car_number,lap_events
+-293296,Old Firm Racing # Yellow,427405,Kevin Jailler,0,2,False,36714694,,-1,False,False,20,10,['pitted']
+-293296,Old Firm Racing # Yellow,427405,Kevin Jailler,1,4,True,37856568,,1141874,False,False,20,10,['off track']
+-293296,Old Firm Racing # Yellow,427405,Kevin Jailler,2,279,True,39920444,,-1,False,False,20,10,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-293296,Old Firm Racing # Yellow,427405,Kevin Jailler,3,279,True,42130469,,-1,False,False,20,10,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-293296,Old Firm Racing # Yellow,427405,Kevin Jailler,4,0,False,43195704,,1065235,False,False,20,10,[]
+-293296,Old Firm Racing # Yellow,427405,Kevin Jailler,5,279,True,45166021,,-1,False,False,20,10,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-293296,Old Firm Racing # Yellow,427405,Kevin Jailler,6,0,False,46250887,,1084866,False,False,20,10,[]
+-293296,Old Firm Racing # Yellow,427405,Kevin Jailler,7,0,False,47337289,,1086402,False,False,20,10,[]
+-293296,Old Firm Racing # Yellow,427405,Kevin Jailler,8,0,False,48427621,,1090332,False,False,20,10,[]
+-293296,Old Firm Racing # Yellow,427405,Kevin Jailler,9,0,False,49518751,,1091130,False,False,20,10,[]
+-293296,Old Firm Racing # Yellow,427405,Kevin Jailler,10,0,False,50606179,,1087428,False,False,20,10,[]
+-293296,Old Firm Racing # Yellow,427405,Kevin Jailler,11,275,False,53117063,,-1,False,False,20,10,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-293296,Old Firm Racing # Yellow,427405,Kevin Jailler,12,0,False,54184693,,1067630,False,False,20,10,[]
+-293296,Old Firm Racing # Yellow,427405,Kevin Jailler,13,0,False,55250010,,1065317,False,False,20,10,[]
+-293296,Old Firm Racing # Yellow,427405,Kevin Jailler,14,275,False,56670119,,-1,False,False,20,10,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-293296,Old Firm Racing # Yellow,427405,Kevin Jailler,15,4,True,57731761,,1061642,True,True,20,10,['off track']
+-293296,Old Firm Racing # Yellow,427405,Kevin Jailler,16,0,False,58796978,,1065217,False,False,20,10,[]
+-289324,Reiter Engineering Esports,289340,Jan Körbs,0,2,False,14923243,,-1,False,False,18,76,['pitted']
+-289324,Reiter Engineering Esports,289340,Jan Körbs,1,0,False,16011755,,1088512,False,False,18,76,[]
+-289324,Reiter Engineering Esports,289340,Jan Körbs,2,0,False,17099135,,1087380,False,False,18,76,[]
+-289324,Reiter Engineering Esports,289340,Jan Körbs,3,0,False,18183798,,1084663,False,False,18,76,[]
+-289324,Reiter Engineering Esports,289340,Jan Körbs,4,311,True,21096582,,-1,False,False,18,76,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'discontinuity']"
+-289324,Reiter Engineering Esports,289340,Jan Körbs,5,0,False,22176875,,1080293,False,False,18,76,[]
+-289324,Reiter Engineering Esports,289340,Jan Körbs,6,0,False,23265009,,1088134,False,False,18,76,[]
+-289324,Reiter Engineering Esports,289340,Jan Körbs,7,287,True,25025291,,-1,False,False,18,76,"['invalid', 'pitted', 'off track', 'black flag', 'car reset', 'discontinuity']"
+-289324,Reiter Engineering Esports,289340,Jan Körbs,8,0,False,26100993,,1075702,True,True,18,76,[]
+-289324,Reiter Engineering Esports,289340,Jan Körbs,9,0,False,27185670,,1084677,False,False,18,76,[]
+-289324,Reiter Engineering Esports,289340,Jan Körbs,10,4,True,28272024,,1086354,False,False,18,76,['off track']
+-289324,Reiter Engineering Esports,289340,Jan Körbs,11,0,False,29364722,,1092698,False,False,18,76,[]
+-289324,Reiter Engineering Esports,289340,Jan Körbs,12,0,False,30449728,,1085006,False,False,18,76,[]
+-289324,Reiter Engineering Esports,289340,Jan Körbs,13,407,True,32171360,,-1,False,False,18,76,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-289324,Reiter Engineering Esports,289340,Jan Körbs,14,4,True,33314006,,1142646,False,False,18,76,['off track']
+-289324,Reiter Engineering Esports,289340,Jan Körbs,15,4,True,34413337,,1099331,False,False,18,76,['off track']
+-289324,Reiter Engineering Esports,289340,Jan Körbs,16,275,False,39331610,,-1,False,False,18,76,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-289324,Reiter Engineering Esports,289340,Jan Körbs,17,4,True,40411271,,1079661,False,False,18,76,['off track']
+-289324,Reiter Engineering Esports,289340,Jan Körbs,18,0,False,41495928,,1084657,False,False,18,76,[]
+-289324,Reiter Engineering Esports,289340,Jan Körbs,19,0,False,42580460,,1084532,False,False,18,76,[]
+-289324,Reiter Engineering Esports,289340,Jan Körbs,20,0,False,43664410,,1083950,False,False,18,76,[]
+-289324,Reiter Engineering Esports,289340,Jan Körbs,21,0,False,44748963,,1084553,False,False,18,76,[]
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,0,279,True,18093926,,-1,False,False,17,202,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,1,68,True,19391488,,1297562,False,False,17,202,"['off track', 'car contact']"
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,2,0,False,20654245,,1262757,False,False,17,202,[]
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,3,4,True,21919471,,1265226,False,False,17,202,['off track']
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,4,0,False,23183655,,1264184,False,False,17,202,[]
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,5,0,False,24451584,,1267929,False,False,17,202,[]
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,6,0,False,25721840,,1270256,False,False,17,202,[]
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,7,4,True,26982734,,1260894,False,False,17,202,['off track']
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,8,0,False,28246418,,1263684,False,False,17,202,[]
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,9,0,False,29513081,,1266663,False,False,17,202,[]
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,10,4,True,30775270,,1262189,False,False,17,202,['off track']
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,11,0,False,32036620,,1261350,False,False,17,202,[]
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,12,0,False,33296783,,1260163,False,False,17,202,[]
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,13,0,False,34557380,,1260597,False,False,17,202,[]
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,14,0,False,35822017,,1264637,False,False,17,202,[]
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,15,0,False,37094721,,1272704,False,False,17,202,[]
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,16,11,False,38452003,,-1,False,False,17,202,"['invalid', 'pitted', 'black flag']"
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,17,3,False,44302151,,-1,False,False,17,202,"['invalid', 'pitted']"
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,18,0,False,45550228,,1248077,False,False,17,202,[]
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,19,0,False,46795273,,1245045,True,True,17,202,[]
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,20,6,True,48145193,,1349920,False,False,17,202,"['pitted', 'off track']"
+-379750,Fury Simsport GT3,400103,Mitchell Ian Greene,44,3,False,82887169,,1848246,False,False,17,202,"['invalid', 'pitted']"
+-379750,Fury Simsport GT3,81643,Bryan Krauss,21,7,True,50130618,,1985425,False,False,19,202,"['invalid', 'pitted', 'off track']"
+-379750,Fury Simsport GT3,81643,Bryan Krauss,22,3,False,53235758,,-1,False,False,19,202,"['invalid', 'pitted']"
+-379750,Fury Simsport GT3,81643,Bryan Krauss,23,4,True,54495258,,1259500,False,False,19,202,['off track']
+-379750,Fury Simsport GT3,81643,Bryan Krauss,24,0,False,55760908,,1265650,False,False,19,202,[]
+-379750,Fury Simsport GT3,81643,Bryan Krauss,25,0,False,57021794,,1260886,False,False,19,202,[]
+-379750,Fury Simsport GT3,81643,Bryan Krauss,26,0,False,58281576,,1259782,False,False,19,202,[]
+-379750,Fury Simsport GT3,81643,Bryan Krauss,27,0,False,59543494,,1261918,False,False,19,202,[]
+-379750,Fury Simsport GT3,81643,Bryan Krauss,28,0,False,60807945,,1264451,False,False,19,202,[]
+-379750,Fury Simsport GT3,81643,Bryan Krauss,29,0,False,62067037,,1259092,False,False,19,202,[]
+-379750,Fury Simsport GT3,81643,Bryan Krauss,30,0,False,63329596,,1262559,False,False,19,202,[]
+-379750,Fury Simsport GT3,81643,Bryan Krauss,31,0,False,64593687,,1264091,False,False,19,202,[]
+-379750,Fury Simsport GT3,81643,Bryan Krauss,32,0,False,65855810,,1262123,False,False,19,202,[]
+-379750,Fury Simsport GT3,81643,Bryan Krauss,33,0,False,67116727,,1260917,False,False,19,202,[]
+-379750,Fury Simsport GT3,81643,Bryan Krauss,34,0,False,68376588,,1259861,False,False,19,202,[]
+-379750,Fury Simsport GT3,81643,Bryan Krauss,35,0,False,69635295,,1258707,False,False,19,202,[]
+-379750,Fury Simsport GT3,81643,Bryan Krauss,36,0,False,70890435,,1255140,False,False,19,202,[]
+-379750,Fury Simsport GT3,81643,Bryan Krauss,37,0,False,72148494,,1258059,False,False,19,202,[]
+-379750,Fury Simsport GT3,81643,Bryan Krauss,38,4,True,73412587,,1264093,False,False,19,202,['off track']
+-379750,Fury Simsport GT3,81643,Bryan Krauss,39,6,True,74773744,,1361157,False,False,19,202,"['pitted', 'off track']"
+-379750,Fury Simsport GT3,81643,Bryan Krauss,40,3,False,77187726,,-1,False,False,19,202,"['invalid', 'pitted']"
+-379750,Fury Simsport GT3,81643,Bryan Krauss,41,0,False,78438481,,1250755,False,True,19,202,[]
+-379750,Fury Simsport GT3,81643,Bryan Krauss,42,0,False,79690428,,1251947,False,False,19,202,[]
+-379750,Fury Simsport GT3,81643,Bryan Krauss,43,2,False,81038923,,1348495,False,False,19,202,['pitted']
+-90491,LITHIUM Motorsports PRO,737017,Andre Campanholo,0,279,True,9108425,,-1,False,False,20,234,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-90491,LITHIUM Motorsports PRO,737017,Andre Campanholo,1,311,True,11175208,,-1,False,False,20,234,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'discontinuity']"
+-90491,LITHIUM Motorsports PRO,737017,Andre Campanholo,2,407,True,13480443,,-1,False,False,20,234,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-90491,LITHIUM Motorsports PRO,737017,Andre Campanholo,3,0,False,14758573,,1278130,False,False,20,234,[]
+-90491,LITHIUM Motorsports PRO,737017,Andre Campanholo,4,0,False,16026136,,1267563,False,False,20,234,[]
+-90491,LITHIUM Motorsports PRO,737017,Andre Campanholo,5,0,False,17290499,,1264363,False,False,20,234,[]
+-90491,LITHIUM Motorsports PRO,737017,Andre Campanholo,6,439,True,33253534,,-1,False,False,20,234,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-90491,LITHIUM Motorsports PRO,737017,Andre Campanholo,7,4,True,34521284,,1267750,False,False,20,234,['off track']
+-90491,LITHIUM Motorsports PRO,737017,Andre Campanholo,8,4,True,35782045,,1260761,True,True,20,234,['off track']
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,0,134,True,4669112,,-1,False,False,19,1,"['pitted', 'off track', 'lost control']"
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,1,4,True,5953465,,1284353,False,False,19,1,['off track']
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,2,0,False,7227158,,1273693,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,3,4,True,8500117,,1272959,False,False,19,1,['off track']
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,4,0,False,9772624,,1272507,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,5,0,False,11052015,,1279391,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,6,0,False,12325044,,1273029,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,7,0,False,13597655,,1272611,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,8,4,True,14867381,,1269726,False,False,19,1,['off track']
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,9,0,False,16142724,,1275343,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,10,0,False,17413833,,1271109,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,11,0,False,18683438,,1269605,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,12,4,True,19957428,,1273990,False,False,19,1,['off track']
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,13,0,False,21230677,,1273249,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,14,0,False,22499349,,1268672,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,15,0,False,23770598,,1271249,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,16,0,False,25039412,,1268814,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,17,0,False,26306593,,1267181,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,18,0,False,27575503,,1268910,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,19,0,False,28842568,,1267065,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,20,0,False,30108971,,1266403,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,21,0,False,31372872,,1263901,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,22,0,False,32639286,,1266414,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,23,0,False,33904027,,1264741,False,False,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,24,0,False,35165480,,1261453,True,True,19,1,[]
+-53704,LITHIUM Motorsports,380152,Zachary Livengood,25,2,False,36520496,,1355016,False,False,19,1,['pitted']
+-273610,Dead Bull Racing,781721,Kajeme Murrieta,0,2,False,42996819,,-1,False,False,19,7,['pitted']
+-273610,Dead Bull Racing,781721,Kajeme Murrieta,1,0,False,44261114,,1264295,False,False,19,7,[]
+-273610,Dead Bull Racing,781721,Kajeme Murrieta,2,4,True,45523976,,1262862,False,False,19,7,['off track']
+-273610,Dead Bull Racing,781721,Kajeme Murrieta,3,0,False,46788221,,1264245,False,False,19,7,[]
+-273610,Dead Bull Racing,781721,Kajeme Murrieta,4,0,False,48050556,,1262335,True,True,19,7,[]
+-273610,Dead Bull Racing,781721,Kajeme Murrieta,5,0,False,49329669,,1279113,False,False,19,7,[]
+-273610,Dead Bull Racing,781721,Kajeme Murrieta,6,4,True,50594562,,1264893,False,False,19,7,['off track']
+-380678,Purple Sector Motorsports #348,338621,Aaron Beaver,0,2,False,11335202,,-1,False,False,20,505,['pitted']
+-380678,Purple Sector Motorsports #348,338621,Aaron Beaver,1,279,True,14658947,,-1,False,False,20,505,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-380678,Purple Sector Motorsports #348,338621,Aaron Beaver,2,0,False,15944372,,1285425,True,True,20,505,[]
