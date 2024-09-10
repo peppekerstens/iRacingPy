@@ -16,13 +16,11 @@ def generate_member_data_driver_indicator(df_member_data: pd, cust_id: int) -> p
     df_driver = df_member_data[driver]
     #print(tabulate(df_driver, headers = 'keys', tablefmt = 'psql'))
     if not df_driver.empty:
-        classification = df_driver.iloc[0]['driver_classification']
+        #classification = df_driver.iloc[0]['gt3am']
         #print(df_row['driver_classification'])
-        if classification == 'Not allowed':
-            #print(df_row['driver_classification'])
-            classification = 'Gold'
+        #if classification == 'Gold':
         #                        ['team_id','cust_id','display_name','race_count','old_classification','total_time','avg_speed','percentage','new_classification','deadzone','reclassified','driven','gold_race_count','gold_total_drive_time','gold_total_sesion_time','index','total_index']
-        df_indicator.loc[0] = [0,'',df_driver.iloc[0]['cust_id'] ,df_driver.iloc[0]['display_name'],classification,0,0,0,0]
+        df_indicator.loc[0] = [0,'',df_driver.iloc[0]['cust_id'] ,df_driver.iloc[0]['display_name'],df_driver.iloc[0]['gt3am'],0,0,0,0]
     return df_indicator
 
 

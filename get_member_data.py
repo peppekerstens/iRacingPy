@@ -15,20 +15,39 @@ import pwinput
 from tabulate import tabulate
 from tqdm import tqdm #https://github.com/tqdm/tqdm/#readme
 import json
+import argparse
 
-def get_pec_driver_qualification(iRating: int) -> str:
-    if iRating >= 2500:
-        return 'lmdh'
-    elif iRating >= 2000:
-        return 'lmp2'
+def is_allowed_gtp(iRating: int) -> bool:
+    if iRating >= 2750:
+        return True
+    else:
+        return False 
+
+def is_allowed_gt3(iRating: int) -> bool:
+    if iRating >= 1700:
+        return True
+    else:
+        return False 
+
+def is_allowed_lmp2(iRating: int) -> bool:
+    if iRating >= 2000:
+        return True
+    else:
+        return False
+           
+def get_driver_qualification(iRating: int) -> str:
+    if iRating >= 2750:
+        return 'gtp'
+    #elif iRating >= 2000:
+    #    return 'lmp2'
     elif iRating >= 1500:
         return 'gt3'
     else:
         return None 
 
-def get_pec_driver_classification(iRating: int) -> str:
-    if iRating > 3500:
-        return 'Not allowed'
+def get_gt3_AM_classification(iRating: int) -> str:
+    if iRating > 3750:
+        return 'No'
     elif iRating >= 2750:
         return 'Gold'
     else:
@@ -43,9 +62,9 @@ def get_member_latest_iRating(df_member_chart_data: pd) -> int:
         last_value = 0
     return last_value 
 
-def get_pec_driver_information(idc: irDataClient, df_member_data: pd) -> pd:
+def get_driver_information(idc: irDataClient, df_member_data: pd) -> pd:
     member_count = len(df_member_data)
-    df_pec_driver_info = pd.DataFrame(columns=['cust_id','display_name','latest_iRating', 'driver_classification','driver_qualification'])
+    df_pec_driver_info = pd.DataFrame(columns=['cust_id','display_name','latest_iRating', 'gtp','lmp2','gt3pro','gt3am'])
     print('Getting driver chart data')
     print()
     #df_pec_driver_info = None
@@ -53,12 +72,16 @@ def get_pec_driver_information(idc: irDataClient, df_member_data: pd) -> pd:
         for index, df_row in df_member_data.iterrows():
             cust_id = df_row['cust_id'] #no need to do something like df_row.iloc[0]['cust_id'] as it already is a single row
             try:
-                df_member_chart_data = get_member_chart_data(idc,cust_id)
+                #df_member_chart_data = get_member_chart_data(idc,cust_id)
+                #display_name = df_row['display_name']
+                #latest_iRating = get_member_latest_iRating(df_member_chart_data)
                 display_name = df_row['display_name']
-                latest_iRating = get_member_latest_iRating(df_member_chart_data)
-                driver_qualification = get_pec_driver_qualification(latest_iRating)
-                driver_classification = get_pec_driver_classification(latest_iRating)
-                df_pec_driver_info.loc[index] = [cust_id,display_name,latest_iRating,driver_classification,driver_qualification]
+                latest_iRating = get_member_irating(idc,cust_id)
+                gtp = is_allowed_gtp(latest_iRating)
+                lmp2 = is_allowed_lmp2(latest_iRating)
+                gt3 = is_allowed_gt3(latest_iRating)
+                gt3_class = get_gt3_AM_classification(latest_iRating)
+                df_pec_driver_info.loc[index] = [cust_id,display_name,latest_iRating,gtp,lmp2,gt3,gt3_class]
             except:
                 print(f"WARNING: Could not find info for cust_id: {cust_id}")
             pbar.update(1)
@@ -66,7 +89,18 @@ def get_pec_driver_information(idc: irDataClient, df_member_data: pd) -> pd:
     return df_pec_driver_info
 
 def get_member_chart_data(idc: irDataClient, custid: int) -> pd:
-    member_chart_data = idc.member_chart_data(cust_id=custid)
+    member_chart_data = idc.member_chart_data(cust_id=custid, category_id=5)
+    df_member_chart_data = pd.DataFrame.from_dict(member_chart_data['data'])
+    return df_member_chart_data
+
+
+def get_member_irating(idc: irDataClient, cust_id: int, category_id=5) -> int:
+    member_profile = idc.member_profile(cust_id=cust_id)
+    for license_history in member_profile['license_history']:
+        if  license_history['category_id'] == category_id:
+            return license_history['irating']
+    return None
+
     df_member_chart_data = pd.DataFrame.from_dict(member_chart_data['data'])
     return df_member_chart_data
 
@@ -96,38 +130,50 @@ def import_csv(path: str) -> dict:
     file.close()
     return data
 
-if __name__ == '__main__': 
-    if len(sys.argv) == 5:
-        username = sys.argv[1] #first cmdline arg is acnt name
-        password = sys.argv[2] #second cmdline arg is pwd
-        cust_id_csv = sys.argv[3] #third cmdline arg is csv with one table cust_ids (iRacing id)
-        csv_name = sys.argv[3] #csv file to save results
+if __name__ == '__main__':
+    #https://stackoverflow.com/questions/40001892/reading-named-command-arguments
+    #https://stackoverflow.com/questions/15301147/python-argparse-default-value-or-specified-value
+    #expand later to use a config file instead of defaults
+    parser=argparse.ArgumentParser()
+    parser.add_argument("--username", help="", default='', type=str)
+    parser.add_argument("--password", help="", default='', type=str)
+    parser.add_argument("--league_id", help="", default=5606, type=int) #PEC league
+    parser.add_argument("--roster", help="", type=str)#default='league_roster.csv', 
+    parser.add_argument("--data", help="", default='member_data.csv', type=str)
+    #parser.add_argument("--csv", help="", default=True, type=bool)
+    #parser.add_argument("--json", help="", default=True, type=bool)
 
-    else:
-        #raise BaseException('bla')  #does not work; processing is stopped see: https://docs.python.org/3/library/exceptions.html#Exception
-        #print('Error: to few arguments!')
-        #print('Usage: py get_session_data.py [username] [password] [session_id]')
-        print('Going into interactive mode....')
+    args=parser.parse_args()
+    #print(f"Args: {args}\nCommand Line: {sys.argv}\nfoo: {args.foo}")
+    #print(f"Dict format: {vars(args)}")
+    
+    username = args.username
+    password = args.password
+    roster = args.roster 
+    data = args.data
+    league_id = args.league_id
+    #jsondump = args.json
+    #csvdump = args.csv
+
+    if username == "":
         username = input("Enter username: ")
-        #password = getpass.getpass('Enter password:') # hard in practise, does not show any input hint
+
+    if password == "":
         password = pwinput.pwinput(prompt='Enter password: ')
-        cust_id_csv = input("Enter Customer ID CSV (press <enter> for league_roster.csv): ")
-        if cust_id_csv == '':
-            cust_id_csv = 'league_roster.csv'
-            #cust_id_csv = 'iracingid.csv'
-        csv_name = input("Enter CSV name for result (press <enter> for member_data.csv): ")
-        if csv_name == '':
-            csv_name = 'member_data.csv'
 
     idc = irDataClient(username=username, password=password)
 
-    #pd.Series(states_df.name.values).to_dict()
-    #https://cmdlinetips.com/2021/04/convert-two-column-values-from-pandas-dataframe-to-a-dictionary/
-    #https://sparkbyexamples.com/pandas/convert-pandas-dataframe-to-series/#:~:text=Convert%20DataFrame%20Column%20to%20Series,selected%20column%20as%20a%20Series.
-    #member_data = get_member_data(idc, cust_id) -> cust_id should be series of type {'12233','112333'}
-
-    df_league_roster = pd.read_csv(cust_id_csv)
-    #csvdata = import_csv(cust_id_csv)
+    # Get generic league information
+    if roster == None:
+        league_information = idc.league_get(league_id)
+        df_league_roster = pd.json_normalize(league_information['roster'])
+    else:
+        df_league_roster = pd.read_csv(roster)
+    
+    #
+    #try to make following code simpler?
+    #check if one call can be made with all cust_id at once to idc.member instead of one by one
+    #
     df_league_roster_count = len(df_league_roster)
     cust_id_array = df_league_roster['cust_id'].values
     #should be of type {}
@@ -145,9 +191,11 @@ if __name__ == '__main__':
     #df_member_data = get_member_data(idc,df_league_roster)
     #df_member_data = get_member_data(idc, csvdata)
     df_member_data = pd.DataFrame.from_dict(members)
-    df_pec_driver_info = get_pec_driver_information(idc,df_member_data)
+    df_pec_driver_info = get_driver_information(idc,df_member_data)
 
     #print(f"{custid[0]},{display_name2},{latest_iRating},{driver_classification},{driver_qualification}")
-    print(tabulate(df_pec_driver_info[['cust_id','display_name','latest_iRating', 'driver_classification','driver_qualification']], headers = 'keys', tablefmt = 'psql'))
+    print(tabulate(df_pec_driver_info, headers = 'keys', tablefmt = 'psql'))
 
-    df_pec_driver_info.to_csv(csv_name,index=False,columns=['cust_id','display_name','latest_iRating', 'driver_classification','driver_qualification'])  
+    #df_pec_driver_info.to_csv(csv_name,index=False,columns=['cust_id','display_name','latest_iRating', 'driver_classification','driver_qualification'])
+    df_pec_driver_info.to_csv(data,index=False)   
+

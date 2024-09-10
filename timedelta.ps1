@@ -1,4 +1,12 @@
-$resultjson = get-content .\iracing_result\iracing-result-65397658.json
+#this calculates the time delta between race finishers
+#timedelta is compared with race WINNER, not with the car ahead
+#actual delta is difference between delta times!
+
+param(
+    $result = '.\iracing_result\iracing-result-71133525.json'
+)
+
+$resultjson = get-content $result
 $result = $resultjson | ConvertFrom-Json
 
 $session_results = $result.session_results.where{$_.simsession_name -like "RACE"}.results
