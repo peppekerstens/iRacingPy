@@ -5,7 +5,7 @@
 # actief season achterhalen, lukt dat niet, dan seizoenen tonen en vragen welke
 
 # welke actie is gewenst?
-1. leden ophalen
+1. leden ophalen => get_league_information.py => roster
 2. resultaten ophalen
 3. timedelta achterhalen
 4. driver indicator ophalen
