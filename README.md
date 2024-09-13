@@ -1,9 +1,9 @@
 # iRacingPy
 
-## 
+## titel2
 A very bad repo name for a very specific bit of iRacing function, written in Python. Creates reports used in the [Platinum Endurance Championship](http://platinumracingleague.com/PEC/) iRacing SimRacing leagues 
 
-## Description
+### Description
 
 
 ## Copyright
