@@ -1,16 +1,17 @@
 cust_id,display_name,initiated,revoked
+621117,Artur Loureiro,2024-09-13T06:44:58Z,False
+569447,Tiago Manuel Dias,2024-09-13T06:44:58Z,False
 857753,Afonso Souto,2024-08-20T16:04:29Z,False
 564150,Iván Ubera,2024-08-20T16:04:30Z,False
-434628,Guilhem Piepers2,2024-08-07T20:31:28Z,False
 289748,A.J. Stravato,2024-08-07T20:44:18Z,False
 365315,Didac Fajardo,2024-08-07T20:40:19Z,False
 82105,Shane Cravens,2024-08-07T20:15:21Z,False
 591171,Pedro Teixeira Machado,2024-08-07T20:34:32Z,False
+92160,Mr L Lawson,2024-09-05T15:59:03Z,False
 985544,Alessandro Penny,2024-08-07T20:05:03Z,False
 655982,Rune Bobbaers,2024-08-07T20:09:45Z,False
 809252,Raphael Ducrozet,2024-08-07T20:30:43Z,False
 558958,Mark DeBoer,2024-08-07T20:34:47Z,False
-753781,Lorenzo Schoovaerts,2024-08-07T20:42:04Z,False
 952093,Dimitris Papadedes,2024-08-19T21:26:49Z,False
 735433,Steven Van Kampen,2024-08-14T14:40:40Z,False
 961390,Georgios Apostolopoulos,2024-08-19T21:26:49Z,False
@@ -25,7 +26,6 @@ cust_id,display_name,initiated,revoked
 253007,Florian Apazeller,2024-08-07T20:32:11Z,False
 292137,Jakub Szelerski,2024-08-07T20:44:26Z,False
 592411,Marc Rozendaal,2024-08-07T20:44:50Z,False
-200773,Ander Gomez,2024-08-07T20:44:58Z,False
 126062,Sascha Juritsch,2024-08-16T15:38:49Z,False
 626105,Daniel Blomqvist,2024-08-16T15:59:17Z,False
 740664,Joao Jorge7,2024-08-16T20:35:55Z,False
@@ -40,7 +40,6 @@ cust_id,display_name,initiated,revoked
 814382,Bastiaan Hartholt,2024-08-19T21:51:26Z,False
 387171,Pablo Fernandez Alonso,2024-08-07T20:02:57Z,False
 19254,Cesar Carregal,2024-08-07T20:03:23Z,False
-556205,Alejandro Recio,2024-08-07T20:37:07Z,False
 350329,Erwin Lucas Liszkowicz,2024-08-07T20:44:03Z,False
 426748,Marc Freixa D.,2024-08-07T20:48:25Z,False
 730758,Sebastiaan Houtgraaf,2024-08-20T15:58:41Z,False
