@@ -62,7 +62,7 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
     #https://stackoverflow.com/questions/15301147/python-argparse-default-value-or-specified-value
     #expand later to use a config file instead of defaults
     parser=argparse.ArgumentParser()
-    parser.add_argument("--member_data", help="location of member data file. if only name is supplied, script location is used",  default='./league_data/member_data.csv', type=str)
+    parser.add_argument("--member_data", help="location of member data file. if only name is supplied, script location is used",  default='./member_data.csv', type=str)
     parser.add_argument("--session", help="location of the session file to process. if only name is supplied, script location is used")
     
     args=parser.parse_args()

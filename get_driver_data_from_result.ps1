@@ -1,5 +1,5 @@
 param(
-    $result = '.\iracing_result\iracing-result-68715750.json'
+    $result = '.\iracing_result\iracing-result-72608683.json'
 )
 
 $objresult = get-content $result | ConvertFrom-Json
@@ -31,9 +31,9 @@ foreach ($session_result in $race_results){
             car_number = $car_number
             team_id = $teamid
             team_display_name = $teamname
-            gtp = $driver.oldi_rating -ge 2500
+            gtp = $driver.oldi_rating -ge 2750
             lmp2 = $driver.oldi_rating -ge 2000
-            gt3pro = $driver.oldi_rating -ge 1500
+            gt3pro = $driver.oldi_rating -ge 1700
             gt3am = $gt3am
         }
     }

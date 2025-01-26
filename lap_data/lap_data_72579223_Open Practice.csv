@@ -1,0 +1,22 @@
+group_id,name,cust_id,display_name,lap_number,flags,incident,session_time,session_start_time,lap_time,team_fastest_lap,personal_best_lap,license_level,car_number,lap_events
+-239796,Slippers Racing Team,682505,Drew Glover2,0,2,False,8265101,,-1,False,False,20,399,['pitted']
+-239796,Slippers Racing Team,682505,Drew Glover2,1,311,True,12942536,,-1,False,False,20,399,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'discontinuity']"
+-239796,Slippers Racing Team,682505,Drew Glover2,2,0,False,15334943,,2392407,False,False,20,399,[]
+-239796,Slippers Racing Team,682505,Drew Glover2,3,0,False,17718311,,2383368,False,False,20,399,[]
+-239796,Slippers Racing Team,682505,Drew Glover2,4,256,False,20099501,,2381190,False,False,20,399,['discontinuity']
+-239796,Slippers Racing Team,682505,Drew Glover2,5,4,True,22495778,,2396277,False,False,20,399,['off track']
+-239796,Slippers Racing Team,682505,Drew Glover2,6,0,False,24867687,,2371909,True,True,20,399,[]
+-239796,Slippers Racing Team,794023,John Connors3,7,1427,True,29391592,,4523905,False,False,19,399,"['invalid', 'pitted', 'car reset', 'lost control', 'discontinuity', 'clock smash']"
+-239796,Slippers Racing Team,794023,John Connors3,8,0,False,31857058,,2465466,False,False,19,399,[]
+-239796,Slippers Racing Team,794023,John Connors3,9,439,True,36001057,,-1,False,False,19,399,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-239796,Slippers Racing Team,794023,John Connors3,10,0,False,38399621,,2398564,False,True,19,399,[]
+-90491,LITHIUM Motorsports PRO,380152,Zachary Livengood,0,311,True,33282608,,-1,False,False,19,234,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'discontinuity']"
+-90491,LITHIUM Motorsports PRO,380152,Zachary Livengood,1,0,False,35679660,,2397052,False,False,19,234,[]
+-90491,LITHIUM Motorsports PRO,380152,Zachary Livengood,2,0,False,38072210,,2392550,False,False,19,234,[]
+-90491,LITHIUM Motorsports PRO,380152,Zachary Livengood,3,0,False,40449255,,2377045,False,False,19,234,[]
+-90491,LITHIUM Motorsports PRO,380152,Zachary Livengood,4,275,False,44402379,,-1,False,False,19,234,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-90491,LITHIUM Motorsports PRO,380152,Zachary Livengood,5,0,False,46801736,,2399357,False,False,19,234,[]
+-90491,LITHIUM Motorsports PRO,380152,Zachary Livengood,6,0,False,49205647,,2403911,False,False,19,234,[]
+-90491,LITHIUM Motorsports PRO,380152,Zachary Livengood,7,0,False,51579241,,2373594,True,True,19,234,[]
+-90491,LITHIUM Motorsports PRO,380152,Zachary Livengood,8,0,False,53975669,,2396428,False,False,19,234,[]
+-90491,LITHIUM Motorsports PRO,380152,Zachary Livengood,9,0,False,56354293,,2378624,False,False,19,234,[]

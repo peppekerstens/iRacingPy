@@ -1,9 +1,9 @@
 param(
     $fpdatafile = '.\PEC Season 6 Free Practise times - FP Total.csv'
     ,
-    $resultfile = '.\iracing_result\iracing-result-71133525.json'
+    $resultfile = '.\iracing_result\iracing-result-73082774.json'
     ,
-    $track = 'Road America'
+    $track = 'Fuji'
 )
 
 $fp_data = import-csv -Path $fpdatafile

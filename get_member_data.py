@@ -40,7 +40,7 @@ def get_driver_qualification(iRating: int) -> str:
         return 'gtp'
     #elif iRating >= 2000:
     #    return 'lmp2'
-    elif iRating >= 1500:
+    elif iRating >= 1700:
         return 'gt3'
     else:
         return None 

@@ -3,13 +3,16 @@
 #actual delta is difference between delta times!
 
 param(
-    $result = '.\iracing_result\iracing-result-71133525.json'
+    $result = '.\iracing_result\iracing-result-71533771.json'
 )
 
 $resultjson = get-content $result
 $result = $resultjson | ConvertFrom-Json
 
 $session_results = $result.session_results.where{$_.simsession_name -like "RACE"}.results
+$car_classes = $session_results.car_class_name | Select-Object -Unique
+
+
 $class_results = $session_results.where{$_.car_class_name -like "GTP"}
 $race_winner = $class_results.where{$_.finish_position_in_class -eq 0}
 $race_totaltime = ($race_winner.average_lap * $race_winner.laps_complete)

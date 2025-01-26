@@ -1,104 +1,68 @@
 team_id,team_display_name,cust_id,display_name,classification,percentage,avg_speed,total_time,total_session_time
--127715,XBD RACING GT3 I,498058,Alberto Moreno S,No,61.0,182,23263,38084
--127715,XBD RACING GT3 I,364474,Rubens Llorente,No,37.0,185,13931,38084
--342530,SimRace Sweden eSports PRO,363812,Vincent Aussems,No,51.0,185,19296,38084
--342530,SimRace Sweden eSports PRO,532015,Winston Ekkel,Gold,48.0,178,18359,38084
--366404,RPM Racing PEC,590994,Charlie Lund Nilsson,No,53.0,180,20250,38084
--366404,RPM Racing PEC,889286,Tom Cecchetto,No,42.0,186,16158,38084
--319245,DTIx Motorsport,222795,Laurens de Rijk,No,36.0,184,13760,38084
--319245,DTIx Motorsport,418518,Jon Derrick,No,35.0,178,13445,38084
--319245,DTIx Motorsport,403160,Mateusz Dębczuk,No,27.0,184,10201,38084
--293256,AZR Motorsport White,717883,André Filipe Vilela,No,38.0,175,14616,38084
--293256,AZR Motorsport White,623248,Diogo F Teodoro,No,32.0,184,12141,38084
--293256,AZR Motorsport White,278489,Paulo J Fonseca,No,25.0,185,9530,38084
--340745,Pandemonium eSports x Sim-Lab Gold,895171,Christian Müller6,Gold,52.0,184,19808,38084
--340745,Pandemonium eSports x Sim-Lab Gold,858536,Mahmood Albash,No,47.0,176,17826,38084
--306078,XBD RACING GT3 II,799932,Felix Manzanedo,No,53.0,177,20371,38084
--306078,XBD RACING GT3 II,504417,Mario Grillo,Silver,27.0,184,10221,38084
--306078,XBD RACING GT3 II,287535,Rafa Venteo,Silver,19.0,183,7065,38084
--129653,Octopus Racing Team,701793,David Marchal,Gold,40.0,185,15329,38084
--129653,Octopus Racing Team,365305,Davo Ramos,No,27.0,185,10164,38084
--129653,Octopus Racing Team,389453,Carlos Ruiz3,No,29.0,171,11216,38084
--379683,Hydrorace Racing Forces PEC,371028,Alex Sevillano Lledó,No,37.0,183,14067,38084
--379683,Hydrorace Racing Forces PEC,369262,Daryl Norkett,Gold,27.0,184,10457,38084
--379683,Hydrorace Racing Forces PEC,596421,Przemyslaw Majtyka,Silver,17.0,184,6500,38084
--379683,Hydrorace Racing Forces PEC,302291,Onno Bastings,No,17.0,162,6652,38084
--197550,EAGLE Speed Academy E-Sports #G,662921,Kris Van Gucht,Gold,54.0,180,20592,38084
--197550,EAGLE Speed Academy E-Sports #G,773907,Tim De Hondt,Gold,43.0,183,16259,38084
--248892,HWT Motorsport,690462,Alex Pilbeam,Silver,50.0,182,19231,38084
--248892,HWT Motorsport,696206,Delil Akbulut,Silver,27.0,184,10318,38084
--248892,HWT Motorsport,617317,Tom Bryant,Silver,19.0,182,7094,38084
--346150,Reiter Engineering Esports GT3,555223,Gianni Pirone,No,36.0,184,13616,38084
--346150,Reiter Engineering Esports GT3,601678,Jack James2,Gold,34.0,184,13115,38084
--346150,Reiter Engineering Esports GT3,957920,Malte Johansson,No,25.0,169,9419,38084
--339602,SimRace Sweden eSports,720558,Edvin Forslund,No,82.0,178,31057,38084
--339602,SimRace Sweden eSports,686915,Nick Kerstens,Gold,17.0,183,6548,38084
--90490,LITHIUM Motorsports AM,59268,Danni Fugl,Silver,36.0,182,13651,38084
--90490,LITHIUM Motorsports AM,1002358,Anders Daniel Rasmussen2,Silver,36.0,182,13547,38084
--90490,LITHIUM Motorsports AM,284176,Martin Birmele,Silver,27.0,171,10452,38084
--323693,Squadra Veloce Bravo by EAGLE RS,393778,Stefan Le Guen,Silver,46.0,175,17552,38084
--323693,Squadra Veloce Bravo by EAGLE RS,821015,Tomas Vandenbossche,Silver,33.0,184,12612,38084
--323693,Squadra Veloce Bravo by EAGLE RS,818518,Jonathan Valgaeren,Silver,18.0,183,6680,38084
--311356,Dogs on Web DS Racing,636573,Roberto JM Artur,Silver,39.0,183,14704,38084
--311356,Dogs on Web DS Racing,681922,Nuno Tavares Barbosa,Silver,40.0,174,15198,38084
--311356,Dogs on Web DS Racing,349178,Marco Vilela,Gold,18.0,183,6907,38084
--90491,LITHIUM Motorsports PRO,380152,Zachary Livengood,Gold,61.0,180,23095,38084
--90491,LITHIUM Motorsports PRO,737017,Andre Campanholo,Silver,18.0,181,6738,38084
--90491,LITHIUM Motorsports PRO,611888,Milo Speelman,Silver,17.0,184,6378,38084
--350679,Pandemonium eSports x Sim-Lab Red,874076,Daniel Ziętek,Silver,51.0,181,19487,38084
--350679,Pandemonium eSports x Sim-Lab Red,885933,Falco Van Rijsselt,Silver,42.0,183,16141,38084
--323480,Virtualdrivers by Thrustmaster #1,827394,Nicolas Vicent,Gold,48.0,177,18283,38084
--323480,Virtualdrivers by Thrustmaster #1,194225,Loic Guillardeau,Gold,34.0,184,13128,38084
--323480,Virtualdrivers by Thrustmaster #1,443864,Renaud Herbillon,Gold,13.0,183,5011,38084
--239796,Slippers Racing Team,682505,Drew Glover2,Silver,37.0,175,13923,38084
--239796,Slippers Racing Team,794023,John Connors3,Silver,24.0,180,8976,38084
--239796,Slippers Racing Team,413787,Rowan Pelan O'Treasaigh,Silver,18.0,179,6822,38084
--239796,Slippers Racing Team,579208,Thomas Burling,Silver,18.0,179,6672,38084
--321313,Enosis eSports PEC GT3,273285,Ale G Torres,No,41.0,184,15649,38084
--321313,Enosis eSports PEC GT3,501688,Francisco Barrionuevo,No,31.0,162,11861,38084
--321313,Enosis eSports PEC GT3,159173,Alex Rourera,Gold,25.0,185,9526,38084
--364697,THLF eSports,144094,E Bennett Parsons,No,52.0,171,19990,38084
--364697,THLF eSports,549249,Tom Kunath,No,45.0,184,17084,38084
--213609,IS Corse,327245,Paolo Ernesto Taddeolini,Gold,32.0,183,12174,38084
--213609,IS Corse,18782,Maurizio Scotti di Uccio,No,27.0,183,10257,38084
--213609,IS Corse,564555,Mauro Dragoni,Silver,26.0,182,9810,38084
--213609,IS Corse,410995,Stefano Tonelli,No,14.0,140,5210,38084
--311353,Strumentti DS Racing,1033551,Diogo Faria,No,49.0,179,18490,38084
--311353,Strumentti DS Racing,400601,Pedro S Monteiro,No,45.0,186,17152,38084
--325463,Team Racegitter.de #Black,599263,Kevin Lazar,Gold,34.0,184,12887,38084
--325463,Team Racegitter.de #Black,775090,Marcel Beck,Silver,32.0,172,12372,38084
--325463,Team Racegitter.de #Black,994597,Christoph Zander,Silver,27.0,181,10237,38084
--230731,SMURF RACING TEAM#391,311045,David Narbonne,Silver,57.0,177,21632,38084
--230731,SMURF RACING TEAM#391,324933,Stephane Henriques,Silver,37.0,182,14059,38084
--322167,DIGITRAQZ - Black,732637,Kevin Souffreau,Gold,47.0,173,17915,38084
--322167,DIGITRAQZ - Black,43654,Yannick Willems,Silver,31.0,178,11841,38084
--322167,DIGITRAQZ - Black,657202,Glenn Grondelaers,Gold,17.0,181,6616,38084
--143359,CORE MOTORSPORTS,344701,Orlando Telheiro,No,36.0,184,13624,38084
--143359,CORE MOTORSPORTS,602947,Daniel Cruz4,No,36.0,156,13664,38084
--143359,CORE MOTORSPORTS,376121,Marco M Mendes,No,20.0,182,7592,38084
--366713,RPM Racing Black PEC,595283,Patrick Gannon,No,28.0,171,10707,38084
--366713,RPM Racing Black PEC,537077,Huib Schuirink,Gold,21.0,184,7896,38084
--366713,RPM Racing Black PEC,538835,Logan Ragione,No,17.0,167,6588,38084
--226247,Taylor Mills Racing #242,639492,Rachel Konkoly,Gold,23.0,183,8584,38084
--226247,Taylor Mills Racing #242,319539,Michael Großberger,Gold,17.0,182,6567,38084
--226247,Taylor Mills Racing #242,121111,Joe Mugford,Silver,13.0,154,4883,38084
--263085,SimRace Sweden eSports PRO II,560270,Iwan Bremer,No,33.0,183,12433,38084
--263085,SimRace Sweden eSports PRO II,604599,Daan Pepels,Gold,20.0,166,7501,38084
--379750,Fury Simsport GT3,400103,Mitchell Ian Greene,No,18.0,184,6996,38084
--379750,Fury Simsport GT3,426301,Stuart Reynolds,No,21.0,166,7908,38084
--379750,Fury Simsport GT3,81643,Bryan Krauss,No,12.0,183,4489,38084
--10463,Hellenic Racing,983360,Christos Libanovnos,Silver,12.0,181,4399,38084
--10463,Hellenic Racing,979837,Tsakaloglou Akis,No,11.0,151,4360,38084
--10463,Hellenic Racing,793324,Giorgos Triantopoulos,Gold,0.0,0,0,38084
--323126,Pandemonium eSports x Sim-Lab White,1061507,Tseard Ploeg,Silver,9.0,171,3562,38084
--323126,Pandemonium eSports x Sim-Lab White,767972,Roy Vermeer,Silver,7.0,183,2563,38084
--230730,SMURF RACING TEAM#291,427628,Antoine  Bos,No,12.0,154,4422,38084
--230730,SMURF RACING TEAM#291,404103,Bastien Viau,No,6.0,184,2162,38084
--134445,Octopus Racing Team Black,340736,Luis Jeronimo,Silver,9.0,155,3323,38084
--134445,Octopus Racing Team Black,367020,Iván Niño,Silver,3.0,174,1210,38084
--348524,DDK by EAGLE Speed Academy,510504,Alex Baeyens,Silver,1.0,172,272,38084
--348524,DDK by EAGLE Speed Academy,896782,Koen Van De Woestyne,Silver,3.0,63,1114,38084
--273610,Dead Bull Racing,865071,Reagon Carty,Gold,4.0,94,1505,38084
--380678,Purple Sector Motorsports #348,338621,Aaron Beaver,Silver,1.0,177,529,38084
--380678,Purple Sector Motorsports #348,295027,Jay Shallington,Gold,0.0,0,0,38084
--380678,Purple Sector Motorsports #348,502143,Thomas Baker6,Silver,0.0,0,0,38084
+-342530,SimRace Sweden eSports PRO,689306,Isak Arvidsson,No,41.0,155,14632,35766
+-342530,SimRace Sweden eSports PRO,532015,Winston Ekkel,Gold,35.0,155,12488,35766
+-342530,SimRace Sweden eSports PRO,363812,Vincent Aussems,No,23.0,153,8264,35766
+-127715,XBD RACING GT3 I,621443,Roberto C Freezer,No,53.0,155,19044,35766
+-127715,XBD RACING GT3 I,535122,Caño Lopez,No,23.0,159,8131,35766
+-127715,XBD RACING GT3 I,633220,Gerard Sardeny Saez,No,23.0,147,8399,35766
+-379683,Hydrorace Racing Forces PEC,286368,Kenzy Nieuwhof,No,47.0,156,16784,35766
+-379683,Hydrorace Racing Forces PEC,302291,Onno Bastings,No,43.0,150,15287,35766
+-379683,Hydrorace Racing Forces PEC,369262,Daryl Norkett,Gold,9.0,157,3344,35766
+-323126,Pandemonium x Sim-Lab White,693417,Ignas Vincerževskis,Gold,52.0,154,18452,35766
+-323126,Pandemonium x Sim-Lab White,1061507,Tseard Ploeg,Silver,47.0,153,16823,35766
+-355821,Rubis Gás by NGC,808097,Francisco J Ramos,No,36.0,150,12915,35766
+-355821,Rubis Gás by NGC,621117,Artur Loureiro,Gold,34.0,153,12127,35766
+-355821,Rubis Gás by NGC,569447,Tiago Manuel Dias,Gold,27.0,160,9771,35766
+-129653,Octopus Racing Team,389453,Carlos Ruiz3,No,46.0,157,16462,35766
+-129653,Octopus Racing Team,649681,Joselu Otero,Gold,35.0,148,12610,35766
+-129653,Octopus Racing Team,242062,Octavio Araujo Pisco,No,15.0,160,5532,35766
+-321313,Enosis eSports PEC GT3,396593,Manu Casasnovas,No,33.0,154,11923,35766
+-321313,Enosis eSports PEC GT3,387611,Beñat Artano,No,33.0,153,11916,35766
+-321313,Enosis eSports PEC GT3,381160,Miguel Angel Gallardo,No,31.0,155,10932,35766
+-366404,RPM Racing PEC,889286,Tom Cecchetto,No,58.0,150,20779,35766
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,No,39.0,158,14045,35766
+-323480,Virtualdrivers by Thrustmaster #1,827394,Nicolas Vicent,Gold,52.0,153,18661,35766
+-323480,Virtualdrivers by Thrustmaster #1,636464,Mickael Costa,Silver,45.0,151,16169,35766
+-348524,DDK by EAGLE Speed Academy #G,925317,Brecht Berings,Silver,55.0,152,19816,35766
+-348524,DDK by EAGLE Speed Academy #G,462911,Gilles Philippaerts,Silver,22.0,146,7864,35766
+-348524,DDK by EAGLE Speed Academy #G,896782,Koen Van De Woestyne,Silver,11.0,158,3945,35766
+-348524,DDK by EAGLE Speed Academy #G,984745,Davy Daniels2,Silver,11.0,158,3848,35766
+-323693,Squadra Veloce Bravo by EAGLE RS,393778,Stefan Le Guen,Silver,40.0,154,14428,35766
+-323693,Squadra Veloce Bravo by EAGLE RS,821015,Tomas Vandenbossche,Silver,32.0,153,11585,35766
+-323693,Squadra Veloce Bravo by EAGLE RS,260286,Jelle Verstraeten2,Silver,23.0,151,8248,35766
+-197550,EAGLE Speed Academy E-Sports #G,70605,Kevin Daniels,Gold,50.0,154,18051,35766
+-197550,EAGLE Speed Academy E-Sports #G,392630,Arend Vergauwe,Gold,46.0,152,16372,35766
+-213609,IS Corse,410995,Stefano Tonelli,No,39.0,140,13970,35766
+-213609,IS Corse,564555,Mauro Dragoni,Silver,31.0,153,11154,35766
+-213609,IS Corse,327245,Paolo Ernesto Taddeolini,Gold,30.0,159,10554,35766
+-325463,Team Racegitter.de #Black,599263,Kevin Lazar,Gold,46.0,154,16344,35766
+-325463,Team Racegitter.de #Black,905598,Dorian Kunar,Gold,32.0,155,11319,35766
+-325463,Team Racegitter.de #Black,775090,Marcel Beck,Gold,19.0,136,6873,35766
+-350679,Pandemonium x Sim-Lab Red,753781,Lorenzo Schoovaerts,Silver,64.0,155,22966,35766
+-350679,Pandemonium x Sim-Lab Red,925588,Mike Gaff,Silver,32.0,143,11506,35766
+-311356,Dogs on Web DS Racing,681922,Nuno Tavares Barbosa,Silver,48.0,150,17123,35766
+-311356,Dogs on Web DS Racing,636573,Roberto JM Artur,Silver,35.0,154,12618,35766
+-311356,Dogs on Web DS Racing,675847,Carlos Miguel Duarte,Silver,13.0,141,4788,35766
+-230731,SMURF RACING TEAM#391,311045,David Narbonne,Silver,49.0,152,17432,35766
+-230731,SMURF RACING TEAM#391,324933,Stephane Henriques,Silver,49.0,146,17370,35766
+-134445,Octopus Racing Team Black,340736,Luis Jeronimo,Silver,35.0,152,12451,35766
+-134445,Octopus Racing Team Black,398891,Marino Mollá,Silver,31.0,151,11180,35766
+-134445,Octopus Racing Team Black,367020,Iván Niño,Silver,26.0,151,9351,35766
+-90490,LITHIUM Motorsports AM,1002358,Anders Daniel Rasmussen2,Silver,39.0,149,13840,35766
+-90490,LITHIUM Motorsports AM,284176,Martin Birmele,Silver,33.0,144,11933,35766
+-90490,LITHIUM Motorsports AM,59268,Danni Fugl,Silver,23.0,158,8288,35766
+-90491,LITHIUM Motorsports PRO,611888,Milo Speelman,Silver,32.0,145,11447,35766
+-90491,LITHIUM Motorsports PRO,380152,Zachary Livengood,Silver,23.0,145,8285,35766
+-339602,SimRace Sweden eSports,735433,Steven Van Kampen,Silver,26.0,145,9394,35766
+-339602,SimRace Sweden eSports,686915,Nick Kerstens,Gold,25.0,147,9017,35766
+-340745,Pandemonium eSports x Sim-Lab Gold,564150,Iván Ubera,No,40.0,147,14341,35766
+-340745,Pandemonium eSports x Sim-Lab Gold,857753,Afonso Souto,No,8.0,146,2819,35766
+-239796,Slippers Racing Team,682505,Drew Glover2,Silver,34.0,145,12251,35766
+-239796,Slippers Racing Team,579208,Thomas Burling,Silver,12.0,149,4199,35766
+-248892,HWT Motorsport,690462,Alex Pilbeam,Silver,24.0,148,8417,35766
+-248892,HWT Motorsport,617317,Tom Bryant,Silver,21.0,132,7570,35766
+-311353,Strumentti DS Racing,400601,Pedro S Monteiro,No,30.0,145,10781,35766
+-311353,Strumentti DS Racing,858949,Gonçalo C Ferreira,No,12.0,145,4419,35766
+-311353,Strumentti DS Racing,1033551,Diogo Faria,No,0.0,0,0,35766
+-306078,XBD RACING GT3 II,799932,Felix Manzanedo,No,20.0,148,7302,35766
+-306078,XBD RACING GT3 II,248367,Mark Luna Heredia,No,10.0,143,3662,35766
