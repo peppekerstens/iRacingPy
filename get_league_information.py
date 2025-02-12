@@ -72,7 +72,7 @@ if __name__ == '__main__':
     parser.add_argument("--username", help="", default='', type=str)
     parser.add_argument("--password", help="", default='', type=str)
     parser.add_argument("--league_id", help="", default=5606, type=int) #PEC league
-    parser.add_argument("--season_id", help="", default=110644, type=int) #season 6
+    parser.add_argument("--season_id", help="", default=115731, type=int) #season 7
     parser.add_argument("--csv", help="", default=True, type=bool)
     parser.add_argument("--json", help="", default=True, type=bool)
 
