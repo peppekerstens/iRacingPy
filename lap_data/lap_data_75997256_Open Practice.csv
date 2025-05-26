@@ -1,0 +1,34 @@
+group_id,name,cust_id,display_name,lap_number,flags,incident,session_time,session_start_time,lap_time,team_fastest_lap,personal_best_lap,license_level,car_number,lap_events
+-113924,Team Jeffrey M Aroyan,319231,Jeffrey M Aroyan,0,279,True,51728202,,-1,False,False,20,2,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-113924,Team Jeffrey M Aroyan,319231,Jeffrey M Aroyan,1,4,True,54142739,,2414537,False,False,20,2,['off track']
+-113924,Team Jeffrey M Aroyan,319231,Jeffrey M Aroyan,2,0,False,56528685,,2385946,False,False,20,2,[]
+-113924,Team Jeffrey M Aroyan,319231,Jeffrey M Aroyan,3,0,False,58889521,,2360836,False,False,20,2,[]
+-113924,Team Jeffrey M Aroyan,319231,Jeffrey M Aroyan,4,132,True,61330156,,2440635,False,False,20,2,"['off track', 'lost control']"
+-113924,Team Jeffrey M Aroyan,319231,Jeffrey M Aroyan,5,0,False,63668635,,2338479,False,False,20,2,[]
+-113924,Team Jeffrey M Aroyan,319231,Jeffrey M Aroyan,6,0,False,65979187,,2310552,False,False,20,2,[]
+-113924,Team Jeffrey M Aroyan,319231,Jeffrey M Aroyan,7,128,True,68349331,,2370144,False,False,20,2,['lost control']
+-113924,Team Jeffrey M Aroyan,319231,Jeffrey M Aroyan,8,0,False,70641224,,2291893,False,False,20,2,[]
+-113924,Team Jeffrey M Aroyan,319231,Jeffrey M Aroyan,9,0,False,72940552,,2299328,False,False,20,2,[]
+-113924,Team Jeffrey M Aroyan,319231,Jeffrey M Aroyan,10,0,False,75229337,,2288785,True,True,20,2,[]
+-113924,Team Jeffrey M Aroyan,319231,Jeffrey M Aroyan,11,2,False,77559581,,2330244,False,False,20,2,['pitted']
+-133249,PLZ NO OFF TRACK,379075,Brian McGough,0,287,True,53322260,,-1,False,False,20,3,"['invalid', 'pitted', 'off track', 'black flag', 'car reset', 'discontinuity']"
+-133249,PLZ NO OFF TRACK,379075,Brian McGough,1,0,False,55693597,,2371337,False,False,20,3,[]
+-133249,PLZ NO OFF TRACK,379075,Brian McGough,2,0,False,58042094,,2348497,False,False,20,3,[]
+-133249,PLZ NO OFF TRACK,379075,Brian McGough,3,4,True,60411296,,2369202,False,False,20,3,['off track']
+-133249,PLZ NO OFF TRACK,379075,Brian McGough,4,4,True,62779814,,2368518,False,False,20,3,['off track']
+-133249,PLZ NO OFF TRACK,379075,Brian McGough,5,0,False,65107899,,2328085,False,False,20,3,[]
+-133249,PLZ NO OFF TRACK,379075,Brian McGough,6,0,False,67420470,,2312571,False,False,20,3,[]
+-133249,PLZ NO OFF TRACK,379075,Brian McGough,7,0,False,69725511,,2305041,False,False,20,3,[]
+-133249,PLZ NO OFF TRACK,379075,Brian McGough,8,0,False,72023735,,2298224,True,True,20,3,[]
+-133249,PLZ NO OFF TRACK,379075,Brian McGough,9,128,True,74386249,,2362514,False,False,20,3,['lost control']
+-133249,PLZ NO OFF TRACK,379075,Brian McGough,10,128,True,76731218,,2344969,False,False,20,3,['lost control']
+-133249,PLZ NO OFF TRACK,379075,Brian McGough,11,6,True,79245210,,2513992,False,False,20,3,"['pitted', 'off track']"
+-409827,Unlucky Luc Racing,885543,Alex M Johnson,0,134,True,21103080,,-1,False,False,20,96,"['pitted', 'off track', 'lost control']"
+-409827,Unlucky Luc Racing,885543,Alex M Johnson,1,0,False,23433564,,2330484,True,True,20,96,[]
+-409827,Unlucky Luc Racing,885543,Alex M Johnson,2,4,True,25815472,,2381908,False,False,20,96,['off track']
+-409827,Unlucky Luc Racing,885543,Alex M Johnson,3,447,True,38594138,,-1,False,False,20,96,"['invalid', 'pitted', 'off track', 'black flag', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-409827,Unlucky Luc Racing,885543,Alex M Johnson,4,439,True,45446694,,-1,False,False,20,96,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-409827,Unlucky Luc Racing,885543,Alex M Johnson,5,439,True,50475395,,-1,False,False,20,96,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-409827,Unlucky Luc Racing,885543,Alex M Johnson,6,439,True,54469878,,-1,False,False,20,96,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-409827,Unlucky Luc Racing,885543,Alex M Johnson,7,0,False,56838583,,2368705,False,False,20,96,[]
+-409827,Unlucky Luc Racing,885543,Alex M Johnson,8,0,False,59199202,,2360619,False,False,20,96,[]

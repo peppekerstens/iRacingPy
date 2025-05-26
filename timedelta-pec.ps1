@@ -45,9 +45,9 @@ $car_classes = $race_results.car_class_name | Select-Object -Unique
 #however; check for human errors first
 
 $gtp_results = $race_results.where{$_.car_class_name -like 'GTP'}
-$gt3_results = $race_results.where{$_.car_class_name -like 'IMSA23'}
-$gt3am_results = $gt3_results.where{$_.livery.car_number -gt 300}
-$gt3pro_results = $gt3_results.where{$_.livery.car_number -lt 300}
+$gt3_results = $race_results.where{$_.car_class_name -like 'GT3 Class'}
+$gt3am_results = $gt3_results.where{$_.livery.car_number -gt 200}
+$gt3pro_results = $gt3_results.where{$_.livery.car_number -lt 200}
 
 #$race_winner = $race_results.where{$_.finish_position -eq 0}
 #$race_total_time = ($race_winner.average_lap * $race_winner.laps_complete)

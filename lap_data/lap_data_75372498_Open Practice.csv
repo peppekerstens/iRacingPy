@@ -1,0 +1,25 @@
+group_id,name,cust_id,display_name,lap_number,flags,incident,session_time,session_start_time,lap_time,team_fastest_lap,personal_best_lap,license_level,car_number,lap_events
+-272730,Negative Delta by SimGear.gg,1009217,Kristian Novev,0,2,False,28534710,,-1,False,False,18,181,['pitted']
+-272730,Negative Delta by SimGear.gg,1009217,Kristian Novev,1,0,False,29688282,,1153572,False,False,18,181,[]
+-272730,Negative Delta by SimGear.gg,1009217,Kristian Novev,2,0,False,30838330,,1150048,False,False,18,181,[]
+-272730,Negative Delta by SimGear.gg,1009217,Kristian Novev,3,279,True,35135242,,-1,False,False,18,181,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-272730,Negative Delta by SimGear.gg,1009217,Kristian Novev,4,4,True,36292732,,1157490,False,False,18,181,['off track']
+-272730,Negative Delta by SimGear.gg,1009217,Kristian Novev,5,0,False,37446870,,1154138,False,False,18,181,[]
+-272730,Negative Delta by SimGear.gg,1009217,Kristian Novev,6,0,False,38594815,,1147945,False,False,18,181,[]
+-272730,Negative Delta by SimGear.gg,1009217,Kristian Novev,7,279,True,41150837,,-1,False,False,18,181,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-272730,Negative Delta by SimGear.gg,1009217,Kristian Novev,8,0,False,42308275,,1157438,False,False,18,181,[]
+-272730,Negative Delta by SimGear.gg,1009217,Kristian Novev,9,0,False,43458377,,1150102,False,False,18,181,[]
+-272730,Negative Delta by SimGear.gg,1009217,Kristian Novev,10,4,True,44611806,,1153429,False,False,18,181,['off track']
+-272730,Negative Delta by SimGear.gg,1009217,Kristian Novev,11,4,True,45765324,,1153518,False,False,18,181,['off track']
+-272730,Negative Delta by SimGear.gg,1009217,Kristian Novev,12,279,True,54886799,,-1,False,False,18,181,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-272730,Negative Delta by SimGear.gg,1009217,Kristian Novev,13,0,False,56034580,,1147781,True,True,18,181,[]
+-272730,Negative Delta by SimGear.gg,1009217,Kristian Novev,14,0,False,57184294,,1149714,False,False,18,181,[]
+-272730,Negative Delta by SimGear.gg,1009217,Kristian Novev,15,4,True,58333855,,1149561,False,False,18,181,['off track']
+-272730,Negative Delta by SimGear.gg,1009217,Kristian Novev,16,4,True,59544209,,1210354,False,False,18,181,['off track']
+-340745,VULKAN Motorsports Gold,376751,Federico Calello,0,6,True,56106198,,-1,False,False,17,132,"['pitted', 'off track']"
+-340745,VULKAN Motorsports Gold,376751,Federico Calello,1,4,True,57269058,,1162860,False,False,17,132,['off track']
+-340745,VULKAN Motorsports Gold,376751,Federico Calello,2,279,True,65659373,,-1,False,False,17,132,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-340745,VULKAN Motorsports Gold,376751,Federico Calello,3,0,False,66836672,,1177299,False,False,17,132,[]
+-340745,VULKAN Motorsports Gold,376751,Federico Calello,4,0,False,67996590,,1159918,True,True,17,132,[]
+-340745,VULKAN Motorsports Gold,376751,Federico Calello,5,0,False,69168148,,1171558,False,False,17,132,[]
+-340745,VULKAN Motorsports Gold,376751,Federico Calello,6,0,False,70329619,,1161471,False,False,17,132,[]

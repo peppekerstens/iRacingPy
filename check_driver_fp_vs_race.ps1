@@ -1,5 +1,5 @@
 param(
-    $fpdatafile = '.\PEC Season 6 Free Practise times - FP Total.csv'
+    $fpdatafile = '.\PEC Season 7 Free Practise times - FP Total.csv'
     ,
     $resultfile = '.\iracing_result\iracing-result-73082774.json'
     ,

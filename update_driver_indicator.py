@@ -89,7 +89,7 @@ if __name__ == '__main__': #only execute when called as script, skipped when loa
     #print(tabulate(df_latest_session, headers = 'keys', tablefmt = 'psql'))
 
     #we only need to process the GT3 car_class
-    car_classes = ['IMSA23']
+    car_classes = ['GT3 Class']
     for car_class in car_classes:
         latest_session_class = df_latest_session["car_class_short_name"] == car_class
         df_latest_session_class = df_latest_session[latest_session_class]

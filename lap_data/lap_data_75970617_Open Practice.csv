@@ -1,0 +1,88 @@
+group_id,name,cust_id,display_name,lap_number,flags,incident,session_time,session_start_time,lap_time,team_fastest_lap,personal_best_lap,license_level,car_number,lap_events
+-362179,NGC by Rubis Gás (Butano),604937,Nelson Clemente,0,415,True,66946161,,-1,False,False,20,42,"['invalid', 'pitted', 'off track', 'black flag', 'car reset', 'lost control', 'discontinuity']"
+-362179,NGC by Rubis Gás (Butano),604937,Nelson Clemente,1,439,True,71275138,,-1,False,False,20,42,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-362179,NGC by Rubis Gás (Butano),604937,Nelson Clemente,2,439,True,76062622,,-1,False,False,20,42,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-362179,NGC by Rubis Gás (Butano),604937,Nelson Clemente,3,407,True,80395486,,-1,False,False,20,42,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-362179,NGC by Rubis Gás (Butano),604937,Nelson Clemente,4,132,True,82769839,,2374353,False,False,20,42,"['off track', 'lost control']"
+-362179,NGC by Rubis Gás (Butano),604937,Nelson Clemente,5,0,False,85053816,,2283977,True,True,20,42,[]
+-362179,NGC by Rubis Gás (Butano),604937,Nelson Clemente,6,439,True,102299719,,-1,False,False,20,42,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-362179,NGC by Rubis Gás (Butano),604937,Nelson Clemente,7,132,True,104697260,,2397541,False,False,20,42,"['off track', 'lost control']"
+-333550,Project Valorous $550,705991,Juan Roldán,0,439,True,20222345,,-1,False,False,20,50,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-333550,Project Valorous $550,705991,Juan Roldán,1,0,False,22629721,,2407376,False,False,20,50,[]
+-333550,Project Valorous $550,705991,Juan Roldán,2,4,True,25018201,,2388480,False,False,20,50,['off track']
+-333550,Project Valorous $550,705991,Juan Roldán,3,0,False,27386883,,2368682,False,False,20,50,[]
+-333550,Project Valorous $550,705991,Juan Roldán,4,132,True,29784631,,2397748,False,False,20,50,"['off track', 'lost control']"
+-333550,Project Valorous $550,705991,Juan Roldán,5,0,False,32139041,,2354410,False,False,20,50,[]
+-333550,Project Valorous $550,705991,Juan Roldán,6,0,False,34481732,,2342691,False,False,20,50,[]
+-333550,Project Valorous $550,705991,Juan Roldán,7,0,False,36850341,,2368609,False,False,20,50,[]
+-333550,Project Valorous $550,705991,Juan Roldán,8,132,True,39294606,,2444265,False,False,20,50,"['off track', 'lost control']"
+-333550,Project Valorous $550,705991,Juan Roldán,9,0,False,41614348,,2319742,False,False,20,50,[]
+-333550,Project Valorous $550,705991,Juan Roldán,10,0,False,43910253,,2295905,True,True,20,50,[]
+-333550,Project Valorous $550,705991,Juan Roldán,11,2,False,46265049,,2354796,False,False,20,50,['pitted']
+-409827,Unlucky Luc Racing,885543,Alex M Johnson,0,443,True,61136247,,-1,False,False,20,96,"['invalid', 'pitted', 'black flag', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-409827,Unlucky Luc Racing,885543,Alex M Johnson,1,4,True,63453685,,2317438,False,False,20,96,['off track']
+-409827,Unlucky Luc Racing,885543,Alex M Johnson,2,447,True,69228860,,-1,False,False,20,96,"['invalid', 'pitted', 'off track', 'black flag', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-409827,Unlucky Luc Racing,885543,Alex M Johnson,3,4,True,71532902,,2304042,True,True,20,96,['off track']
+-409827,Unlucky Luc Racing,885543,Alex M Johnson,4,439,True,101699592,,-1,False,False,20,96,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-131595,M4sked Devils Orange,222138,Alex Mas,0,439,True,39918229,,-1,False,False,19,4,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-131595,M4sked Devils Orange,222138,Alex Mas,1,0,False,42573375,,2655146,False,False,19,4,[]
+-131595,M4sked Devils Orange,222138,Alex Mas,2,4,True,45264561,,2691186,False,False,19,4,['off track']
+-131595,M4sked Devils Orange,222138,Alex Mas,3,0,False,47900888,,2636327,False,False,19,4,[]
+-131595,M4sked Devils Orange,222138,Alex Mas,4,0,False,50545722,,2644834,False,False,19,4,[]
+-131595,M4sked Devils Orange,222138,Alex Mas,5,0,False,53167770,,2622048,False,False,19,4,[]
+-131595,M4sked Devils Orange,222138,Alex Mas,6,403,True,57269090,,-1,False,False,19,4,"['invalid', 'pitted', 'car reset', 'lost control', 'discontinuity']"
+-131595,M4sked Devils Orange,222138,Alex Mas,7,0,False,59892552,,2623462,False,False,19,4,[]
+-131595,M4sked Devils Orange,222138,Alex Mas,8,4,True,62532906,,2640354,False,False,19,4,['off track']
+-131595,M4sked Devils Orange,222138,Alex Mas,9,132,True,65200356,,2667450,False,False,19,4,"['off track', 'lost control']"
+-131595,M4sked Devils Orange,222138,Alex Mas,10,0,False,67819392,,2619036,False,False,19,4,[]
+-131595,M4sked Devils Orange,222138,Alex Mas,11,0,False,70422269,,2602877,False,False,19,4,[]
+-131595,M4sked Devils Orange,222138,Alex Mas,12,275,False,74807314,,-1,False,False,19,4,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-131595,M4sked Devils Orange,222138,Alex Mas,13,0,False,77385486,,2578172,False,False,19,4,[]
+-131595,M4sked Devils Orange,222138,Alex Mas,14,0,False,79942193,,2556707,False,False,19,4,[]
+-131595,M4sked Devils Orange,222138,Alex Mas,15,0,False,82486658,,2544465,False,False,19,4,[]
+-131595,M4sked Devils Orange,222138,Alex Mas,16,2,False,85066622,,2579964,False,False,19,4,['pitted']
+-131595,M4sked Devils Orange,222138,Alex Mas,17,2,False,87951678,,2885056,False,False,19,4,['pitted']
+-131595,M4sked Devils Orange,222138,Alex Mas,18,0,False,90403816,,2452138,False,False,19,4,[]
+-131595,M4sked Devils Orange,222138,Alex Mas,19,0,False,92840097,,2436281,False,False,19,4,[]
+-131595,M4sked Devils Orange,222138,Alex Mas,20,0,False,95265276,,2425179,False,False,19,4,[]
+-131595,M4sked Devils Orange,222138,Alex Mas,21,0,False,97679135,,2413859,False,False,19,4,[]
+-131595,M4sked Devils Orange,222138,Alex Mas,22,0,False,100088671,,2409536,False,False,19,4,[]
+-131595,M4sked Devils Orange,222138,Alex Mas,23,0,False,102491409,,2402738,True,True,19,4,[]
+-131595,M4sked Devils Orange,222138,Alex Mas,24,0,False,104899895,,2408486,False,False,19,4,[]
+-313947,M4sked Devils eSports,280146,Raul Monraba,0,2,False,12142490,,-1,False,False,17,161,['pitted']
+-313947,M4sked Devils eSports,280146,Raul Monraba,1,439,True,16987439,,-1,False,False,17,161,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-313947,M4sked Devils eSports,280146,Raul Monraba,2,4,True,19663373,,2675934,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,3,0,False,22391641,,2728268,False,False,17,161,[]
+-313947,M4sked Devils eSports,280146,Raul Monraba,4,439,True,25810204,,-1,False,False,17,161,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-313947,M4sked Devils eSports,280146,Raul Monraba,5,0,False,28490554,,2680350,False,False,17,161,[]
+-313947,M4sked Devils eSports,280146,Raul Monraba,6,439,True,37210950,,-1,False,False,17,161,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-313947,M4sked Devils eSports,280146,Raul Monraba,7,0,False,39852308,,2641358,False,False,17,161,[]
+-313947,M4sked Devils eSports,280146,Raul Monraba,8,0,False,42492560,,2640252,False,False,17,161,[]
+-313947,M4sked Devils eSports,280146,Raul Monraba,9,128,True,45214166,,2721606,False,False,17,161,['lost control']
+-313947,M4sked Devils eSports,280146,Raul Monraba,10,439,True,50594503,,-1,False,False,17,161,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-313947,M4sked Devils eSports,280146,Raul Monraba,11,0,False,53227670,,2633167,False,False,17,161,[]
+-313947,M4sked Devils eSports,280146,Raul Monraba,12,275,False,60229950,,-1,False,False,17,161,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-313947,M4sked Devils eSports,280146,Raul Monraba,13,4,True,62857793,,2627843,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,14,0,False,65472711,,2614918,False,False,17,161,[]
+-313947,M4sked Devils eSports,280146,Raul Monraba,15,439,True,74805816,,-1,False,False,17,161,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-313947,M4sked Devils eSports,280146,Raul Monraba,16,0,False,77407587,,2601771,False,False,17,161,[]
+-313947,M4sked Devils eSports,280146,Raul Monraba,17,0,False,79979484,,2571897,False,False,17,161,[]
+-313947,M4sked Devils eSports,280146,Raul Monraba,18,0,False,82528618,,2549134,False,False,17,161,[]
+-313947,M4sked Devils eSports,280146,Raul Monraba,19,2,False,85114107,,2585489,False,False,17,161,['pitted']
+-313947,M4sked Devils eSports,280146,Raul Monraba,20,6,True,88226472,,3112365,False,False,17,161,"['pitted', 'off track']"
+-313947,M4sked Devils eSports,280146,Raul Monraba,21,439,True,92466541,,-1,False,False,17,161,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-313947,M4sked Devils eSports,280146,Raul Monraba,22,435,True,99403401,,-1,False,False,17,161,"['invalid', 'pitted', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-313947,M4sked Devils eSports,280146,Raul Monraba,23,0,False,101886640,,2483239,False,False,17,161,[]
+-313947,M4sked Devils eSports,280146,Raul Monraba,24,0,False,104328530,,2441890,False,False,17,161,[]
+-313947,M4sked Devils eSports,280146,Raul Monraba,25,0,False,106760557,,2432027,True,True,17,161,[]
+-272730,Negative Delta by SimGear.gg,666727,Vladislav T Shopov,0,130,True,19771884,,-1,False,False,20,181,"['pitted', 'lost control']"
+-272730,Negative Delta by SimGear.gg,666727,Vladislav T Shopov,1,0,False,22427922,,2656038,False,False,20,181,[]
+-272730,Negative Delta by SimGear.gg,666727,Vladislav T Shopov,2,407,True,37664007,,-1,False,False,20,181,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-272730,Negative Delta by SimGear.gg,666727,Vladislav T Shopov,3,439,True,41131524,,-1,False,False,20,181,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-272730,Negative Delta by SimGear.gg,666727,Vladislav T Shopov,4,0,False,43781450,,2649926,False,False,20,181,[]
+-272730,Negative Delta by SimGear.gg,666727,Vladislav T Shopov,5,0,False,46436771,,2655321,False,False,20,181,[]
+-272730,Negative Delta by SimGear.gg,666727,Vladislav T Shopov,6,0,False,49061950,,2625179,False,False,20,181,[]
+-272730,Negative Delta by SimGear.gg,666727,Vladislav T Shopov,7,0,False,51699246,,2637296,False,False,20,181,[]
+-272730,Negative Delta by SimGear.gg,666727,Vladislav T Shopov,8,0,False,54312766,,2613520,True,True,20,181,[]
+-272730,Negative Delta by SimGear.gg,666727,Vladislav T Shopov,9,4,True,56934246,,2621480,False,False,20,181,['off track']
+-272730,Negative Delta by SimGear.gg,666727,Vladislav T Shopov,10,128,True,59639944,,2705698,False,False,20,181,['lost control']

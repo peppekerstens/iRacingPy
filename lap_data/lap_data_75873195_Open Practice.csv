@@ -1,0 +1,30 @@
+group_id,name,cust_id,display_name,lap_number,flags,incident,session_time,session_start_time,lap_time,team_fastest_lap,personal_best_lap,license_level,car_number,lap_events
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,0,275,False,172067466,,-1,False,False,20,110,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,1,260,True,174433729,,2366263,False,False,20,110,"['off track', 'discontinuity']"
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,2,0,False,176798444,,2364715,False,False,20,110,[]
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,3,0,False,179165472,,2367028,False,False,20,110,[]
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,4,0,False,181540137,,2374665,False,False,20,110,[]
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,5,0,False,183915680,,2375543,False,False,20,110,[]
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,6,0,False,186273824,,2358144,False,False,20,110,[]
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,7,0,False,188631961,,2358137,False,False,20,110,[]
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,8,0,False,190989861,,2357900,False,False,20,110,[]
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,9,0,False,193344842,,2354981,False,False,20,110,[]
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,10,0,False,195696301,,2351459,False,False,20,110,[]
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,11,4,True,198047675,,2351374,True,True,20,110,['off track']
+-411426,Endurance Enjoyers Green,783240,Salva Torres,0,275,False,61187040,,-1,False,False,19,3,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-411426,Endurance Enjoyers Green,783240,Salva Torres,1,4,True,63609780,,2422740,False,False,19,3,['off track']
+-411426,Endurance Enjoyers Green,783240,Salva Torres,2,0,False,66015184,,2405404,True,True,19,3,[]
+-280802,Valkyrie Exype,335241,Kevin Chartier,0,2,False,11023856,,-1,False,False,20,2,['pitted']
+-280802,Valkyrie Exype,335241,Kevin Chartier,1,343,True,14221197,,-1,False,False,20,2,"['invalid', 'pitted', 'off track', 'car reset', 'car contact', 'discontinuity']"
+-280802,Valkyrie Exype,335241,Kevin Chartier,2,4,True,16803584,,2582387,False,False,20,2,['off track']
+-280802,Valkyrie Exype,335241,Kevin Chartier,3,4,True,19400650,,2597066,False,False,20,2,['off track']
+-280802,Valkyrie Exype,335241,Kevin Chartier,4,375,True,29290350,,-1,False,False,20,2,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'car contact', 'discontinuity']"
+-280802,Valkyrie Exype,335241,Kevin Chartier,5,0,False,31801844,,2511494,True,True,20,2,[]
+-307895,Valkyrie Exype Green,376502,Guilian Mourre,0,2,False,5793324,,-1,False,False,20,177,['pitted']
+-307895,Valkyrie Exype Green,376502,Guilian Mourre,1,0,False,8394301,,2600977,False,False,20,177,[]
+-307895,Valkyrie Exype Green,376502,Guilian Mourre,2,4,True,11018791,,2624490,False,False,20,177,['off track']
+-307895,Valkyrie Exype Green,376502,Guilian Mourre,3,439,True,14216172,,-1,False,False,20,177,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-307895,Valkyrie Exype Green,376502,Guilian Mourre,4,4,True,16784310,,2568138,False,False,20,177,['off track']
+-307895,Valkyrie Exype Green,376502,Guilian Mourre,5,4,True,19366099,,2581789,False,False,20,177,['off track']
+-307895,Valkyrie Exype Green,376502,Guilian Mourre,6,499,True,29282002,,-1,False,False,20,177,"['invalid', 'pitted', 'car reset', 'contact', 'car contact', 'lost control', 'discontinuity']"
+-307895,Valkyrie Exype Green,376502,Guilian Mourre,7,0,False,31796763,,2514761,True,True,20,177,[]

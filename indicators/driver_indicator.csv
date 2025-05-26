@@ -1,0 +1,63 @@
+team_id,team_display_name,cust_id,display_name,classification,percentage,avg_speed,total_time,total_session_time
+-55290,FastRepair Motorsport,372757,Abel Sallán,No,57.0,153,20233,35776
+-55290,FastRepair Motorsport,670589,Joan Z Rodríguez,No,42.0,159,14988,35776
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,No,44.0,160,15727,35776
+-366404,RPM Racing PEC,889286,Tom Cecchetto,No,35.0,147,12465,35776
+-366404,RPM Racing PEC,412258,Yeshal Yunus,No,19.0,161,6799,35776
+-323480,Virtualdrivers by Thrustmaster #1,591043,Patryk Molawka,Gold,56.0,154,20120,35776
+-323480,Virtualdrivers by Thrustmaster #1,827394,Nicolas Vicent,Gold,42.0,154,14970,35776
+-392192,Orca Performance Racing #Black,501731,Thorsten Seifert,No,33.0,159,11705,35776
+-392192,Orca Performance Racing #Black,775090,Marcel Beck,No,33.0,153,11842,35776
+-392192,Orca Performance Racing #Black,599263,Kevin Lazar,No,31.0,153,11100,35776
+-307895,Valkyrie Exype Green,361527,Romain Utiel,No,80.0,154,28766,35776
+-307895,Valkyrie Exype Green,335241,Kevin Chartier,No,18.0,159,6434,35776
+-272730,Negative Delta by SimGear.gg,666727,Vladislav T Shopov,No,65.0,152,23088,35776
+-272730,Negative Delta by SimGear.gg,1009217,Kristian Novev,No,33.0,159,11888,35776
+-375708,Top Tier Motorsport,981826,Michael C Brown,Gold,46.0,154,16445,35776
+-375708,Top Tier Motorsport,119381,Justin Eloff,Gold,31.0,157,11263,35776
+-375708,Top Tier Motorsport,1067459,Lewis Kenyon,Gold,21.0,146,7628,35776
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,Silver,63.0,157,22491,35776
+-313739,Orca Performance Racing #Blue,905598,Dorian Kunar,Gold,36.0,145,12839,35776
+-345520,Carbono eSports GT3 Am,390003,Óscar González,Silver,54.0,154,19348,35776
+-345520,Carbono eSports GT3 Am,227444,Sergio Ochoa Expósito,Silver,43.0,153,15246,35776
+-225095,EAGLE Speed Academy E-Sports #S,392630,Arend Vergauwe,Gold,43.0,156,15268,35776
+-225095,EAGLE Speed Academy E-Sports #S,454539,Lander Van den Brande,Gold,33.0,145,11922,35776
+-225095,EAGLE Speed Academy E-Sports #S,773907,Tim De Hondt,Silver,21.0,158,7569,35776
+-313947,M4sked Devils eSports,222138,Alex Mas,No,76.0,151,27095,35776
+-313947,M4sked Devils eSports,280146,Raul Monraba,Silver,22.0,156,7882,35776
+-323321,GO! eSports BJ,243240,Joan Marti,No,60.0,152,21627,35776
+-323321,GO! eSports BJ,602487,Miguel Toledo,No,37.0,156,13210,35776
+-348524,DDK Racing Team #G,856411,Andrew M Fairley,No,40.0,159,14432,35776
+-348524,DDK Racing Team #G,924596,Ruben Berings,Gold,44.0,148,15634,35776
+-348524,DDK Racing Team #G,735022,Raz Harper,Gold,12.0,153,4269,35776
+-197550,EAGLE Speed Academy E-Sports #G,510504,Alex Baeyens,Silver,41.0,157,14609,35776
+-197550,EAGLE Speed Academy E-Sports #G,767013,Lorenz De Vlieger,Silver,33.0,145,11918,35776
+-197550,EAGLE Speed Academy E-Sports #G,407487,Kyllian Claes,Silver,22.0,157,7953,35776
+-381584,DDK Racing Team #S,925317,Brecht Berings,Silver,61.0,154,21879,35776
+-381584,DDK Racing Team #S,462911,Gilles Philippaerts,Silver,33.0,150,11654,35776
+-381584,DDK Racing Team #S,638244,Nauzet Valeriano Herrera,Silver,2.0,138,696,35776
+-319656,MRRS Racing Amethyst,524466,Stefan Anjema,Silver,44.0,152,15723,35776
+-319656,MRRS Racing Amethyst,564580,Glenn Smit2,Silver,36.0,157,12754,35776
+-319656,MRRS Racing Amethyst,613751,Richard Schaafstra,Gold,18.0,143,6322,35776
+-230731,#291 SMURF RACING TEAM,324933,Stephane Henriques,Silver,51.0,149,18170,35776
+-230731,#291 SMURF RACING TEAM,311045,David Narbonne,Silver,44.0,155,15863,35776
+-217076,Locals Autosport,582569,Darius Rackauskas,Silver,36.0,151,12737,35776
+-217076,Locals Autosport,605561,Vakaris Vilius,Silver,37.0,146,13314,35776
+-217076,Locals Autosport,602477,Vytautas Jasiulevicius,Silver,23.0,156,8119,35776
+-365739,IS Corse Red,564555,Mauro Dragoni,Silver,38.0,156,13537,35776
+-365739,IS Corse Red,578268,Edoardo Fava,Silver,36.0,150,12841,35776
+-365739,IS Corse Red,327245,Paolo Ernesto Taddeolini,Gold,20.0,145,7293,35776
+-348902,Squadra Veloce Alpha by EAGLE RS,821015,Tomas Vandenbossche,Silver,41.0,152,14732,35776
+-348902,Squadra Veloce Alpha by EAGLE RS,260286,Jelle Verstraeten2,Silver,33.0,142,11672,35776
+-348902,Squadra Veloce Alpha by EAGLE RS,528179,Franken Robin,Silver,21.0,156,7382,35776
+-399913,DLR SimLab \\ Green,890122,Edwin Bierling,Silver,42.0,151,14922,35776
+-399913,DLR SimLab \\ Green,1019076,Kevin Versantvoort,Silver,23.0,146,8053,35776
+-399913,DLR SimLab \\ Green,523760,Didier Ruijters,Silver,20.0,158,7317,35776
+-399913,DLR SimLab \\ Green,1016227,Tiemen Scholten,Silver,10.0,152,3410,35776
+-340745,VULKAN Motorsports Gold,564150,Iván Ubera,No,40.0,147,14388,35776
+-340745,VULKAN Motorsports Gold,857753,Afonso Souto,No,32.0,154,11491,35776
+-340745,VULKAN Motorsports Gold,693417,Ignas Vincerževskis,Gold,21.0,159,7484,35776
+-321313,Enosis eSports Simultimate GT3,381160,Miguel Angel Gallardo,No,43.0,153,15343,35776
+-321313,Enosis eSports Simultimate GT3,405341,Iván Aguado,No,40.0,154,14143,35776
+-397452,Enosis eSports Emix,138006,Jorge Correia,No,30.0,159,10638,35776
+-397452,Enosis eSports Emix,436347,Migue Santos,No,25.0,152,8864,35776

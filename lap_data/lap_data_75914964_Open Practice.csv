@@ -1,0 +1,529 @@
+group_id,name,cust_id,display_name,lap_number,flags,incident,session_time,session_start_time,lap_time,team_fastest_lap,personal_best_lap,license_level,car_number,lap_events
+-306596,XBD Racing GTP,245246,Alberto García Blasco,0,6,True,83742438,,-1,False,False,20,47,"['pitted', 'off track']"
+-306596,XBD Racing GTP,245246,Alberto García Blasco,1,4,True,85892614,,2150176,False,False,20,47,['off track']
+-306596,XBD Racing GTP,245246,Alberto García Blasco,2,0,False,87999594,,2106980,False,False,20,47,[]
+-306596,XBD Racing GTP,245246,Alberto García Blasco,3,439,True,91606803,,-1,False,False,20,47,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-306596,XBD Racing GTP,245246,Alberto García Blasco,4,0,False,93717625,,2110822,False,False,20,47,[]
+-306596,XBD Racing GTP,245246,Alberto García Blasco,5,0,False,95827872,,2110247,False,False,20,47,[]
+-306596,XBD Racing GTP,245246,Alberto García Blasco,6,0,False,97923290,,2095418,True,True,20,47,[]
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,0,6,True,51546803,,-1,False,False,20,36,"['pitted', 'off track']"
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,1,0,False,53854618,,2307815,False,False,20,36,[]
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,2,0,False,56153420,,2298802,False,False,20,36,[]
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,3,0,False,58495336,,2341916,False,False,20,36,[]
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,4,0,False,60800880,,2305544,False,False,20,36,[]
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,5,0,False,63075521,,2274641,False,False,20,36,[]
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,6,2,False,65394937,,2319416,False,False,20,36,['pitted']
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,7,2,False,68297817,,2902880,False,False,20,36,['pitted']
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,8,0,False,70469206,,2171389,False,False,20,36,[]
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,9,0,False,72600505,,2131299,False,False,20,36,[]
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,10,0,False,74725066,,2124561,False,False,20,36,[]
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,11,0,False,76837359,,2112293,False,False,20,36,[]
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,12,0,False,78944738,,2107379,False,False,20,36,[]
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,13,0,False,81040211,,2095473,True,True,20,36,[]
+-333550,Project Valorous $550,592411,Marc Rozendaal,0,407,True,81583754,,-1,False,False,18,50,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-333550,Project Valorous $550,592411,Marc Rozendaal,1,0,False,83706702,,2122948,False,False,18,50,[]
+-333550,Project Valorous $550,592411,Marc Rozendaal,2,4,True,85818475,,2111773,False,False,18,50,['off track']
+-333550,Project Valorous $550,592411,Marc Rozendaal,3,0,False,87925363,,2106888,False,False,18,50,[]
+-333550,Project Valorous $550,592411,Marc Rozendaal,4,4,True,90023500,,2098137,True,True,18,50,['off track']
+-54812,WST-Racing,25253,Wim Stockmans,0,439,True,79774738,,-1,False,False,20,43,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-54812,WST-Racing,25253,Wim Stockmans,1,0,False,81945166,,2170428,False,False,20,43,[]
+-54812,WST-Racing,25253,Wim Stockmans,2,0,False,84096426,,2151260,False,False,20,43,[]
+-54812,WST-Racing,25253,Wim Stockmans,3,0,False,86235823,,2139397,False,False,20,43,[]
+-54812,WST-Racing,25253,Wim Stockmans,4,0,False,88383609,,2147786,False,False,20,43,[]
+-54812,WST-Racing,25253,Wim Stockmans,5,0,False,90509877,,2126268,False,False,20,43,[]
+-54812,WST-Racing,25253,Wim Stockmans,6,403,True,95002812,,-1,False,False,20,43,"['invalid', 'pitted', 'car reset', 'lost control', 'discontinuity']"
+-54812,WST-Racing,25253,Wim Stockmans,7,0,False,97143015,,2140203,False,False,20,43,[]
+-54812,WST-Racing,25253,Wim Stockmans,8,4,True,99275113,,2132098,False,False,20,43,['off track']
+-54812,WST-Racing,25253,Wim Stockmans,9,4,True,101400400,,2125287,False,False,20,43,['off track']
+-54812,WST-Racing,25253,Wim Stockmans,10,0,False,103520306,,2119906,False,False,20,43,[]
+-54812,WST-Racing,25253,Wim Stockmans,11,0,False,105642512,,2122206,False,False,20,43,[]
+-54812,WST-Racing,25253,Wim Stockmans,12,0,False,107752022,,2109510,True,True,20,43,[]
+-352094,Team SUPPAI,1020347,Christian Sauer,0,130,True,58505731,,-1,False,False,20,40,"['pitted', 'lost control']"
+-352094,Team SUPPAI,1020347,Christian Sauer,1,132,True,60978193,,2472462,False,False,20,40,"['off track', 'lost control']"
+-352094,Team SUPPAI,1020347,Christian Sauer,2,0,False,63265153,,2286960,False,False,20,40,[]
+-352094,Team SUPPAI,1020347,Christian Sauer,3,2,False,65606554,,2341401,False,False,20,40,['pitted']
+-352094,Team SUPPAI,1020347,Christian Sauer,4,134,True,68442302,,2835748,False,False,20,40,"['pitted', 'off track', 'lost control']"
+-352094,Team SUPPAI,1020347,Christian Sauer,5,128,True,70760850,,2318548,False,False,20,40,['lost control']
+-352094,Team SUPPAI,1020347,Christian Sauer,6,0,False,72950660,,2189810,False,False,20,40,[]
+-352094,Team SUPPAI,1020347,Christian Sauer,7,132,True,75255466,,2304806,False,False,20,40,"['off track', 'lost control']"
+-352094,Team SUPPAI,1020347,Christian Sauer,8,132,True,77460545,,2205079,False,False,20,40,"['off track', 'lost control']"
+-352094,Team SUPPAI,1020347,Christian Sauer,9,132,True,79737818,,2277273,False,False,20,40,"['off track', 'lost control']"
+-352094,Team SUPPAI,1020347,Christian Sauer,10,132,True,81930313,,2192495,False,False,20,40,"['off track', 'lost control']"
+-352094,Team SUPPAI,1020347,Christian Sauer,11,439,True,86780312,,-1,False,False,20,40,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-352094,Team SUPPAI,1020347,Christian Sauer,12,439,True,90851539,,-1,False,False,20,40,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-352094,Team SUPPAI,1020347,Christian Sauer,13,443,True,95720456,,-1,False,False,20,40,"['invalid', 'pitted', 'black flag', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-352094,Team SUPPAI,1020347,Christian Sauer,14,4,True,97945839,,2225383,False,False,20,40,['off track']
+-352094,Team SUPPAI,1020347,Christian Sauer,15,0,False,100079439,,2133600,False,False,20,40,[]
+-352094,Team SUPPAI,1020347,Christian Sauer,16,0,False,102200874,,2121435,True,True,20,40,[]
+-288978,Enosis eSports Simultimate GTP,348052,Aritz Paz,0,2,False,4880008,,-1,False,False,19,74,['pitted']
+-288978,Enosis eSports Simultimate GTP,348052,Aritz Paz,1,407,True,9741312,,-1,False,False,19,74,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-288978,Enosis eSports Simultimate GTP,348052,Aritz Paz,2,0,False,12104593,,2363281,False,False,19,74,[]
+-288978,Enosis eSports Simultimate GTP,348052,Aritz Paz,3,0,False,14443461,,2338868,False,False,19,74,[]
+-288978,Enosis eSports Simultimate GTP,348052,Aritz Paz,4,256,False,16772202,,2328741,False,False,19,74,['discontinuity']
+-288978,Enosis eSports Simultimate GTP,348052,Aritz Paz,5,4,True,19093806,,2321604,False,False,19,74,['off track']
+-288978,Enosis eSports Simultimate GTP,348052,Aritz Paz,6,0,False,21410849,,2317043,False,False,19,74,[]
+-288978,Enosis eSports Simultimate GTP,348052,Aritz Paz,7,0,False,23709302,,2298453,False,False,19,74,[]
+-288978,Enosis eSports Simultimate GTP,348052,Aritz Paz,8,0,False,26000844,,2291542,False,False,19,74,[]
+-288978,Enosis eSports Simultimate GTP,348052,Aritz Paz,9,0,False,28290095,,2289251,False,False,19,74,[]
+-288978,Enosis eSports Simultimate GTP,348052,Aritz Paz,10,132,True,30584741,,2294646,False,False,19,74,"['off track', 'lost control']"
+-288978,Enosis eSports Simultimate GTP,348052,Aritz Paz,11,132,True,32898401,,2313660,False,False,19,74,"['off track', 'lost control']"
+-288978,Enosis eSports Simultimate GTP,348052,Aritz Paz,12,4,True,35178640,,2280239,False,False,19,74,['off track']
+-288978,Enosis eSports Simultimate GTP,348052,Aritz Paz,13,407,True,37716221,,-1,False,False,19,74,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-288978,Enosis eSports Simultimate GTP,348052,Aritz Paz,14,0,False,39982709,,2266488,True,True,19,74,[]
+-288978,Enosis eSports Simultimate GTP,348052,Aritz Paz,15,0,False,42250404,,2267695,False,False,19,74,[]
+-411303,Reiter Engineering Esports Chrome,639396,Jonas Weber4,0,407,True,52857960,,-1,False,False,18,37,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-411303,Reiter Engineering Esports Chrome,639396,Jonas Weber4,1,0,False,55125117,,2267157,True,True,18,37,[]
+-411303,Reiter Engineering Esports Chrome,639396,Jonas Weber4,2,4,True,57422225,,2297108,False,False,18,37,['off track']
+-411303,Reiter Engineering Esports Chrome,639396,Jonas Weber4,3,4,True,59694640,,2272415,False,False,18,37,['off track']
+-345760,Old Firm Racing #White,803226,Julien Harmand,0,275,False,22789343,,-1,False,False,18,97,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-345760,Old Firm Racing #White,803226,Julien Harmand,1,0,False,25100788,,2311445,False,False,18,97,[]
+-345760,Old Firm Racing #White,803226,Julien Harmand,2,4,True,27441882,,2341094,False,False,18,97,['off track']
+-345760,Old Firm Racing #White,803226,Julien Harmand,3,0,False,29767883,,2326001,False,False,18,97,[]
+-345760,Old Firm Racing #White,803226,Julien Harmand,4,0,False,32051485,,2283602,False,False,18,97,[]
+-345760,Old Firm Racing #White,803226,Julien Harmand,5,0,False,34336054,,2284569,False,False,18,97,[]
+-345760,Old Firm Racing #White,803226,Julien Harmand,6,0,False,36606093,,2270039,True,True,18,97,[]
+-345760,Old Firm Racing #White,803226,Julien Harmand,7,4,True,39032335,,2426242,False,False,18,97,['off track']
+-345760,Old Firm Racing #White,803226,Julien Harmand,8,4,True,41361289,,2328954,False,False,18,97,['off track']
+-345760,Old Firm Racing #White,803226,Julien Harmand,9,128,True,43699122,,2337833,False,False,18,97,['lost control']
+-345760,Old Firm Racing #White,803226,Julien Harmand,10,6,True,46055677,,2356555,False,False,18,97,"['pitted', 'off track']"
+-345760,Old Firm Racing #White,803226,Julien Harmand,11,2,False,49246758,,3191081,False,False,18,97,['pitted']
+-345760,Old Firm Racing #White,803226,Julien Harmand,12,4,True,51565064,,2318306,False,False,18,97,['off track']
+-132790,Reiter Engineering Esports II,898634,Aidan Wilkinson,0,134,True,11018665,,-1,False,False,18,77,"['pitted', 'off track', 'lost control']"
+-132790,Reiter Engineering Esports II,898634,Aidan Wilkinson,1,407,True,17846810,,-1,False,False,18,77,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-132790,Reiter Engineering Esports II,898634,Aidan Wilkinson,2,128,True,20258582,,2411772,False,False,18,77,['lost control']
+-132790,Reiter Engineering Esports II,898634,Aidan Wilkinson,3,439,True,38574198,,-1,False,False,18,77,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-132790,Reiter Engineering Esports II,898634,Aidan Wilkinson,4,0,False,40890563,,2316365,False,False,18,77,[]
+-132790,Reiter Engineering Esports II,898634,Aidan Wilkinson,5,0,False,43210640,,2320077,False,False,18,77,[]
+-132790,Reiter Engineering Esports II,898634,Aidan Wilkinson,6,0,False,45515918,,2305278,False,False,18,77,[]
+-132790,Reiter Engineering Esports II,898634,Aidan Wilkinson,7,275,False,51001115,,-1,False,False,18,77,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-132790,Reiter Engineering Esports II,898634,Aidan Wilkinson,8,0,False,53306890,,2305775,False,False,18,77,[]
+-132790,Reiter Engineering Esports II,898634,Aidan Wilkinson,9,0,False,55591524,,2284634,True,True,18,77,[]
+-132790,Reiter Engineering Esports II,898634,Aidan Wilkinson,10,0,False,57899329,,2307805,False,False,18,77,[]
+-132790,Reiter Engineering Esports II,898634,Aidan Wilkinson,11,415,True,62035106,,-1,False,False,18,77,"['invalid', 'pitted', 'off track', 'black flag', 'car reset', 'lost control', 'discontinuity']"
+-132790,Reiter Engineering Esports II,898634,Aidan Wilkinson,12,4,True,64335412,,2300306,False,False,18,77,['off track']
+-408222,Old Firm Racing By HelvetSim,490005,Randy Martin y Mateos,0,130,True,22905688,,-1,False,False,18,23,"['pitted', 'lost control']"
+-408222,Old Firm Racing By HelvetSim,490005,Randy Martin y Mateos,1,439,True,28194924,,-1,False,False,18,23,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-408222,Old Firm Racing By HelvetSim,490005,Randy Martin y Mateos,2,0,False,30522991,,2328067,False,False,18,23,[]
+-408222,Old Firm Racing By HelvetSim,490005,Randy Martin y Mateos,3,0,False,32819987,,2296996,False,False,18,23,[]
+-408222,Old Firm Racing By HelvetSim,490005,Randy Martin y Mateos,4,0,False,35144331,,2324344,False,False,18,23,[]
+-408222,Old Firm Racing By HelvetSim,490005,Randy Martin y Mateos,5,0,False,37439885,,2295554,False,False,18,23,[]
+-408222,Old Firm Racing By HelvetSim,490005,Randy Martin y Mateos,6,0,False,39753331,,2313446,False,False,18,23,[]
+-408222,Old Firm Racing By HelvetSim,490005,Randy Martin y Mateos,7,4,True,42055747,,2302416,False,False,18,23,['off track']
+-408222,Old Firm Racing By HelvetSim,490005,Randy Martin y Mateos,8,0,False,44375921,,2320174,False,False,18,23,[]
+-408222,Old Firm Racing By HelvetSim,490005,Randy Martin y Mateos,9,0,False,46663453,,2287532,True,True,18,23,[]
+-408222,Old Firm Racing By HelvetSim,490005,Randy Martin y Mateos,10,0,False,48965049,,2301596,False,False,18,23,[]
+-362179,NGC by Rubis Gás (Butano),775547,André Rosa,2,407,True,47609996,,5288039,False,False,20,42,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-362179,NGC by Rubis Gás (Butano),775547,André Rosa,3,5,True,49903592,,-1,False,False,20,42,"['invalid', 'off track']"
+-362179,NGC by Rubis Gás (Butano),775547,André Rosa,4,4,True,52208673,,2305081,True,True,20,42,['off track']
+-362179,NGC by Rubis Gás (Butano),775547,André Rosa,7,311,True,62622887,,5087101,False,False,20,42,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'discontinuity']"
+-362179,NGC by Rubis Gás (Butano),775547,André Rosa,8,439,True,67262644,,-1,False,False,20,42,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-362179,NGC by Rubis Gás (Butano),667770,Pedro Daniel Paquete,0,4503,True,39936200,,-1,False,False,19,42,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity', 'driver change']"
+-362179,NGC by Rubis Gás (Butano),667770,Pedro Daniel Paquete,1,132,True,42321957,,2385757,False,True,19,42,"['off track', 'lost control']"
+-362179,NGC by Rubis Gás (Butano),667770,Pedro Daniel Paquete,5,279,True,55121375,,2912702,False,False,19,42,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-362179,NGC by Rubis Gás (Butano),667770,Pedro Daniel Paquete,6,132,True,57535786,,2414411,False,False,19,42,"['off track', 'lost control']"
+-289324,Reiter Engineering Esports,528552,Niclas Geßner,0,6,True,6931582,,-1,False,False,20,76,"['pitted', 'off track']"
+-289324,Reiter Engineering Esports,528552,Niclas Geßner,1,128,True,9393726,,2462144,False,False,20,76,['lost control']
+-289324,Reiter Engineering Esports,528552,Niclas Geßner,2,0,False,11744120,,2350394,False,False,20,76,[]
+-289324,Reiter Engineering Esports,528552,Niclas Geßner,3,0,False,14073568,,2329448,True,True,20,76,[]
+-221044,DLR SimLab \\ White,89195,Rino Demeulemeester,0,407,True,7422111,,-1,False,False,19,2,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-221044,DLR SimLab \\ White,89195,Rino Demeulemeester,1,132,True,9926213,,2504102,False,False,19,2,"['off track', 'lost control']"
+-221044,DLR SimLab \\ White,89195,Rino Demeulemeester,2,0,False,12367746,,2441533,False,False,19,2,[]
+-221044,DLR SimLab \\ White,89195,Rino Demeulemeester,3,4,True,14774691,,2406945,False,False,19,2,['off track']
+-221044,DLR SimLab \\ White,89195,Rino Demeulemeester,4,407,True,20065722,,-1,False,False,19,2,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-221044,DLR SimLab \\ White,89195,Rino Demeulemeester,5,0,False,22439649,,2373927,False,False,19,2,[]
+-221044,DLR SimLab \\ White,89195,Rino Demeulemeester,6,0,False,24786487,,2346838,True,True,19,2,[]
+-324811,Go! eSports #14,243240,Joan Marti,0,311,True,93202385,,-1,False,False,20,14,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'discontinuity']"
+-324811,Go! eSports #14,243240,Joan Marti,1,0,False,95594779,,2392394,False,False,20,14,[]
+-324811,Go! eSports #14,243240,Joan Marti,2,0,False,98028616,,2433837,False,False,20,14,[]
+-324811,Go! eSports #14,243240,Joan Marti,3,0,False,100399571,,2370955,False,False,20,14,[]
+-324811,Go! eSports #14,243240,Joan Marti,4,0,False,102766263,,2366692,True,True,20,14,[]
+-265815,el jonan de baraka,564150,Iván Ubera,0,6,True,83546581,,-1,False,False,20,46,"['pitted', 'off track']"
+-265815,el jonan de baraka,564150,Iván Ubera,1,128,True,86103257,,2556676,False,False,20,46,['lost control']
+-265815,el jonan de baraka,564150,Iván Ubera,2,132,True,88570529,,2467272,False,False,20,46,"['off track', 'lost control']"
+-265815,el jonan de baraka,564150,Iván Ubera,3,128,True,91027093,,2456564,False,False,20,46,['lost control']
+-265815,el jonan de baraka,564150,Iván Ubera,4,0,False,93412548,,2385455,False,False,20,46,[]
+-265815,el jonan de baraka,564150,Iván Ubera,5,275,False,97005716,,-1,False,False,20,46,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-265815,el jonan de baraka,564150,Iván Ubera,6,0,False,99402206,,2396490,False,False,20,46,[]
+-265815,el jonan de baraka,564150,Iván Ubera,7,0,False,101790148,,2387942,False,False,20,46,[]
+-265815,el jonan de baraka,564150,Iván Ubera,8,0,False,104163228,,2373080,True,True,20,46,[]
+-265815,el jonan de baraka,564150,Iván Ubera,9,0,False,106563013,,2399785,False,False,20,46,[]
+-411426,Endurance Enjoyers Green,783240,Salva Torres,0,6,True,24570248,,-1,False,False,19,19,"['pitted', 'off track']"
+-411426,Endurance Enjoyers Green,783240,Salva Torres,1,0,False,27234382,,2664134,False,False,19,19,[]
+-411426,Endurance Enjoyers Green,783240,Salva Torres,2,4,True,29894465,,2660083,False,False,19,19,['off track']
+-411426,Endurance Enjoyers Green,783240,Salva Torres,3,0,False,32544062,,2649597,False,False,19,19,[]
+-411426,Endurance Enjoyers Green,783240,Salva Torres,4,0,False,35170039,,2625977,False,False,19,19,[]
+-411426,Endurance Enjoyers Green,783240,Salva Torres,5,275,False,39164548,,-1,False,False,19,19,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-411426,Endurance Enjoyers Green,783240,Salva Torres,6,439,True,44256541,,-1,False,False,19,19,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-411426,Endurance Enjoyers Green,783240,Salva Torres,7,0,False,46868587,,2612046,False,False,19,19,[]
+-411426,Endurance Enjoyers Green,783240,Salva Torres,8,0,False,49467949,,2599362,False,False,19,19,[]
+-411426,Endurance Enjoyers Green,783240,Salva Torres,9,275,False,53582221,,-1,False,False,19,19,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-411426,Endurance Enjoyers Green,783240,Salva Torres,10,0,False,56172156,,2589935,False,False,19,19,[]
+-411426,Endurance Enjoyers Green,783240,Salva Torres,11,2,False,58812404,,2640248,False,False,19,19,['pitted']
+-411426,Endurance Enjoyers Green,783240,Salva Torres,12,3,False,62033568,,-1,False,False,19,19,"['invalid', 'pitted']"
+-411426,Endurance Enjoyers Green,783240,Salva Torres,13,439,True,71427960,,-1,False,False,19,19,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-411426,Endurance Enjoyers Green,783240,Salva Torres,14,0,False,73874318,,2446358,False,False,19,19,[]
+-411426,Endurance Enjoyers Green,783240,Salva Torres,15,0,False,76298012,,2423694,False,False,19,19,[]
+-411426,Endurance Enjoyers Green,783240,Salva Torres,16,0,False,78708501,,2410489,False,False,19,19,[]
+-411426,Endurance Enjoyers Green,783240,Salva Torres,17,439,True,85514179,,-1,False,False,19,19,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-411426,Endurance Enjoyers Green,783240,Salva Torres,18,439,True,88532012,,-1,False,False,19,19,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-411426,Endurance Enjoyers Green,783240,Salva Torres,19,0,False,90939924,,2407912,False,False,19,19,[]
+-411426,Endurance Enjoyers Green,783240,Salva Torres,20,0,False,93337403,,2397479,False,False,19,19,[]
+-411426,Endurance Enjoyers Green,783240,Salva Torres,21,4,True,95840266,,2502863,False,False,19,19,['off track']
+-411426,Endurance Enjoyers Green,783240,Salva Torres,22,0,False,98258462,,2418196,False,False,19,19,[]
+-411426,Endurance Enjoyers Green,783240,Salva Torres,23,0,False,100666291,,2407829,False,False,19,19,[]
+-411426,Endurance Enjoyers Green,783240,Salva Torres,24,0,False,103053723,,2387432,False,False,19,19,[]
+-411426,Endurance Enjoyers Green,783240,Salva Torres,25,0,False,105441716,,2387993,False,False,19,19,[]
+-411426,Endurance Enjoyers Green,783240,Salva Torres,26,0,False,107824628,,2382912,True,True,19,19,[]
+-213609,IS Corse,327245,Paolo Ernesto Taddeolini,0,258,False,82022149,,-1,False,False,19,169,"['pitted', 'discontinuity']"
+-213609,IS Corse,327245,Paolo Ernesto Taddeolini,1,439,True,88993055,,-1,False,False,19,169,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-213609,IS Corse,327245,Paolo Ernesto Taddeolini,2,0,False,91417282,,2424227,False,False,19,169,[]
+-213609,IS Corse,327245,Paolo Ernesto Taddeolini,3,0,False,93830793,,2413511,False,False,19,169,[]
+-213609,IS Corse,327245,Paolo Ernesto Taddeolini,4,0,False,96237855,,2407062,False,False,19,169,[]
+-213609,IS Corse,327245,Paolo Ernesto Taddeolini,5,0,False,98639468,,2401613,False,False,19,169,[]
+-213609,IS Corse,327245,Paolo Ernesto Taddeolini,6,0,False,101036882,,2397414,False,False,19,169,[]
+-213609,IS Corse,327245,Paolo Ernesto Taddeolini,7,0,False,103437018,,2400136,False,False,19,169,[]
+-213609,IS Corse,327245,Paolo Ernesto Taddeolini,8,0,False,105828916,,2391898,True,True,19,169,[]
+-213609,IS Corse,327245,Paolo Ernesto Taddeolini,9,16384,False,108230330,,2401414,False,False,19,169,[]
+-340745,VULKAN Motorsports Gold,693417,Ignas Vincerževskis,0,435,True,85308543,,-1,False,False,20,132,"['invalid', 'pitted', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-340745,VULKAN Motorsports Gold,693417,Ignas Vincerževskis,1,0,False,87765365,,2456822,False,False,20,132,[]
+-340745,VULKAN Motorsports Gold,693417,Ignas Vincerževskis,2,4,True,90212885,,2447520,False,False,20,132,['off track']
+-340745,VULKAN Motorsports Gold,693417,Ignas Vincerževskis,3,4,True,92636996,,2424111,False,False,20,132,['off track']
+-340745,VULKAN Motorsports Gold,693417,Ignas Vincerževskis,4,0,False,95044049,,2407053,False,False,20,132,[]
+-340745,VULKAN Motorsports Gold,693417,Ignas Vincerževskis,5,1,False,97446918,,-1,False,False,20,132,['invalid']
+-340745,VULKAN Motorsports Gold,693417,Ignas Vincerževskis,6,287,True,102005309,,-1,False,False,20,132,"['invalid', 'pitted', 'off track', 'black flag', 'car reset', 'discontinuity']"
+-340745,VULKAN Motorsports Gold,693417,Ignas Vincerževskis,7,4,True,104399070,,2393761,True,True,20,132,['off track']
+-340745,VULKAN Motorsports Gold,693417,Ignas Vincerževskis,8,4,True,106886731,,2487661,False,False,20,132,['off track']
+-340745,VULKAN Motorsports Gold,693417,Ignas Vincerževskis,9,16384,False,109283867,,2397136,False,False,20,132,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,0,2,False,6251709,,-1,False,False,20,264,['pitted']
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,1,0,False,8953897,,2702188,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,2,0,False,11652357,,2698460,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,3,0,False,14339995,,2687638,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,4,0,False,17016322,,2676327,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,5,0,False,19683088,,2666766,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,6,0,False,22353432,,2670344,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,7,0,False,25020315,,2666883,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,8,0,False,27699493,,2679178,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,9,0,False,30362989,,2663496,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,10,0,False,33026235,,2663246,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,11,0,False,35675088,,2648853,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,12,0,False,38314621,,2639533,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,13,2,False,40988356,,2673735,False,False,20,264,['pitted']
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,14,275,False,50781381,,-1,False,False,20,264,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,15,275,False,55490957,,-1,False,False,20,264,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,16,0,False,58110070,,2619113,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,17,0,False,60692402,,2582332,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,18,0,False,63233968,,2541566,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,19,0,False,65731270,,2497302,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,20,0,False,68184974,,2453704,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,21,0,False,70620687,,2435713,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,22,1,False,73036762,,-1,False,False,20,264,['invalid']
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,23,1,False,75465721,,-1,False,False,20,264,['invalid']
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,24,1,False,77874674,,-1,False,False,20,264,['invalid']
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,25,1,False,80319765,,-1,False,False,20,264,['invalid']
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,26,0,False,82716210,,2396445,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,27,1,False,85103121,,-1,False,False,20,264,['invalid']
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,28,275,False,99764964,,-1,False,False,20,264,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,29,0,False,102159942,,2394978,True,True,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,30,0,False,104574568,,2414626,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,31,0,False,106985768,,2411200,False,False,20,264,[]
+-313739,Orca Performance Racing #Blue,994089,Maximilian Fischer2,32,16384,False,109382953,,2397185,False,False,20,264,[]
+-306549,Valkyrie Exype Purple13,361527,Romain Utiel,0,275,False,7218781,,-1,False,False,19,6,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-306549,Valkyrie Exype Purple13,361527,Romain Utiel,1,0,False,9872459,,2653678,False,False,19,6,[]
+-306549,Valkyrie Exype Purple13,361527,Romain Utiel,2,439,True,17523081,,-1,False,False,19,6,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-306549,Valkyrie Exype Purple13,361527,Romain Utiel,3,257,False,20162345,,-1,False,False,19,6,"['invalid', 'discontinuity']"
+-306549,Valkyrie Exype Purple13,361527,Romain Utiel,4,4,True,22849469,,2687124,False,False,19,6,['off track']
+-306549,Valkyrie Exype Purple13,361527,Romain Utiel,5,439,True,35220542,,-1,False,False,19,6,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-306549,Valkyrie Exype Purple13,361527,Romain Utiel,6,0,False,37855535,,2634993,False,False,19,6,[]
+-306549,Valkyrie Exype Purple13,361527,Romain Utiel,7,0,False,40466252,,2610717,False,False,19,6,[]
+-306549,Valkyrie Exype Purple13,361527,Romain Utiel,8,0,False,43081447,,2615195,False,False,19,6,[]
+-306549,Valkyrie Exype Purple13,361527,Romain Utiel,9,0,False,45685161,,2603714,False,False,19,6,[]
+-306549,Valkyrie Exype Purple13,361527,Romain Utiel,10,275,False,88774738,,-1,False,False,19,6,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-306549,Valkyrie Exype Purple13,361527,Romain Utiel,11,4,True,91210800,,2436062,False,False,19,6,['off track']
+-306549,Valkyrie Exype Purple13,361527,Romain Utiel,12,257,False,93617482,,-1,False,False,19,6,"['invalid', 'discontinuity']"
+-306549,Valkyrie Exype Purple13,361527,Romain Utiel,13,0,False,96012483,,2395001,True,True,19,6,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,0,279,True,10206903,,-1,False,False,20,133,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,1,407,True,13811988,,-1,False,False,20,133,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,2,0,False,16493014,,2681026,False,False,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,3,0,False,19161011,,2667997,False,False,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,4,0,False,21821569,,2660558,False,False,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,5,0,False,24472187,,2650618,False,False,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,6,0,False,27132320,,2660133,False,False,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,7,0,False,29791194,,2658874,False,False,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,8,403,True,39158199,,-1,False,False,20,133,"['invalid', 'pitted', 'car reset', 'lost control', 'discontinuity']"
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,9,0,False,41831908,,2673709,False,False,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,10,0,False,44481454,,2649546,False,False,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,11,0,False,47102520,,2621066,False,False,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,12,0,False,49724825,,2622305,False,False,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,13,0,False,52327183,,2602358,False,False,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,14,279,True,58067883,,-1,False,False,20,133,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,15,403,True,61187640,,-1,False,False,20,133,"['invalid', 'pitted', 'car reset', 'lost control', 'discontinuity']"
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,16,0,False,63715679,,2528039,False,False,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,17,0,False,66214568,,2498889,False,False,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,18,64,True,68686705,,2472137,False,False,20,133,['car contact']
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,19,0,False,71121177,,2434472,False,False,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,20,0,False,73539104,,2417927,False,False,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,21,311,True,88095015,,-1,False,False,20,133,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'discontinuity']"
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,22,0,False,90507657,,2412642,False,False,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,23,0,False,92909309,,2401652,False,False,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,24,439,True,98460837,,-1,False,False,20,133,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,25,0,False,100864252,,2403415,False,False,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,26,0,False,103260847,,2396595,True,True,20,133,[]
+-411731,Endurance Enjoyers,715811,Daniel Atanasov,27,0,False,105664276,,2403429,False,False,20,133,[]
+-307788,x4 to zandvoort,649681,Joselu Otero,0,407,True,45482457,,-1,False,False,20,33,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-307788,x4 to zandvoort,649681,Joselu Otero,1,0,False,48111611,,2629154,False,False,20,33,[]
+-307788,x4 to zandvoort,649681,Joselu Otero,2,0,False,50721151,,2609540,False,False,20,33,[]
+-307788,x4 to zandvoort,649681,Joselu Otero,3,0,False,53323268,,2602117,False,False,20,33,[]
+-307788,x4 to zandvoort,649681,Joselu Otero,4,0,False,55919984,,2596716,False,False,20,33,[]
+-307788,x4 to zandvoort,649681,Joselu Otero,5,2,False,58536598,,2616614,False,False,20,33,['pitted']
+-307788,x4 to zandvoort,649681,Joselu Otero,6,2,False,61512101,,2975503,False,False,20,33,['pitted']
+-307788,x4 to zandvoort,649681,Joselu Otero,7,0,False,64009335,,2497234,False,False,20,33,[]
+-307788,x4 to zandvoort,649681,Joselu Otero,8,403,True,67112338,,-1,False,False,20,33,"['invalid', 'pitted', 'car reset', 'lost control', 'discontinuity']"
+-307788,x4 to zandvoort,649681,Joselu Otero,9,4,True,69560227,,2447889,False,False,20,33,['off track']
+-307788,x4 to zandvoort,649681,Joselu Otero,10,0,False,71986499,,2426272,False,False,20,33,[]
+-307788,x4 to zandvoort,649681,Joselu Otero,11,0,False,74405128,,2418629,False,False,20,33,[]
+-307788,x4 to zandvoort,649681,Joselu Otero,12,0,False,76827407,,2422279,False,False,20,33,[]
+-307788,x4 to zandvoort,649681,Joselu Otero,13,0,False,79225622,,2398215,True,True,20,33,[]
+-137387,Team Davo Ramos,365305,Davo Ramos,0,311,True,29642782,,-1,False,False,20,26,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'discontinuity']"
+-137387,Team Davo Ramos,365305,Davo Ramos,1,128,True,32490525,,2847743,False,False,20,26,['lost control']
+-137387,Team Davo Ramos,365305,Davo Ramos,2,4,True,35164444,,2673919,False,False,20,26,['off track']
+-137387,Team Davo Ramos,365305,Davo Ramos,3,439,True,41153876,,-1,False,False,20,26,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-137387,Team Davo Ramos,365305,Davo Ramos,4,0,False,43785124,,2631248,False,False,20,26,[]
+-137387,Team Davo Ramos,365305,Davo Ramos,5,0,False,46466285,,2681161,False,False,20,26,[]
+-137387,Team Davo Ramos,365305,Davo Ramos,6,0,False,49080211,,2613926,False,False,20,26,[]
+-137387,Team Davo Ramos,365305,Davo Ramos,7,0,False,51685225,,2605014,False,False,20,26,[]
+-137387,Team Davo Ramos,365305,Davo Ramos,8,0,False,54298404,,2613179,False,False,20,26,[]
+-137387,Team Davo Ramos,365305,Davo Ramos,9,2,False,56938818,,2640414,False,False,20,26,['pitted']
+-137387,Team Davo Ramos,365305,Davo Ramos,10,439,True,62652404,,-1,False,False,20,26,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-137387,Team Davo Ramos,365305,Davo Ramos,11,128,True,65259890,,2607486,False,False,20,26,['lost control']
+-137387,Team Davo Ramos,365305,Davo Ramos,12,0,False,68053491,,2793601,False,False,20,26,[]
+-137387,Team Davo Ramos,365305,Davo Ramos,13,0,False,70493211,,2439720,False,False,20,26,[]
+-137387,Team Davo Ramos,365305,Davo Ramos,14,407,True,78291729,,-1,False,False,20,26,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-137387,Team Davo Ramos,365305,Davo Ramos,15,0,False,80702986,,2411257,False,False,20,26,[]
+-137387,Team Davo Ramos,365305,Davo Ramos,16,0,False,83102250,,2399264,True,True,20,26,[]
+-253483,Orca Performance Racing #Blue Sprint,1107074,Marvin Papenhagen,0,439,True,50792259,,-1,False,False,19,17,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-253483,Orca Performance Racing #Blue Sprint,1107074,Marvin Papenhagen,1,343,True,56794375,,-1,False,False,19,17,"['invalid', 'pitted', 'off track', 'car reset', 'car contact', 'discontinuity']"
+-253483,Orca Performance Racing #Blue Sprint,1107074,Marvin Papenhagen,2,4,True,59357371,,2562996,False,False,19,17,['off track']
+-253483,Orca Performance Racing #Blue Sprint,1107074,Marvin Papenhagen,3,4,True,61892136,,2534765,False,False,19,17,['off track']
+-253483,Orca Performance Racing #Blue Sprint,1107074,Marvin Papenhagen,4,4,True,64445701,,2553565,False,False,19,17,['off track']
+-253483,Orca Performance Racing #Blue Sprint,1107074,Marvin Papenhagen,5,4,True,66943576,,2497875,False,False,19,17,['off track']
+-253483,Orca Performance Racing #Blue Sprint,1107074,Marvin Papenhagen,6,407,True,70991690,,-1,False,False,19,17,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-253483,Orca Performance Racing #Blue Sprint,1107074,Marvin Papenhagen,7,1,False,73426662,,-1,False,False,19,17,['invalid']
+-253483,Orca Performance Racing #Blue Sprint,1107074,Marvin Papenhagen,8,407,True,80508448,,-1,False,False,19,17,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-253483,Orca Performance Racing #Blue Sprint,1107074,Marvin Papenhagen,9,0,False,82929182,,2420734,False,False,19,17,[]
+-253483,Orca Performance Racing #Blue Sprint,1107074,Marvin Papenhagen,10,0,False,85353101,,2423919,False,False,19,17,[]
+-253483,Orca Performance Racing #Blue Sprint,1107074,Marvin Papenhagen,11,0,False,87760246,,2407145,False,False,19,17,[]
+-253483,Orca Performance Racing #Blue Sprint,1107074,Marvin Papenhagen,12,0,False,90173297,,2413051,False,False,19,17,[]
+-253483,Orca Performance Racing #Blue Sprint,1107074,Marvin Papenhagen,13,0,False,92579469,,2406172,True,True,19,17,[]
+-253483,Orca Performance Racing #Blue Sprint,1107074,Marvin Papenhagen,14,4,True,94996401,,2416932,False,False,19,17,['off track']
+-253483,Orca Performance Racing #Blue Sprint,1107074,Marvin Papenhagen,15,4,True,97499439,,2503038,False,False,19,17,['off track']
+-129653,Octopus Racing Team,701793,David Marchal,0,2,False,7928558,,-1,False,False,20,124,['pitted']
+-129653,Octopus Racing Team,701793,David Marchal,1,0,False,10602753,,2674195,False,False,20,124,[]
+-129653,Octopus Racing Team,701793,David Marchal,2,275,False,15124037,,-1,False,False,20,124,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-129653,Octopus Racing Team,701793,David Marchal,3,0,False,17784264,,2660227,False,False,20,124,[]
+-129653,Octopus Racing Team,701793,David Marchal,4,0,False,20434637,,2650373,False,False,20,124,[]
+-129653,Octopus Racing Team,701793,David Marchal,5,0,False,23067337,,2632700,False,False,20,124,[]
+-129653,Octopus Racing Team,701793,David Marchal,6,128,True,25784506,,2717169,False,False,20,124,['lost control']
+-129653,Octopus Racing Team,701793,David Marchal,7,0,False,28406448,,2621942,False,False,20,124,[]
+-129653,Octopus Racing Team,701793,David Marchal,8,132,True,31152464,,2746016,False,False,20,124,"['off track', 'lost control']"
+-129653,Octopus Racing Team,701793,David Marchal,9,0,False,33797408,,2644944,False,False,20,124,[]
+-129653,Octopus Racing Team,701793,David Marchal,10,0,False,36412095,,2614687,False,False,20,124,[]
+-129653,Octopus Racing Team,701793,David Marchal,11,311,True,44370157,,-1,False,False,20,124,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'discontinuity']"
+-129653,Octopus Racing Team,701793,David Marchal,12,0,False,46974868,,2604711,False,False,20,124,[]
+-129653,Octopus Racing Team,701793,David Marchal,13,0,False,49576100,,2601232,False,False,20,124,[]
+-129653,Octopus Racing Team,701793,David Marchal,14,0,False,52160637,,2584537,False,False,20,124,[]
+-129653,Octopus Racing Team,701793,David Marchal,15,0,False,54736168,,2575531,False,False,20,124,[]
+-129653,Octopus Racing Team,701793,David Marchal,16,0,False,57310847,,2574679,False,False,20,124,[]
+-129653,Octopus Racing Team,701793,David Marchal,17,279,True,67102514,,-1,False,False,20,124,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-129653,Octopus Racing Team,701793,David Marchal,18,0,False,69555030,,2452516,False,False,20,124,[]
+-129653,Octopus Racing Team,701793,David Marchal,19,4,True,71996000,,2440970,False,False,20,124,['off track']
+-129653,Octopus Racing Team,701793,David Marchal,20,0,False,74410321,,2414321,False,False,20,124,[]
+-129653,Octopus Racing Team,701793,David Marchal,21,0,False,76819616,,2409295,True,True,20,124,[]
+-129653,Octopus Racing Team,701793,David Marchal,22,4,True,79234520,,2414904,False,False,20,124,['off track']
+-225095,EAGLE Speed Academy E-Sports #S,454539,Lander Van den Brande,0,407,True,48986425,,-1,False,False,20,186,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-225095,EAGLE Speed Academy E-Sports #S,454539,Lander Van den Brande,1,311,True,53991502,,-1,False,False,20,186,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'discontinuity']"
+-225095,EAGLE Speed Academy E-Sports #S,454539,Lander Van den Brande,2,0,False,56606970,,2615468,False,False,20,186,[]
+-225095,EAGLE Speed Academy E-Sports #S,454539,Lander Van den Brande,3,0,False,59205641,,2598671,False,False,20,186,[]
+-225095,EAGLE Speed Academy E-Sports #S,454539,Lander Van den Brande,4,0,False,61784649,,2579008,False,False,20,186,[]
+-225095,EAGLE Speed Academy E-Sports #S,454539,Lander Van den Brande,5,439,True,65451783,,-1,False,False,20,186,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-225095,EAGLE Speed Academy E-Sports #S,454539,Lander Van den Brande,6,4,True,67946726,,2494943,False,False,20,186,['off track']
+-225095,EAGLE Speed Academy E-Sports #S,454539,Lander Van den Brande,7,0,False,70406883,,2460157,False,False,20,186,[]
+-225095,EAGLE Speed Academy E-Sports #S,454539,Lander Van den Brande,8,0,False,72841702,,2434819,False,False,20,186,[]
+-225095,EAGLE Speed Academy E-Sports #S,454539,Lander Van den Brande,9,5,True,75391734,,-1,False,False,20,186,"['invalid', 'off track']"
+-225095,EAGLE Speed Academy E-Sports #S,454539,Lander Van den Brande,10,1,False,77833419,,-1,False,False,20,186,['invalid']
+-225095,EAGLE Speed Academy E-Sports #S,454539,Lander Van den Brande,11,0,False,80246370,,2412951,True,True,20,186,[]
+-126077,Cachupa Psicadélica,127661,Miguel Almeida,0,439,True,59612614,,-1,False,False,18,38,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-126077,Cachupa Psicadélica,127661,Miguel Almeida,1,0,False,62170975,,2558361,False,False,18,38,[]
+-126077,Cachupa Psicadélica,127661,Miguel Almeida,2,132,True,64731591,,2560616,False,False,18,38,"['off track', 'lost control']"
+-126077,Cachupa Psicadélica,127661,Miguel Almeida,3,0,False,67191586,,2459995,False,False,18,38,[]
+-126077,Cachupa Psicadélica,127661,Miguel Almeida,4,4,True,69635620,,2444034,False,False,18,38,['off track']
+-126077,Cachupa Psicadélica,127661,Miguel Almeida,5,0,False,72049698,,2414078,True,True,18,38,[]
+-404643,smit,564580,Glenn Smit2,0,447,True,91244328,,-1,False,False,20,80,"['invalid', 'pitted', 'off track', 'black flag', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-404643,smit,564580,Glenn Smit2,1,1,False,93665251,,-1,False,False,20,80,['invalid']
+-404643,smit,564580,Glenn Smit2,2,1,False,96097726,,-1,False,False,20,80,['invalid']
+-404643,smit,564580,Glenn Smit2,3,0,False,98512117,,2414391,True,True,20,80,[]
+-404643,smit,564580,Glenn Smit2,4,311,True,104608288,,-1,False,False,20,80,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'discontinuity']"
+-404643,smit,564580,Glenn Smit2,5,0,False,107025636,,2417348,False,False,20,80,[]
+-326405,Orca Performance Racing #3,486559,Jannis Rohde,0,2,False,90144684,,-1,False,False,19,964,['pitted']
+-326405,Orca Performance Racing #3,486559,Jannis Rohde,1,128,True,92750807,,2606123,False,False,19,964,['lost control']
+-326405,Orca Performance Racing #3,486559,Jannis Rohde,2,311,True,97469608,,-1,False,False,19,964,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'discontinuity']"
+-326405,Orca Performance Racing #3,486559,Jannis Rohde,3,0,False,99907786,,2438178,False,False,19,964,[]
+-326405,Orca Performance Racing #3,486559,Jannis Rohde,4,0,False,102338435,,2430649,False,False,19,964,[]
+-326405,Orca Performance Racing #3,486559,Jannis Rohde,5,4,True,104764779,,2426344,False,False,19,964,['off track']
+-326405,Orca Performance Racing #3,486559,Jannis Rohde,6,4,True,107186907,,2422128,True,True,19,964,['off track']
+-326405,Orca Performance Racing #3,486559,Jannis Rohde,7,16384,False,109611410,,2424503,False,False,19,964,[]
+-239048,Team Vakaris Vilius,605561,Vakaris Vilius,0,2,False,50188334,,-1,False,False,20,35,['pitted']
+-239048,Team Vakaris Vilius,605561,Vakaris Vilius,1,132,True,52973321,,2784987,False,False,20,35,"['off track', 'lost control']"
+-239048,Team Vakaris Vilius,605561,Vakaris Vilius,2,164,True,55757366,,2784045,False,False,20,35,"['off track', 'contact', 'lost control']"
+-239048,Team Vakaris Vilius,605561,Vakaris Vilius,3,439,True,61015081,,-1,False,False,20,35,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-239048,Team Vakaris Vilius,605561,Vakaris Vilius,4,0,False,63594805,,2579724,False,False,20,35,[]
+-239048,Team Vakaris Vilius,605561,Vakaris Vilius,5,0,False,66149774,,2554969,False,False,20,35,[]
+-239048,Team Vakaris Vilius,605561,Vakaris Vilius,6,128,True,68799904,,2650130,False,False,20,35,['lost control']
+-239048,Team Vakaris Vilius,605561,Vakaris Vilius,7,407,True,72368766,,-1,False,False,20,35,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-239048,Team Vakaris Vilius,605561,Vakaris Vilius,8,0,False,74819510,,2450744,False,False,20,35,[]
+-239048,Team Vakaris Vilius,605561,Vakaris Vilius,9,439,True,78222277,,-1,False,False,20,35,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-239048,Team Vakaris Vilius,605561,Vakaris Vilius,10,0,False,80658316,,2436039,True,True,20,35,[]
+-134445,Octopus Racing Team Black,340736,Luis Jeronimo,0,6,True,58558336,,-1,False,False,18,224,"['pitted', 'off track']"
+-134445,Octopus Racing Team Black,340736,Luis Jeronimo,1,132,True,61377419,,2819083,False,False,18,224,"['off track', 'lost control']"
+-134445,Octopus Racing Team Black,340736,Luis Jeronimo,2,311,True,66974120,,-1,False,False,18,224,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'discontinuity']"
+-134445,Octopus Racing Team Black,340736,Luis Jeronimo,3,375,True,72160492,,-1,False,False,18,224,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'car contact', 'discontinuity']"
+-134445,Octopus Racing Team Black,340736,Luis Jeronimo,4,435,True,75595380,,-1,False,False,18,224,"['invalid', 'pitted', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-134445,Octopus Racing Team Black,340736,Luis Jeronimo,5,4,True,78033392,,2438012,True,True,18,224,['off track']
+-319656,MRRS Racing Amethyst,524466,Stefan Anjema,0,2,False,28549225,,-1,False,False,20,270,['pitted']
+-319656,MRRS Racing Amethyst,524466,Stefan Anjema,1,0,False,31190300,,2641075,False,False,20,270,[]
+-319656,MRRS Racing Amethyst,524466,Stefan Anjema,2,4,True,33830191,,2639891,False,False,20,270,['off track']
+-319656,MRRS Racing Amethyst,524466,Stefan Anjema,3,0,False,36460849,,2630658,False,False,20,270,[]
+-319656,MRRS Racing Amethyst,524466,Stefan Anjema,4,4,True,39098469,,2637620,False,False,20,270,['off track']
+-319656,MRRS Racing Amethyst,524466,Stefan Anjema,5,0,False,41705548,,2607079,False,False,20,270,[]
+-319656,MRRS Racing Amethyst,524466,Stefan Anjema,6,2,False,44376790,,2671242,False,False,20,270,['pitted']
+-319656,MRRS Racing Amethyst,524466,Stefan Anjema,7,283,False,51864415,,-1,False,False,20,270,"['invalid', 'pitted', 'black flag', 'car reset', 'discontinuity']"
+-319656,MRRS Racing Amethyst,524466,Stefan Anjema,8,0,False,54458805,,2594390,False,False,20,270,[]
+-319656,MRRS Racing Amethyst,524466,Stefan Anjema,9,0,False,57042868,,2584063,False,False,20,270,[]
+-319656,MRRS Racing Amethyst,524466,Stefan Anjema,10,4,True,59603131,,2560263,False,False,20,270,['off track']
+-319656,MRRS Racing Amethyst,524466,Stefan Anjema,11,0,False,62167592,,2564461,False,False,20,270,[]
+-319656,MRRS Racing Amethyst,524466,Stefan Anjema,12,2,False,64774312,,2606720,False,False,20,270,['pitted']
+-319656,MRRS Racing Amethyst,524466,Stefan Anjema,13,2,False,67687107,,2912795,False,False,20,270,['pitted']
+-319656,MRRS Racing Amethyst,524466,Stefan Anjema,14,0,False,70172387,,2485280,False,False,20,270,[]
+-319656,MRRS Racing Amethyst,524466,Stefan Anjema,15,0,False,72621637,,2449250,True,True,20,270,[]
+-280802,Valkyrie Exype,335241,Kevin Chartier,0,439,True,104018014,,-1,False,False,20,48,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-280802,Valkyrie Exype,335241,Kevin Chartier,1,4,True,106470976,,2452962,True,True,20,48,['off track']
+-325463,Orca Performance Racing #1,501731,Thorsten Seifert,0,275,False,31326558,,-1,False,False,20,27,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-325463,Orca Performance Racing #1,501731,Thorsten Seifert,1,0,False,33988056,,2661498,False,False,20,27,[]
+-325463,Orca Performance Racing #1,501731,Thorsten Seifert,2,0,False,36632065,,2644009,False,False,20,27,[]
+-325463,Orca Performance Racing #1,501731,Thorsten Seifert,3,0,False,39325592,,2693527,False,False,20,27,[]
+-325463,Orca Performance Racing #1,501731,Thorsten Seifert,4,0,False,41969467,,2643875,False,False,20,27,[]
+-325463,Orca Performance Racing #1,501731,Thorsten Seifert,5,0,False,44602022,,2632555,False,False,20,27,[]
+-325463,Orca Performance Racing #1,501731,Thorsten Seifert,6,0,False,47221232,,2619210,False,False,20,27,[]
+-325463,Orca Performance Racing #1,501731,Thorsten Seifert,7,439,True,51673158,,-1,False,False,20,27,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-325463,Orca Performance Racing #1,501731,Thorsten Seifert,8,407,True,55511225,,-1,False,False,20,27,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-325463,Orca Performance Racing #1,501731,Thorsten Seifert,9,439,True,58856926,,-1,False,False,20,27,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-325463,Orca Performance Racing #1,501731,Thorsten Seifert,10,0,False,61421440,,2564514,False,False,20,27,[]
+-325463,Orca Performance Racing #1,501731,Thorsten Seifert,11,0,False,63952346,,2530906,False,False,20,27,[]
+-325463,Orca Performance Racing #1,501731,Thorsten Seifert,12,0,False,66440179,,2487833,True,True,20,27,[]
+-328587,GO! eSports #093,888006,Marc Lopez5,0,2,False,69716330,,-1,False,False,14,41,['pitted']
+-328587,GO! eSports #093,888006,Marc Lopez5,1,0,False,72218447,,2502117,True,True,14,41,[]
+-217076,Locals Autosport,582569,Darius Rackauskas,0,439,True,34693668,,-1,False,False,20,222,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-217076,Locals Autosport,582569,Darius Rackauskas,1,439,True,39486215,,-1,False,False,20,222,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-217076,Locals Autosport,582569,Darius Rackauskas,2,132,True,42291694,,2805479,False,False,20,222,"['off track', 'lost control']"
+-217076,Locals Autosport,582569,Darius Rackauskas,3,0,False,44988871,,2697177,False,False,20,222,[]
+-217076,Locals Autosport,582569,Darius Rackauskas,4,439,True,48128395,,-1,False,False,20,222,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-217076,Locals Autosport,582569,Darius Rackauskas,5,0,False,50772047,,2643652,False,False,20,222,[]
+-217076,Locals Autosport,582569,Darius Rackauskas,6,351,True,55051295,,-1,False,False,20,222,"['invalid', 'pitted', 'off track', 'black flag', 'car reset', 'car contact', 'discontinuity']"
+-217076,Locals Autosport,582569,Darius Rackauskas,7,439,True,58375757,,-1,False,False,20,222,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-217076,Locals Autosport,582569,Darius Rackauskas,8,4,True,61052976,,2677219,False,False,20,222,['off track']
+-217076,Locals Autosport,582569,Darius Rackauskas,9,503,True,66866672,,-1,False,False,20,222,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'car contact', 'lost control', 'discontinuity']"
+-217076,Locals Autosport,582569,Darius Rackauskas,10,0,False,69411420,,2544748,True,True,20,222,[]
+-217076,Locals Autosport,582569,Darius Rackauskas,11,275,False,72686538,,-1,False,False,20,222,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-409969,Pacemakers,892225,Dave Teheux,3,439,True,58980079,,18889101,False,False,19,288,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-409969,Pacemakers,892225,Dave Teheux,4,0,False,61583184,,2603105,False,False,19,288,[]
+-409969,Pacemakers,892225,Dave Teheux,5,0,False,64175492,,2592308,False,False,19,288,[]
+-409969,Pacemakers,892225,Dave Teheux,6,0,False,66727105,,2551613,True,True,19,288,[]
+-409969,Pacemakers,885933,Falco Van Rijsselt,0,447,True,23409479,,-1,False,False,18,288,"['invalid', 'pitted', 'off track', 'black flag', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-409969,Pacemakers,885933,Falco Van Rijsselt,1,439,True,37378655,,-1,False,False,18,288,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-409969,Pacemakers,885933,Falco Van Rijsselt,2,0,False,40090978,,2712323,False,True,18,288,[]
+-278514,SPH eMotorsport,394019,Nick André Stodal,0,439,True,49439513,,-1,False,False,20,262,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-278514,SPH eMotorsport,394019,Nick André Stodal,1,0,False,52056613,,2617100,False,False,20,262,[]
+-278514,SPH eMotorsport,394019,Nick André Stodal,2,0,False,54660814,,2604201,False,False,20,262,[]
+-278514,SPH eMotorsport,394019,Nick André Stodal,3,279,True,59663747,,-1,False,False,20,262,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-278514,SPH eMotorsport,394019,Nick André Stodal,4,0,False,62220661,,2556914,False,False,20,262,[]
+-278514,SPH eMotorsport,394019,Nick André Stodal,5,0,False,64775475,,2554814,True,True,20,262,[]
+-278514,SPH eMotorsport,394019,Nick André Stodal,6,275,False,67627474,,-1,False,False,20,262,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-132807,Miguel Angel Gallardo,381160,Miguel Angel Gallardo,0,279,True,24268662,,-1,False,False,20,21,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-132807,Miguel Angel Gallardo,381160,Miguel Angel Gallardo,1,128,True,27094525,,2825863,False,False,20,21,['lost control']
+-132807,Miguel Angel Gallardo,381160,Miguel Angel Gallardo,2,4,True,29785212,,2690687,False,False,20,21,['off track']
+-132807,Miguel Angel Gallardo,381160,Miguel Angel Gallardo,3,0,False,32472746,,2687534,False,False,20,21,[]
+-132807,Miguel Angel Gallardo,381160,Miguel Angel Gallardo,4,0,False,35132495,,2659749,False,False,20,21,[]
+-132807,Miguel Angel Gallardo,381160,Miguel Angel Gallardo,5,128,True,37973772,,2841277,False,False,20,21,['lost control']
+-132807,Miguel Angel Gallardo,381160,Miguel Angel Gallardo,6,0,False,40615068,,2641296,False,False,20,21,[]
+-132807,Miguel Angel Gallardo,381160,Miguel Angel Gallardo,7,0,False,43234197,,2619129,False,False,20,21,[]
+-132807,Miguel Angel Gallardo,381160,Miguel Angel Gallardo,8,256,False,45845062,,2610865,False,False,20,21,['discontinuity']
+-132807,Miguel Angel Gallardo,381160,Miguel Angel Gallardo,9,0,False,48450028,,2604966,False,False,20,21,[]
+-132807,Miguel Angel Gallardo,381160,Miguel Angel Gallardo,10,0,False,51048873,,2598845,False,False,20,21,[]
+-132807,Miguel Angel Gallardo,381160,Miguel Angel Gallardo,11,0,False,53639800,,2590927,False,False,20,21,[]
+-132807,Miguel Angel Gallardo,381160,Miguel Angel Gallardo,12,0,False,56220371,,2580571,True,True,20,21,[]
+-323321,GO! eSports BJ,528824,Kiko Lacalle,0,343,True,37492252,,-1,False,False,20,188,"['invalid', 'pitted', 'off track', 'car reset', 'car contact', 'discontinuity']"
+-323321,GO! eSports BJ,528824,Kiko Lacalle,1,0,False,40086372,,2594120,False,False,20,188,[]
+-323321,GO! eSports BJ,528824,Kiko Lacalle,2,0,False,42676332,,2589960,True,True,20,188,[]
+-89179,Team Q lo sepas,257614,Roman Farre Ortiz,0,439,True,12710448,,-1,False,False,19,15,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-89179,Team Q lo sepas,257614,Roman Farre Ortiz,1,311,True,21113840,,-1,False,False,19,15,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'discontinuity']"
+-89179,Team Q lo sepas,257614,Roman Farre Ortiz,2,0,False,23825975,,2712135,False,False,19,15,[]
+-89179,Team Q lo sepas,257614,Roman Farre Ortiz,3,0,False,26501060,,2675085,False,False,19,15,[]
+-89179,Team Q lo sepas,257614,Roman Farre Ortiz,4,311,True,34337932,,-1,False,False,19,15,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'discontinuity']"
+-89179,Team Q lo sepas,257614,Roman Farre Ortiz,5,0,False,37043157,,2705225,False,False,19,15,[]
+-89179,Team Q lo sepas,257614,Roman Farre Ortiz,6,0,False,39688225,,2645068,False,False,19,15,[]
+-89179,Team Q lo sepas,257614,Roman Farre Ortiz,7,311,True,46441024,,-1,False,False,19,15,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'discontinuity']"
+-89179,Team Q lo sepas,257614,Roman Farre Ortiz,8,0,False,49053211,,2612187,False,False,19,15,[]
+-89179,Team Q lo sepas,257614,Roman Farre Ortiz,9,0,False,51658605,,2605394,True,True,19,15,[]
+-364948,chasing charlie,889286,Tom Cecchetto,0,6,True,5856562,,-1,False,False,20,8,"['pitted', 'off track']"
+-364948,chasing charlie,889286,Tom Cecchetto,1,0,False,8524532,,2667970,False,False,20,8,[]
+-364948,chasing charlie,889286,Tom Cecchetto,2,0,False,11174150,,2649618,False,False,20,8,[]
+-364948,chasing charlie,889286,Tom Cecchetto,3,0,False,13977531,,2803381,False,False,20,8,[]
+-364948,chasing charlie,889286,Tom Cecchetto,4,0,False,16614302,,2636771,False,False,20,8,[]
+-364948,chasing charlie,889286,Tom Cecchetto,5,0,False,19239003,,2624701,False,False,20,8,[]
+-364948,chasing charlie,889286,Tom Cecchetto,6,0,False,21856457,,2617454,True,True,20,8,[]
+-364948,chasing charlie,889286,Tom Cecchetto,7,439,True,30099058,,-1,False,False,20,8,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-55286,FastRepair Motorsport GT3 #04,372757,Abel Sallán,0,279,True,6157238,,-1,False,False,20,4,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-55286,FastRepair Motorsport GT3 #04,372757,Abel Sallán,1,0,False,8792311,,2635073,False,False,20,4,[]
+-55286,FastRepair Motorsport GT3 #04,372757,Abel Sallán,2,0,False,11423490,,2631179,False,False,20,4,[]
+-55286,FastRepair Motorsport GT3 #04,372757,Abel Sallán,3,0,False,14052198,,2628708,True,True,20,4,[]
+-397452,Enosis eSports Emix,138006,Jorge Correia,0,439,True,43743942,,-1,False,False,19,178,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-397452,Enosis eSports Emix,138006,Jorge Correia,1,0,False,46405420,,2661478,False,False,19,178,[]
+-397452,Enosis eSports Emix,138006,Jorge Correia,2,439,True,49743835,,-1,False,False,19,178,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-397452,Enosis eSports Emix,138006,Jorge Correia,3,0,False,52397288,,2653453,False,False,19,178,[]
+-397452,Enosis eSports Emix,138006,Jorge Correia,4,0,False,55068096,,2670808,False,False,19,178,[]
+-397452,Enosis eSports Emix,138006,Jorge Correia,5,0,False,57703144,,2635048,True,True,19,178,[]
+-55290,FastRepair Motorsport GT3,195224,Jotta Perez,0,439,True,8331548,,-1,False,False,19,102,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-55290,FastRepair Motorsport GT3,195224,Jotta Perez,1,0,False,11078670,,2747122,False,False,19,102,[]
+-55290,FastRepair Motorsport GT3,195224,Jotta Perez,2,0,False,13754053,,2675383,False,False,19,102,[]
+-55290,FastRepair Motorsport GT3,195224,Jotta Perez,3,0,False,16416679,,2662626,False,False,19,102,[]
+-55290,FastRepair Motorsport GT3,195224,Jotta Perez,4,0,False,19058265,,2641586,True,True,19,102,[]
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,0,2,False,5853215,,-1,False,False,20,110,['pitted']
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,1,0,False,8532095,,2678880,False,False,20,110,[]
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,2,4,True,11286104,,2754009,False,False,20,110,['off track']
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,3,128,True,13986146,,2700042,False,False,20,110,['lost control']
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,4,0,False,16630796,,2644650,True,True,20,110,[]
+-366404,RPM Racing PEC,590994,Charlie Lund Nilsson,5,311,True,30095623,,-1,False,False,20,110,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'discontinuity']"
+-381584,DDK Racing Team #S,462911,Gilles Philippaerts,0,6,True,35480733,,-1,False,False,20,226,"['pitted', 'off track']"
+-381584,DDK Racing Team #S,462911,Gilles Philippaerts,1,447,True,48801643,,-1,False,False,20,226,"['invalid', 'pitted', 'off track', 'black flag', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-381584,DDK Racing Team #S,462911,Gilles Philippaerts,2,0,False,51447989,,2646346,True,True,20,226,[]
+-381584,DDK Racing Team #S,462911,Gilles Philippaerts,3,275,False,69848283,,-1,False,False,20,226,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-415332,EAGLE Speed Academy E-Sports PEC sd,566242,Steven Deleersnijder,0,6,True,12250350,,-1,False,False,19,185,"['pitted', 'off track']"
+-415332,EAGLE Speed Academy E-Sports PEC sd,566242,Steven Deleersnijder,1,407,True,16034363,,-1,False,False,19,185,"['invalid', 'pitted', 'off track', 'car reset', 'lost control', 'discontinuity']"
+-415332,EAGLE Speed Academy E-Sports PEC sd,566242,Steven Deleersnijder,2,439,True,21943464,,-1,False,False,19,185,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-415332,EAGLE Speed Academy E-Sports PEC sd,566242,Steven Deleersnijder,3,0,False,24634662,,2691198,False,False,19,185,[]
+-415332,EAGLE Speed Academy E-Sports PEC sd,566242,Steven Deleersnijder,4,0,False,27317265,,2682603,False,False,19,185,[]
+-415332,EAGLE Speed Academy E-Sports PEC sd,566242,Steven Deleersnijder,5,4,True,30009919,,2692654,False,False,19,185,['off track']
+-415332,EAGLE Speed Academy E-Sports PEC sd,566242,Steven Deleersnijder,6,0,False,32659136,,2649217,True,True,19,185,[]
+-415332,EAGLE Speed Academy E-Sports PEC sd,566242,Steven Deleersnijder,7,0,False,35329341,,2670205,False,False,19,185,[]
+-392192,Orca Performance Racing #Black,775090,Marcel Beck,0,439,True,27834812,,-1,False,False,18,164,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-392192,Orca Performance Racing #Black,775090,Marcel Beck,1,0,False,30555121,,2720309,False,False,18,164,[]
+-392192,Orca Performance Racing #Black,775090,Marcel Beck,2,0,False,33205424,,2650303,True,True,18,164,[]
+-392192,Orca Performance Racing #Black,775090,Marcel Beck,3,467,True,63360340,,-1,False,False,18,164,"['invalid', 'pitted', 'car reset', 'car contact', 'lost control', 'discontinuity']"
+-375708,Top Tier Motorsport,819528,Jakub Bugala2,0,439,True,22122600,,-1,False,False,20,130,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-375708,Top Tier Motorsport,819528,Jakub Bugala2,1,132,True,24984613,,2862013,False,False,20,130,"['off track', 'lost control']"
+-375708,Top Tier Motorsport,819528,Jakub Bugala2,2,4,True,27708962,,2724349,False,False,20,130,['off track']
+-375708,Top Tier Motorsport,819528,Jakub Bugala2,3,0,False,30393831,,2684869,True,True,20,130,[]
+-375708,Top Tier Motorsport,819528,Jakub Bugala2,4,6,True,33131717,,2737886,False,False,20,130,"['pitted', 'off track']"
+-399913,DLR SimLab \\ Green,575706,Wessel van Kralingen,0,439,True,27009015,,-1,False,False,18,234,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-399913,DLR SimLab \\ Green,575706,Wessel van Kralingen,1,164,True,29756755,,2747740,True,True,18,234,"['off track', 'contact', 'lost control']"
+-399913,DLR SimLab \\ Green,575706,Wessel van Kralingen,2,6,True,32550713,,2793958,False,False,18,234,"['pitted', 'off track']"
+-399913,DLR SimLab \\ Green,575706,Wessel van Kralingen,3,134,True,36647015,,4096302,False,False,18,234,"['pitted', 'off track', 'lost control']"

@@ -1,0 +1,62 @@
+group_id,name,cust_id,display_name,lap_number,flags,incident,session_time,session_start_time,lap_time,team_fastest_lap,personal_best_lap,license_level,car_number,lap_events
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,0,2,False,53131719,,-1,False,False,20,3,['pitted']
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,1,4,True,54242470,,1110751,False,False,20,3,['off track']
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,2,4,True,55331505,,1089035,False,False,20,3,['off track']
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,3,132,True,56536661,,1205156,False,False,20,3,"['off track', 'lost control']"
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,4,0,False,57630545,,1093884,False,False,20,3,[]
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,5,0,False,58722980,,1092435,False,False,20,3,[]
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,6,4,True,59812120,,1089140,False,False,20,3,['off track']
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,7,0,False,60900509,,1088389,True,True,20,3,[]
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,8,0,False,61989690,,1089181,False,False,20,3,[]
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,9,4,True,63082893,,1093203,False,False,20,3,['off track']
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,10,0,False,64175596,,1092703,False,False,20,3,[]
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,11,4,True,65269322,,1093726,False,False,20,3,['off track']
+-195425,Team Pablo Álvarez,410026,Pablo Álvarez,12,2,False,66385981,,1116659,False,False,20,3,['pitted']
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,0,6,True,3640177,,-1,False,False,20,32,"['pitted', 'off track']"
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,1,4,True,4859791,,1219614,False,False,20,32,['off track']
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,2,0,False,6004165,,1144374,False,False,20,32,[]
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,3,0,False,7134191,,1130026,False,False,20,32,[]
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,4,0,False,8256125,,1121934,False,False,20,32,[]
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,5,0,False,9376091,,1119966,False,False,20,32,[]
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,6,0,False,10498728,,1122637,False,False,20,32,[]
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,7,0,False,11612233,,1113505,False,False,20,32,[]
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,8,0,False,12732286,,1120053,False,False,20,32,[]
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,9,0,False,13852746,,1120460,False,False,20,32,[]
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,10,4,True,15017047,,1164301,False,False,20,32,['off track']
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,11,0,False,16143512,,1126465,False,False,20,32,[]
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,12,0,False,17269838,,1126326,False,False,20,32,[]
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,13,0,False,18395264,,1125426,False,False,20,32,[]
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,14,0,False,19505119,,1109855,True,True,20,32,[]
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,15,4,True,20643514,,1138395,False,False,20,32,['off track']
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,16,0,False,21768907,,1125393,False,False,20,32,[]
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,17,0,False,22880701,,1111794,False,False,20,32,[]
+-336861,VULKAN Motorsports Orange,690462,Alex Pilbeam,18,2,False,24079971,,1199270,False,False,20,32,['pitted']
+-313947,M4sked Devils eSports,280146,Raul Monraba,0,6,True,5811978,,-1,False,False,17,161,"['pitted', 'off track']"
+-313947,M4sked Devils eSports,280146,Raul Monraba,1,4,True,7051324,,1239346,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,2,4,True,8281822,,1230498,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,3,279,True,15965385,,-1,False,False,17,161,"['invalid', 'pitted', 'off track', 'car reset', 'discontinuity']"
+-313947,M4sked Devils eSports,280146,Raul Monraba,4,4,True,17200254,,1234869,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,5,4,True,18444523,,1244269,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,6,4,True,19678039,,1233516,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,7,4,True,20914941,,1236902,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,8,439,True,26275345,,-1,False,False,17,161,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-313947,M4sked Devils eSports,280146,Raul Monraba,9,4,True,27527503,,1252158,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,10,439,True,29801489,,-1,False,False,17,161,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-313947,M4sked Devils eSports,280146,Raul Monraba,11,7,True,35507109,,-1,False,False,17,161,"['invalid', 'pitted', 'off track']"
+-313947,M4sked Devils eSports,280146,Raul Monraba,12,4,True,36845577,,1338468,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,13,4,True,38086439,,1240862,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,14,4,True,39336840,,1250401,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,15,4,True,40585164,,1248324,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,16,4,True,41850837,,1265673,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,17,4,True,43096516,,1245679,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,18,4,True,44461758,,1365242,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,19,4,True,45688869,,1227111,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,20,4,True,46952234,,1263365,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,21,439,True,49895832,,-1,False,False,17,161,"['invalid', 'pitted', 'off track', 'car reset', 'contact', 'lost control', 'discontinuity']"
+-313947,M4sked Devils eSports,280146,Raul Monraba,22,4,True,51128057,,1232225,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,23,415,True,62378413,,-1,False,False,17,161,"['invalid', 'pitted', 'off track', 'black flag', 'car reset', 'lost control', 'discontinuity']"
+-313947,M4sked Devils eSports,280146,Raul Monraba,24,0,False,63607065,,1228652,False,False,17,161,[]
+-313947,M4sked Devils eSports,280146,Raul Monraba,25,4,True,64867805,,1260740,False,False,17,161,['off track']
+-313947,M4sked Devils eSports,280146,Raul Monraba,26,0,False,66082634,,1214829,True,True,17,161,[]
+-313947,M4sked Devils eSports,280146,Raul Monraba,27,275,False,68073221,,-1,False,False,17,161,"['invalid', 'pitted', 'car reset', 'discontinuity']"
+-313947,M4sked Devils eSports,280146,Raul Monraba,28,4,True,69291423,,1218202,False,False,17,161,['off track']

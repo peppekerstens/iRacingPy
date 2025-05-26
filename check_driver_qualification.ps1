@@ -1,5 +1,5 @@
 param(
-    $resultfile = '.\iracing_result\iracing-result-73082774.json' 
+    $resultfile = '.\iracing_result\iracing-result-74712067.json' 
 )
 $result = get-content $resultfile | ConvertFrom-Json
 

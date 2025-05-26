@@ -4,18 +4,205 @@
     "seasons": [
         {
             "active": true,
-            "driver_points_car_classes": [],
+            "driver_points_car_classes": [
+                {
+                    "car_class_id": 0,
+                    "cars_in_class": [
+                        {
+                            "car_id": 0,
+                            "car_name": "All Cars"
+                        },
+                        {
+                            "car_id": 194,
+                            "car_name": "Acura NSX GT3 EVO 22"
+                        },
+                        {
+                            "car_id": 132,
+                            "car_name": "BMW M4 GT3"
+                        },
+                        {
+                            "car_id": 196,
+                            "car_name": "Ferrari 499P"
+                        },
+                        {
+                            "car_id": 168,
+                            "car_name": "Cadillac V-Series.R GTP"
+                        },
+                        {
+                            "car_id": 169,
+                            "car_name": "Porsche 911 GT3 R (992)"
+                        },
+                        {
+                            "car_id": 170,
+                            "car_name": "Acura ARX-06 GTP"
+                        },
+                        {
+                            "car_id": 173,
+                            "car_name": "Ferrari 296 GT3"
+                        },
+                        {
+                            "car_id": 184,
+                            "car_name": "Chevrolet Corvette Z06 GT3.R"
+                        },
+                        {
+                            "car_id": 185,
+                            "car_name": "Ford Mustang GT3"
+                        },
+                        {
+                            "car_id": 188,
+                            "car_name": "McLaren 720S GT3 EVO"
+                        },
+                        {
+                            "car_id": 156,
+                            "car_name": "Mercedes-AMG GT3 2020"
+                        },
+                        {
+                            "car_id": 159,
+                            "car_name": "BMW M Hybrid V8"
+                        }
+                    ],
+                    "name": "All Car Classes"
+                },
+                {
+                    "car_class_id": 2708,
+                    "cars_in_class": [
+                        {
+                            "car_id": 0,
+                            "car_name": "All Cars"
+                        },
+                        {
+                            "car_id": 194,
+                            "car_name": "Acura NSX GT3 EVO 22"
+                        },
+                        {
+                            "car_id": 132,
+                            "car_name": "BMW M4 GT3"
+                        },
+                        {
+                            "car_id": 184,
+                            "car_name": "Chevrolet Corvette Z06 GT3.R"
+                        },
+                        {
+                            "car_id": 185,
+                            "car_name": "Ford Mustang GT3"
+                        },
+                        {
+                            "car_id": 169,
+                            "car_name": "Porsche 911 GT3 R (992)"
+                        },
+                        {
+                            "car_id": 188,
+                            "car_name": "McLaren 720S GT3 EVO"
+                        },
+                        {
+                            "car_id": 156,
+                            "car_name": "Mercedes-AMG GT3 2020"
+                        },
+                        {
+                            "car_id": 173,
+                            "car_name": "Ferrari 296 GT3"
+                        }
+                    ],
+                    "name": "GT3 Class"
+                },
+                {
+                    "car_class_id": 4029,
+                    "cars_in_class": [
+                        {
+                            "car_id": 0,
+                            "car_name": "All Cars"
+                        },
+                        {
+                            "car_id": 196,
+                            "car_name": "Ferrari 499P"
+                        },
+                        {
+                            "car_id": 168,
+                            "car_name": "Cadillac V-Series.R GTP"
+                        },
+                        {
+                            "car_id": 170,
+                            "car_name": "Acura ARX-06 GTP"
+                        },
+                        {
+                            "car_id": 159,
+                            "car_name": "BMW M Hybrid V8"
+                        }
+                    ],
+                    "name": "GTP"
+                }
+            ],
             "hidden": false,
             "league_id": 5606,
             "no_drops_on_or_after_race_num": -1,
             "num_drops": 0,
-            "points_cars": [],
+            "points_cars": [
+                {
+                    "car_id": 194,
+                    "car_name": "Acura NSX GT3 EVO 22"
+                },
+                {
+                    "car_id": 132,
+                    "car_name": "BMW M4 GT3"
+                },
+                {
+                    "car_id": 184,
+                    "car_name": "Chevrolet Corvette Z06 GT3.R"
+                },
+                {
+                    "car_id": 173,
+                    "car_name": "Ferrari 296 GT3"
+                },
+                {
+                    "car_id": 185,
+                    "car_name": "Ford Mustang GT3"
+                },
+                {
+                    "car_id": 188,
+                    "car_name": "McLaren 720S GT3 EVO"
+                },
+                {
+                    "car_id": 156,
+                    "car_name": "Mercedes-AMG GT3 2020"
+                },
+                {
+                    "car_id": 169,
+                    "car_name": "Porsche 911 GT3 R (992)"
+                },
+                {
+                    "car_id": 170,
+                    "car_name": "Acura ARX-06 GTP"
+                },
+                {
+                    "car_id": 159,
+                    "car_name": "BMW M Hybrid V8"
+                },
+                {
+                    "car_id": 168,
+                    "car_name": "Cadillac V-Series.R GTP"
+                },
+                {
+                    "car_id": 196,
+                    "car_name": "Ferrari 499P"
+                }
+            ],
             "points_system_desc": "No points will be awarded.  The league administrator will assign points at a later date.",
             "points_system_id": 1,
             "points_system_name": "None",
             "season_id": 115731,
             "season_name": "PEC Season 7",
-            "team_points_car_classes": []
+            "team_points_car_classes": [
+                {
+                    "car_class_id": 0,
+                    "cars_in_class": [
+                        {
+                            "car_id": 0,
+                            "car_name": "All Cars"
+                        }
+                    ],
+                    "name": "All Car Classes"
+                }
+            ]
         }
     ],
     "subscribed": false,
