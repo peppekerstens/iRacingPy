@@ -1,5 +1,5 @@
 $signupSheet = import-csv -path .\pecsignup.csv 
-$memberData = import-csv -path .\member_data.csv
+$memberData = import-csv -path .\league_roster.csv
 $csvteams = "Name,Background color,Text color,Logo URL,Class 1,Class 2,Class 3`n"
 $csvdrivers = "iRacing name,iRacing ID,Multicar team background color,Multicar team text color,Multicar team logo url,iRacing car color override,iRacing car number color override,First name override,Last name override,Suffix override,Initials override,iRacing team name override,Multicar team name,Highlight,Club name override,Photo URL,Number URL,Car Url,Class 1,Class 2,Class 3,Birth date,Home town,Driver header,Driver information`n"
 foreach ($signup in $signupSheet){
