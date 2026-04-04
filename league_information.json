@@ -155,6 +155,70 @@
             },
             "initiated": "2025-05-24T21:10:29Z",
             "league_id": 5606
+        },
+        {
+            "admins": [],
+            "application_id": 774666,
+            "cust_id": 350722,
+            "display_name": "Marvin Weil",
+            "helmet": {
+                "color1": "faff00",
+                "color2": "2a3795",
+                "color3": "f30000",
+                "face_type": 8,
+                "helmet_type": 0,
+                "pattern": 57
+            },
+            "initiated": "2025-05-30T19:22:37Z",
+            "league_id": 5606
+        },
+        {
+            "admins": [],
+            "application_id": 774882,
+            "cust_id": 450059,
+            "display_name": "Kaiden Wideawake",
+            "helmet": {
+                "color1": "8d8d8d",
+                "color2": "ffffff",
+                "color3": "a6a6a6",
+                "face_type": 11,
+                "helmet_type": 0,
+                "pattern": 35
+            },
+            "initiated": "2025-05-31T16:40:43Z",
+            "league_id": 5606
+        },
+        {
+            "admins": [],
+            "application_id": 774886,
+            "cust_id": 1055147,
+            "display_name": "Pedro Ribeiro26",
+            "helmet": {
+                "color1": "ebff00",
+                "color2": "0a0243",
+                "color3": "ff0000",
+                "face_type": 8,
+                "helmet_type": 0,
+                "pattern": 35
+            },
+            "initiated": "2025-05-31T17:01:28Z",
+            "league_id": 5606
+        },
+        {
+            "admins": [],
+            "application_id": 774966,
+            "cust_id": 915734,
+            "display_name": "Nathan Ford2",
+            "helmet": {
+                "color1": "013990",
+                "color2": "ffffff",
+                "color3": "4bd3fd",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 1
+            },
+            "initiated": "2025-05-31T23:19:38Z",
+            "league_id": 5606
         }
     ],
     "league_id": 5606,
@@ -282,6 +346,21 @@
             "revoked": false
         },
         {
+            "cust_id": 129852,
+            "display_name": "Paul Searle",
+            "helmet": {
+                "color1": "FAFBF4",
+                "color2": "D4F84F",
+                "color3": "6BCF17",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 65
+            },
+            "initiated": "2025-01-19T09:08:51Z",
+            "league_id": 5606,
+            "revoked": false
+        },
+        {
             "cust_id": 615845,
             "display_name": "Carlos Ponce",
             "helmet": {
@@ -293,21 +372,6 @@
                 "pattern": 14
             },
             "initiated": "2025-01-19T09:23:29Z",
-            "league_id": 5606,
-            "revoked": false
-        },
-        {
-            "cust_id": 637077,
-            "display_name": "Jeremy Lefile",
-            "helmet": {
-                "color1": "ffffff",
-                "color2": "111111",
-                "color3": "bbb300",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 28
-            },
-            "initiated": "2025-01-19T09:32:53Z",
             "league_id": 5606,
             "revoked": false
         },
@@ -342,21 +406,6 @@
             "revoked": false
         },
         {
-            "cust_id": 974604,
-            "display_name": "Boris Bitterauf",
-            "helmet": {
-                "color1": "b82f37",
-                "color2": "284a94",
-                "color3": "111111",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 1
-            },
-            "initiated": "2025-01-19T09:22:06Z",
-            "league_id": 5606,
-            "revoked": false
-        },
-        {
             "cust_id": 82115,
             "display_name": "Stephen Ribeiro",
             "helmet": {
@@ -368,201 +417,6 @@
                 "pattern": 33
             },
             "initiated": "2025-01-19T09:24:41Z",
-            "league_id": 5606,
-            "revoked": false
-        },
-        {
-            "cust_id": 1105934,
-            "display_name": "Michael R Mack",
-            "helmet": {
-                "color1": "d3cc18",
-                "color2": "000000",
-                "color3": "85980e",
-                "face_type": 8,
-                "helmet_type": 0,
-                "pattern": 9
-            },
-            "initiated": "2025-01-28T16:15:47Z",
-            "league_id": 5606,
-            "revoked": false
-        },
-        {
-            "cust_id": 76487,
-            "display_name": "Rene Zettl",
-            "helmet": {
-                "color1": "000000",
-                "color2": "ED2129",
-                "color3": "FFFFFF",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 28
-            },
-            "initiated": "2025-01-19T09:12:18Z",
-            "league_id": 5606,
-            "revoked": false
-        },
-        {
-            "cust_id": 365739,
-            "display_name": "Tyler Herron",
-            "helmet": {
-                "color1": "1E3652",
-                "color2": "592E12",
-                "color3": "446364",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 45
-            },
-            "initiated": "2025-01-19T09:31:00Z",
-            "league_id": 5606,
-            "revoked": false
-        },
-        {
-            "cust_id": 1072435,
-            "display_name": "Finn Matussek",
-            "helmet": {
-                "color1": "ffffff",
-                "color2": "f01111",
-                "color3": "f04800",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 28
-            },
-            "initiated": "2025-01-19T09:14:55Z",
-            "league_id": 5606,
-            "revoked": false
-        },
-        {
-            "cust_id": 980858,
-            "display_name": "Dani Santo",
-            "helmet": {
-                "color1": "ffffff",
-                "color2": "00ffc0",
-                "color3": "000000",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 28
-            },
-            "initiated": "2025-04-26T16:15:06Z",
-            "league_id": 5606,
-            "revoked": false
-        },
-        {
-            "cust_id": 411987,
-            "display_name": "Alejandro Casta\u00f1eyra",
-            "helmet": {
-                "color1": "ffffff",
-                "color2": "f1732e",
-                "color3": "372a75",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 1
-            },
-            "initiated": "2025-01-28T16:13:25Z",
-            "league_id": 5606,
-            "revoked": false
-        },
-        {
-            "cust_id": 103117,
-            "display_name": "Ricardo Ferreira",
-            "helmet": {
-                "color1": "000000",
-                "color2": "ffffff",
-                "color3": "ff00fc",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 64
-            },
-            "initiated": "2025-03-30T19:11:17Z",
-            "league_id": 5606,
-            "revoked": false
-        },
-        {
-            "cust_id": 228317,
-            "display_name": "Christian Friemel",
-            "helmet": {
-                "color1": "000000",
-                "color2": "dbf600",
-                "color3": "000000",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 67
-            },
-            "initiated": "2025-01-19T09:15:32Z",
-            "league_id": 5606,
-            "revoked": false
-        },
-        {
-            "cust_id": 129852,
-            "display_name": "Paul Searle",
-            "helmet": {
-                "color1": "FAFBF4",
-                "color2": "D4F84F",
-                "color3": "6BCF17",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 65
-            },
-            "initiated": "2025-01-19T09:08:51Z",
-            "league_id": 5606,
-            "revoked": false
-        },
-        {
-            "cust_id": 1121337,
-            "display_name": "Tino Sch\u00e4tzler",
-            "helmet": {
-                "color1": "000000",
-                "color2": "2b00ff",
-                "color3": "24ff00",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 16
-            },
-            "initiated": "2025-01-19T09:22:13Z",
-            "league_id": 5606,
-            "revoked": false
-        },
-        {
-            "cust_id": 716552,
-            "display_name": "Ryan Woolsey",
-            "helmet": {
-                "color1": "ffffff",
-                "color2": "480080",
-                "color3": "eeeeee",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 35
-            },
-            "initiated": "2025-01-19T09:33:54Z",
-            "league_id": 5606,
-            "revoked": false
-        },
-        {
-            "cust_id": 1015545,
-            "display_name": "Mike Whiskey",
-            "helmet": {
-                "color1": "fd0000",
-                "color2": "ffffff",
-                "color3": "ff0000",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 11
-            },
-            "initiated": "2025-01-19T09:22:30Z",
-            "league_id": 5606,
-            "revoked": false
-        },
-        {
-            "cust_id": 725639,
-            "display_name": "David Mart\u00edn Fdez",
-            "helmet": {
-                "color1": "de31dd",
-                "color2": "e9f4ec",
-                "color3": "111111",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 7
-            },
-            "initiated": "2025-01-19T09:23:53Z",
             "league_id": 5606,
             "revoked": false
         },
@@ -612,6 +466,51 @@
             "revoked": false
         },
         {
+            "cust_id": 1105934,
+            "display_name": "Michael R Mack",
+            "helmet": {
+                "color1": "d3cc18",
+                "color2": "000000",
+                "color3": "85980e",
+                "face_type": 8,
+                "helmet_type": 0,
+                "pattern": 9
+            },
+            "initiated": "2025-01-28T16:15:47Z",
+            "league_id": 5606,
+            "revoked": false
+        },
+        {
+            "cust_id": 76487,
+            "display_name": "Rene Zettl",
+            "helmet": {
+                "color1": "000000",
+                "color2": "ED2129",
+                "color3": "FFFFFF",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 28
+            },
+            "initiated": "2025-01-19T09:12:18Z",
+            "league_id": 5606,
+            "revoked": false
+        },
+        {
+            "cust_id": 365739,
+            "display_name": "Tyler Herron",
+            "helmet": {
+                "color1": "1E3652",
+                "color2": "592E12",
+                "color3": "446364",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 45
+            },
+            "initiated": "2025-01-19T09:31:00Z",
+            "league_id": 5606,
+            "revoked": false
+        },
+        {
             "cust_id": 899836,
             "display_name": "Giuseppe Romeo",
             "helmet": {
@@ -623,6 +522,171 @@
                 "pattern": 35
             },
             "initiated": "2025-01-19T09:31:14Z",
+            "league_id": 5606,
+            "revoked": false
+        },
+        {
+            "cust_id": 411987,
+            "display_name": "Alejandro Casta\u00f1eyra",
+            "helmet": {
+                "color1": "ffffff",
+                "color2": "f1732e",
+                "color3": "372a75",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 1
+            },
+            "initiated": "2025-01-28T16:13:25Z",
+            "league_id": 5606,
+            "revoked": false
+        },
+        {
+            "cust_id": 103117,
+            "display_name": "Ricardo Ferreira",
+            "helmet": {
+                "color1": "000000",
+                "color2": "ffffff",
+                "color3": "ff00fc",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 64
+            },
+            "initiated": "2025-03-30T19:11:17Z",
+            "league_id": 5606,
+            "revoked": false
+        },
+        {
+            "cust_id": 980858,
+            "display_name": "Dani Santo",
+            "helmet": {
+                "color1": "ffffff",
+                "color2": "00ffc0",
+                "color3": "000000",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 28
+            },
+            "initiated": "2025-04-26T16:15:06Z",
+            "league_id": 5606,
+            "revoked": false
+        },
+        {
+            "cust_id": 1121337,
+            "display_name": "Tino Sch\u00e4tzler",
+            "helmet": {
+                "color1": "000000",
+                "color2": "2b00ff",
+                "color3": "24ff00",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 16
+            },
+            "initiated": "2025-01-19T09:22:13Z",
+            "league_id": 5606,
+            "revoked": false
+        },
+        {
+            "cust_id": 637077,
+            "display_name": "Jeremy Lefile",
+            "helmet": {
+                "color1": "ffffff",
+                "color2": "111111",
+                "color3": "bbb300",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 28
+            },
+            "initiated": "2025-01-19T09:32:53Z",
+            "league_id": 5606,
+            "revoked": false
+        },
+        {
+            "cust_id": 716552,
+            "display_name": "Ryan Woolsey",
+            "helmet": {
+                "color1": "ffffff",
+                "color2": "480080",
+                "color3": "eeeeee",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 35
+            },
+            "initiated": "2025-01-19T09:33:54Z",
+            "league_id": 5606,
+            "revoked": false
+        },
+        {
+            "cust_id": 974604,
+            "display_name": "Boris Bitterauf",
+            "helmet": {
+                "color1": "b82f37",
+                "color2": "284a94",
+                "color3": "111111",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 1
+            },
+            "initiated": "2025-01-19T09:22:06Z",
+            "league_id": 5606,
+            "revoked": false
+        },
+        {
+            "cust_id": 1015545,
+            "display_name": "Mike Whiskey",
+            "helmet": {
+                "color1": "fd0000",
+                "color2": "ffffff",
+                "color3": "ff0000",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 11
+            },
+            "initiated": "2025-01-19T09:22:30Z",
+            "league_id": 5606,
+            "revoked": false
+        },
+        {
+            "cust_id": 725639,
+            "display_name": "David Mart\u00edn Fdez",
+            "helmet": {
+                "color1": "de31dd",
+                "color2": "e9f4ec",
+                "color3": "111111",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 7
+            },
+            "initiated": "2025-01-19T09:23:53Z",
+            "league_id": 5606,
+            "revoked": false
+        },
+        {
+            "cust_id": 1072435,
+            "display_name": "Finn Matussek",
+            "helmet": {
+                "color1": "ffffff",
+                "color2": "f01111",
+                "color3": "f04800",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 28
+            },
+            "initiated": "2025-01-19T09:14:55Z",
+            "league_id": 5606,
+            "revoked": false
+        },
+        {
+            "cust_id": 228317,
+            "display_name": "Christian Friemel",
+            "helmet": {
+                "color1": "000000",
+                "color2": "dbf600",
+                "color3": "000000",
+                "face_type": 0,
+                "helmet_type": 0,
+                "pattern": 67
+            },
+            "initiated": "2025-01-19T09:15:32Z",
             "league_id": 5606,
             "revoked": false
         }
@@ -971,25 +1035,6 @@
             },
             "league_mail_opt_out": false,
             "league_member_since": "2025-03-30T18:46:25Z",
-            "league_pm_opt_out": false,
-            "nick_name": null,
-            "owner": false
-        },
-        {
-            "admin": false,
-            "car_number": null,
-            "cust_id": 20477,
-            "display_name": "Albert Priem",
-            "helmet": {
-                "color1": "ffffff",
-                "color2": "ffa800",
-                "color3": "ff7700",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 62
-            },
-            "league_mail_opt_out": false,
-            "league_member_since": "2025-01-21T18:43:39Z",
             "league_pm_opt_out": false,
             "nick_name": null,
             "owner": false
@@ -3182,25 +3227,6 @@
         {
             "admin": false,
             "car_number": null,
-            "cust_id": 613747,
-            "display_name": "Jeanpaul Seemann",
-            "helmet": {
-                "color1": "ffffff",
-                "color2": "fc8800",
-                "color3": "ff0000",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 35
-            },
-            "league_mail_opt_out": false,
-            "league_member_since": "2025-01-22T14:28:26Z",
-            "league_pm_opt_out": false,
-            "nick_name": null,
-            "owner": false
-        },
-        {
-            "admin": false,
-            "car_number": null,
             "cust_id": 319231,
             "display_name": "Jeffrey M Aroyan",
             "helmet": {
@@ -3638,25 +3664,6 @@
         {
             "admin": false,
             "car_number": null,
-            "cust_id": 1019076,
-            "display_name": "Kevin Versantvoort",
-            "helmet": {
-                "color1": "000000",
-                "color2": "ff0000",
-                "color3": "ffa100",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 19
-            },
-            "league_mail_opt_out": false,
-            "league_member_since": "2025-02-01T09:42:14Z",
-            "league_pm_opt_out": false,
-            "nick_name": null,
-            "owner": false
-        },
-        {
-            "admin": false,
-            "car_number": null,
             "cust_id": 528824,
             "display_name": "Kiko Lacalle",
             "helmet": {
@@ -3945,9 +3952,9 @@
             "cust_id": 767013,
             "display_name": "Lorenz De Vlieger",
             "helmet": {
-                "color1": "000000",
-                "color2": "8f8849",
-                "color3": "001373",
+                "color1": "003087",
+                "color2": "ffc107",
+                "color3": "1c2526",
                 "face_type": 0,
                 "helmet_type": 0,
                 "pattern": 28
@@ -4227,25 +4234,6 @@
         {
             "admin": false,
             "car_number": null,
-            "cust_id": 432228,
-            "display_name": "Mark Biesma",
-            "helmet": {
-                "color1": "ffb600",
-                "color2": "ffb600",
-                "color3": "ffb600",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 65
-            },
-            "league_mail_opt_out": false,
-            "league_member_since": "2025-01-28T08:03:38Z",
-            "league_pm_opt_out": false,
-            "nick_name": null,
-            "owner": false
-        },
-        {
-            "admin": false,
-            "car_number": null,
             "cust_id": 522535,
             "display_name": "Mart\u00edn R. P\u00e9rez",
             "helmet": {
@@ -4372,25 +4360,6 @@
             },
             "league_mail_opt_out": false,
             "league_member_since": "2025-02-03T10:03:17Z",
-            "league_pm_opt_out": false,
-            "nick_name": null,
-            "owner": false
-        },
-        {
-            "admin": false,
-            "car_number": null,
-            "cust_id": 18782,
-            "display_name": "Maurizio Scotti di Uccio",
-            "helmet": {
-                "color1": "ffef26",
-                "color2": "f5f74f",
-                "color3": "0409fd",
-                "face_type": 0,
-                "helmet_type": 0,
-                "pattern": 64
-            },
-            "league_mail_opt_out": false,
-            "league_member_since": "2025-01-28T11:10:54Z",
             "league_pm_opt_out": false,
             "nick_name": null,
             "owner": false
@@ -6334,7 +6303,7 @@
             "owner": false
         }
     ],
-    "roster_count": 300,
+    "roster_count": 295,
     "rules": "https://docs.google.com/document/d/1-wO82niTQeBv7ucrWyPBZIFdSxphuCAA1ttv_JAxqgY/edit?usp=sharing",
     "tags": {
         "categorized": [

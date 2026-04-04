@@ -2284,7 +2284,7 @@
                 "wind_value": 3
             },
             "winner_id": -374027,
-            "winner_name": "big men"
+            "winner_name": "Team DWR x SimCoach Setups"
         },
         {
             "cars": [
@@ -6541,7 +6541,7 @@
                     "wind_low": 3.1,
                     "wind_units": 1
                 },
-                "weather_url": "https://scorpio-assets.s3.amazonaws.com/members/messaging-services/non_expiring/weather-forecast/hosted/4477861.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250526T192441Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUO6OO4A3WX3RTXUZ%2F20250526%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=604800&X-Amz-Signature=f5e991d6fc93be58005f703942f873b6f33d1aa06d93ab465019b93b045a0bef",
+                "weather_url": "https://scorpio-assets.s3.amazonaws.com/members/messaging-services/non_expiring/weather-forecast/hosted/4477861.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250609T060455Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUO6OO4A3WX3RTXUZ%2F20250609%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=604800&X-Amz-Signature=9a1c449941e836312fd3317bcabb8f1e5b7b8861127113b2621269079eadb9c0",
                 "weather_var_initial": 0,
                 "weather_var_ongoing": 0,
                 "wind_dir": 0,
@@ -8180,7 +8180,7 @@
                     "wind_low": 19.5,
                     "wind_units": 1
                 },
-                "weather_url": "https://scorpio-assets.s3.amazonaws.com/members/messaging-services/non_expiring/weather-forecast/hosted/4477879.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250526T192441Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUO6OO4A3WX3RTXUZ%2F20250526%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=604800&X-Amz-Signature=1a03c2523318657b8c5e5451cc33c1d0a1c50a615621cadc181727c24dadf120",
+                "weather_url": "https://scorpio-assets.s3.amazonaws.com/members/messaging-services/non_expiring/weather-forecast/hosted/4477879.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250609T060455Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUO6OO4A3WX3RTXUZ%2F20250609%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=604800&X-Amz-Signature=690fdf34f518a868f8a044de58a94501387c954489358d65afee40a339f6177b",
                 "weather_var_initial": 0,
                 "weather_var_ongoing": 0,
                 "wind_dir": 0,
@@ -8507,7 +8507,7 @@
                     "wind_low": 6.9,
                     "wind_units": 1
                 },
-                "weather_url": "https://scorpio-assets.s3.amazonaws.com/members/messaging-services/non_expiring/weather-forecast/hosted/4496173.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250526T192441Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUO6OO4A3WX3RTXUZ%2F20250526%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=604800&X-Amz-Signature=ad586a5b578a230d31b43bf9acca6c20ff1d5c5909c59e6947bfead27de3335c",
+                "weather_url": "https://scorpio-assets.s3.amazonaws.com/members/messaging-services/non_expiring/weather-forecast/hosted/4496173.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250609T060455Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUO6OO4A3WX3RTXUZ%2F20250609%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=604800&X-Amz-Signature=e779b658052ec2f025ad295a40a90cb209f870a89970262e0f09125695db565f",
                 "weather_var_initial": 0,
                 "weather_var_ongoing": 0,
                 "wind_dir": 0,
@@ -9490,7 +9490,7 @@
                     "wind_low": 9,
                     "wind_units": 1
                 },
-                "weather_url": "https://scorpio-assets.s3.amazonaws.com/members/messaging-services/non_expiring/weather-forecast/hosted/4528273.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250526T192441Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUO6OO4A3WX3RTXUZ%2F20250526%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=604800&X-Amz-Signature=dd84e9b2f6ea845324c51c70ad0295d163da28f3515d6536eaf3fe2b4afc7cfc",
+                "weather_url": "https://scorpio-assets.s3.amazonaws.com/members/messaging-services/non_expiring/weather-forecast/hosted/4528273.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250609T060455Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUO6OO4A3WX3RTXUZ%2F20250609%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=604800&X-Amz-Signature=b27e289d0575c6c891a3b0efca3c07c01eca381c2441ad23032114dda1ac9581",
                 "weather_var_initial": 0,
                 "weather_var_ongoing": 0,
                 "wind_dir": 0,
@@ -9757,7 +9757,7 @@
             ],
             "driver_changes": true,
             "entry_count": 0,
-            "has_results": false,
+            "has_results": true,
             "launch_at": "2025-05-26T17:00:00Z",
             "league_id": 5606,
             "league_season_id": 115731,
@@ -9772,7 +9772,7 @@
             "race_laps": 0,
             "race_length": 0,
             "session_id": 275730445,
-            "status": 2,
+            "status": 4,
             "subsession_id": 77265119,
             "team_entry_count": 0,
             "time_limit": 180,
@@ -9817,13 +9817,14 @@
                     "wind_low": 5.3,
                     "wind_units": 1
                 },
-                "weather_url": "https://scorpio-assets.s3.amazonaws.com/members/messaging-services/non_expiring/weather-forecast/hosted/4528470.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250526T192441Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUO6OO4A3WX3RTXUZ%2F20250526%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=604800&X-Amz-Signature=c64b45a472f2b49b7067e9a6560f4b6c22dc1397a3bb8b441591a20e96c735a0",
                 "weather_var_initial": 0,
                 "weather_var_ongoing": 0,
                 "wind_dir": 0,
                 "wind_units": 1,
                 "wind_value": 3
-            }
+            },
+            "winner_id": -190634,
+            "winner_name": "XBD Endurance Solo"
         },
         {
             "cars": [
@@ -9920,7 +9921,7 @@
             ],
             "driver_changes": true,
             "entry_count": 0,
-            "has_results": false,
+            "has_results": true,
             "launch_at": "2025-05-27T20:00:00Z",
             "league_id": 5606,
             "league_season_id": 115731,
@@ -9934,7 +9935,9 @@
             "qualify_length": 0,
             "race_laps": 0,
             "race_length": 0,
-            "status": 1,
+            "session_id": 275852191,
+            "status": 4,
+            "subsession_id": 77295451,
             "team_entry_count": 0,
             "time_limit": 180,
             "track": {
@@ -9978,13 +9981,14 @@
                     "wind_low": 8.1,
                     "wind_units": 1
                 },
-                "weather_url": "https://scorpio-assets.s3.amazonaws.com/members/messaging-services/non_expiring/weather-forecast/hosted/4534897.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250526T192441Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUO6OO4A3WX3RTXUZ%2F20250526%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=604800&X-Amz-Signature=a52045a112e32e3a1ad571b9c699df5fcce2fbf1cab70cd544a9d3f50d6fb06d",
                 "weather_var_initial": 0,
                 "weather_var_ongoing": 0,
                 "wind_dir": 0,
                 "wind_units": 1,
                 "wind_value": 3
-            }
+            },
+            "winner_id": -63062,
+            "winner_name": "Fury Simsport | Black"
         },
         {
             "cars": [
@@ -10081,7 +10085,7 @@
             ],
             "driver_changes": true,
             "entry_count": 0,
-            "has_results": false,
+            "has_results": true,
             "launch_at": "2025-05-28T17:00:00Z",
             "league_id": 5606,
             "league_season_id": 115731,
@@ -10095,7 +10099,9 @@
             "qualify_length": 0,
             "race_laps": 0,
             "race_length": 0,
-            "status": 1,
+            "session_id": 275946615,
+            "status": 4,
+            "subsession_id": 77316763,
             "team_entry_count": 0,
             "time_limit": 180,
             "track": {
@@ -10139,13 +10145,14 @@
                     "wind_low": 9.6,
                     "wind_units": 1
                 },
-                "weather_url": "https://scorpio-assets.s3.amazonaws.com/members/messaging-services/non_expiring/weather-forecast/hosted/4534899.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250526T192441Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUO6OO4A3WX3RTXUZ%2F20250526%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=604800&X-Amz-Signature=9b187968fa267953752c4fa39418cabc9d780f32d98bc52cab5e14b8046dbcec",
                 "weather_var_initial": 0,
                 "weather_var_ongoing": 0,
                 "wind_dir": 0,
                 "wind_units": 1,
                 "wind_value": 3
-            }
+            },
+            "winner_id": -305380,
+            "winner_name": "Grid-and-Go.com eSports"
         },
         {
             "cars": [
@@ -10242,7 +10249,7 @@
             ],
             "driver_changes": true,
             "entry_count": 0,
-            "has_results": false,
+            "has_results": true,
             "launch_at": "2025-05-28T17:00:00Z",
             "league_id": 5606,
             "league_season_id": 115731,
@@ -10256,7 +10263,9 @@
             "qualify_length": 0,
             "race_laps": 0,
             "race_length": 0,
-            "status": 1,
+            "session_id": 275946616,
+            "status": 4,
+            "subsession_id": 77316764,
             "team_entry_count": 0,
             "time_limit": 180,
             "track": {
@@ -10300,13 +10309,14 @@
                     "wind_low": 9.6,
                     "wind_units": 1
                 },
-                "weather_url": "https://scorpio-assets.s3.amazonaws.com/members/messaging-services/non_expiring/weather-forecast/hosted/4534905.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250526T192441Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUO6OO4A3WX3RTXUZ%2F20250526%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=604800&X-Amz-Signature=93a3303fb14df4c5f2d3f863de7550cc227d19bc73fd4e0075dc4da613ef0016",
                 "weather_var_initial": 0,
                 "weather_var_ongoing": 0,
                 "wind_dir": 0,
                 "wind_units": 1,
                 "wind_value": 3
-            }
+            },
+            "winner_id": -229281,
+            "winner_name": "Team mik van der Werf"
         },
         {
             "cars": [
@@ -10403,7 +10413,7 @@
             ],
             "driver_changes": true,
             "entry_count": 0,
-            "has_results": false,
+            "has_results": true,
             "launch_at": "2025-05-29T17:00:00Z",
             "league_id": 5606,
             "league_season_id": 115731,
@@ -10417,7 +10427,9 @@
             "qualify_length": 0,
             "race_laps": 0,
             "race_length": 0,
-            "status": 1,
+            "session_id": 276055597,
+            "status": 4,
+            "subsession_id": 77342845,
             "team_entry_count": 0,
             "time_limit": 180,
             "track": {
@@ -10461,13 +10473,14 @@
                     "wind_low": 16.2,
                     "wind_units": 1
                 },
-                "weather_url": "https://scorpio-assets.s3.amazonaws.com/members/messaging-services/non_expiring/weather-forecast/hosted/4534907.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250526T192441Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUO6OO4A3WX3RTXUZ%2F20250526%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=604800&X-Amz-Signature=0b977848eeebf4acbdaaf73a3d463567cce8884eb0ecb3fdde6e857739eecdf5",
                 "weather_var_initial": 0,
                 "weather_var_ongoing": 0,
                 "wind_dir": 0,
                 "wind_units": 1,
                 "wind_value": 3
-            }
+            },
+            "winner_id": -408222,
+            "winner_name": "Old Firm Racing By HelvetSim"
         },
         {
             "cars": [
@@ -10564,7 +10577,7 @@
             ],
             "driver_changes": true,
             "entry_count": 0,
-            "has_results": false,
+            "has_results": true,
             "launch_at": "2025-05-30T01:00:00Z",
             "league_id": 5606,
             "league_season_id": 115731,
@@ -10578,7 +10591,9 @@
             "qualify_length": 0,
             "race_laps": 0,
             "race_length": 0,
-            "status": 1,
+            "session_id": 276091746,
+            "status": 4,
+            "subsession_id": 77352348,
             "team_entry_count": 0,
             "time_limit": 180,
             "track": {
@@ -10622,13 +10637,14 @@
                     "wind_low": 16.2,
                     "wind_units": 1
                 },
-                "weather_url": "https://scorpio-assets.s3.amazonaws.com/members/messaging-services/non_expiring/weather-forecast/hosted/4534910.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250526T192441Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUO6OO4A3WX3RTXUZ%2F20250526%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=604800&X-Amz-Signature=034a8e87c536429ac6239bbb51ffa9ff35f70601eb1e52de3f1e074772c39ca1",
                 "weather_var_initial": 0,
                 "weather_var_ongoing": 0,
                 "wind_dir": 0,
                 "wind_units": 1,
                 "wind_value": 3
-            }
+            },
+            "winner_id": -313947,
+            "winner_name": "M4sked Devils eSports"
         },
         {
             "cars": [
@@ -10725,7 +10741,7 @@
             ],
             "driver_changes": true,
             "entry_count": 0,
-            "has_results": false,
+            "has_results": true,
             "launch_at": "2025-05-30T17:00:00Z",
             "league_id": 5606,
             "league_season_id": 115731,
@@ -10739,7 +10755,9 @@
             "qualify_length": 0,
             "race_laps": 0,
             "race_length": 0,
-            "status": 1,
+            "session_id": 276163438,
+            "status": 4,
+            "subsession_id": 77367768,
             "team_entry_count": 0,
             "time_limit": 180,
             "track": {
@@ -10783,13 +10801,14 @@
                     "wind_low": 10.2,
                     "wind_units": 1
                 },
-                "weather_url": "https://scorpio-assets.s3.amazonaws.com/members/messaging-services/non_expiring/weather-forecast/hosted/4534920.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250526T192441Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUO6OO4A3WX3RTXUZ%2F20250526%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=604800&X-Amz-Signature=1e3af21fd39b88737d749c96b71b0d82a7cbd3a239092e7dc2468075b5e8368a",
                 "weather_var_initial": 0,
                 "weather_var_ongoing": 0,
                 "wind_dir": 0,
                 "wind_units": 1,
                 "wind_value": 3
-            }
+            },
+            "winner_id": -408222,
+            "winner_name": "Old Firm Racing By HelvetSim"
         },
         {
             "cars": [
@@ -10886,7 +10905,7 @@
             ],
             "driver_changes": true,
             "entry_count": 0,
-            "has_results": false,
+            "has_results": true,
             "launch_at": "2025-05-31T10:00:00Z",
             "league_id": 5606,
             "league_season_id": 115731,
@@ -10900,7 +10919,9 @@
             "qualify_length": 40,
             "race_laps": 0,
             "race_length": 720,
-            "status": 1,
+            "session_id": 276239879,
+            "status": 4,
+            "subsession_id": 77385912,
             "team_entry_count": 0,
             "time_limit": 840,
             "track": {
@@ -10944,13 +10965,14 @@
                     "wind_low": 6.9,
                     "wind_units": 1
                 },
-                "weather_url": "https://scorpio-assets.s3.amazonaws.com/members/messaging-services/non_expiring/weather-forecast/hosted/4534939.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250526T192441Z&X-Amz-SignedHeaders=host&X-Amz-Credential=AKIAUO6OO4A3WX3RTXUZ%2F20250526%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Expires=604800&X-Amz-Signature=28828f26eb1ed42951df004ddc8b8637cd12ee54508fb3b2503df77829c9b919",
                 "weather_var_initial": 0,
                 "weather_var_ongoing": 0,
                 "wind_dir": 0,
                 "wind_units": 1,
                 "wind_value": 3
-            }
+            },
+            "winner_id": -306596,
+            "winner_name": "XBD Racing GTP"
         }
     ],
     "success": true
